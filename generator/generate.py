@@ -390,11 +390,11 @@ def generate_struct(filetype, filename, struct_name, hasid):
         generate_reader(f, struct_name, vars)
 
     if needs_ctor(struct_name):
-        filepath = os.path.join(tmp_dir, 'rpg_%s.cpp' % filename)
+        filepath = os.path.join(tmp_dir, 'rpg_%s_gen.cpp' % filename)
         with open(filepath, 'w') as f:
             generate_ctor(f, vars)
 
-    filepath = os.path.join(tmp_dir, 'rpg_%s.h' % filename)
+    filepath = os.path.join(tmp_dir, 'rpg_%s_gen.h' % filename)
     with open(filepath, 'w') as f:
         generate_header(f, struct_name, hasid, vars)
 
@@ -408,7 +408,7 @@ def generate_rawstruct(filename, struct_name):
         structname = struct_name,
         structupper = struct_name.upper())
 
-    filepath = os.path.join(tmp_dir, 'rpg_%s.h' % filename)
+    filepath = os.path.join(tmp_dir, 'rpg_%s_gen.h' % filename)
     with open(filepath, 'w') as f:
         generate_header(f, struct_name, False, vars)
 
@@ -479,13 +479,13 @@ def list_files_struct(filetype, filename, struct_name, hasid):
         return
     print('%s_%s.cpp' % (filetype, filename))
     if needs_ctor(struct_name):
-        print('rpg_%s.cpp' % filename)
-    print('rpg_%s.h' % filename)
+        print('rpg_%s_gen.cpp' % filename)
+    print('rpg_%s_gen.h' % filename)
 
 def list_files_rawstruct(filename, struct_name):
     if needs_ctor(struct_name):
-        print('rpg_%s.cpp' % filename)
-    print('rpg_%s.h' % filename)
+        print('rpg_%s_gen.cpp' % filename)
+    print('rpg_%s_gen.h' % filename)
 
 def list_files_flags(filetype, filename, struct_name):
     print('%s_%s_flags.cpp' % (filetype, filename))

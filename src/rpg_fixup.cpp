@@ -6,6 +6,7 @@
 
 #include "reader_options.h"
 #include "rpg_actor.h"
+#include "rpg_map.h"
 #include "rpg_mapinfo.h"
 #include "rpg_system.h"
 #include "rpg_save.h"

@@ -30,6 +30,9 @@
 #include "rpg_eventcommand.h"
 #include "rpg_treemap.h"
 #include "rpg_database.h"
+#include "rpg_battlecommands.h"
+#include "rpg_switch.h"
+#include "rpg_variable.h"
 
 /**
  * Data namespace
