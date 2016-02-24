@@ -431,11 +431,8 @@ struct IDChecker {
 	typedef char no;
 	typedef int yes;
 
-	template <typename U, U> struct type_check;
-	template <class C>
-	static yes check(type_check<int C::*, &C::ID> *);
-	template <class C>
-	static no  check(...);
+	template <typename C> static yes check(decltype(&C::ID));
+	template <typename C> static no check(...);
 
 	static const bool value = sizeof(check<T>(0)) == sizeof(yes);
 };
