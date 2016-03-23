@@ -16,6 +16,7 @@
 #include "reader_types.h"
 #include "reader_options.h"
 #include "reader_util.h"
+#include <array>
 
 /*
  * Calls SkipDebug() instead of Skip() for debug builds.
@@ -261,6 +262,13 @@ private:
 	 * @param d double to convert.
 	 */
 	static void SwapByteOrder(double &d);
+
+	void FillBuffer();
+
+	size_t file_size = 0;
+	int buffer_pos = 0;
+	int buffer_eof = -1;
+	std::array<char, 102400> file_buffer;
 };
 
 #endif

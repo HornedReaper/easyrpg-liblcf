@@ -20,6 +20,11 @@ LcfReader::LcfReader(const char* filename, std::string encoding) :
 	encoding(encoding),
 	stream(fopen(filename, "rb"))
 {
+	fseek(stream, 0, SEEK_END);
+	file_size = ftell(stream);
+	fseek(stream, 0, SEEK_SET);
+
+	FillBuffer();
 }
 
 LcfReader::LcfReader(const std::string& filename, std::string encoding) :
@@ -27,6 +32,11 @@ LcfReader::LcfReader(const std::string& filename, std::string encoding) :
 	encoding(encoding),
 	stream(fopen(filename.c_str(), "rb"))
 {
+	fseek(stream, 0, SEEK_END);
+	file_size = ftell(stream);
+	fseek(stream, 0, SEEK_SET);
+
+	FillBuffer();
 }
 
 LcfReader::~LcfReader() {
@@ -40,13 +50,27 @@ void LcfReader::Close() {
 }
 
 size_t LcfReader::Read0(void *ptr, size_t size, size_t nmemb) {
-	size_t result = fread(ptr, size, nmemb, stream);
+	int to_read = size * nmemb;
+
+	while (!Eof()) {
+		int remaining_buffer = file_buffer.size() - buffer_pos;
+
+		if (to_read > remaining_buffer) {
+			memcpy(ptr, file_buffer.data() + buffer_pos, remaining_buffer);
+			to_read -= remaining_buffer;
+			FillBuffer();
+		} else {
+			memcpy(ptr, file_buffer.data() + buffer_pos, to_read);
+			buffer_pos += to_read;
+			break;
+		}
+	}
 #ifdef NDEBUG
-	if (result != nmemb && !Eof()) {
+	if (to_read != 0 && !Eof()) {
 		perror("Reading error: ");
 	}
 #endif
-	return result;
+	return nmemb;
 }
 
 void LcfReader::Read(void *ptr, size_t size, size_t nmemb) {
@@ -172,19 +196,31 @@ bool LcfReader::IsOk() const {
 }
 
 bool LcfReader::Eof() const {
-	return feof(stream) != 0;
+	return buffer_eof != -1 && buffer_pos >= buffer_eof;
 }
 
 void LcfReader::Seek(size_t pos, SeekMode mode) {
+	int to_seek = pos;
+	int remaining_buffer = file_buffer.size() - buffer_pos;
+
 	switch (mode) {
 	case LcfReader::FromStart:
 		fseek(stream, pos, SEEK_SET);
+		FillBuffer();
 		break;
 	case LcfReader::FromCurrent:
-		fseek(stream, pos, SEEK_CUR);
+		assert(pos < file_buffer.size());
+
+		if (to_seek > remaining_buffer) {
+			FillBuffer();
+			buffer_pos += to_seek - remaining_buffer;
+		} else {
+			buffer_pos += to_seek;
+		}
 		break;
 	case LcfReader::FromEnd:
 		fseek(stream, pos, SEEK_END);
+		buffer_pos = 0;
 		break;
 	default:
 		assert(false && "Invalid SeekMode");
@@ -192,11 +228,22 @@ void LcfReader::Seek(size_t pos, SeekMode mode) {
 }
 
 uint32_t LcfReader::Tell() {
-	return (uint32_t)ftell(stream);
+	size_t pos = ftell(stream);
+
+	if (buffer_eof > -1) {
+		pos = file_size + file_buffer.size() - buffer_eof;
+	}
+
+	return (uint32_t)pos - file_buffer.size() + buffer_pos;
 }
 
 bool LcfReader::Ungetch(uint8_t ch) {
-	return (ungetc(ch, stream) == ch);
+	if (buffer_pos > 0) {
+		buffer_pos--;
+		return file_buffer[buffer_pos] == ch;
+	} else {
+		return (ungetc(ch, stream) == ch);
+	}
 }
 
 #ifdef _DEBUG
@@ -289,9 +336,18 @@ void LcfReader::SwapByteOrder(double& d)
 void LcfReader::SwapByteOrder(uint16_t& /* us */) {}
 void LcfReader::SwapByteOrder(uint32_t& /* ui */) {}
 void LcfReader::SwapByteOrder(double& /* d */) {}
+
 #endif
 
 void LcfReader::SwapByteOrder(int16_t& s)
 {
 	SwapByteOrder((uint16_t&) s);
+}
+
+void LcfReader::FillBuffer() {
+	buffer_pos = 0;
+	size_t read = fread(file_buffer.data(), 1, file_buffer.size(), stream);
+	if (read < file_buffer.size()) {
+		buffer_eof = read;
+	}
 }
