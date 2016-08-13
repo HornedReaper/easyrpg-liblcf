@@ -83,11 +83,11 @@ std::string ReaderUtil::DetectEncoding(const std::string &database_file) {
 
 std::vector<std::string> ReaderUtil::DetectEncodings(const std::string& database_file) {
 	std::vector<std::string> encodings;
-#ifdef LCF_SUPPORT_ICU
-	std::ostringstream text;
 
 	// Populate Data::terms and Data::system or will empty by default even if load fails
 	LDB_Reader::Load(database_file, "");
+#ifdef LCF_SUPPORT_ICU
+	std::ostringstream text;
 
 	text <<
 	Data::terms.menu_save <<
@@ -134,6 +134,8 @@ std::vector<std::string> ReaderUtil::DetectEncodings(const std::string& database
 	Data::system.battletest_background <<
 	Data::system.frame_name;
 
+	bool japanese = false;
+
 	if (!text.str().empty()) {
 		UErrorCode status = U_ZERO_ERROR;
 		UCharsetDetector* detector = ucsdet_open(&status);
@@ -151,6 +153,7 @@ std::vector<std::string> ReaderUtil::DetectEncodings(const std::string& database
 
 				// Fixes to ensure proper Windows encodings
 				if (encoding == "Shift_JIS") {
+					japanese = true;
 					encodings.push_back("ibm-943_P15A-2003"); // Japanese with \ as backslash
 				} else if (encoding == "EUC-KR") {
 					encodings.push_back("windows-949-2000"); // Korean with \ as backlash
@@ -172,7 +175,21 @@ std::vector<std::string> ReaderUtil::DetectEncodings(const std::string& database
 			}
 		}
 		ucsdet_close(detector);
+
+		if (!encodings.empty() && !japanese) {
+			// Always assume game is also japanese because many game translations are
+			// flawed (some filenames still japanese, mojibake, ...)
+			encodings.push_back("ibm-943_P15A-2003");
+		}
 	}
+#else
+	// Random list because iconv lacks encoding guessing
+
+	encodings.push_back("windows-1252");
+	encodings.push_back("SHIFT_JIS");
+	encodings.push_back("cp949");
+	encodings.push_back("windows-1251");
+	encodings.push_back("windows-1250");
 #endif
 
 	return encodings;
