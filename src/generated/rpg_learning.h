@@ -21,11 +21,11 @@ namespace RPG {
 		int ID = 0;
 		int level = 1;
 		int skill_id = 1;
-        int GetLevel() const;
-        void SetLevel(int level);
+		int GetLevel() const;
+		void SetLevel(int level);
 
-        int GetSkillId() const;
-        void SetSkillId(int skill_id);
+		int GetSkillId() const;
+		void SetSkillId(int skill_id);
 
 	};
 }

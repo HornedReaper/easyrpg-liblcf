@@ -90,55 +90,55 @@ namespace RPG {
 		int move_speed = 3;
 		MoveRoute move_route;
 		std::vector<EventCommand> event_commands;
-        const EventPageCondition& GetCondition() const;
-        EventPageCondition& GetCondition();
-        void SetCondition(const EventPageCondition& condition);
+		const EventPageCondition& GetCondition() const;
+		EventPageCondition& GetCondition();
+		void SetCondition(const EventPageCondition& condition);
 
-        const std::string& GetCharacterName() const;
-        std::string& GetCharacterName();
-        void SetCharacterName(const std::string& character_name);
+		const std::string& GetCharacterName() const;
+		std::string& GetCharacterName();
+		void SetCharacterName(const std::string& character_name);
 
-        int GetCharacterIndex() const;
-        void SetCharacterIndex(int character_index);
+		int GetCharacterIndex() const;
+		void SetCharacterIndex(int character_index);
 
-        int GetCharacterDirection() const;
-        void SetCharacterDirection(int character_direction);
+		int GetCharacterDirection() const;
+		void SetCharacterDirection(int character_direction);
 
-        int GetCharacterPattern() const;
-        void SetCharacterPattern(int character_pattern);
+		int GetCharacterPattern() const;
+		void SetCharacterPattern(int character_pattern);
 
-        bool GetTranslucent() const;
-        void SetTranslucent(bool translucent);
+		bool GetTranslucent() const;
+		void SetTranslucent(bool translucent);
 
-        int GetMoveType() const;
-        void SetMoveType(int move_type);
+		int GetMoveType() const;
+		void SetMoveType(int move_type);
 
-        int GetMoveFrequency() const;
-        void SetMoveFrequency(int move_frequency);
+		int GetMoveFrequency() const;
+		void SetMoveFrequency(int move_frequency);
 
-        int GetTrigger() const;
-        void SetTrigger(int trigger);
+		int GetTrigger() const;
+		void SetTrigger(int trigger);
 
-        int GetLayer() const;
-        void SetLayer(int layer);
+		int GetLayer() const;
+		void SetLayer(int layer);
 
-        bool GetOverlapForbidden() const;
-        void SetOverlapForbidden(bool overlap_forbidden);
+		bool GetOverlapForbidden() const;
+		void SetOverlapForbidden(bool overlap_forbidden);
 
-        int GetAnimationType() const;
-        void SetAnimationType(int animation_type);
+		int GetAnimationType() const;
+		void SetAnimationType(int animation_type);
 
-        int GetMoveSpeed() const;
-        void SetMoveSpeed(int move_speed);
+		int GetMoveSpeed() const;
+		void SetMoveSpeed(int move_speed);
 
-        const MoveRoute& GetMoveRoute() const;
-        MoveRoute& GetMoveRoute();
-        void SetMoveRoute(const MoveRoute& move_route);
+		const MoveRoute& GetMoveRoute() const;
+		MoveRoute& GetMoveRoute();
+		void SetMoveRoute(const MoveRoute& move_route);
 
 
-        const std::vector<EventCommand>& GetEventCommands() const;
-        std::vector<EventCommand>& GetEventCommands();
-        void SetEventCommands(const std::vector<EventCommand>& event_commands);
+		const std::vector<EventCommand>& GetEventCommands() const;
+		std::vector<EventCommand>& GetEventCommands();
+		void SetEventCommands(const std::vector<EventCommand>& event_commands);
 
 	};
 }

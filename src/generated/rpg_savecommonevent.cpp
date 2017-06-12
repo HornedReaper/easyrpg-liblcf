@@ -14,14 +14,14 @@
 
 
 const RPG::SaveEventData& RPG::SaveCommonEvent::GetEventData() const  {
-    return event_data;
+	return event_data;
 }
 
 RPG::SaveEventData& RPG::SaveCommonEvent::GetEventData() {
-    return event_data;
+	return event_data;
 }
 
 void RPG::SaveCommonEvent::SetEventData(const RPG::SaveEventData& event_data) {
-    this->event_data = event_data;
+	this->event_data = event_data;
 }
 

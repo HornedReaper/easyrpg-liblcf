@@ -49,64 +49,64 @@ namespace RPG {
 		int panorama_data = -1;
 		SaveEventData events;
 		std::vector<SaveCommonEvent> common_events;
-        const SaveTitle& GetTitle() const;
-        SaveTitle& GetTitle();
-        void SetTitle(const SaveTitle& title);
+		const SaveTitle& GetTitle() const;
+		SaveTitle& GetTitle();
+		void SetTitle(const SaveTitle& title);
 
-        const SaveSystem& GetSystem() const;
-        SaveSystem& GetSystem();
-        void SetSystem(const SaveSystem& system);
+		const SaveSystem& GetSystem() const;
+		SaveSystem& GetSystem();
+		void SetSystem(const SaveSystem& system);
 
-        const SaveScreen& GetScreen() const;
-        SaveScreen& GetScreen();
-        void SetScreen(const SaveScreen& screen);
+		const SaveScreen& GetScreen() const;
+		SaveScreen& GetScreen();
+		void SetScreen(const SaveScreen& screen);
 
-        const std::vector<SavePicture>& GetPictures() const;
-        std::vector<SavePicture>& GetPictures();
-        void SetPictures(const std::vector<SavePicture>& pictures);
+		const std::vector<SavePicture>& GetPictures() const;
+		std::vector<SavePicture>& GetPictures();
+		void SetPictures(const std::vector<SavePicture>& pictures);
 
-        const SavePartyLocation& GetPartyLocation() const;
-        SavePartyLocation& GetPartyLocation();
-        void SetPartyLocation(const SavePartyLocation& party_location);
+		const SavePartyLocation& GetPartyLocation() const;
+		SavePartyLocation& GetPartyLocation();
+		void SetPartyLocation(const SavePartyLocation& party_location);
 
-        const SaveVehicleLocation& GetBoatLocation() const;
-        SaveVehicleLocation& GetBoatLocation();
-        void SetBoatLocation(const SaveVehicleLocation& boat_location);
+		const SaveVehicleLocation& GetBoatLocation() const;
+		SaveVehicleLocation& GetBoatLocation();
+		void SetBoatLocation(const SaveVehicleLocation& boat_location);
 
-        const SaveVehicleLocation& GetShipLocation() const;
-        SaveVehicleLocation& GetShipLocation();
-        void SetShipLocation(const SaveVehicleLocation& ship_location);
+		const SaveVehicleLocation& GetShipLocation() const;
+		SaveVehicleLocation& GetShipLocation();
+		void SetShipLocation(const SaveVehicleLocation& ship_location);
 
-        const SaveVehicleLocation& GetAirshipLocation() const;
-        SaveVehicleLocation& GetAirshipLocation();
-        void SetAirshipLocation(const SaveVehicleLocation& airship_location);
+		const SaveVehicleLocation& GetAirshipLocation() const;
+		SaveVehicleLocation& GetAirshipLocation();
+		void SetAirshipLocation(const SaveVehicleLocation& airship_location);
 
-        const std::vector<SaveActor>& GetActors() const;
-        std::vector<SaveActor>& GetActors();
-        void SetActors(const std::vector<SaveActor>& actors);
+		const std::vector<SaveActor>& GetActors() const;
+		std::vector<SaveActor>& GetActors();
+		void SetActors(const std::vector<SaveActor>& actors);
 
-        const SaveInventory& GetInventory() const;
-        SaveInventory& GetInventory();
-        void SetInventory(const SaveInventory& inventory);
+		const SaveInventory& GetInventory() const;
+		SaveInventory& GetInventory();
+		void SetInventory(const SaveInventory& inventory);
 
-        const std::vector<SaveTarget>& GetTargets() const;
-        std::vector<SaveTarget>& GetTargets();
-        void SetTargets(const std::vector<SaveTarget>& targets);
+		const std::vector<SaveTarget>& GetTargets() const;
+		std::vector<SaveTarget>& GetTargets();
+		void SetTargets(const std::vector<SaveTarget>& targets);
 
-        const SaveMapInfo& GetMapInfo() const;
-        SaveMapInfo& GetMapInfo();
-        void SetMapInfo(const SaveMapInfo& map_info);
+		const SaveMapInfo& GetMapInfo() const;
+		SaveMapInfo& GetMapInfo();
+		void SetMapInfo(const SaveMapInfo& map_info);
 
-        int GetPanoramaData() const;
-        void SetPanoramaData(int panorama_data);
+		int GetPanoramaData() const;
+		void SetPanoramaData(int panorama_data);
 
-        const SaveEventData& GetEvents() const;
-        SaveEventData& GetEvents();
-        void SetEvents(const SaveEventData& events);
+		const SaveEventData& GetEvents() const;
+		SaveEventData& GetEvents();
+		void SetEvents(const SaveEventData& events);
 
-        const std::vector<SaveCommonEvent>& GetCommonEvents() const;
-        std::vector<SaveCommonEvent>& GetCommonEvents();
-        void SetCommonEvents(const std::vector<SaveCommonEvent>& common_events);
+		const std::vector<SaveCommonEvent>& GetCommonEvents() const;
+		std::vector<SaveCommonEvent>& GetCommonEvents();
+		void SetCommonEvents(const std::vector<SaveCommonEvent>& common_events);
 
 	};
 }

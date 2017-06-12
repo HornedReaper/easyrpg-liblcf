@@ -14,14 +14,14 @@
 
 
 const std::vector<RPG::AnimationCellData>& RPG::AnimationFrame::GetCells() const  {
-    return cells;
+	return cells;
 }
 
 std::vector<RPG::AnimationCellData>& RPG::AnimationFrame::GetCells() {
-    return cells;
+	return cells;
 }
 
 void RPG::AnimationFrame::SetCells(const std::vector<RPG::AnimationCellData>& cells) {
-    this->cells = cells;
+	this->cells = cells;
 }
 

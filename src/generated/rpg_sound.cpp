@@ -14,38 +14,38 @@
 
 
 const std::string& RPG::Sound::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::Sound::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::Sound::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 
 int RPG::Sound::GetVolume() const {
-    return volume;
+	return volume;
 }
 
 void RPG::Sound::SetVolume(int volume) {
-    this->volume = volume;
+	this->volume = volume;
 }
 
 int RPG::Sound::GetTempo() const {
-    return tempo;
+	return tempo;
 }
 
 void RPG::Sound::SetTempo(int tempo) {
-    this->tempo = tempo;
+	this->tempo = tempo;
 }
 
 int RPG::Sound::GetBalance() const {
-    return balance;
+	return balance;
 }
 
 void RPG::Sound::SetBalance(int balance) {
-    this->balance = balance;
+	this->balance = balance;
 }
 

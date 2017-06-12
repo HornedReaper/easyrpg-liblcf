@@ -23,17 +23,17 @@ namespace RPG {
 		int x = 0;
 		int y = 0;
 		bool invisible = false;
-        int GetEnemyId() const;
-        void SetEnemyId(int enemy_id);
+		int GetEnemyId() const;
+		void SetEnemyId(int enemy_id);
 
-        int GetX() const;
-        void SetX(int x);
+		int GetX() const;
+		void SetX(int x);
 
-        int GetY() const;
-        void SetY(int y);
+		int GetY() const;
+		void SetY(int y);
 
-        bool GetInvisible() const;
-        void SetInvisible(bool invisible);
+		bool GetInvisible() const;
+		void SetInvisible(bool invisible);
 
 	};
 }

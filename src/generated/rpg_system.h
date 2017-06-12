@@ -149,201 +149,201 @@ namespace RPG {
 		std::string frame_name;
 		bool invert_animations = false;
 		bool show_title = true;
-        int GetLdbId() const;
-        void SetLdbId(int ldb_id);
+		int GetLdbId() const;
+		void SetLdbId(int ldb_id);
 
-        const std::string& GetBoatName() const;
-        std::string& GetBoatName();
-        void SetBoatName(const std::string& boat_name);
+		const std::string& GetBoatName() const;
+		std::string& GetBoatName();
+		void SetBoatName(const std::string& boat_name);
 
-        const std::string& GetShipName() const;
-        std::string& GetShipName();
-        void SetShipName(const std::string& ship_name);
+		const std::string& GetShipName() const;
+		std::string& GetShipName();
+		void SetShipName(const std::string& ship_name);
 
-        const std::string& GetAirshipName() const;
-        std::string& GetAirshipName();
-        void SetAirshipName(const std::string& airship_name);
+		const std::string& GetAirshipName() const;
+		std::string& GetAirshipName();
+		void SetAirshipName(const std::string& airship_name);
 
-        int GetBoatIndex() const;
-        void SetBoatIndex(int boat_index);
+		int GetBoatIndex() const;
+		void SetBoatIndex(int boat_index);
 
-        int GetShipIndex() const;
-        void SetShipIndex(int ship_index);
+		int GetShipIndex() const;
+		void SetShipIndex(int ship_index);
 
-        int GetAirshipIndex() const;
-        void SetAirshipIndex(int airship_index);
+		int GetAirshipIndex() const;
+		void SetAirshipIndex(int airship_index);
 
-        const std::string& GetTitleName() const;
-        std::string& GetTitleName();
-        void SetTitleName(const std::string& title_name);
+		const std::string& GetTitleName() const;
+		std::string& GetTitleName();
+		void SetTitleName(const std::string& title_name);
 
-        const std::string& GetGameoverName() const;
-        std::string& GetGameoverName();
-        void SetGameoverName(const std::string& gameover_name);
+		const std::string& GetGameoverName() const;
+		std::string& GetGameoverName();
+		void SetGameoverName(const std::string& gameover_name);
 
-        const std::string& GetSystemName() const;
-        std::string& GetSystemName();
-        void SetSystemName(const std::string& system_name);
+		const std::string& GetSystemName() const;
+		std::string& GetSystemName();
+		void SetSystemName(const std::string& system_name);
 
-        const std::string& GetSystem2Name() const;
-        std::string& GetSystem2Name();
-        void SetSystem2Name(const std::string& system2_name);
-
-
-        const std::vector<int16_t>& GetParty() const;
-        std::vector<int16_t>& GetParty();
-        void SetParty(const std::vector<int16_t>& party);
+		const std::string& GetSystem2Name() const;
+		std::string& GetSystem2Name();
+		void SetSystem2Name(const std::string& system2_name);
 
 
-        const std::vector<int16_t>& GetMenuCommands() const;
-        std::vector<int16_t>& GetMenuCommands();
-        void SetMenuCommands(const std::vector<int16_t>& menu_commands);
+		const std::vector<int16_t>& GetParty() const;
+		std::vector<int16_t>& GetParty();
+		void SetParty(const std::vector<int16_t>& party);
 
-        const Music& GetTitleMusic() const;
-        Music& GetTitleMusic();
-        void SetTitleMusic(const Music& title_music);
 
-        const Music& GetBattleMusic() const;
-        Music& GetBattleMusic();
-        void SetBattleMusic(const Music& battle_music);
+		const std::vector<int16_t>& GetMenuCommands() const;
+		std::vector<int16_t>& GetMenuCommands();
+		void SetMenuCommands(const std::vector<int16_t>& menu_commands);
 
-        const Music& GetBattleEndMusic() const;
-        Music& GetBattleEndMusic();
-        void SetBattleEndMusic(const Music& battle_end_music);
+		const Music& GetTitleMusic() const;
+		Music& GetTitleMusic();
+		void SetTitleMusic(const Music& title_music);
 
-        const Music& GetInnMusic() const;
-        Music& GetInnMusic();
-        void SetInnMusic(const Music& inn_music);
+		const Music& GetBattleMusic() const;
+		Music& GetBattleMusic();
+		void SetBattleMusic(const Music& battle_music);
 
-        const Music& GetBoatMusic() const;
-        Music& GetBoatMusic();
-        void SetBoatMusic(const Music& boat_music);
+		const Music& GetBattleEndMusic() const;
+		Music& GetBattleEndMusic();
+		void SetBattleEndMusic(const Music& battle_end_music);
 
-        const Music& GetShipMusic() const;
-        Music& GetShipMusic();
-        void SetShipMusic(const Music& ship_music);
+		const Music& GetInnMusic() const;
+		Music& GetInnMusic();
+		void SetInnMusic(const Music& inn_music);
 
-        const Music& GetAirshipMusic() const;
-        Music& GetAirshipMusic();
-        void SetAirshipMusic(const Music& airship_music);
+		const Music& GetBoatMusic() const;
+		Music& GetBoatMusic();
+		void SetBoatMusic(const Music& boat_music);
 
-        const Music& GetGameoverMusic() const;
-        Music& GetGameoverMusic();
-        void SetGameoverMusic(const Music& gameover_music);
+		const Music& GetShipMusic() const;
+		Music& GetShipMusic();
+		void SetShipMusic(const Music& ship_music);
 
-        const Sound& GetCursorSe() const;
-        Sound& GetCursorSe();
-        void SetCursorSe(const Sound& cursor_se);
+		const Music& GetAirshipMusic() const;
+		Music& GetAirshipMusic();
+		void SetAirshipMusic(const Music& airship_music);
 
-        const Sound& GetDecisionSe() const;
-        Sound& GetDecisionSe();
-        void SetDecisionSe(const Sound& decision_se);
+		const Music& GetGameoverMusic() const;
+		Music& GetGameoverMusic();
+		void SetGameoverMusic(const Music& gameover_music);
 
-        const Sound& GetCancelSe() const;
-        Sound& GetCancelSe();
-        void SetCancelSe(const Sound& cancel_se);
+		const Sound& GetCursorSe() const;
+		Sound& GetCursorSe();
+		void SetCursorSe(const Sound& cursor_se);
 
-        const Sound& GetBuzzerSe() const;
-        Sound& GetBuzzerSe();
-        void SetBuzzerSe(const Sound& buzzer_se);
+		const Sound& GetDecisionSe() const;
+		Sound& GetDecisionSe();
+		void SetDecisionSe(const Sound& decision_se);
 
-        const Sound& GetBattleSe() const;
-        Sound& GetBattleSe();
-        void SetBattleSe(const Sound& battle_se);
+		const Sound& GetCancelSe() const;
+		Sound& GetCancelSe();
+		void SetCancelSe(const Sound& cancel_se);
 
-        const Sound& GetEscapeSe() const;
-        Sound& GetEscapeSe();
-        void SetEscapeSe(const Sound& escape_se);
+		const Sound& GetBuzzerSe() const;
+		Sound& GetBuzzerSe();
+		void SetBuzzerSe(const Sound& buzzer_se);
 
-        const Sound& GetEnemyAttackSe() const;
-        Sound& GetEnemyAttackSe();
-        void SetEnemyAttackSe(const Sound& enemy_attack_se);
+		const Sound& GetBattleSe() const;
+		Sound& GetBattleSe();
+		void SetBattleSe(const Sound& battle_se);
 
-        const Sound& GetEnemyDamagedSe() const;
-        Sound& GetEnemyDamagedSe();
-        void SetEnemyDamagedSe(const Sound& enemy_damaged_se);
+		const Sound& GetEscapeSe() const;
+		Sound& GetEscapeSe();
+		void SetEscapeSe(const Sound& escape_se);
 
-        const Sound& GetActorDamagedSe() const;
-        Sound& GetActorDamagedSe();
-        void SetActorDamagedSe(const Sound& actor_damaged_se);
+		const Sound& GetEnemyAttackSe() const;
+		Sound& GetEnemyAttackSe();
+		void SetEnemyAttackSe(const Sound& enemy_attack_se);
 
-        const Sound& GetDodgeSe() const;
-        Sound& GetDodgeSe();
-        void SetDodgeSe(const Sound& dodge_se);
+		const Sound& GetEnemyDamagedSe() const;
+		Sound& GetEnemyDamagedSe();
+		void SetEnemyDamagedSe(const Sound& enemy_damaged_se);
 
-        const Sound& GetEnemyDeathSe() const;
-        Sound& GetEnemyDeathSe();
-        void SetEnemyDeathSe(const Sound& enemy_death_se);
+		const Sound& GetActorDamagedSe() const;
+		Sound& GetActorDamagedSe();
+		void SetActorDamagedSe(const Sound& actor_damaged_se);
 
-        const Sound& GetItemSe() const;
-        Sound& GetItemSe();
-        void SetItemSe(const Sound& item_se);
+		const Sound& GetDodgeSe() const;
+		Sound& GetDodgeSe();
+		void SetDodgeSe(const Sound& dodge_se);
 
-        int GetTransitionOut() const;
-        void SetTransitionOut(int transition_out);
+		const Sound& GetEnemyDeathSe() const;
+		Sound& GetEnemyDeathSe();
+		void SetEnemyDeathSe(const Sound& enemy_death_se);
 
-        int GetTransitionIn() const;
-        void SetTransitionIn(int transition_in);
+		const Sound& GetItemSe() const;
+		Sound& GetItemSe();
+		void SetItemSe(const Sound& item_se);
 
-        int GetBattleStartFadeout() const;
-        void SetBattleStartFadeout(int battle_start_fadeout);
+		int GetTransitionOut() const;
+		void SetTransitionOut(int transition_out);
 
-        int GetBattleStartFadein() const;
-        void SetBattleStartFadein(int battle_start_fadein);
+		int GetTransitionIn() const;
+		void SetTransitionIn(int transition_in);
 
-        int GetBattleEndFadeout() const;
-        void SetBattleEndFadeout(int battle_end_fadeout);
+		int GetBattleStartFadeout() const;
+		void SetBattleStartFadeout(int battle_start_fadeout);
 
-        int GetBattleEndFadein() const;
-        void SetBattleEndFadein(int battle_end_fadein);
+		int GetBattleStartFadein() const;
+		void SetBattleStartFadein(int battle_start_fadein);
 
-        int GetMessageStretch() const;
-        void SetMessageStretch(int message_stretch);
+		int GetBattleEndFadeout() const;
+		void SetBattleEndFadeout(int battle_end_fadeout);
 
-        int GetFontId() const;
-        void SetFontId(int font_id);
+		int GetBattleEndFadein() const;
+		void SetBattleEndFadein(int battle_end_fadein);
 
-        int GetSelectedCondition() const;
-        void SetSelectedCondition(int selected_condition);
+		int GetMessageStretch() const;
+		void SetMessageStretch(int message_stretch);
 
-        int GetSelectedHero() const;
-        void SetSelectedHero(int selected_hero);
+		int GetFontId() const;
+		void SetFontId(int font_id);
 
-        const std::string& GetBattletestBackground() const;
-        std::string& GetBattletestBackground();
-        void SetBattletestBackground(const std::string& battletest_background);
+		int GetSelectedCondition() const;
+		void SetSelectedCondition(int selected_condition);
 
-        const std::vector<TestBattler>& GetBattletestData() const;
-        std::vector<TestBattler>& GetBattletestData();
-        void SetBattletestData(const std::vector<TestBattler>& battletest_data);
+		int GetSelectedHero() const;
+		void SetSelectedHero(int selected_hero);
 
-        int GetSaveCount() const;
-        void SetSaveCount(int save_count);
+		const std::string& GetBattletestBackground() const;
+		std::string& GetBattletestBackground();
+		void SetBattletestBackground(const std::string& battletest_background);
 
-        int GetBattletestTerrain() const;
-        void SetBattletestTerrain(int battletest_terrain);
+		const std::vector<TestBattler>& GetBattletestData() const;
+		std::vector<TestBattler>& GetBattletestData();
+		void SetBattletestData(const std::vector<TestBattler>& battletest_data);
 
-        int GetBattletestFormation() const;
-        void SetBattletestFormation(int battletest_formation);
+		int GetSaveCount() const;
+		void SetSaveCount(int save_count);
 
-        int GetBattletestCondition() const;
-        void SetBattletestCondition(int battletest_condition);
+		int GetBattletestTerrain() const;
+		void SetBattletestTerrain(int battletest_terrain);
 
-        int GetUnknown61() const;
-        void SetUnknown61(int unknown_61);
+		int GetBattletestFormation() const;
+		void SetBattletestFormation(int battletest_formation);
 
-        bool GetShowFrame() const;
-        void SetShowFrame(bool show_frame);
+		int GetBattletestCondition() const;
+		void SetBattletestCondition(int battletest_condition);
 
-        const std::string& GetFrameName() const;
-        std::string& GetFrameName();
-        void SetFrameName(const std::string& frame_name);
+		int GetUnknown61() const;
+		void SetUnknown61(int unknown_61);
 
-        bool GetInvertAnimations() const;
-        void SetInvertAnimations(bool invert_animations);
+		bool GetShowFrame() const;
+		void SetShowFrame(bool show_frame);
 
-        bool GetShowTitle() const;
-        void SetShowTitle(bool show_title);
+		const std::string& GetFrameName() const;
+		std::string& GetFrameName();
+		void SetFrameName(const std::string& frame_name);
+
+		bool GetInvertAnimations() const;
+		void SetInvertAnimations(bool invert_animations);
+
+		bool GetShowTitle() const;
+		void SetShowTitle(bool show_title);
 
 	};
 }

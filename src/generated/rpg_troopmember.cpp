@@ -14,34 +14,34 @@
 
 
 int RPG::TroopMember::GetEnemyId() const {
-    return enemy_id;
+	return enemy_id;
 }
 
 void RPG::TroopMember::SetEnemyId(int enemy_id) {
-    this->enemy_id = enemy_id;
+	this->enemy_id = enemy_id;
 }
 
 int RPG::TroopMember::GetX() const {
-    return x;
+	return x;
 }
 
 void RPG::TroopMember::SetX(int x) {
-    this->x = x;
+	this->x = x;
 }
 
 int RPG::TroopMember::GetY() const {
-    return y;
+	return y;
 }
 
 void RPG::TroopMember::SetY(int y) {
-    this->y = y;
+	this->y = y;
 }
 
 bool RPG::TroopMember::GetInvisible() const {
-    return invisible;
+	return invisible;
 }
 
 void RPG::TroopMember::SetInvisible(bool invisible) {
-    this->invisible = invisible;
+	this->invisible = invisible;
 }
 

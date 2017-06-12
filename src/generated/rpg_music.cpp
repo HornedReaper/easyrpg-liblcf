@@ -14,46 +14,46 @@
 
 
 const std::string& RPG::Music::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::Music::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::Music::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 
 int RPG::Music::GetFadein() const {
-    return fadein;
+	return fadein;
 }
 
 void RPG::Music::SetFadein(int fadein) {
-    this->fadein = fadein;
+	this->fadein = fadein;
 }
 
 int RPG::Music::GetVolume() const {
-    return volume;
+	return volume;
 }
 
 void RPG::Music::SetVolume(int volume) {
-    this->volume = volume;
+	this->volume = volume;
 }
 
 int RPG::Music::GetTempo() const {
-    return tempo;
+	return tempo;
 }
 
 void RPG::Music::SetTempo(int tempo) {
-    this->tempo = tempo;
+	this->tempo = tempo;
 }
 
 int RPG::Music::GetBalance() const {
-    return balance;
+	return balance;
 }
 
 void RPG::Music::SetBalance(int balance) {
-    this->balance = balance;
+	this->balance = balance;
 }
 

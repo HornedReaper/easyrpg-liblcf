@@ -24,20 +24,20 @@ namespace RPG {
 		int map_y = 0;
 		bool switch_on = false;
 		int switch_id = 0;
-        int GetMapId() const;
-        void SetMapId(int map_id);
+		int GetMapId() const;
+		void SetMapId(int map_id);
 
-        int GetMapX() const;
-        void SetMapX(int map_x);
+		int GetMapX() const;
+		void SetMapX(int map_x);
 
-        int GetMapY() const;
-        void SetMapY(int map_y);
+		int GetMapY() const;
+		void SetMapY(int map_y);
 
-        bool GetSwitchOn() const;
-        void SetSwitchOn(bool switch_on);
+		bool GetSwitchOn() const;
+		void SetSwitchOn(bool switch_on);
 
-        int GetSwitchId() const;
-        void SetSwitchId(int switch_id);
+		int GetSwitchId() const;
+		void SetSwitchId(int switch_id);
 
 	};
 }

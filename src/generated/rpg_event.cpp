@@ -14,42 +14,42 @@
 
 
 const std::string& RPG::Event::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::Event::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::Event::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 
 int RPG::Event::GetX() const {
-    return x;
+	return x;
 }
 
 void RPG::Event::SetX(int x) {
-    this->x = x;
+	this->x = x;
 }
 
 int RPG::Event::GetY() const {
-    return y;
+	return y;
 }
 
 void RPG::Event::SetY(int y) {
-    this->y = y;
+	this->y = y;
 }
 
 const std::vector<RPG::EventPage>& RPG::Event::GetPages() const  {
-    return pages;
+	return pages;
 }
 
 std::vector<RPG::EventPage>& RPG::Event::GetPages() {
-    return pages;
+	return pages;
 }
 
 void RPG::Event::SetPages(const std::vector<RPG::EventPage>& pages) {
-    this->pages = pages;
+	this->pages = pages;
 }
 

@@ -32,9 +32,8 @@ bool LDB_Reader::Load(const std::string& filename, const std::string& encoding) 
 
 	// Delayed initialization of some actor fields because they are engine
 	// dependent
-	std::vector<RPG::Actor>::iterator it;
-	for (it = Data::actors.begin(); it != Data::actors.end(); ++it) {
-		(*it).Setup();
+	for (auto& actor : Data::actors) {
+		actor->Setup();
 	}
 
 	return true;

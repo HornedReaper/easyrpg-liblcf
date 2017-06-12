@@ -14,22 +14,22 @@
 
 
 const std::string& RPG::BattleCommand::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::BattleCommand::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::BattleCommand::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 
 int RPG::BattleCommand::GetType() const {
-    return type;
+	return type;
 }
 
 void RPG::BattleCommand::SetType(int type) {
-    this->type = type;
+	this->type = type;
 }
 

@@ -14,74 +14,74 @@
 
 
 const std::string& RPG::Animation::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::Animation::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::Animation::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 
 const std::string& RPG::Animation::GetAnimationName() const  {
-    return animation_name;
+	return animation_name;
 }
 
 std::string& RPG::Animation::GetAnimationName() {
-    return animation_name;
+	return animation_name;
 }
 
 void RPG::Animation::SetAnimationName(const std::string& animation_name) {
-    this->animation_name = animation_name;
+	this->animation_name = animation_name;
 }
 
 int RPG::Animation::GetUnknown03() const {
-    return unknown_03;
+	return unknown_03;
 }
 
 void RPG::Animation::SetUnknown03(int unknown_03) {
-    this->unknown_03 = unknown_03;
+	this->unknown_03 = unknown_03;
 }
 
 const std::vector<RPG::AnimationTiming>& RPG::Animation::GetTimings() const  {
-    return timings;
+	return timings;
 }
 
 std::vector<RPG::AnimationTiming>& RPG::Animation::GetTimings() {
-    return timings;
+	return timings;
 }
 
 void RPG::Animation::SetTimings(const std::vector<RPG::AnimationTiming>& timings) {
-    this->timings = timings;
+	this->timings = timings;
 }
 
 int RPG::Animation::GetScope() const {
-    return scope;
+	return scope;
 }
 
 void RPG::Animation::SetScope(int scope) {
-    this->scope = scope;
+	this->scope = scope;
 }
 
 int RPG::Animation::GetPosition() const {
-    return position;
+	return position;
 }
 
 void RPG::Animation::SetPosition(int position) {
-    this->position = position;
+	this->position = position;
 }
 
 const std::vector<RPG::AnimationFrame>& RPG::Animation::GetFrames() const  {
-    return frames;
+	return frames;
 }
 
 std::vector<RPG::AnimationFrame>& RPG::Animation::GetFrames() {
-    return frames;
+	return frames;
 }
 
 void RPG::Animation::SetFrames(const std::vector<RPG::AnimationFrame>& frames) {
-    this->frames = frames;
+	this->frames = frames;
 }
 

@@ -29,35 +29,35 @@ namespace RPG {
 		int tone_blue = 100;
 		int tone_gray = 100;
 		int transparency = 0;
-        int GetValid() const;
-        void SetValid(int valid);
+		int GetValid() const;
+		void SetValid(int valid);
 
-        int GetCellId() const;
-        void SetCellId(int cell_id);
+		int GetCellId() const;
+		void SetCellId(int cell_id);
 
-        int GetX() const;
-        void SetX(int x);
+		int GetX() const;
+		void SetX(int x);
 
-        int GetY() const;
-        void SetY(int y);
+		int GetY() const;
+		void SetY(int y);
 
-        int GetZoom() const;
-        void SetZoom(int zoom);
+		int GetZoom() const;
+		void SetZoom(int zoom);
 
-        int GetToneRed() const;
-        void SetToneRed(int tone_red);
+		int GetToneRed() const;
+		void SetToneRed(int tone_red);
 
-        int GetToneGreen() const;
-        void SetToneGreen(int tone_green);
+		int GetToneGreen() const;
+		void SetToneGreen(int tone_green);
 
-        int GetToneBlue() const;
-        void SetToneBlue(int tone_blue);
+		int GetToneBlue() const;
+		void SetToneBlue(int tone_blue);
 
-        int GetToneGray() const;
-        void SetToneGray(int tone_gray);
+		int GetToneGray() const;
+		void SetToneGray(int tone_gray);
 
-        int GetTransparency() const;
-        void SetTransparency(int transparency);
+		int GetTransparency() const;
+		void SetTransparency(int transparency);
 
 	};
 }

@@ -14,14 +14,14 @@
 
 
 const std::string& RPG::Switch::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::Switch::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::Switch::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 

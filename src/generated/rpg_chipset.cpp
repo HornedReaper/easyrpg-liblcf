@@ -20,78 +20,78 @@ RPG::Chipset::Chipset() {
 
 
 const std::string& RPG::Chipset::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::Chipset::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::Chipset::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 
 const std::string& RPG::Chipset::GetChipsetName() const  {
-    return chipset_name;
+	return chipset_name;
 }
 
 std::string& RPG::Chipset::GetChipsetName() {
-    return chipset_name;
+	return chipset_name;
 }
 
 void RPG::Chipset::SetChipsetName(const std::string& chipset_name) {
-    this->chipset_name = chipset_name;
+	this->chipset_name = chipset_name;
 }
 
 const std::vector<int16_t>& RPG::Chipset::GetTerrainData() const  {
-    return terrain_data;
+	return terrain_data;
 }
 
 std::vector<int16_t>& RPG::Chipset::GetTerrainData() {
-    return terrain_data;
+	return terrain_data;
 }
 
 void RPG::Chipset::SetTerrainData(const std::vector<int16_t>& terrain_data) {
-    this->terrain_data = terrain_data;
+	this->terrain_data = terrain_data;
 }
 
 const std::vector<uint8_t>& RPG::Chipset::GetPassableDataLower() const  {
-    return passable_data_lower;
+	return passable_data_lower;
 }
 
 std::vector<uint8_t>& RPG::Chipset::GetPassableDataLower() {
-    return passable_data_lower;
+	return passable_data_lower;
 }
 
 void RPG::Chipset::SetPassableDataLower(const std::vector<uint8_t>& passable_data_lower) {
-    this->passable_data_lower = passable_data_lower;
+	this->passable_data_lower = passable_data_lower;
 }
 
 const std::vector<uint8_t>& RPG::Chipset::GetPassableDataUpper() const  {
-    return passable_data_upper;
+	return passable_data_upper;
 }
 
 std::vector<uint8_t>& RPG::Chipset::GetPassableDataUpper() {
-    return passable_data_upper;
+	return passable_data_upper;
 }
 
 void RPG::Chipset::SetPassableDataUpper(const std::vector<uint8_t>& passable_data_upper) {
-    this->passable_data_upper = passable_data_upper;
+	this->passable_data_upper = passable_data_upper;
 }
 
 int RPG::Chipset::GetAnimationType() const {
-    return animation_type;
+	return animation_type;
 }
 
 void RPG::Chipset::SetAnimationType(int animation_type) {
-    this->animation_type = animation_type;
+	this->animation_type = animation_type;
 }
 
 int RPG::Chipset::GetAnimationSpeed() const {
-    return animation_speed;
+	return animation_speed;
 }
 
 void RPG::Chipset::SetAnimationSpeed(int animation_speed) {
-    this->animation_speed = animation_speed;
+	this->animation_speed = animation_speed;
 }
 

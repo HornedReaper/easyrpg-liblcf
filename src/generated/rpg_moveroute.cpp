@@ -15,30 +15,30 @@
 
 
 const std::vector<RPG::MoveCommand>& RPG::MoveRoute::GetMoveCommands() const  {
-    return move_commands;
+	return move_commands;
 }
 
 std::vector<RPG::MoveCommand>& RPG::MoveRoute::GetMoveCommands() {
-    return move_commands;
+	return move_commands;
 }
 
 void RPG::MoveRoute::SetMoveCommands(const std::vector<RPG::MoveCommand>& move_commands) {
-    this->move_commands = move_commands;
+	this->move_commands = move_commands;
 }
 
 bool RPG::MoveRoute::GetRepeat() const {
-    return repeat;
+	return repeat;
 }
 
 void RPG::MoveRoute::SetRepeat(bool repeat) {
-    this->repeat = repeat;
+	this->repeat = repeat;
 }
 
 bool RPG::MoveRoute::GetSkippable() const {
-    return skippable;
+	return skippable;
 }
 
 void RPG::MoveRoute::SetSkippable(bool skippable) {
-    this->skippable = skippable;
+	this->skippable = skippable;
 }
 

@@ -32,22 +32,22 @@ namespace RPG {
 		int battler_index = 0;
 		int animation_type = 0;
 		int animation_id = 1;
-        const std::string& GetName() const;
-        std::string& GetName();
-        void SetName(const std::string& name);
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
 
-        const std::string& GetBattlerName() const;
-        std::string& GetBattlerName();
-        void SetBattlerName(const std::string& battler_name);
+		const std::string& GetBattlerName() const;
+		std::string& GetBattlerName();
+		void SetBattlerName(const std::string& battler_name);
 
-        int GetBattlerIndex() const;
-        void SetBattlerIndex(int battler_index);
+		int GetBattlerIndex() const;
+		void SetBattlerIndex(int battler_index);
 
-        int GetAnimationType() const;
-        void SetAnimationType(int animation_type);
+		int GetAnimationType() const;
+		void SetAnimationType(int animation_type);
 
-        int GetAnimationId() const;
-        void SetAnimationId(int animation_id);
+		int GetAnimationId() const;
+		void SetAnimationId(int animation_id);
 
 	};
 }

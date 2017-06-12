@@ -14,26 +14,26 @@
 
 
 int RPG::BattlerAnimationData::GetMove() const {
-    return move;
+	return move;
 }
 
 void RPG::BattlerAnimationData::SetMove(int move) {
-    this->move = move;
+	this->move = move;
 }
 
 int RPG::BattlerAnimationData::GetAfterImage() const {
-    return after_image;
+	return after_image;
 }
 
 void RPG::BattlerAnimationData::SetAfterImage(int after_image) {
-    this->after_image = after_image;
+	this->after_image = after_image;
 }
 
 int RPG::BattlerAnimationData::GetPose() const {
-    return pose;
+	return pose;
 }
 
 void RPG::BattlerAnimationData::SetPose(int pose) {
-    this->pose = pose;
+	this->pose = pose;
 }
 

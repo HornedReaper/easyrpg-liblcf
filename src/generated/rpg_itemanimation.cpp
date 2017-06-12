@@ -14,74 +14,74 @@
 
 
 int RPG::ItemAnimation::GetType() const {
-    return type;
+	return type;
 }
 
 void RPG::ItemAnimation::SetType(int type) {
-    this->type = type;
+	this->type = type;
 }
 
 int RPG::ItemAnimation::GetWeaponAnim() const {
-    return weapon_anim;
+	return weapon_anim;
 }
 
 void RPG::ItemAnimation::SetWeaponAnim(int weapon_anim) {
-    this->weapon_anim = weapon_anim;
+	this->weapon_anim = weapon_anim;
 }
 
 int RPG::ItemAnimation::GetMovement() const {
-    return movement;
+	return movement;
 }
 
 void RPG::ItemAnimation::SetMovement(int movement) {
-    this->movement = movement;
+	this->movement = movement;
 }
 
 int RPG::ItemAnimation::GetAfterImage() const {
-    return after_image;
+	return after_image;
 }
 
 void RPG::ItemAnimation::SetAfterImage(int after_image) {
-    this->after_image = after_image;
+	this->after_image = after_image;
 }
 
 int RPG::ItemAnimation::GetAttacks() const {
-    return attacks;
+	return attacks;
 }
 
 void RPG::ItemAnimation::SetAttacks(int attacks) {
-    this->attacks = attacks;
+	this->attacks = attacks;
 }
 
 bool RPG::ItemAnimation::GetRanged() const {
-    return ranged;
+	return ranged;
 }
 
 void RPG::ItemAnimation::SetRanged(bool ranged) {
-    this->ranged = ranged;
+	this->ranged = ranged;
 }
 
 int RPG::ItemAnimation::GetRangedAnim() const {
-    return ranged_anim;
+	return ranged_anim;
 }
 
 void RPG::ItemAnimation::SetRangedAnim(int ranged_anim) {
-    this->ranged_anim = ranged_anim;
+	this->ranged_anim = ranged_anim;
 }
 
 int RPG::ItemAnimation::GetRangedSpeed() const {
-    return ranged_speed;
+	return ranged_speed;
 }
 
 void RPG::ItemAnimation::SetRangedSpeed(int ranged_speed) {
-    this->ranged_speed = ranged_speed;
+	this->ranged_speed = ranged_speed;
 }
 
 int RPG::ItemAnimation::GetBattleAnim() const {
-    return battle_anim;
+	return battle_anim;
 }
 
 void RPG::ItemAnimation::SetBattleAnim(int battle_anim) {
-    this->battle_anim = battle_anim;
+	this->battle_anim = battle_anim;
 }
 
