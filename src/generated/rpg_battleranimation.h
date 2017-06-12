@@ -34,6 +34,21 @@ namespace RPG {
 		int speed = 0;
 		std::vector<BattlerAnimationExtension> base_data;
 		std::vector<BattlerAnimationExtension> weapon_data;
+        const std::string& GetName() const;
+        std::string& GetName();
+        void SetName(const std::string& name);
+
+        int GetSpeed() const;
+        void SetSpeed(int speed);
+
+        const std::vector<BattlerAnimationExtension>& GetBaseData() const;
+        std::vector<BattlerAnimationExtension>& GetBaseData();
+        void SetBaseData(const std::vector<BattlerAnimationExtension>& base_data);
+
+        const std::vector<BattlerAnimationExtension>& GetWeaponData() const;
+        std::vector<BattlerAnimationExtension>& GetWeaponData();
+        void SetWeaponData(const std::vector<BattlerAnimationExtension>& weapon_data);
+
 	};
 }
 

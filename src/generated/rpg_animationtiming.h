@@ -41,6 +41,31 @@ namespace RPG {
 		int flash_blue = 31;
 		int flash_power = 31;
 		int screen_shake = 0;
+        int GetFrame() const;
+        void SetFrame(int frame);
+
+        const Sound& GetSe() const;
+        Sound& GetSe();
+        void SetSe(const Sound& se);
+
+        int GetFlashScope() const;
+        void SetFlashScope(int flash_scope);
+
+        int GetFlashRed() const;
+        void SetFlashRed(int flash_red);
+
+        int GetFlashGreen() const;
+        void SetFlashGreen(int flash_green);
+
+        int GetFlashBlue() const;
+        void SetFlashBlue(int flash_blue);
+
+        int GetFlashPower() const;
+        void SetFlashPower(int flash_power);
+
+        int GetScreenShake() const;
+        void SetScreenShake(int screen_shake);
+
 	};
 }
 
