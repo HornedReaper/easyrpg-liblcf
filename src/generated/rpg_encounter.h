@@ -20,8 +20,8 @@ namespace RPG {
 	public:
 		int ID = 0;
 		int troop_id = 0;
-        int GetTroopId() const;
-        void SetTroopId(int troop_id);
+		int GetTroopId() const;
+		void SetTroopId(int troop_id);
 
 	};
 }

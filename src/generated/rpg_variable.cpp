@@ -14,14 +14,14 @@
 
 
 const std::string& RPG::Variable::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::Variable::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::Variable::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 

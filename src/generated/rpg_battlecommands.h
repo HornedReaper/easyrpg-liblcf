@@ -66,51 +66,51 @@ namespace RPG {
 		int teleport_x = 0;
 		int teleport_y = 0;
 		int teleport_face = 0;
-        int GetPlacement() const;
-        void SetPlacement(int placement);
+		int GetPlacement() const;
+		void SetPlacement(int placement);
 
-        int GetDeathHandler1() const;
-        void SetDeathHandler1(int death_handler1);
+		int GetDeathHandler1() const;
+		void SetDeathHandler1(int death_handler1);
 
-        int GetRow() const;
-        void SetRow(int row);
+		int GetRow() const;
+		void SetRow(int row);
 
-        int GetBattleType() const;
-        void SetBattleType(int battle_type);
+		int GetBattleType() const;
+		void SetBattleType(int battle_type);
 
-        int GetUnknown09() const;
-        void SetUnknown09(int unknown_09);
+		int GetUnknown09() const;
+		void SetUnknown09(int unknown_09);
 
-        const std::vector<BattleCommand>& GetCommands() const;
-        std::vector<BattleCommand>& GetCommands();
-        void SetCommands(const std::vector<BattleCommand>& commands);
+		const std::vector<BattleCommand>& GetCommands() const;
+		std::vector<BattleCommand>& GetCommands();
+		void SetCommands(const std::vector<BattleCommand>& commands);
 
-        int GetDeathHandler2() const;
-        void SetDeathHandler2(int death_handler2);
+		int GetDeathHandler2() const;
+		void SetDeathHandler2(int death_handler2);
 
-        int GetDeathEvent() const;
-        void SetDeathEvent(int death_event);
+		int GetDeathEvent() const;
+		void SetDeathEvent(int death_event);
 
-        int GetWindowSize() const;
-        void SetWindowSize(int window_size);
+		int GetWindowSize() const;
+		void SetWindowSize(int window_size);
 
-        int GetTransparency() const;
-        void SetTransparency(int transparency);
+		int GetTransparency() const;
+		void SetTransparency(int transparency);
 
-        bool GetTeleport() const;
-        void SetTeleport(bool teleport);
+		bool GetTeleport() const;
+		void SetTeleport(bool teleport);
 
-        int GetTeleportId() const;
-        void SetTeleportId(int teleport_id);
+		int GetTeleportId() const;
+		void SetTeleportId(int teleport_id);
 
-        int GetTeleportX() const;
-        void SetTeleportX(int teleport_x);
+		int GetTeleportX() const;
+		void SetTeleportX(int teleport_x);
 
-        int GetTeleportY() const;
-        void SetTeleportY(int teleport_y);
+		int GetTeleportY() const;
+		void SetTeleportY(int teleport_y);
 
-        int GetTeleportFace() const;
-        void SetTeleportFace(int teleport_face);
+		int GetTeleportFace() const;
+		void SetTeleportFace(int teleport_face);
 
 	};
 }

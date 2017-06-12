@@ -24,7 +24,7 @@ struct RawStruct<RPG::TreeMap> {
  * Reads Map Tree.
  */
 void RawStruct<RPG::TreeMap>::ReadLcf(RPG::TreeMap& ref, LcfReader& stream, uint32_t /* length */) {
-	Struct<RPG::MapInfo>::ReadLcf(ref.maps, stream);
+	Struct<RPG::MapInfo*>::ReadLcf(ref.maps, stream);
 	for (int i = stream.ReadInt(); i > 0; i--)
 		ref.tree_order.push_back(stream.ReadInt());
 	ref.active_node = stream.ReadInt();
@@ -32,7 +32,7 @@ void RawStruct<RPG::TreeMap>::ReadLcf(RPG::TreeMap& ref, LcfReader& stream, uint
 }
 
 void RawStruct<RPG::TreeMap>::WriteLcf(const RPG::TreeMap& ref, LcfWriter& stream) {
-	Struct<RPG::MapInfo>::WriteLcf(ref.maps, stream);
+	Struct<RPG::MapInfo*>::WriteLcf(ref.maps, stream);
 	int count = ref.tree_order.size();
 	stream.WriteInt(count);
 	for (int i = 0; i < count; i++)
@@ -50,7 +50,7 @@ void RawStruct<RPG::TreeMap>::WriteXml(const RPG::TreeMap& ref, XmlWriter& strea
 	stream.BeginElement("TreeMap");
 
 	stream.BeginElement("maps");
-	Struct<RPG::MapInfo>::WriteXml(ref.maps, stream);
+	Struct<RPG::MapInfo*>::WriteXml(ref.maps, stream);
 	stream.EndElement("maps");
 
 	stream.BeginElement("tree_order");
@@ -79,7 +79,7 @@ public:
 		active_node = false;
 		tree_order = false;
 		if (strcmp(name, "maps") == 0)
-			Struct<RPG::MapInfo>::BeginXml(ref.maps, stream);
+			Struct<RPG::MapInfo*>::BeginXml(ref.maps, stream);
 		else if (strcmp(name, "tree_order") == 0)
 			tree_order = true;
 		else if (strcmp(name, "active_node") == 0)

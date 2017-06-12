@@ -14,50 +14,50 @@
 
 
 const std::string& RPG::BattlerAnimationExtension::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::BattlerAnimationExtension::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::BattlerAnimationExtension::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 
 const std::string& RPG::BattlerAnimationExtension::GetBattlerName() const  {
-    return battler_name;
+	return battler_name;
 }
 
 std::string& RPG::BattlerAnimationExtension::GetBattlerName() {
-    return battler_name;
+	return battler_name;
 }
 
 void RPG::BattlerAnimationExtension::SetBattlerName(const std::string& battler_name) {
-    this->battler_name = battler_name;
+	this->battler_name = battler_name;
 }
 
 int RPG::BattlerAnimationExtension::GetBattlerIndex() const {
-    return battler_index;
+	return battler_index;
 }
 
 void RPG::BattlerAnimationExtension::SetBattlerIndex(int battler_index) {
-    this->battler_index = battler_index;
+	this->battler_index = battler_index;
 }
 
 int RPG::BattlerAnimationExtension::GetAnimationType() const {
-    return animation_type;
+	return animation_type;
 }
 
 void RPG::BattlerAnimationExtension::SetAnimationType(int animation_type) {
-    this->animation_type = animation_type;
+	this->animation_type = animation_type;
 }
 
 int RPG::BattlerAnimationExtension::GetAnimationId() const {
-    return animation_id;
+	return animation_id;
 }
 
 void RPG::BattlerAnimationExtension::SetAnimationId(int animation_id) {
-    this->animation_id = animation_id;
+	this->animation_id = animation_id;
 }
 

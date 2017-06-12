@@ -14,10 +14,10 @@
 
 
 int RPG::Encounter::GetTroopId() const {
-    return troop_id;
+	return troop_id;
 }
 
 void RPG::Encounter::SetTroopId(int troop_id) {
-    this->troop_id = troop_id;
+	this->troop_id = troop_id;
 }
 

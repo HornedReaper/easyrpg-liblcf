@@ -14,46 +14,46 @@
 
 
 const std::string& RPG::BattlerAnimation::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::BattlerAnimation::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::BattlerAnimation::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 
 int RPG::BattlerAnimation::GetSpeed() const {
-    return speed;
+	return speed;
 }
 
 void RPG::BattlerAnimation::SetSpeed(int speed) {
-    this->speed = speed;
+	this->speed = speed;
 }
 
 const std::vector<RPG::BattlerAnimationExtension>& RPG::BattlerAnimation::GetBaseData() const  {
-    return base_data;
+	return base_data;
 }
 
 std::vector<RPG::BattlerAnimationExtension>& RPG::BattlerAnimation::GetBaseData() {
-    return base_data;
+	return base_data;
 }
 
 void RPG::BattlerAnimation::SetBaseData(const std::vector<RPG::BattlerAnimationExtension>& base_data) {
-    this->base_data = base_data;
+	this->base_data = base_data;
 }
 
 const std::vector<RPG::BattlerAnimationExtension>& RPG::BattlerAnimation::GetWeaponData() const  {
-    return weapon_data;
+	return weapon_data;
 }
 
 std::vector<RPG::BattlerAnimationExtension>& RPG::BattlerAnimation::GetWeaponData() {
-    return weapon_data;
+	return weapon_data;
 }
 
 void RPG::BattlerAnimation::SetWeaponData(const std::vector<RPG::BattlerAnimationExtension>& weapon_data) {
-    this->weapon_data = weapon_data;
+	this->weapon_data = weapon_data;
 }
 

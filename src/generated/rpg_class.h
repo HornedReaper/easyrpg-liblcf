@@ -40,55 +40,55 @@ namespace RPG {
 		std::vector<uint8_t> state_ranks;
 		std::vector<uint8_t> attribute_ranks;
 		std::vector<uint32_t> battle_commands;
-        const std::string& GetName() const;
-        std::string& GetName();
-        void SetName(const std::string& name);
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
 
-        bool GetTwoWeapon() const;
-        void SetTwoWeapon(bool two_weapon);
+		bool GetTwoWeapon() const;
+		void SetTwoWeapon(bool two_weapon);
 
-        bool GetLockEquipment() const;
-        void SetLockEquipment(bool lock_equipment);
+		bool GetLockEquipment() const;
+		void SetLockEquipment(bool lock_equipment);
 
-        bool GetAutoBattle() const;
-        void SetAutoBattle(bool auto_battle);
+		bool GetAutoBattle() const;
+		void SetAutoBattle(bool auto_battle);
 
-        bool GetSuperGuard() const;
-        void SetSuperGuard(bool super_guard);
+		bool GetSuperGuard() const;
+		void SetSuperGuard(bool super_guard);
 
-        const Parameters& GetParameters() const;
-        Parameters& GetParameters();
-        void SetParameters(const Parameters& parameters);
+		const Parameters& GetParameters() const;
+		Parameters& GetParameters();
+		void SetParameters(const Parameters& parameters);
 
-        int GetExpBase() const;
-        void SetExpBase(int exp_base);
+		int GetExpBase() const;
+		void SetExpBase(int exp_base);
 
-        int GetExpInflation() const;
-        void SetExpInflation(int exp_inflation);
+		int GetExpInflation() const;
+		void SetExpInflation(int exp_inflation);
 
-        int GetExpCorrection() const;
-        void SetExpCorrection(int exp_correction);
+		int GetExpCorrection() const;
+		void SetExpCorrection(int exp_correction);
 
-        int GetBattlerAnimation() const;
-        void SetBattlerAnimation(int battler_animation);
+		int GetBattlerAnimation() const;
+		void SetBattlerAnimation(int battler_animation);
 
-        const std::vector<Learning>& GetSkills() const;
-        std::vector<Learning>& GetSkills();
-        void SetSkills(const std::vector<Learning>& skills);
-
-
-        const std::vector<uint8_t>& GetStateRanks() const;
-        std::vector<uint8_t>& GetStateRanks();
-        void SetStateRanks(const std::vector<uint8_t>& state_ranks);
+		const std::vector<Learning>& GetSkills() const;
+		std::vector<Learning>& GetSkills();
+		void SetSkills(const std::vector<Learning>& skills);
 
 
-        const std::vector<uint8_t>& GetAttributeRanks() const;
-        std::vector<uint8_t>& GetAttributeRanks();
-        void SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks);
+		const std::vector<uint8_t>& GetStateRanks() const;
+		std::vector<uint8_t>& GetStateRanks();
+		void SetStateRanks(const std::vector<uint8_t>& state_ranks);
 
-        const std::vector<uint32_t>& GetBattleCommands() const;
-        std::vector<uint32_t>& GetBattleCommands();
-        void SetBattleCommands(const std::vector<uint32_t>& battle_commands);
+
+		const std::vector<uint8_t>& GetAttributeRanks() const;
+		std::vector<uint8_t>& GetAttributeRanks();
+		void SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks);
+
+		const std::vector<uint32_t>& GetBattleCommands() const;
+		std::vector<uint32_t>& GetBattleCommands();
+		void SetBattleCommands(const std::vector<uint32_t>& battle_commands);
 
 	};
 }

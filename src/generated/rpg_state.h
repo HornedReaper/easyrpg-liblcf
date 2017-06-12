@@ -85,137 +85,137 @@ namespace RPG {
 		int sp_change_val = 0;
 		int sp_change_map_val = 0;
 		int sp_change_map_steps = 0;
-        const std::string& GetName() const;
-        std::string& GetName();
-        void SetName(const std::string& name);
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
 
-        int GetType() const;
-        void SetType(int type);
+		int GetType() const;
+		void SetType(int type);
 
-        int GetColor() const;
-        void SetColor(int color);
+		int GetColor() const;
+		void SetColor(int color);
 
-        int GetPriority() const;
-        void SetPriority(int priority);
+		int GetPriority() const;
+		void SetPriority(int priority);
 
-        int GetRestriction() const;
-        void SetRestriction(int restriction);
+		int GetRestriction() const;
+		void SetRestriction(int restriction);
 
-        int GetARate() const;
-        void SetARate(int a_rate);
+		int GetARate() const;
+		void SetARate(int a_rate);
 
-        int GetBRate() const;
-        void SetBRate(int b_rate);
+		int GetBRate() const;
+		void SetBRate(int b_rate);
 
-        int GetCRate() const;
-        void SetCRate(int c_rate);
+		int GetCRate() const;
+		void SetCRate(int c_rate);
 
-        int GetDRate() const;
-        void SetDRate(int d_rate);
+		int GetDRate() const;
+		void SetDRate(int d_rate);
 
-        int GetERate() const;
-        void SetERate(int e_rate);
+		int GetERate() const;
+		void SetERate(int e_rate);
 
-        int GetHoldTurn() const;
-        void SetHoldTurn(int hold_turn);
+		int GetHoldTurn() const;
+		void SetHoldTurn(int hold_turn);
 
-        int GetAutoReleaseProb() const;
-        void SetAutoReleaseProb(int auto_release_prob);
+		int GetAutoReleaseProb() const;
+		void SetAutoReleaseProb(int auto_release_prob);
 
-        int GetReleaseByDamage() const;
-        void SetReleaseByDamage(int release_by_damage);
+		int GetReleaseByDamage() const;
+		void SetReleaseByDamage(int release_by_damage);
 
-        int GetAffectType() const;
-        void SetAffectType(int affect_type);
+		int GetAffectType() const;
+		void SetAffectType(int affect_type);
 
-        bool GetAffectAttack() const;
-        void SetAffectAttack(bool affect_attack);
+		bool GetAffectAttack() const;
+		void SetAffectAttack(bool affect_attack);
 
-        bool GetAffectDefense() const;
-        void SetAffectDefense(bool affect_defense);
+		bool GetAffectDefense() const;
+		void SetAffectDefense(bool affect_defense);
 
-        bool GetAffectSpirit() const;
-        void SetAffectSpirit(bool affect_spirit);
+		bool GetAffectSpirit() const;
+		void SetAffectSpirit(bool affect_spirit);
 
-        bool GetAffectAgility() const;
-        void SetAffectAgility(bool affect_agility);
+		bool GetAffectAgility() const;
+		void SetAffectAgility(bool affect_agility);
 
-        int GetReduceHitRatio() const;
-        void SetReduceHitRatio(int reduce_hit_ratio);
+		int GetReduceHitRatio() const;
+		void SetReduceHitRatio(int reduce_hit_ratio);
 
-        bool GetAvoidAttacks() const;
-        void SetAvoidAttacks(bool avoid_attacks);
+		bool GetAvoidAttacks() const;
+		void SetAvoidAttacks(bool avoid_attacks);
 
-        bool GetReflectMagic() const;
-        void SetReflectMagic(bool reflect_magic);
+		bool GetReflectMagic() const;
+		void SetReflectMagic(bool reflect_magic);
 
-        bool GetCursed() const;
-        void SetCursed(bool cursed);
+		bool GetCursed() const;
+		void SetCursed(bool cursed);
 
-        int GetBattlerAnimationId() const;
-        void SetBattlerAnimationId(int battler_animation_id);
+		int GetBattlerAnimationId() const;
+		void SetBattlerAnimationId(int battler_animation_id);
 
-        bool GetRestrictSkill() const;
-        void SetRestrictSkill(bool restrict_skill);
+		bool GetRestrictSkill() const;
+		void SetRestrictSkill(bool restrict_skill);
 
-        int GetRestrictSkillLevel() const;
-        void SetRestrictSkillLevel(int restrict_skill_level);
+		int GetRestrictSkillLevel() const;
+		void SetRestrictSkillLevel(int restrict_skill_level);
 
-        bool GetRestrictMagic() const;
-        void SetRestrictMagic(bool restrict_magic);
+		bool GetRestrictMagic() const;
+		void SetRestrictMagic(bool restrict_magic);
 
-        int GetRestrictMagicLevel() const;
-        void SetRestrictMagicLevel(int restrict_magic_level);
+		int GetRestrictMagicLevel() const;
+		void SetRestrictMagicLevel(int restrict_magic_level);
 
-        int GetHpChangeType() const;
-        void SetHpChangeType(int hp_change_type);
+		int GetHpChangeType() const;
+		void SetHpChangeType(int hp_change_type);
 
-        int GetSpChangeType() const;
-        void SetSpChangeType(int sp_change_type);
+		int GetSpChangeType() const;
+		void SetSpChangeType(int sp_change_type);
 
-        const std::string& GetMessageActor() const;
-        std::string& GetMessageActor();
-        void SetMessageActor(const std::string& message_actor);
+		const std::string& GetMessageActor() const;
+		std::string& GetMessageActor();
+		void SetMessageActor(const std::string& message_actor);
 
-        const std::string& GetMessageEnemy() const;
-        std::string& GetMessageEnemy();
-        void SetMessageEnemy(const std::string& message_enemy);
+		const std::string& GetMessageEnemy() const;
+		std::string& GetMessageEnemy();
+		void SetMessageEnemy(const std::string& message_enemy);
 
-        const std::string& GetMessageAlready() const;
-        std::string& GetMessageAlready();
-        void SetMessageAlready(const std::string& message_already);
+		const std::string& GetMessageAlready() const;
+		std::string& GetMessageAlready();
+		void SetMessageAlready(const std::string& message_already);
 
-        const std::string& GetMessageAffected() const;
-        std::string& GetMessageAffected();
-        void SetMessageAffected(const std::string& message_affected);
+		const std::string& GetMessageAffected() const;
+		std::string& GetMessageAffected();
+		void SetMessageAffected(const std::string& message_affected);
 
-        const std::string& GetMessageRecovery() const;
-        std::string& GetMessageRecovery();
-        void SetMessageRecovery(const std::string& message_recovery);
+		const std::string& GetMessageRecovery() const;
+		std::string& GetMessageRecovery();
+		void SetMessageRecovery(const std::string& message_recovery);
 
-        int GetHpChangeMax() const;
-        void SetHpChangeMax(int hp_change_max);
+		int GetHpChangeMax() const;
+		void SetHpChangeMax(int hp_change_max);
 
-        int GetHpChangeVal() const;
-        void SetHpChangeVal(int hp_change_val);
+		int GetHpChangeVal() const;
+		void SetHpChangeVal(int hp_change_val);
 
-        int GetHpChangeMapVal() const;
-        void SetHpChangeMapVal(int hp_change_map_val);
+		int GetHpChangeMapVal() const;
+		void SetHpChangeMapVal(int hp_change_map_val);
 
-        int GetHpChangeMapSteps() const;
-        void SetHpChangeMapSteps(int hp_change_map_steps);
+		int GetHpChangeMapSteps() const;
+		void SetHpChangeMapSteps(int hp_change_map_steps);
 
-        int GetSpChangeMax() const;
-        void SetSpChangeMax(int sp_change_max);
+		int GetSpChangeMax() const;
+		void SetSpChangeMax(int sp_change_max);
 
-        int GetSpChangeVal() const;
-        void SetSpChangeVal(int sp_change_val);
+		int GetSpChangeVal() const;
+		void SetSpChangeVal(int sp_change_val);
 
-        int GetSpChangeMapVal() const;
-        void SetSpChangeMapVal(int sp_change_map_val);
+		int GetSpChangeMapVal() const;
+		void SetSpChangeMapVal(int sp_change_map_val);
 
-        int GetSpChangeMapSteps() const;
-        void SetSpChangeMapSteps(int sp_change_map_steps);
+		int GetSpChangeMapSteps() const;
+		void SetSpChangeMapSteps(int sp_change_map_steps);
 
 	};
 }

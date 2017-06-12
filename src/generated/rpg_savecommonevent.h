@@ -23,9 +23,9 @@ namespace RPG {
 	public:
 		int ID = 0;
 		SaveEventData event_data;
-        const SaveEventData& GetEventData() const;
-        SaveEventData& GetEventData();
-        void SetEventData(const SaveEventData& event_data);
+		const SaveEventData& GetEventData() const;
+		SaveEventData& GetEventData();
+		void SetEventData(const SaveEventData& event_data);
 
 	};
 }

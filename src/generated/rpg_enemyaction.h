@@ -58,44 +58,44 @@ namespace RPG {
 		bool switch_off = false;
 		int switch_off_id = 1;
 		int rating = 50;
-        int GetKind() const;
-        void SetKind(int kind);
+		int GetKind() const;
+		void SetKind(int kind);
 
-        int GetBasic() const;
-        void SetBasic(int basic);
+		int GetBasic() const;
+		void SetBasic(int basic);
 
-        int GetSkillId() const;
-        void SetSkillId(int skill_id);
+		int GetSkillId() const;
+		void SetSkillId(int skill_id);
 
-        int GetEnemyId() const;
-        void SetEnemyId(int enemy_id);
+		int GetEnemyId() const;
+		void SetEnemyId(int enemy_id);
 
-        int GetConditionType() const;
-        void SetConditionType(int condition_type);
+		int GetConditionType() const;
+		void SetConditionType(int condition_type);
 
-        int GetConditionParam1() const;
-        void SetConditionParam1(int condition_param1);
+		int GetConditionParam1() const;
+		void SetConditionParam1(int condition_param1);
 
-        int GetConditionParam2() const;
-        void SetConditionParam2(int condition_param2);
+		int GetConditionParam2() const;
+		void SetConditionParam2(int condition_param2);
 
-        int GetSwitchId() const;
-        void SetSwitchId(int switch_id);
+		int GetSwitchId() const;
+		void SetSwitchId(int switch_id);
 
-        bool GetSwitchOn() const;
-        void SetSwitchOn(bool switch_on);
+		bool GetSwitchOn() const;
+		void SetSwitchOn(bool switch_on);
 
-        int GetSwitchOnId() const;
-        void SetSwitchOnId(int switch_on_id);
+		int GetSwitchOnId() const;
+		void SetSwitchOnId(int switch_on_id);
 
-        bool GetSwitchOff() const;
-        void SetSwitchOff(bool switch_off);
+		bool GetSwitchOff() const;
+		void SetSwitchOff(bool switch_off);
 
-        int GetSwitchOffId() const;
-        void SetSwitchOffId(int switch_off_id);
+		int GetSwitchOffId() const;
+		void SetSwitchOffId(int switch_off_id);
 
-        int GetRating() const;
-        void SetRating(int rating);
+		int GetRating() const;
+		void SetRating(int rating);
 
 	};
 }

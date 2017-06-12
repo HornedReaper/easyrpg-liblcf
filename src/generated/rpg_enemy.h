@@ -46,75 +46,75 @@ namespace RPG {
 		std::vector<uint8_t> state_ranks;
 		std::vector<uint8_t> attribute_ranks;
 		std::vector<EnemyAction> actions;
-        const std::string& GetName() const;
-        std::string& GetName();
-        void SetName(const std::string& name);
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
 
-        const std::string& GetBattlerName() const;
-        std::string& GetBattlerName();
-        void SetBattlerName(const std::string& battler_name);
+		const std::string& GetBattlerName() const;
+		std::string& GetBattlerName();
+		void SetBattlerName(const std::string& battler_name);
 
-        int GetBattlerHue() const;
-        void SetBattlerHue(int battler_hue);
+		int GetBattlerHue() const;
+		void SetBattlerHue(int battler_hue);
 
-        int GetMaxHp() const;
-        void SetMaxHp(int max_hp);
+		int GetMaxHp() const;
+		void SetMaxHp(int max_hp);
 
-        int GetMaxSp() const;
-        void SetMaxSp(int max_sp);
+		int GetMaxSp() const;
+		void SetMaxSp(int max_sp);
 
-        int GetAttack() const;
-        void SetAttack(int attack);
+		int GetAttack() const;
+		void SetAttack(int attack);
 
-        int GetDefense() const;
-        void SetDefense(int defense);
+		int GetDefense() const;
+		void SetDefense(int defense);
 
-        int GetSpirit() const;
-        void SetSpirit(int spirit);
+		int GetSpirit() const;
+		void SetSpirit(int spirit);
 
-        int GetAgility() const;
-        void SetAgility(int agility);
+		int GetAgility() const;
+		void SetAgility(int agility);
 
-        bool GetTransparent() const;
-        void SetTransparent(bool transparent);
+		bool GetTransparent() const;
+		void SetTransparent(bool transparent);
 
-        int GetExp() const;
-        void SetExp(int exp);
+		int GetExp() const;
+		void SetExp(int exp);
 
-        int GetGold() const;
-        void SetGold(int gold);
+		int GetGold() const;
+		void SetGold(int gold);
 
-        int GetDropId() const;
-        void SetDropId(int drop_id);
+		int GetDropId() const;
+		void SetDropId(int drop_id);
 
-        int GetDropProb() const;
-        void SetDropProb(int drop_prob);
+		int GetDropProb() const;
+		void SetDropProb(int drop_prob);
 
-        bool GetCriticalHit() const;
-        void SetCriticalHit(bool critical_hit);
+		bool GetCriticalHit() const;
+		void SetCriticalHit(bool critical_hit);
 
-        int GetCriticalHitChance() const;
-        void SetCriticalHitChance(int critical_hit_chance);
+		int GetCriticalHitChance() const;
+		void SetCriticalHitChance(int critical_hit_chance);
 
-        bool GetMiss() const;
-        void SetMiss(bool miss);
+		bool GetMiss() const;
+		void SetMiss(bool miss);
 
-        bool GetLevitate() const;
-        void SetLevitate(bool levitate);
-
-
-        const std::vector<uint8_t>& GetStateRanks() const;
-        std::vector<uint8_t>& GetStateRanks();
-        void SetStateRanks(const std::vector<uint8_t>& state_ranks);
+		bool GetLevitate() const;
+		void SetLevitate(bool levitate);
 
 
-        const std::vector<uint8_t>& GetAttributeRanks() const;
-        std::vector<uint8_t>& GetAttributeRanks();
-        void SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks);
+		const std::vector<uint8_t>& GetStateRanks() const;
+		std::vector<uint8_t>& GetStateRanks();
+		void SetStateRanks(const std::vector<uint8_t>& state_ranks);
 
-        const std::vector<EnemyAction>& GetActions() const;
-        std::vector<EnemyAction>& GetActions();
-        void SetActions(const std::vector<EnemyAction>& actions);
+
+		const std::vector<uint8_t>& GetAttributeRanks() const;
+		std::vector<uint8_t>& GetAttributeRanks();
+		void SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks);
+
+		const std::vector<EnemyAction>& GetActions() const;
+		std::vector<EnemyAction>& GetActions();
+		void SetActions(const std::vector<EnemyAction>& actions);
 
 	};
 }

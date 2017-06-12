@@ -44,51 +44,51 @@ namespace RPG {
 		int parallax_horz_speed = 0;
 		bool parallax_vert_auto = false;
 		int parallax_vert_speed = 0;
-        int GetPositionX() const;
-        void SetPositionX(int position_x);
+		int GetPositionX() const;
+		void SetPositionX(int position_x);
 
-        int GetPositionY() const;
-        void SetPositionY(int position_y);
+		int GetPositionY() const;
+		void SetPositionY(int position_y);
 
-        int GetEncounterRate() const;
-        void SetEncounterRate(int encounter_rate);
+		int GetEncounterRate() const;
+		void SetEncounterRate(int encounter_rate);
 
-        int GetChipsetId() const;
-        void SetChipsetId(int chipset_id);
+		int GetChipsetId() const;
+		void SetChipsetId(int chipset_id);
 
-        const std::vector<SaveMapEvent>& GetEvents() const;
-        std::vector<SaveMapEvent>& GetEvents();
-        void SetEvents(const std::vector<SaveMapEvent>& events);
+		const std::vector<SaveMapEvent>& GetEvents() const;
+		std::vector<SaveMapEvent>& GetEvents();
+		void SetEvents(const std::vector<SaveMapEvent>& events);
 
-        const std::vector<uint8_t>& GetLowerTiles() const;
-        std::vector<uint8_t>& GetLowerTiles();
-        void SetLowerTiles(const std::vector<uint8_t>& lower_tiles);
+		const std::vector<uint8_t>& GetLowerTiles() const;
+		std::vector<uint8_t>& GetLowerTiles();
+		void SetLowerTiles(const std::vector<uint8_t>& lower_tiles);
 
-        const std::vector<uint8_t>& GetUpperTiles() const;
-        std::vector<uint8_t>& GetUpperTiles();
-        void SetUpperTiles(const std::vector<uint8_t>& upper_tiles);
+		const std::vector<uint8_t>& GetUpperTiles() const;
+		std::vector<uint8_t>& GetUpperTiles();
+		void SetUpperTiles(const std::vector<uint8_t>& upper_tiles);
 
-        const std::string& GetParallaxName() const;
-        std::string& GetParallaxName();
-        void SetParallaxName(const std::string& parallax_name);
+		const std::string& GetParallaxName() const;
+		std::string& GetParallaxName();
+		void SetParallaxName(const std::string& parallax_name);
 
-        bool GetParallaxHorz() const;
-        void SetParallaxHorz(bool parallax_horz);
+		bool GetParallaxHorz() const;
+		void SetParallaxHorz(bool parallax_horz);
 
-        bool GetParallaxVert() const;
-        void SetParallaxVert(bool parallax_vert);
+		bool GetParallaxVert() const;
+		void SetParallaxVert(bool parallax_vert);
 
-        bool GetParallaxHorzAuto() const;
-        void SetParallaxHorzAuto(bool parallax_horz_auto);
+		bool GetParallaxHorzAuto() const;
+		void SetParallaxHorzAuto(bool parallax_horz_auto);
 
-        int GetParallaxHorzSpeed() const;
-        void SetParallaxHorzSpeed(int parallax_horz_speed);
+		int GetParallaxHorzSpeed() const;
+		void SetParallaxHorzSpeed(int parallax_horz_speed);
 
-        bool GetParallaxVertAuto() const;
-        void SetParallaxVertAuto(bool parallax_vert_auto);
+		bool GetParallaxVertAuto() const;
+		void SetParallaxVertAuto(bool parallax_vert_auto);
 
-        int GetParallaxVertSpeed() const;
-        void SetParallaxVertSpeed(int parallax_vert_speed);
+		int GetParallaxVertSpeed() const;
+		void SetParallaxVertSpeed(int parallax_vert_speed);
 
 	};
 }

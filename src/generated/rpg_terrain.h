@@ -71,107 +71,107 @@ namespace RPG {
 		int grid_a = 0;
 		int grid_b = 0;
 		int grid_c = 0;
-        const std::string& GetName() const;
-        std::string& GetName();
-        void SetName(const std::string& name);
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
 
-        int GetDamage() const;
-        void SetDamage(int damage);
+		int GetDamage() const;
+		void SetDamage(int damage);
 
-        int GetEncounterRate() const;
-        void SetEncounterRate(int encounter_rate);
+		int GetEncounterRate() const;
+		void SetEncounterRate(int encounter_rate);
 
-        const std::string& GetBackgroundName() const;
-        std::string& GetBackgroundName();
-        void SetBackgroundName(const std::string& background_name);
+		const std::string& GetBackgroundName() const;
+		std::string& GetBackgroundName();
+		void SetBackgroundName(const std::string& background_name);
 
-        bool GetBoatPass() const;
-        void SetBoatPass(bool boat_pass);
+		bool GetBoatPass() const;
+		void SetBoatPass(bool boat_pass);
 
-        bool GetShipPass() const;
-        void SetShipPass(bool ship_pass);
+		bool GetShipPass() const;
+		void SetShipPass(bool ship_pass);
 
-        bool GetAirshipPass() const;
-        void SetAirshipPass(bool airship_pass);
+		bool GetAirshipPass() const;
+		void SetAirshipPass(bool airship_pass);
 
-        bool GetAirshipLand() const;
-        void SetAirshipLand(bool airship_land);
+		bool GetAirshipLand() const;
+		void SetAirshipLand(bool airship_land);
 
-        int GetBushDepth() const;
-        void SetBushDepth(int bush_depth);
+		int GetBushDepth() const;
+		void SetBushDepth(int bush_depth);
 
-        const Sound& GetFootstep() const;
-        Sound& GetFootstep();
-        void SetFootstep(const Sound& footstep);
+		const Sound& GetFootstep() const;
+		Sound& GetFootstep();
+		void SetFootstep(const Sound& footstep);
 
-        bool GetOnDamageSe() const;
-        void SetOnDamageSe(bool on_damage_se);
+		bool GetOnDamageSe() const;
+		void SetOnDamageSe(bool on_damage_se);
 
-        int GetBackgroundType() const;
-        void SetBackgroundType(int background_type);
+		int GetBackgroundType() const;
+		void SetBackgroundType(int background_type);
 
-        const std::string& GetBackgroundAName() const;
-        std::string& GetBackgroundAName();
-        void SetBackgroundAName(const std::string& background_a_name);
+		const std::string& GetBackgroundAName() const;
+		std::string& GetBackgroundAName();
+		void SetBackgroundAName(const std::string& background_a_name);
 
-        bool GetBackgroundAScrollh() const;
-        void SetBackgroundAScrollh(bool background_a_scrollh);
+		bool GetBackgroundAScrollh() const;
+		void SetBackgroundAScrollh(bool background_a_scrollh);
 
-        bool GetBackgroundAScrollv() const;
-        void SetBackgroundAScrollv(bool background_a_scrollv);
+		bool GetBackgroundAScrollv() const;
+		void SetBackgroundAScrollv(bool background_a_scrollv);
 
-        int GetBackgroundAScrollhSpeed() const;
-        void SetBackgroundAScrollhSpeed(int background_a_scrollh_speed);
+		int GetBackgroundAScrollhSpeed() const;
+		void SetBackgroundAScrollhSpeed(int background_a_scrollh_speed);
 
-        int GetBackgroundAScrollvSpeed() const;
-        void SetBackgroundAScrollvSpeed(int background_a_scrollv_speed);
+		int GetBackgroundAScrollvSpeed() const;
+		void SetBackgroundAScrollvSpeed(int background_a_scrollv_speed);
 
-        bool GetBackgroundB() const;
-        void SetBackgroundB(bool background_b);
+		bool GetBackgroundB() const;
+		void SetBackgroundB(bool background_b);
 
-        const std::string& GetBackgroundBName() const;
-        std::string& GetBackgroundBName();
-        void SetBackgroundBName(const std::string& background_b_name);
+		const std::string& GetBackgroundBName() const;
+		std::string& GetBackgroundBName();
+		void SetBackgroundBName(const std::string& background_b_name);
 
-        bool GetBackgroundBScrollh() const;
-        void SetBackgroundBScrollh(bool background_b_scrollh);
+		bool GetBackgroundBScrollh() const;
+		void SetBackgroundBScrollh(bool background_b_scrollh);
 
-        bool GetBackgroundBScrollv() const;
-        void SetBackgroundBScrollv(bool background_b_scrollv);
+		bool GetBackgroundBScrollv() const;
+		void SetBackgroundBScrollv(bool background_b_scrollv);
 
-        int GetBackgroundBScrollhSpeed() const;
-        void SetBackgroundBScrollhSpeed(int background_b_scrollh_speed);
+		int GetBackgroundBScrollhSpeed() const;
+		void SetBackgroundBScrollhSpeed(int background_b_scrollh_speed);
 
-        int GetBackgroundBScrollvSpeed() const;
-        void SetBackgroundBScrollvSpeed(int background_b_scrollv_speed);
+		int GetBackgroundBScrollvSpeed() const;
+		void SetBackgroundBScrollvSpeed(int background_b_scrollv_speed);
 
-        const Flags& GetSpecialFlags() const;
-        Flags& GetSpecialFlags();
-        void SetSpecialFlags(const Flags& special_flags);
+		const Flags& GetSpecialFlags() const;
+		Flags& GetSpecialFlags();
+		void SetSpecialFlags(const Flags& special_flags);
 
-        int GetSpecialBackParty() const;
-        void SetSpecialBackParty(int special_back_party);
+		int GetSpecialBackParty() const;
+		void SetSpecialBackParty(int special_back_party);
 
-        int GetSpecialBackEnemies() const;
-        void SetSpecialBackEnemies(int special_back_enemies);
+		int GetSpecialBackEnemies() const;
+		void SetSpecialBackEnemies(int special_back_enemies);
 
-        int GetSpecialLateralParty() const;
-        void SetSpecialLateralParty(int special_lateral_party);
+		int GetSpecialLateralParty() const;
+		void SetSpecialLateralParty(int special_lateral_party);
 
-        int GetSpecialLateralEnemies() const;
-        void SetSpecialLateralEnemies(int special_lateral_enemies);
+		int GetSpecialLateralEnemies() const;
+		void SetSpecialLateralEnemies(int special_lateral_enemies);
 
-        int GetGridLocation() const;
-        void SetGridLocation(int grid_location);
+		int GetGridLocation() const;
+		void SetGridLocation(int grid_location);
 
-        int GetGridA() const;
-        void SetGridA(int grid_a);
+		int GetGridA() const;
+		void SetGridA(int grid_a);
 
-        int GetGridB() const;
-        void SetGridB(int grid_b);
+		int GetGridB() const;
+		void SetGridB(int grid_b);
 
-        int GetGridC() const;
-        void SetGridC(int grid_c);
+		int GetGridC() const;
+		void SetGridC(int grid_c);
 
 	};
 }

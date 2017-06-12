@@ -14,62 +14,62 @@
 
 
 const std::string& RPG::Attribute::GetName() const  {
-    return name;
+	return name;
 }
 
 std::string& RPG::Attribute::GetName() {
-    return name;
+	return name;
 }
 
 void RPG::Attribute::SetName(const std::string& name) {
-    this->name = name;
+	this->name = name;
 }
 
 int RPG::Attribute::GetType() const {
-    return type;
+	return type;
 }
 
 void RPG::Attribute::SetType(int type) {
-    this->type = type;
+	this->type = type;
 }
 
 int RPG::Attribute::GetARate() const {
-    return a_rate;
+	return a_rate;
 }
 
 void RPG::Attribute::SetARate(int a_rate) {
-    this->a_rate = a_rate;
+	this->a_rate = a_rate;
 }
 
 int RPG::Attribute::GetBRate() const {
-    return b_rate;
+	return b_rate;
 }
 
 void RPG::Attribute::SetBRate(int b_rate) {
-    this->b_rate = b_rate;
+	this->b_rate = b_rate;
 }
 
 int RPG::Attribute::GetCRate() const {
-    return c_rate;
+	return c_rate;
 }
 
 void RPG::Attribute::SetCRate(int c_rate) {
-    this->c_rate = c_rate;
+	this->c_rate = c_rate;
 }
 
 int RPG::Attribute::GetDRate() const {
-    return d_rate;
+	return d_rate;
 }
 
 void RPG::Attribute::SetDRate(int d_rate) {
-    this->d_rate = d_rate;
+	this->d_rate = d_rate;
 }
 
 int RPG::Attribute::GetERate() const {
-    return e_rate;
+	return e_rate;
 }
 
 void RPG::Attribute::SetERate(int e_rate) {
-    this->e_rate = e_rate;
+	this->e_rate = e_rate;
 }
 

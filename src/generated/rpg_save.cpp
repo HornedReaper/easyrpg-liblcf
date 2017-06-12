@@ -14,178 +14,178 @@
 
 
 const RPG::SaveTitle& RPG::Save::GetTitle() const  {
-    return title;
+	return title;
 }
 
 RPG::SaveTitle& RPG::Save::GetTitle() {
-    return title;
+	return title;
 }
 
 void RPG::Save::SetTitle(const RPG::SaveTitle& title) {
-    this->title = title;
+	this->title = title;
 }
 
 const RPG::SaveSystem& RPG::Save::GetSystem() const  {
-    return system;
+	return system;
 }
 
 RPG::SaveSystem& RPG::Save::GetSystem() {
-    return system;
+	return system;
 }
 
 void RPG::Save::SetSystem(const RPG::SaveSystem& system) {
-    this->system = system;
+	this->system = system;
 }
 
 const RPG::SaveScreen& RPG::Save::GetScreen() const  {
-    return screen;
+	return screen;
 }
 
 RPG::SaveScreen& RPG::Save::GetScreen() {
-    return screen;
+	return screen;
 }
 
 void RPG::Save::SetScreen(const RPG::SaveScreen& screen) {
-    this->screen = screen;
+	this->screen = screen;
 }
 
 const std::vector<RPG::SavePicture>& RPG::Save::GetPictures() const  {
-    return pictures;
+	return pictures;
 }
 
 std::vector<RPG::SavePicture>& RPG::Save::GetPictures() {
-    return pictures;
+	return pictures;
 }
 
 void RPG::Save::SetPictures(const std::vector<RPG::SavePicture>& pictures) {
-    this->pictures = pictures;
+	this->pictures = pictures;
 }
 
 const RPG::SavePartyLocation& RPG::Save::GetPartyLocation() const  {
-    return party_location;
+	return party_location;
 }
 
 RPG::SavePartyLocation& RPG::Save::GetPartyLocation() {
-    return party_location;
+	return party_location;
 }
 
 void RPG::Save::SetPartyLocation(const RPG::SavePartyLocation& party_location) {
-    this->party_location = party_location;
+	this->party_location = party_location;
 }
 
 const RPG::SaveVehicleLocation& RPG::Save::GetBoatLocation() const  {
-    return boat_location;
+	return boat_location;
 }
 
 RPG::SaveVehicleLocation& RPG::Save::GetBoatLocation() {
-    return boat_location;
+	return boat_location;
 }
 
 void RPG::Save::SetBoatLocation(const RPG::SaveVehicleLocation& boat_location) {
-    this->boat_location = boat_location;
+	this->boat_location = boat_location;
 }
 
 const RPG::SaveVehicleLocation& RPG::Save::GetShipLocation() const  {
-    return ship_location;
+	return ship_location;
 }
 
 RPG::SaveVehicleLocation& RPG::Save::GetShipLocation() {
-    return ship_location;
+	return ship_location;
 }
 
 void RPG::Save::SetShipLocation(const RPG::SaveVehicleLocation& ship_location) {
-    this->ship_location = ship_location;
+	this->ship_location = ship_location;
 }
 
 const RPG::SaveVehicleLocation& RPG::Save::GetAirshipLocation() const  {
-    return airship_location;
+	return airship_location;
 }
 
 RPG::SaveVehicleLocation& RPG::Save::GetAirshipLocation() {
-    return airship_location;
+	return airship_location;
 }
 
 void RPG::Save::SetAirshipLocation(const RPG::SaveVehicleLocation& airship_location) {
-    this->airship_location = airship_location;
+	this->airship_location = airship_location;
 }
 
 const std::vector<RPG::SaveActor>& RPG::Save::GetActors() const  {
-    return actors;
+	return actors;
 }
 
 std::vector<RPG::SaveActor>& RPG::Save::GetActors() {
-    return actors;
+	return actors;
 }
 
 void RPG::Save::SetActors(const std::vector<RPG::SaveActor>& actors) {
-    this->actors = actors;
+	this->actors = actors;
 }
 
 const RPG::SaveInventory& RPG::Save::GetInventory() const  {
-    return inventory;
+	return inventory;
 }
 
 RPG::SaveInventory& RPG::Save::GetInventory() {
-    return inventory;
+	return inventory;
 }
 
 void RPG::Save::SetInventory(const RPG::SaveInventory& inventory) {
-    this->inventory = inventory;
+	this->inventory = inventory;
 }
 
 const std::vector<RPG::SaveTarget>& RPG::Save::GetTargets() const  {
-    return targets;
+	return targets;
 }
 
 std::vector<RPG::SaveTarget>& RPG::Save::GetTargets() {
-    return targets;
+	return targets;
 }
 
 void RPG::Save::SetTargets(const std::vector<RPG::SaveTarget>& targets) {
-    this->targets = targets;
+	this->targets = targets;
 }
 
 const RPG::SaveMapInfo& RPG::Save::GetMapInfo() const  {
-    return map_info;
+	return map_info;
 }
 
 RPG::SaveMapInfo& RPG::Save::GetMapInfo() {
-    return map_info;
+	return map_info;
 }
 
 void RPG::Save::SetMapInfo(const RPG::SaveMapInfo& map_info) {
-    this->map_info = map_info;
+	this->map_info = map_info;
 }
 
 int RPG::Save::GetPanoramaData() const {
-    return panorama_data;
+	return panorama_data;
 }
 
 void RPG::Save::SetPanoramaData(int panorama_data) {
-    this->panorama_data = panorama_data;
+	this->panorama_data = panorama_data;
 }
 
 const RPG::SaveEventData& RPG::Save::GetEvents() const  {
-    return events;
+	return events;
 }
 
 RPG::SaveEventData& RPG::Save::GetEvents() {
-    return events;
+	return events;
 }
 
 void RPG::Save::SetEvents(const RPG::SaveEventData& events) {
-    this->events = events;
+	this->events = events;
 }
 
 const std::vector<RPG::SaveCommonEvent>& RPG::Save::GetCommonEvents() const  {
-    return common_events;
+	return common_events;
 }
 
 std::vector<RPG::SaveCommonEvent>& RPG::Save::GetCommonEvents() {
-    return common_events;
+	return common_events;
 }
 
 void RPG::Save::SetCommonEvents(const std::vector<RPG::SaveCommonEvent>& common_events) {
-    this->common_events = common_events;
+	this->common_events = common_events;
 }
 
