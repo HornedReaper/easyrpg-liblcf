@@ -33,6 +33,47 @@ namespace RPG {
 		int face3_id = 0;
 		std::string face4_name;
 		int face4_id = 0;
+        double GetTimestamp() const;
+        void SetTimestamp(double timestamp);
+
+        const std::string& GetHeroName() const;
+        std::string& GetHeroName();
+        void SetHeroName(const std::string& hero_name);
+
+        int GetHeroLevel() const;
+        void SetHeroLevel(int hero_level);
+
+        int GetHeroHp() const;
+        void SetHeroHp(int hero_hp);
+
+        const std::string& GetFace1Name() const;
+        std::string& GetFace1Name();
+        void SetFace1Name(const std::string& face1_name);
+
+        int GetFace1Id() const;
+        void SetFace1Id(int face1_id);
+
+        const std::string& GetFace2Name() const;
+        std::string& GetFace2Name();
+        void SetFace2Name(const std::string& face2_name);
+
+        int GetFace2Id() const;
+        void SetFace2Id(int face2_id);
+
+        const std::string& GetFace3Name() const;
+        std::string& GetFace3Name();
+        void SetFace3Name(const std::string& face3_name);
+
+        int GetFace3Id() const;
+        void SetFace3Id(int face3_id);
+
+        const std::string& GetFace4Name() const;
+        std::string& GetFace4Name();
+        void SetFace4Name(const std::string& face4_name);
+
+        int GetFace4Id() const;
+        void SetFace4Id(int face4_id);
+
 	};
 }
 

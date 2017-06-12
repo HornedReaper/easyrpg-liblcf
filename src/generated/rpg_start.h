@@ -30,6 +30,42 @@ namespace RPG {
 		int airship_map_id = 0;
 		int airship_x = 0;
 		int airship_y = 0;
+        int GetPartyMapId() const;
+        void SetPartyMapId(int party_map_id);
+
+        int GetPartyX() const;
+        void SetPartyX(int party_x);
+
+        int GetPartyY() const;
+        void SetPartyY(int party_y);
+
+        int GetBoatMapId() const;
+        void SetBoatMapId(int boat_map_id);
+
+        int GetBoatX() const;
+        void SetBoatX(int boat_x);
+
+        int GetBoatY() const;
+        void SetBoatY(int boat_y);
+
+        int GetShipMapId() const;
+        void SetShipMapId(int ship_map_id);
+
+        int GetShipX() const;
+        void SetShipX(int ship_x);
+
+        int GetShipY() const;
+        void SetShipY(int ship_y);
+
+        int GetAirshipMapId() const;
+        void SetAirshipMapId(int airship_map_id);
+
+        int GetAirshipX() const;
+        void SetAirshipX(int airship_x);
+
+        int GetAirshipY() const;
+        void SetAirshipY(int airship_y);
+
 	};
 }
 

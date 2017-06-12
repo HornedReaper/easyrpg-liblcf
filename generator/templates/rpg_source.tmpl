@@ -2,9 +2,37 @@
 // Headers
 #include "rpg_{{ filename }}.h"
 
+{%- if struct_name is needs_ctor %}
 /**
  * Constructor.
  */
 RPG::{{ struct_name }}::{{ struct_name }}() {
 	Init();
 }
+{%- endif %}
+
+{% for field in fields[struct_name]|field_is_used %}
+{%- if not field.size %}
+{%- if field is pod %}
+{{ field.type|cpp_type }} RPG::{{ struct_name }}::Get{{ field|method }}() const {
+    return {{ field.name }};
+}
+
+void RPG::{{ struct_name }}::Set{{ field|method }}({{ field.type|cpp_type }} {{ field.name }}) {
+    this->{{ field.name }} = {{ field.name }};
+}
+{%- else %}
+const {{ field.type|cpp_type }}& RPG::{{ struct_name }}::Get{{ field|method }}() const  {
+    return {{ field.name }};
+}
+
+{{ field.type|cpp_type }}& RPG::{{ struct_name }}::Get{{ field|method }}() {
+    return {{ field.name }};
+}
+
+void RPG::{{ struct_name }}::Set{{ field|method }}(const {{ field.type|cpp_type }}& {{ field.name }}) {
+    this->{{ field.name }} = {{ field.name }};
+}
+{%- endif %}
+{%- endif %}
+{% endfor %}
