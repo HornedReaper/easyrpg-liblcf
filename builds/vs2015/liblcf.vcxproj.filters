@@ -443,6 +443,12 @@
     <ClCompile Include="..\..\src\generated\rpg_saveactor.cpp">
       <Filter>Source Files\RPG</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\rpg_fixup.cpp">
+      <Filter>Source Files\RPG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rpg_setup.cpp">
+      <Filter>Source Files\RPG</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\command_codes.h">

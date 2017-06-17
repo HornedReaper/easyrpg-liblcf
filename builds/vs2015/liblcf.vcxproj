@@ -255,6 +255,8 @@
     <ClCompile Include="..\..\src\reader_lcf.cpp" />
     <ClCompile Include="..\..\src\reader_util.cpp" />
     <ClCompile Include="..\..\src\reader_xml.cpp" />
+    <ClCompile Include="..\..\src\rpg_fixup.cpp" />
+    <ClCompile Include="..\..\src\rpg_setup.cpp" />
     <ClCompile Include="..\..\src\writer_lcf.cpp" />
     <ClCompile Include="..\..\src\writer_xml.cpp" />
     <ClCompile Include="..\..\src\generated\ldb_actor.cpp" />

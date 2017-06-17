@@ -50,8 +50,8 @@ namespace RPG {
 		std::string& GetAnimationName();
 		void SetAnimationName(const std::string& animation_name);
 
-		int GetUnknown03() const;
-		void SetUnknown03(int unknown_03);
+		bool GetLarge() const;
+		void SetLarge(bool large);
 
 		const std::vector<AnimationTiming>& GetTimings() const;
 		std::vector<AnimationTiming>& GetTimings();

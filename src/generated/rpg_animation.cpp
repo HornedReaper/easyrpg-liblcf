@@ -37,12 +37,12 @@ void RPG::Animation::SetAnimationName(const std::string& animation_name) {
 	this->animation_name = animation_name;
 }
 
-int RPG::Animation::GetUnknown03() const {
-	return unknown_03;
+bool RPG::Animation::GetLarge() const {
+	return large;
 }
 
-void RPG::Animation::SetUnknown03(int unknown_03) {
-	this->unknown_03 = unknown_03;
+void RPG::Animation::SetLarge(bool large) {
+	this->large = large;
 }
 
 const std::vector<RPG::AnimationTiming>& RPG::Animation::GetTimings() const  {

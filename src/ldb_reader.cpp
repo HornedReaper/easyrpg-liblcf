@@ -33,7 +33,7 @@ bool LDB_Reader::Load(const std::string& filename, const std::string& encoding) 
 	// Delayed initialization of some actor fields because they are engine
 	// dependent
 	for (auto& actor : Data::actors) {
-		actor->Setup();
+		actor.Setup();
 	}
 
 	return true;
