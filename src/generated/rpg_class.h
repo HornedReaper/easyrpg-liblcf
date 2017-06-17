@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 #include "rpg_learning.h"
 #include "rpg_parameters.h"
@@ -36,10 +36,10 @@ namespace RPG {
 		int exp_inflation = 300;
 		int exp_correction = 0;
 		int battler_animation = 0;
-		std::vector<Learning> skills;
-		std::vector<uint8_t> state_ranks;
-		std::vector<uint8_t> attribute_ranks;
-		std::vector<uint32_t> battle_commands;
+		LcfVector<Learning> skills;
+		LcfVector<uint8_t> state_ranks;
+		LcfVector<uint8_t> attribute_ranks;
+		LcfVector<uint32_t> battle_commands;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);
@@ -72,23 +72,23 @@ namespace RPG {
 		int GetBattlerAnimation() const;
 		void SetBattlerAnimation(int battler_animation);
 
-		const std::vector<Learning>& GetSkills() const;
-		std::vector<Learning>& GetSkills();
-		void SetSkills(const std::vector<Learning>& skills);
+		const LcfVector<Learning>& GetSkills() const;
+		LcfVector<Learning>& GetSkills();
+		void SetSkills(const LcfVector<Learning>& skills);
 
 
-		const std::vector<uint8_t>& GetStateRanks() const;
-		std::vector<uint8_t>& GetStateRanks();
-		void SetStateRanks(const std::vector<uint8_t>& state_ranks);
+		const LcfVector<uint8_t>& GetStateRanks() const;
+		LcfVector<uint8_t>& GetStateRanks();
+		void SetStateRanks(const LcfVector<uint8_t>& state_ranks);
 
 
-		const std::vector<uint8_t>& GetAttributeRanks() const;
-		std::vector<uint8_t>& GetAttributeRanks();
-		void SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks);
+		const LcfVector<uint8_t>& GetAttributeRanks() const;
+		LcfVector<uint8_t>& GetAttributeRanks();
+		void SetAttributeRanks(const LcfVector<uint8_t>& attribute_ranks);
 
-		const std::vector<uint32_t>& GetBattleCommands() const;
-		std::vector<uint32_t>& GetBattleCommands();
-		void SetBattleCommands(const std::vector<uint32_t>& battle_commands);
+		const LcfVector<uint32_t>& GetBattleCommands() const;
+		LcfVector<uint32_t>& GetBattleCommands();
+		void SetBattleCommands(const LcfVector<uint32_t>& battle_commands);
 
 	};
 }

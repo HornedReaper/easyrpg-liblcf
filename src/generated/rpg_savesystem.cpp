@@ -65,15 +65,15 @@ void RPG::SaveSystem::SetSwitchesSize(int switches_size) {
 	this->switches_size = switches_size;
 }
 
-const std::vector<bool>& RPG::SaveSystem::GetSwitches() const  {
+const LcfVector<bool>& RPG::SaveSystem::GetSwitches() const  {
 	return switches;
 }
 
-std::vector<bool>& RPG::SaveSystem::GetSwitches() {
+LcfVector<bool>& RPG::SaveSystem::GetSwitches() {
 	return switches;
 }
 
-void RPG::SaveSystem::SetSwitches(const std::vector<bool>& switches) {
+void RPG::SaveSystem::SetSwitches(const LcfVector<bool>& switches) {
 	this->switches = switches;
 }
 
@@ -85,15 +85,15 @@ void RPG::SaveSystem::SetVariablesSize(int variables_size) {
 	this->variables_size = variables_size;
 }
 
-const std::vector<uint32_t>& RPG::SaveSystem::GetVariables() const  {
+const LcfVector<uint32_t>& RPG::SaveSystem::GetVariables() const  {
 	return variables;
 }
 
-std::vector<uint32_t>& RPG::SaveSystem::GetVariables() {
+LcfVector<uint32_t>& RPG::SaveSystem::GetVariables() {
 	return variables;
 }
 
-void RPG::SaveSystem::SetVariables(const std::vector<uint32_t>& variables) {
+void RPG::SaveSystem::SetVariables(const LcfVector<uint32_t>& variables) {
 	this->variables = variables;
 }
 

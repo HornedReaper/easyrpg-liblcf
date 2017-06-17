@@ -237,6 +237,7 @@
     <ClCompile Include="..\..\src\generated\rpg_trooppage.cpp" />
     <ClCompile Include="..\..\src\generated\rpg_trooppagecondition.cpp" />
     <ClCompile Include="..\..\src\generated\rpg_variable.cpp" />
+    <ClCompile Include="..\..\src\lcf_vector.cpp" />
     <ClCompile Include="..\..\src\reader_struct.cpp" />
     <ClCompile Include="..\..\src\data.cpp" />
     <ClCompile Include="..\..\src\ini.cpp" />
@@ -255,6 +256,8 @@
     <ClCompile Include="..\..\src\reader_lcf.cpp" />
     <ClCompile Include="..\..\src\reader_util.cpp" />
     <ClCompile Include="..\..\src\reader_xml.cpp" />
+    <ClCompile Include="..\..\src\rpg_fixup.cpp" />
+    <ClCompile Include="..\..\src\rpg_setup.cpp" />
     <ClCompile Include="..\..\src\writer_lcf.cpp" />
     <ClCompile Include="..\..\src\writer_xml.cpp" />
     <ClCompile Include="..\..\src\generated\ldb_actor.cpp" />
@@ -324,6 +327,7 @@
     <ClInclude Include="..\..\src\ini.h" />
     <ClInclude Include="..\..\src\inireader.h" />
     <ClInclude Include="..\..\src\lcf_options.h" />
+    <ClInclude Include="..\..\src\lcf_vector.h" />
     <ClInclude Include="..\..\src\ldb_reader.h" />
     <ClInclude Include="..\..\src\lmt_reader.h" />
     <ClInclude Include="..\..\src\lmu_reader.h" />

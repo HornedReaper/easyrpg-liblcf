@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 
 /**
  * RPG::EventCommand class.
@@ -158,7 +158,7 @@ namespace RPG {
 		int code = 0;
 		int indent = 0;
 		std::string string;
-		std::vector<int> parameters;
+		LcfVector<int> parameters;
 		int GetCode() const;
 		void SetCode(int code);
 
@@ -169,9 +169,9 @@ namespace RPG {
 		std::string& GetString();
 		void SetString(const std::string& string);
 
-		const std::vector<int>& GetParameters() const;
-		std::vector<int>& GetParameters();
-		void SetParameters(const std::vector<int>& parameters);
+		const LcfVector<int>& GetParameters() const;
+		LcfVector<int>& GetParameters();
+		void SetParameters(const LcfVector<int>& parameters);
 
 	};
 }

@@ -50,12 +50,12 @@ LCF_STRUCT_FIELDS_BEGIN()
 	LCF_STRUCT_TYPED_FIELD(bool, absorb_damage),
 	LCF_STRUCT_TYPED_FIELD(bool, ignore_defense),
 	LCF_STRUCT_SIZE_FIELD(bool, state_effects),
-	LCF_STRUCT_TYPED_FIELD(std::vector<bool>, state_effects),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<bool>, state_effects),
 	LCF_STRUCT_SIZE_FIELD(bool, attribute_effects),
-	LCF_STRUCT_TYPED_FIELD(std::vector<bool>, attribute_effects),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<bool>, attribute_effects),
 	LCF_STRUCT_TYPED_FIELD(bool, affect_attr_defence),
 	LCF_STRUCT_TYPED_FIELD(int, battler_animation),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::BattlerAnimationData>, battler_animation_data),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::BattlerAnimationData>, battler_animation_data),
 LCF_STRUCT_FIELDS_END()
 
 #undef LCF_CURRENT_STRUCT

@@ -34,7 +34,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <sstream>
-#include <vector>
+#include "lcf_vector.h"
 
 #include "data.h"
 #include "inireader.h"

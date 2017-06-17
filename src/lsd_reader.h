@@ -11,7 +11,7 @@
 #define LCF_LSD_READER_H
 
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include <memory>
 #include <ctime>
 #include "rpg_save.h"

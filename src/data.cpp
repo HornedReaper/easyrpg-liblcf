@@ -13,24 +13,24 @@
 namespace Data {
 	RPG::Database data;
 
-	std::vector<RPG::Actor*>& actors = data.actors;
-	std::vector<RPG::Skill*>& skills = data.skills;
-	std::vector<RPG::Item*>& items = data.items;
-	std::vector<RPG::Enemy*>& enemies = data.enemies;
-	std::vector<RPG::Troop*>& troops = data.troops;
-	std::vector<RPG::Terrain*>& terrains = data.terrains;
-	std::vector<RPG::Attribute*>& attributes = data.attributes;
-	std::vector<RPG::State*>& states = data.states;
-	std::vector<RPG::Animation*>& animations = data.animations;
-	std::vector<RPG::Chipset*>& chipsets = data.chipsets;
-	std::vector<RPG::CommonEvent*>& commonevents = data.commonevents;
+	LcfVector<RPG::Actor>& actors = data.actors;
+	LcfVector<RPG::Skill>& skills = data.skills;
+	LcfVector<RPG::Item>& items = data.items;
+	LcfVector<RPG::Enemy>& enemies = data.enemies;
+	LcfVector<RPG::Troop>& troops = data.troops;
+	LcfVector<RPG::Terrain>& terrains = data.terrains;
+	LcfVector<RPG::Attribute>& attributes = data.attributes;
+	LcfVector<RPG::State>& states = data.states;
+	LcfVector<RPG::Animation>& animations = data.animations;
+	LcfVector<RPG::Chipset>& chipsets = data.chipsets;
+	LcfVector<RPG::CommonEvent>& commonevents = data.commonevents;
 	RPG::BattleCommands& battlecommands = data.battlecommands;
-	std::vector<RPG::Class*>& classes = data.classes;
-	std::vector<RPG::BattlerAnimation*>& battleranimations = data.battleranimations;
+	LcfVector<RPG::Class>& classes = data.classes;
+	LcfVector<RPG::BattlerAnimation>& battleranimations = data.battleranimations;
 	RPG::Terms& terms = data.terms;
 	RPG::System& system = data.system;
-	std::vector<RPG::Switch*>& switches = data.switches;
-	std::vector<RPG::Variable*>& variables = data.variables;
+	LcfVector<RPG::Switch>& switches = data.switches;
+	LcfVector<RPG::Variable>& variables = data.variables;
 
 	RPG::TreeMap treemap;
 }

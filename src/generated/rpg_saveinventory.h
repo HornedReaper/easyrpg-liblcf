@@ -13,7 +13,7 @@
 #define LCF_RPG_SAVEINVENTORY_H
 
 // Headers
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 
 /**
@@ -24,11 +24,11 @@ namespace RPG {
 	public:
 		void Setup();
 		int party_size = -1;
-		std::vector<int16_t> party;
+		LcfVector<int16_t> party;
 		int items_size = -1;
-		std::vector<int16_t> item_ids;
-		std::vector<uint8_t> item_counts;
-		std::vector<uint8_t> item_usage;
+		LcfVector<int16_t> item_ids;
+		LcfVector<uint8_t> item_counts;
+		LcfVector<uint8_t> item_usage;
 		int gold = 0;
 		int timer1_secs = 0;
 		bool timer1_active = false;
@@ -47,24 +47,24 @@ namespace RPG {
 		int GetPartySize() const;
 		void SetPartySize(int party_size);
 
-		const std::vector<int16_t>& GetParty() const;
-		std::vector<int16_t>& GetParty();
-		void SetParty(const std::vector<int16_t>& party);
+		const LcfVector<int16_t>& GetParty() const;
+		LcfVector<int16_t>& GetParty();
+		void SetParty(const LcfVector<int16_t>& party);
 
 		int GetItemsSize() const;
 		void SetItemsSize(int items_size);
 
-		const std::vector<int16_t>& GetItemIds() const;
-		std::vector<int16_t>& GetItemIds();
-		void SetItemIds(const std::vector<int16_t>& item_ids);
+		const LcfVector<int16_t>& GetItemIds() const;
+		LcfVector<int16_t>& GetItemIds();
+		void SetItemIds(const LcfVector<int16_t>& item_ids);
 
-		const std::vector<uint8_t>& GetItemCounts() const;
-		std::vector<uint8_t>& GetItemCounts();
-		void SetItemCounts(const std::vector<uint8_t>& item_counts);
+		const LcfVector<uint8_t>& GetItemCounts() const;
+		LcfVector<uint8_t>& GetItemCounts();
+		void SetItemCounts(const LcfVector<uint8_t>& item_counts);
 
-		const std::vector<uint8_t>& GetItemUsage() const;
-		std::vector<uint8_t>& GetItemUsage();
-		void SetItemUsage(const std::vector<uint8_t>& item_usage);
+		const LcfVector<uint8_t>& GetItemUsage() const;
+		LcfVector<uint8_t>& GetItemUsage();
+		void SetItemUsage(const LcfVector<uint8_t>& item_usage);
 
 		int GetGold() const;
 		void SetGold(int gold);

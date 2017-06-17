@@ -11,7 +11,7 @@
 #define LCF_WRITER_XML_H
 
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include <cstdio>
 #include "reader_types.h"
 
@@ -131,7 +131,7 @@ protected:
 	 * @param val vector to write.
 	 */
 	template <class T>
-	void WriteVector(const std::vector<T>& val);
+	void WriteVector(const LcfVector<T>& val);
 
 };
 

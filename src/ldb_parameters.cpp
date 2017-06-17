@@ -48,19 +48,19 @@ int RawStruct<RPG::Parameters>::LcfSize(const RPG::Parameters& ref, LcfWriter& /
 
 void RawStruct<RPG::Parameters>::WriteXml(const RPG::Parameters& ref, XmlWriter& stream) {
 	stream.BeginElement("Parameters");
-	stream.WriteNode<std::vector<int16_t> >("maxhp", ref.maxhp);
-	stream.WriteNode<std::vector<int16_t> >("maxsp", ref.maxsp);
-	stream.WriteNode<std::vector<int16_t> >("attack", ref.attack);
-	stream.WriteNode<std::vector<int16_t> >("defense", ref.defense);
-	stream.WriteNode<std::vector<int16_t> >("spirit", ref.spirit);
-	stream.WriteNode<std::vector<int16_t> >("agility", ref.agility);
+	stream.WriteNode<LcfVector<int16_t> >("maxhp", ref.maxhp);
+	stream.WriteNode<LcfVector<int16_t> >("maxsp", ref.maxsp);
+	stream.WriteNode<LcfVector<int16_t> >("attack", ref.attack);
+	stream.WriteNode<LcfVector<int16_t> >("defense", ref.defense);
+	stream.WriteNode<LcfVector<int16_t> >("spirit", ref.spirit);
+	stream.WriteNode<LcfVector<int16_t> >("agility", ref.agility);
 	stream.EndElement("Parameters");
 }
 
 class ParametersXmlHandler : public XmlHandler {
 private:
 	RPG::Parameters& ref;
-	std::vector<int16_t>* field;
+	LcfVector<int16_t>* field;
 public:
 	ParametersXmlHandler(RPG::Parameters& ref) : ref(ref), field(NULL) {}
 	void StartElement(XmlReader& stream, const char* name, const char** /* atts */) {
@@ -86,7 +86,7 @@ public:
 	}
 	void CharacterData(XmlReader& /* stream */, const std::string& data) {
 		if (field != NULL)
-			XmlReader::Read<std::vector<int16_t> >(*field, data);
+			XmlReader::Read<LcfVector<int16_t> >(*field, data);
 	}
 };
 

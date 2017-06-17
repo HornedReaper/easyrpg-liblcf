@@ -26,15 +26,15 @@ void RPG::TroopPage::SetCondition(const RPG::TroopPageCondition& condition) {
 }
 
 
-const std::vector<RPG::EventCommand>& RPG::TroopPage::GetEventCommands() const  {
+const LcfVector<RPG::EventCommand>& RPG::TroopPage::GetEventCommands() const  {
 	return event_commands;
 }
 
-std::vector<RPG::EventCommand>& RPG::TroopPage::GetEventCommands() {
+LcfVector<RPG::EventCommand>& RPG::TroopPage::GetEventCommands() {
 	return event_commands;
 }
 
-void RPG::TroopPage::SetEventCommands(const std::vector<RPG::EventCommand>& event_commands) {
+void RPG::TroopPage::SetEventCommands(const LcfVector<RPG::EventCommand>& event_commands) {
 	this->event_commands = event_commands;
 }
 

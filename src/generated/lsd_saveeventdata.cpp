@@ -20,7 +20,7 @@
 #define LCF_CURRENT_STRUCT SaveEventData
 
 LCF_STRUCT_FIELDS_BEGIN()
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::SaveEventCommands>, commands),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::SaveEventCommands>, commands),
 	LCF_STRUCT_TYPED_FIELD(bool, show_message),
 	LCF_STRUCT_TYPED_FIELD(int, unknown_0b_escape),
 	LCF_STRUCT_TYPED_FIELD(bool, wait_movement),

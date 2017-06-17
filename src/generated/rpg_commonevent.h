@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_eventcommand.h"
 
 /**
@@ -34,7 +34,7 @@ namespace RPG {
 		int trigger = 0;
 		bool switch_flag = false;
 		int switch_id = 1;
-		std::vector<EventCommand> event_commands;
+		LcfVector<EventCommand> event_commands;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);
@@ -49,9 +49,9 @@ namespace RPG {
 		void SetSwitchId(int switch_id);
 
 
-		const std::vector<EventCommand>& GetEventCommands() const;
-		std::vector<EventCommand>& GetEventCommands();
-		void SetEventCommands(const std::vector<EventCommand>& event_commands);
+		const LcfVector<EventCommand>& GetEventCommands() const;
+		LcfVector<EventCommand>& GetEventCommands();
+		void SetEventCommands(const LcfVector<EventCommand>& event_commands);
 
 	};
 }

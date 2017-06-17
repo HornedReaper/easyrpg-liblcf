@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 #include "rpg_enemyaction.h"
 
@@ -43,9 +43,9 @@ namespace RPG {
 		int critical_hit_chance = 30;
 		bool miss = false;
 		bool levitate = false;
-		std::vector<uint8_t> state_ranks;
-		std::vector<uint8_t> attribute_ranks;
-		std::vector<EnemyAction> actions;
+		LcfVector<uint8_t> state_ranks;
+		LcfVector<uint8_t> attribute_ranks;
+		LcfVector<EnemyAction> actions;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);
@@ -103,18 +103,18 @@ namespace RPG {
 		void SetLevitate(bool levitate);
 
 
-		const std::vector<uint8_t>& GetStateRanks() const;
-		std::vector<uint8_t>& GetStateRanks();
-		void SetStateRanks(const std::vector<uint8_t>& state_ranks);
+		const LcfVector<uint8_t>& GetStateRanks() const;
+		LcfVector<uint8_t>& GetStateRanks();
+		void SetStateRanks(const LcfVector<uint8_t>& state_ranks);
 
 
-		const std::vector<uint8_t>& GetAttributeRanks() const;
-		std::vector<uint8_t>& GetAttributeRanks();
-		void SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks);
+		const LcfVector<uint8_t>& GetAttributeRanks() const;
+		LcfVector<uint8_t>& GetAttributeRanks();
+		void SetAttributeRanks(const LcfVector<uint8_t>& attribute_ranks);
 
-		const std::vector<EnemyAction>& GetActions() const;
-		std::vector<EnemyAction>& GetActions();
-		void SetActions(const std::vector<EnemyAction>& actions);
+		const LcfVector<EnemyAction>& GetActions() const;
+		LcfVector<EnemyAction>& GetActions();
+		void SetActions(const LcfVector<EnemyAction>& actions);
 
 	};
 }

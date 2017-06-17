@@ -23,18 +23,18 @@ LCF_STRUCT_FIELDS_BEGIN()
 	LCF_STRUCT_TYPED_FIELD(RPG::SaveTitle, title),
 	LCF_STRUCT_TYPED_FIELD(RPG::SaveSystem, system),
 	LCF_STRUCT_TYPED_FIELD(RPG::SaveScreen, screen),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::SavePicture>, pictures),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::SavePicture>, pictures),
 	LCF_STRUCT_TYPED_FIELD(RPG::SavePartyLocation, party_location),
 	LCF_STRUCT_TYPED_FIELD(RPG::SaveVehicleLocation, boat_location),
 	LCF_STRUCT_TYPED_FIELD(RPG::SaveVehicleLocation, ship_location),
 	LCF_STRUCT_TYPED_FIELD(RPG::SaveVehicleLocation, airship_location),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::SaveActor>, actors),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::SaveActor>, actors),
 	LCF_STRUCT_TYPED_FIELD(RPG::SaveInventory, inventory),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::SaveTarget>, targets),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::SaveTarget>, targets),
 	LCF_STRUCT_TYPED_FIELD(RPG::SaveMapInfo, map_info),
 	LCF_STRUCT_TYPED_FIELD(int, panorama_data),
 	LCF_STRUCT_TYPED_FIELD(RPG::SaveEventData, events),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::SaveCommonEvent>, common_events),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::SaveCommonEvent>, common_events),
 LCF_STRUCT_FIELDS_END()
 
 #undef LCF_CURRENT_STRUCT

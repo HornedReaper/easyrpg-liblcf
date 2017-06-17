@@ -13,7 +13,7 @@
 #define LCF_RPG_TREEMAP_H
 
 // Headers
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_mapinfo.h"
 #include "rpg_start.h"
 
@@ -23,17 +23,17 @@
 namespace RPG {
 	class TreeMap {
 	public:
-		std::vector<MapInfo> maps;
-		std::vector<int> tree_order;
+		LcfVector<MapInfo> maps;
+		LcfVector<int> tree_order;
 		int active_node = 0;
 		Start start;
-		const std::vector<MapInfo>& GetMaps() const;
-		std::vector<MapInfo>& GetMaps();
-		void SetMaps(const std::vector<MapInfo>& maps);
+		const LcfVector<MapInfo>& GetMaps() const;
+		LcfVector<MapInfo>& GetMaps();
+		void SetMaps(const LcfVector<MapInfo>& maps);
 
-		const std::vector<int>& GetTreeOrder() const;
-		std::vector<int>& GetTreeOrder();
-		void SetTreeOrder(const std::vector<int>& tree_order);
+		const LcfVector<int>& GetTreeOrder() const;
+		LcfVector<int>& GetTreeOrder();
+		void SetTreeOrder(const LcfVector<int>& tree_order);
 
 		int GetActiveNode() const;
 		void SetActiveNode(int active_node);

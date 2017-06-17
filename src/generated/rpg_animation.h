@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_animationframe.h"
 #include "rpg_animationtiming.h"
 
@@ -38,10 +38,10 @@ namespace RPG {
 		std::string name;
 		std::string animation_name;
 		int unknown_03 = -1;
-		std::vector<AnimationTiming> timings;
+		LcfVector<AnimationTiming> timings;
 		int scope = 0;
 		int position = 2;
-		std::vector<AnimationFrame> frames;
+		LcfVector<AnimationFrame> frames;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);
@@ -53,9 +53,9 @@ namespace RPG {
 		int GetUnknown03() const;
 		void SetUnknown03(int unknown_03);
 
-		const std::vector<AnimationTiming>& GetTimings() const;
-		std::vector<AnimationTiming>& GetTimings();
-		void SetTimings(const std::vector<AnimationTiming>& timings);
+		const LcfVector<AnimationTiming>& GetTimings() const;
+		LcfVector<AnimationTiming>& GetTimings();
+		void SetTimings(const LcfVector<AnimationTiming>& timings);
 
 		int GetScope() const;
 		void SetScope(int scope);
@@ -63,9 +63,9 @@ namespace RPG {
 		int GetPosition() const;
 		void SetPosition(int position);
 
-		const std::vector<AnimationFrame>& GetFrames() const;
-		std::vector<AnimationFrame>& GetFrames();
-		void SetFrames(const std::vector<AnimationFrame>& frames);
+		const LcfVector<AnimationFrame>& GetFrames() const;
+		LcfVector<AnimationFrame>& GetFrames();
+		void SetFrames(const LcfVector<AnimationFrame>& frames);
 
 	};
 }

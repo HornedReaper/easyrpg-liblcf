@@ -13,7 +13,7 @@
 #define LCF_RPG_DATABASE_H
 
 // Headers
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_actor.h"
 #include "rpg_animation.h"
 #include "rpg_attribute.h"
@@ -39,64 +39,64 @@
 namespace RPG {
 	class Database {
 	public:
-		std::vector<Actor> actors;
-		std::vector<Skill> skills;
-		std::vector<Item> items;
-		std::vector<Enemy> enemies;
-		std::vector<Troop> troops;
-		std::vector<Terrain> terrains;
-		std::vector<Attribute> attributes;
-		std::vector<State> states;
-		std::vector<Animation> animations;
-		std::vector<Chipset> chipsets;
+		LcfVector<Actor> actors;
+		LcfVector<Skill> skills;
+		LcfVector<Item> items;
+		LcfVector<Enemy> enemies;
+		LcfVector<Troop> troops;
+		LcfVector<Terrain> terrains;
+		LcfVector<Attribute> attributes;
+		LcfVector<State> states;
+		LcfVector<Animation> animations;
+		LcfVector<Chipset> chipsets;
 		Terms terms;
 		System system;
-		std::vector<Switch> switches;
-		std::vector<Variable> variables;
-		std::vector<CommonEvent> commonevents;
+		LcfVector<Switch> switches;
+		LcfVector<Variable> variables;
+		LcfVector<CommonEvent> commonevents;
 		int version = 0;
 		BattleCommands battlecommands;
-		std::vector<Class> classes;
-		std::vector<BattlerAnimation> battleranimations;
-		const std::vector<Actor>& GetActors() const;
-		std::vector<Actor>& GetActors();
-		void SetActors(const std::vector<Actor>& actors);
+		LcfVector<Class> classes;
+		LcfVector<BattlerAnimation> battleranimations;
+		const LcfVector<Actor>& GetActors() const;
+		LcfVector<Actor>& GetActors();
+		void SetActors(const LcfVector<Actor>& actors);
 
-		const std::vector<Skill>& GetSkills() const;
-		std::vector<Skill>& GetSkills();
-		void SetSkills(const std::vector<Skill>& skills);
+		const LcfVector<Skill>& GetSkills() const;
+		LcfVector<Skill>& GetSkills();
+		void SetSkills(const LcfVector<Skill>& skills);
 
-		const std::vector<Item>& GetItems() const;
-		std::vector<Item>& GetItems();
-		void SetItems(const std::vector<Item>& items);
+		const LcfVector<Item>& GetItems() const;
+		LcfVector<Item>& GetItems();
+		void SetItems(const LcfVector<Item>& items);
 
-		const std::vector<Enemy>& GetEnemies() const;
-		std::vector<Enemy>& GetEnemies();
-		void SetEnemies(const std::vector<Enemy>& enemies);
+		const LcfVector<Enemy>& GetEnemies() const;
+		LcfVector<Enemy>& GetEnemies();
+		void SetEnemies(const LcfVector<Enemy>& enemies);
 
-		const std::vector<Troop>& GetTroops() const;
-		std::vector<Troop>& GetTroops();
-		void SetTroops(const std::vector<Troop>& troops);
+		const LcfVector<Troop>& GetTroops() const;
+		LcfVector<Troop>& GetTroops();
+		void SetTroops(const LcfVector<Troop>& troops);
 
-		const std::vector<Terrain>& GetTerrains() const;
-		std::vector<Terrain>& GetTerrains();
-		void SetTerrains(const std::vector<Terrain>& terrains);
+		const LcfVector<Terrain>& GetTerrains() const;
+		LcfVector<Terrain>& GetTerrains();
+		void SetTerrains(const LcfVector<Terrain>& terrains);
 
-		const std::vector<Attribute>& GetAttributes() const;
-		std::vector<Attribute>& GetAttributes();
-		void SetAttributes(const std::vector<Attribute>& attributes);
+		const LcfVector<Attribute>& GetAttributes() const;
+		LcfVector<Attribute>& GetAttributes();
+		void SetAttributes(const LcfVector<Attribute>& attributes);
 
-		const std::vector<State>& GetStates() const;
-		std::vector<State>& GetStates();
-		void SetStates(const std::vector<State>& states);
+		const LcfVector<State>& GetStates() const;
+		LcfVector<State>& GetStates();
+		void SetStates(const LcfVector<State>& states);
 
-		const std::vector<Animation>& GetAnimations() const;
-		std::vector<Animation>& GetAnimations();
-		void SetAnimations(const std::vector<Animation>& animations);
+		const LcfVector<Animation>& GetAnimations() const;
+		LcfVector<Animation>& GetAnimations();
+		void SetAnimations(const LcfVector<Animation>& animations);
 
-		const std::vector<Chipset>& GetChipsets() const;
-		std::vector<Chipset>& GetChipsets();
-		void SetChipsets(const std::vector<Chipset>& chipsets);
+		const LcfVector<Chipset>& GetChipsets() const;
+		LcfVector<Chipset>& GetChipsets();
+		void SetChipsets(const LcfVector<Chipset>& chipsets);
 
 		const Terms& GetTerms() const;
 		Terms& GetTerms();
@@ -106,17 +106,17 @@ namespace RPG {
 		System& GetSystem();
 		void SetSystem(const System& system);
 
-		const std::vector<Switch>& GetSwitches() const;
-		std::vector<Switch>& GetSwitches();
-		void SetSwitches(const std::vector<Switch>& switches);
+		const LcfVector<Switch>& GetSwitches() const;
+		LcfVector<Switch>& GetSwitches();
+		void SetSwitches(const LcfVector<Switch>& switches);
 
-		const std::vector<Variable>& GetVariables() const;
-		std::vector<Variable>& GetVariables();
-		void SetVariables(const std::vector<Variable>& variables);
+		const LcfVector<Variable>& GetVariables() const;
+		LcfVector<Variable>& GetVariables();
+		void SetVariables(const LcfVector<Variable>& variables);
 
-		const std::vector<CommonEvent>& GetCommonevents() const;
-		std::vector<CommonEvent>& GetCommonevents();
-		void SetCommonevents(const std::vector<CommonEvent>& commonevents);
+		const LcfVector<CommonEvent>& GetCommonevents() const;
+		LcfVector<CommonEvent>& GetCommonevents();
+		void SetCommonevents(const LcfVector<CommonEvent>& commonevents);
 
 		int GetVersion() const;
 		void SetVersion(int version);
@@ -125,13 +125,13 @@ namespace RPG {
 		BattleCommands& GetBattlecommands();
 		void SetBattlecommands(const BattleCommands& battlecommands);
 
-		const std::vector<Class>& GetClasses() const;
-		std::vector<Class>& GetClasses();
-		void SetClasses(const std::vector<Class>& classes);
+		const LcfVector<Class>& GetClasses() const;
+		LcfVector<Class>& GetClasses();
+		void SetClasses(const LcfVector<Class>& classes);
 
-		const std::vector<BattlerAnimation>& GetBattleranimations() const;
-		std::vector<BattlerAnimation>& GetBattleranimations();
-		void SetBattleranimations(const std::vector<BattlerAnimation>& battleranimations);
+		const LcfVector<BattlerAnimation>& GetBattleranimations() const;
+		LcfVector<BattlerAnimation>& GetBattleranimations();
+		void SetBattleranimations(const LcfVector<BattlerAnimation>& battleranimations);
 
 	};
 }

@@ -43,39 +43,39 @@ void RPG::Chipset::SetChipsetName(const std::string& chipset_name) {
 	this->chipset_name = chipset_name;
 }
 
-const std::vector<int16_t>& RPG::Chipset::GetTerrainData() const  {
+const LcfVector<int16_t>& RPG::Chipset::GetTerrainData() const  {
 	return terrain_data;
 }
 
-std::vector<int16_t>& RPG::Chipset::GetTerrainData() {
+LcfVector<int16_t>& RPG::Chipset::GetTerrainData() {
 	return terrain_data;
 }
 
-void RPG::Chipset::SetTerrainData(const std::vector<int16_t>& terrain_data) {
+void RPG::Chipset::SetTerrainData(const LcfVector<int16_t>& terrain_data) {
 	this->terrain_data = terrain_data;
 }
 
-const std::vector<uint8_t>& RPG::Chipset::GetPassableDataLower() const  {
+const LcfVector<uint8_t>& RPG::Chipset::GetPassableDataLower() const  {
 	return passable_data_lower;
 }
 
-std::vector<uint8_t>& RPG::Chipset::GetPassableDataLower() {
+LcfVector<uint8_t>& RPG::Chipset::GetPassableDataLower() {
 	return passable_data_lower;
 }
 
-void RPG::Chipset::SetPassableDataLower(const std::vector<uint8_t>& passable_data_lower) {
+void RPG::Chipset::SetPassableDataLower(const LcfVector<uint8_t>& passable_data_lower) {
 	this->passable_data_lower = passable_data_lower;
 }
 
-const std::vector<uint8_t>& RPG::Chipset::GetPassableDataUpper() const  {
+const LcfVector<uint8_t>& RPG::Chipset::GetPassableDataUpper() const  {
 	return passable_data_upper;
 }
 
-std::vector<uint8_t>& RPG::Chipset::GetPassableDataUpper() {
+LcfVector<uint8_t>& RPG::Chipset::GetPassableDataUpper() {
 	return passable_data_upper;
 }
 
-void RPG::Chipset::SetPassableDataUpper(const std::vector<uint8_t>& passable_data_upper) {
+void RPG::Chipset::SetPassableDataUpper(const LcfVector<uint8_t>& passable_data_upper) {
 	this->passable_data_upper = passable_data_upper;
 }
 

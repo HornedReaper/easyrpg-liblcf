@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 
 /**
@@ -33,9 +33,9 @@ namespace RPG {
 		int ID = 0;
 		std::string name;
 		std::string chipset_name;
-		std::vector<int16_t> terrain_data;
-		std::vector<uint8_t> passable_data_lower;
-		std::vector<uint8_t> passable_data_upper;
+		LcfVector<int16_t> terrain_data;
+		LcfVector<uint8_t> passable_data_lower;
+		LcfVector<uint8_t> passable_data_upper;
 		int animation_type = 0;
 		int animation_speed = 0;
 		const std::string& GetName() const;
@@ -46,17 +46,17 @@ namespace RPG {
 		std::string& GetChipsetName();
 		void SetChipsetName(const std::string& chipset_name);
 
-		const std::vector<int16_t>& GetTerrainData() const;
-		std::vector<int16_t>& GetTerrainData();
-		void SetTerrainData(const std::vector<int16_t>& terrain_data);
+		const LcfVector<int16_t>& GetTerrainData() const;
+		LcfVector<int16_t>& GetTerrainData();
+		void SetTerrainData(const LcfVector<int16_t>& terrain_data);
 
-		const std::vector<uint8_t>& GetPassableDataLower() const;
-		std::vector<uint8_t>& GetPassableDataLower();
-		void SetPassableDataLower(const std::vector<uint8_t>& passable_data_lower);
+		const LcfVector<uint8_t>& GetPassableDataLower() const;
+		LcfVector<uint8_t>& GetPassableDataLower();
+		void SetPassableDataLower(const LcfVector<uint8_t>& passable_data_lower);
 
-		const std::vector<uint8_t>& GetPassableDataUpper() const;
-		std::vector<uint8_t>& GetPassableDataUpper();
-		void SetPassableDataUpper(const std::vector<uint8_t>& passable_data_upper);
+		const LcfVector<uint8_t>& GetPassableDataUpper() const;
+		LcfVector<uint8_t>& GetPassableDataUpper();
+		void SetPassableDataUpper(const LcfVector<uint8_t>& passable_data_upper);
 
 		int GetAnimationType() const;
 		void SetAnimationType(int animation_type);

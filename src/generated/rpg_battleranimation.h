@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_battleranimationextension.h"
 
 /**
@@ -32,8 +32,8 @@ namespace RPG {
 		int ID = 0;
 		std::string name;
 		int speed = 0;
-		std::vector<BattlerAnimationExtension> base_data;
-		std::vector<BattlerAnimationExtension> weapon_data;
+		LcfVector<BattlerAnimationExtension> base_data;
+		LcfVector<BattlerAnimationExtension> weapon_data;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);
@@ -41,13 +41,13 @@ namespace RPG {
 		int GetSpeed() const;
 		void SetSpeed(int speed);
 
-		const std::vector<BattlerAnimationExtension>& GetBaseData() const;
-		std::vector<BattlerAnimationExtension>& GetBaseData();
-		void SetBaseData(const std::vector<BattlerAnimationExtension>& base_data);
+		const LcfVector<BattlerAnimationExtension>& GetBaseData() const;
+		LcfVector<BattlerAnimationExtension>& GetBaseData();
+		void SetBaseData(const LcfVector<BattlerAnimationExtension>& base_data);
 
-		const std::vector<BattlerAnimationExtension>& GetWeaponData() const;
-		std::vector<BattlerAnimationExtension>& GetWeaponData();
-		void SetWeaponData(const std::vector<BattlerAnimationExtension>& weapon_data);
+		const LcfVector<BattlerAnimationExtension>& GetWeaponData() const;
+		LcfVector<BattlerAnimationExtension>& GetWeaponData();
+		void SetWeaponData(const LcfVector<BattlerAnimationExtension>& weapon_data);
 
 	};
 }

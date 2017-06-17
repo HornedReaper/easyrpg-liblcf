@@ -30,12 +30,12 @@ LCF_STRUCT_FIELDS_BEGIN()
 	LCF_STRUCT_TYPED_FIELD(int, exp_inflation),
 	LCF_STRUCT_TYPED_FIELD(int, exp_correction),
 	LCF_STRUCT_TYPED_FIELD(int, battler_animation),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::Learning>, skills),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::Learning>, skills),
 	LCF_STRUCT_SIZE_FIELD(uint8_t, state_ranks),
-	LCF_STRUCT_TYPED_FIELD(std::vector<uint8_t>, state_ranks),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<uint8_t>, state_ranks),
 	LCF_STRUCT_SIZE_FIELD(uint8_t, attribute_ranks),
-	LCF_STRUCT_TYPED_FIELD(std::vector<uint8_t>, attribute_ranks),
-	LCF_STRUCT_TYPED_FIELD(std::vector<uint32_t>, battle_commands),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<uint8_t>, attribute_ranks),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<uint32_t>, battle_commands),
 LCF_STRUCT_FIELDS_END()
 
 #undef LCF_CURRENT_STRUCT

@@ -53,15 +53,15 @@ void RPG::BattleCommands::SetUnknown09(int unknown_09) {
 	this->unknown_09 = unknown_09;
 }
 
-const std::vector<RPG::BattleCommand>& RPG::BattleCommands::GetCommands() const  {
+const LcfVector<RPG::BattleCommand>& RPG::BattleCommands::GetCommands() const  {
 	return commands;
 }
 
-std::vector<RPG::BattleCommand>& RPG::BattleCommands::GetCommands() {
+LcfVector<RPG::BattleCommand>& RPG::BattleCommands::GetCommands() {
 	return commands;
 }
 
-void RPG::BattleCommands::SetCommands(const std::vector<RPG::BattleCommand>& commands) {
+void RPG::BattleCommands::SetCommands(const LcfVector<RPG::BattleCommand>& commands) {
 	this->commands = commands;
 }
 

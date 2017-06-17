@@ -130,28 +130,28 @@ void RPG::System::SetSystem2Name(const std::string& system2_name) {
 }
 
 
-const std::vector<int16_t>& RPG::System::GetParty() const  {
+const LcfVector<int16_t>& RPG::System::GetParty() const  {
 	return party;
 }
 
-std::vector<int16_t>& RPG::System::GetParty() {
+LcfVector<int16_t>& RPG::System::GetParty() {
 	return party;
 }
 
-void RPG::System::SetParty(const std::vector<int16_t>& party) {
+void RPG::System::SetParty(const LcfVector<int16_t>& party) {
 	this->party = party;
 }
 
 
-const std::vector<int16_t>& RPG::System::GetMenuCommands() const  {
+const LcfVector<int16_t>& RPG::System::GetMenuCommands() const  {
 	return menu_commands;
 }
 
-std::vector<int16_t>& RPG::System::GetMenuCommands() {
+LcfVector<int16_t>& RPG::System::GetMenuCommands() {
 	return menu_commands;
 }
 
-void RPG::System::SetMenuCommands(const std::vector<int16_t>& menu_commands) {
+void RPG::System::SetMenuCommands(const LcfVector<int16_t>& menu_commands) {
 	this->menu_commands = menu_commands;
 }
 
@@ -487,15 +487,15 @@ void RPG::System::SetBattletestBackground(const std::string& battletest_backgrou
 	this->battletest_background = battletest_background;
 }
 
-const std::vector<RPG::TestBattler>& RPG::System::GetBattletestData() const  {
+const LcfVector<RPG::TestBattler>& RPG::System::GetBattletestData() const  {
 	return battletest_data;
 }
 
-std::vector<RPG::TestBattler>& RPG::System::GetBattletestData() {
+LcfVector<RPG::TestBattler>& RPG::System::GetBattletestData() {
 	return battletest_data;
 }
 
-void RPG::System::SetBattletestData(const std::vector<RPG::TestBattler>& battletest_data) {
+void RPG::System::SetBattletestData(const LcfVector<RPG::TestBattler>& battletest_data) {
 	this->battletest_data = battletest_data;
 }
 

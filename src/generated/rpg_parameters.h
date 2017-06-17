@@ -13,7 +13,7 @@
 #define LCF_RPG_PARAMETERS_H
 
 // Headers
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 
 /**
@@ -23,35 +23,35 @@ namespace RPG {
 	class Parameters {
 	public:
 		void Setup(int final_level);
-		std::vector<int16_t> maxhp;
-		std::vector<int16_t> maxsp;
-		std::vector<int16_t> attack;
-		std::vector<int16_t> defense;
-		std::vector<int16_t> spirit;
-		std::vector<int16_t> agility;
-		const std::vector<int16_t>& GetMaxhp() const;
-		std::vector<int16_t>& GetMaxhp();
-		void SetMaxhp(const std::vector<int16_t>& maxhp);
+		LcfVector<int16_t> maxhp;
+		LcfVector<int16_t> maxsp;
+		LcfVector<int16_t> attack;
+		LcfVector<int16_t> defense;
+		LcfVector<int16_t> spirit;
+		LcfVector<int16_t> agility;
+		const LcfVector<int16_t>& GetMaxhp() const;
+		LcfVector<int16_t>& GetMaxhp();
+		void SetMaxhp(const LcfVector<int16_t>& maxhp);
 
-		const std::vector<int16_t>& GetMaxsp() const;
-		std::vector<int16_t>& GetMaxsp();
-		void SetMaxsp(const std::vector<int16_t>& maxsp);
+		const LcfVector<int16_t>& GetMaxsp() const;
+		LcfVector<int16_t>& GetMaxsp();
+		void SetMaxsp(const LcfVector<int16_t>& maxsp);
 
-		const std::vector<int16_t>& GetAttack() const;
-		std::vector<int16_t>& GetAttack();
-		void SetAttack(const std::vector<int16_t>& attack);
+		const LcfVector<int16_t>& GetAttack() const;
+		LcfVector<int16_t>& GetAttack();
+		void SetAttack(const LcfVector<int16_t>& attack);
 
-		const std::vector<int16_t>& GetDefense() const;
-		std::vector<int16_t>& GetDefense();
-		void SetDefense(const std::vector<int16_t>& defense);
+		const LcfVector<int16_t>& GetDefense() const;
+		LcfVector<int16_t>& GetDefense();
+		void SetDefense(const LcfVector<int16_t>& defense);
 
-		const std::vector<int16_t>& GetSpirit() const;
-		std::vector<int16_t>& GetSpirit();
-		void SetSpirit(const std::vector<int16_t>& spirit);
+		const LcfVector<int16_t>& GetSpirit() const;
+		LcfVector<int16_t>& GetSpirit();
+		void SetSpirit(const LcfVector<int16_t>& spirit);
 
-		const std::vector<int16_t>& GetAgility() const;
-		std::vector<int16_t>& GetAgility();
-		void SetAgility(const std::vector<int16_t>& agility);
+		const LcfVector<int16_t>& GetAgility() const;
+		LcfVector<int16_t>& GetAgility();
+		void SetAgility(const LcfVector<int16_t>& agility);
 
 	};
 }

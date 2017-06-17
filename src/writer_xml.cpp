@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-#include <vector>
+#include "lcf_vector.h"
 #include "writer_xml.h"
 
 XmlWriter::XmlWriter(const char* filename) :
@@ -110,32 +110,32 @@ void XmlWriter::Write<std::string>(const std::string& val) {
 }
 
 template <>
-void XmlWriter::Write<std::vector<int> >(const std::vector<int>& val) {
+void XmlWriter::Write<LcfVector<int> >(const LcfVector<int>& val) {
 	WriteVector<int>(val);
 }
 
 template <>
-void XmlWriter::Write<std::vector<bool> >(const std::vector<bool>& val) {
+void XmlWriter::Write<LcfVector<bool> >(const LcfVector<bool>& val) {
 	WriteVector<bool>(val);
 }
 
 template <>
-void XmlWriter::Write<std::vector<uint8_t> >(const std::vector<uint8_t>& val) {
+void XmlWriter::Write<LcfVector<uint8_t> >(const LcfVector<uint8_t>& val) {
 	WriteVector<uint8_t>(val);
 }
 
 template <>
-void XmlWriter::Write<std::vector<int16_t> >(const std::vector<int16_t>& val) {
+void XmlWriter::Write<LcfVector<int16_t> >(const LcfVector<int16_t>& val) {
 	WriteVector<int16_t>(val);
 }
 
 template <>
-void XmlWriter::Write<std::vector<uint32_t> >(const std::vector<uint32_t>& val) {
+void XmlWriter::Write<LcfVector<uint32_t> >(const LcfVector<uint32_t>& val) {
 	WriteVector<uint32_t>(val);
 }
 
 template <>
-void XmlWriter::Write<std::vector<double> >(const std::vector<double>& val) {
+void XmlWriter::Write<LcfVector<double> >(const LcfVector<double>& val) {
 	WriteVector<double>(val);
 }
 
@@ -144,9 +144,9 @@ void XmlWriter::WriteInt(int val) {
 }
 
 template <class T>
-void XmlWriter::WriteVector(const std::vector<T>& val) {
+void XmlWriter::WriteVector(const LcfVector<T>& val) {
 	Indent();
-	typename std::vector<T>::const_iterator it;
+	typename LcfVector<T>::const_iterator it;
 	bool first = true;
 	for (it = val.begin(); it != val.end(); it++) {
 		if (!first)
@@ -211,8 +211,8 @@ template void XmlWriter::WriteNode<uint32_t>(const std::string& name, const uint
 template void XmlWriter::WriteNode<double>(const std::string& name, const double& val);
 template void XmlWriter::WriteNode<std::string>(const std::string& name, const std::string& val);
 
-template void XmlWriter::WriteNode<std::vector<int> >(const std::string& name, const std::vector<int>& val);
-template void XmlWriter::WriteNode<std::vector<bool> >(const std::string& name, const std::vector<bool>& val);
-template void XmlWriter::WriteNode<std::vector<uint8_t> >(const std::string& name, const std::vector<uint8_t>& val);
-template void XmlWriter::WriteNode<std::vector<int16_t> >(const std::string& name, const std::vector<int16_t>& val);
-template void XmlWriter::WriteNode<std::vector<uint32_t> >(const std::string& name, const std::vector<uint32_t>& val);
+template void XmlWriter::WriteNode<LcfVector<int> >(const std::string& name, const LcfVector<int>& val);
+template void XmlWriter::WriteNode<LcfVector<bool> >(const std::string& name, const LcfVector<bool>& val);
+template void XmlWriter::WriteNode<LcfVector<uint8_t> >(const std::string& name, const LcfVector<uint8_t>& val);
+template void XmlWriter::WriteNode<LcfVector<int16_t> >(const std::string& name, const LcfVector<int16_t>& val);
+template void XmlWriter::WriteNode<LcfVector<uint32_t> >(const std::string& name, const LcfVector<uint32_t>& val);

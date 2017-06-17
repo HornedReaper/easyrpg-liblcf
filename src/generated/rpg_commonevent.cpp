@@ -50,15 +50,15 @@ void RPG::CommonEvent::SetSwitchId(int switch_id) {
 }
 
 
-const std::vector<RPG::EventCommand>& RPG::CommonEvent::GetEventCommands() const  {
+const LcfVector<RPG::EventCommand>& RPG::CommonEvent::GetEventCommands() const  {
 	return event_commands;
 }
 
-std::vector<RPG::EventCommand>& RPG::CommonEvent::GetEventCommands() {
+LcfVector<RPG::EventCommand>& RPG::CommonEvent::GetEventCommands() {
 	return event_commands;
 }
 
-void RPG::CommonEvent::SetEventCommands(const std::vector<RPG::EventCommand>& event_commands) {
+void RPG::CommonEvent::SetEventCommands(const LcfVector<RPG::EventCommand>& event_commands) {
 	this->event_commands = event_commands;
 }
 

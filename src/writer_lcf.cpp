@@ -83,8 +83,8 @@ void LcfWriter::Write<double>(double val) {
 }
 
 template <>
-void LcfWriter::Write<bool>(const std::vector<bool>& buffer) {
-	std::vector<bool>::const_iterator it;
+void LcfWriter::Write<bool>(const LcfVector<bool>& buffer) {
+	LcfVector<bool>::const_iterator it;
 	for (it = buffer.begin(); it != buffer.end(); it++) {
 		uint8_t val = *it ? 1 : 0;
 		Write(val);
@@ -92,20 +92,20 @@ void LcfWriter::Write<bool>(const std::vector<bool>& buffer) {
 }
 
 template <>
-void LcfWriter::Write<uint8_t>(const std::vector<uint8_t>& buffer) {
+void LcfWriter::Write<uint8_t>(const LcfVector<uint8_t>& buffer) {
 	Write(&buffer.front(), 1, buffer.size());
 }
 
 template <>
-void LcfWriter::Write<int16_t>(const std::vector<int16_t>& buffer) {
-	std::vector<int16_t>::const_iterator it;
+void LcfWriter::Write<int16_t>(const LcfVector<int16_t>& buffer) {
+	LcfVector<int16_t>::const_iterator it;
 	for (it = buffer.begin(); it != buffer.end(); it++)
 		Write(*it);
 }
 
 template <>
-void LcfWriter::Write<uint32_t>(const std::vector<uint32_t>& buffer) {
-	std::vector<uint32_t>::const_iterator it;
+void LcfWriter::Write<uint32_t>(const LcfVector<uint32_t>& buffer) {
+	LcfVector<uint32_t>::const_iterator it;
 	for (it = buffer.begin(); it != buffer.end(); it++)
 		Write(*it);
 }

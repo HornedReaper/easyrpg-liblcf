@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 #include "rpg_music.h"
 #include "rpg_sound.h"
@@ -106,8 +106,8 @@ namespace RPG {
 		std::string gameover_name;
 		std::string system_name;
 		std::string system2_name;
-		std::vector<int16_t> party;
-		std::vector<int16_t> menu_commands;
+		LcfVector<int16_t> party;
+		LcfVector<int16_t> menu_commands;
 		Music title_music;
 		Music battle_music;
 		Music battle_end_music;
@@ -139,7 +139,7 @@ namespace RPG {
 		int selected_condition = 0;
 		int selected_hero = 0;
 		std::string battletest_background;
-		std::vector<TestBattler> battletest_data;
+		LcfVector<TestBattler> battletest_data;
 		int save_count = 0;
 		int battletest_terrain = 0;
 		int battletest_formation = 0;
@@ -190,14 +190,14 @@ namespace RPG {
 		void SetSystem2Name(const std::string& system2_name);
 
 
-		const std::vector<int16_t>& GetParty() const;
-		std::vector<int16_t>& GetParty();
-		void SetParty(const std::vector<int16_t>& party);
+		const LcfVector<int16_t>& GetParty() const;
+		LcfVector<int16_t>& GetParty();
+		void SetParty(const LcfVector<int16_t>& party);
 
 
-		const std::vector<int16_t>& GetMenuCommands() const;
-		std::vector<int16_t>& GetMenuCommands();
-		void SetMenuCommands(const std::vector<int16_t>& menu_commands);
+		const LcfVector<int16_t>& GetMenuCommands() const;
+		LcfVector<int16_t>& GetMenuCommands();
+		void SetMenuCommands(const LcfVector<int16_t>& menu_commands);
 
 		const Music& GetTitleMusic() const;
 		Music& GetTitleMusic();
@@ -313,9 +313,9 @@ namespace RPG {
 		std::string& GetBattletestBackground();
 		void SetBattletestBackground(const std::string& battletest_background);
 
-		const std::vector<TestBattler>& GetBattletestData() const;
-		std::vector<TestBattler>& GetBattletestData();
-		void SetBattletestData(const std::vector<TestBattler>& battletest_data);
+		const LcfVector<TestBattler>& GetBattletestData() const;
+		LcfVector<TestBattler>& GetBattletestData();
+		void SetBattletestData(const LcfVector<TestBattler>& battletest_data);
 
 		int GetSaveCount() const;
 		void SetSaveCount(int save_count);

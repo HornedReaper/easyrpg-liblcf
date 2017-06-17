@@ -13,7 +13,7 @@
 #define LCF_RPG_SAVEEVENTCOMMANDS_H
 
 // Headers
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 #include "rpg_eventcommand.h"
 
@@ -25,18 +25,18 @@ namespace RPG {
 	public:
 		int ID = 0;
 		int commands_size = 0;
-		std::vector<EventCommand> commands;
+		LcfVector<EventCommand> commands;
 		int current_command = 0;
 		int event_id = 0;
 		bool actioned = false;
 		int unknown_15_subcommand_path_size = -1;
-		std::vector<uint8_t> unknown_16_subcommand_path;
+		LcfVector<uint8_t> unknown_16_subcommand_path;
 		int GetCommandsSize() const;
 		void SetCommandsSize(int commands_size);
 
-		const std::vector<EventCommand>& GetCommands() const;
-		std::vector<EventCommand>& GetCommands();
-		void SetCommands(const std::vector<EventCommand>& commands);
+		const LcfVector<EventCommand>& GetCommands() const;
+		LcfVector<EventCommand>& GetCommands();
+		void SetCommands(const LcfVector<EventCommand>& commands);
 
 		int GetCurrentCommand() const;
 		void SetCurrentCommand(int current_command);
@@ -50,9 +50,9 @@ namespace RPG {
 		int GetUnknown15SubcommandPathSize() const;
 		void SetUnknown15SubcommandPathSize(int unknown_15_subcommand_path_size);
 
-		const std::vector<uint8_t>& GetUnknown16SubcommandPath() const;
-		std::vector<uint8_t>& GetUnknown16SubcommandPath();
-		void SetUnknown16SubcommandPath(const std::vector<uint8_t>& unknown_16_subcommand_path);
+		const LcfVector<uint8_t>& GetUnknown16SubcommandPath() const;
+		LcfVector<uint8_t>& GetUnknown16SubcommandPath();
+		void SetUnknown16SubcommandPath(const LcfVector<uint8_t>& unknown_16_subcommand_path);
 
 	};
 }

@@ -34,7 +34,7 @@ LCF_STRUCT_FIELDS_BEGIN()
 	LCF_STRUCT_TYPED_FIELD(int, teleport),
 	LCF_STRUCT_TYPED_FIELD(int, escape),
 	LCF_STRUCT_TYPED_FIELD(int, save),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::Encounter>, encounters),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::Encounter>, encounters),
 	LCF_STRUCT_TYPED_FIELD(int, encounter_steps),
 	LCF_STRUCT_TYPED_FIELD(RPG::Rect, area_rect),
 LCF_STRUCT_FIELDS_END()

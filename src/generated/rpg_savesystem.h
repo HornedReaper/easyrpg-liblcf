@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 #include "rpg_music.h"
 #include "rpg_sound.h"
@@ -38,9 +38,9 @@ namespace RPG {
 		int message_stretch = 0;
 		int font_id = 0;
 		int switches_size = 0;
-		std::vector<bool> switches;
+		LcfVector<bool> switches;
 		int variables_size = 0;
-		std::vector<uint32_t> variables;
+		LcfVector<uint32_t> variables;
 		int message_transparent = 0;
 		int message_position = 2;
 		int message_prevent_overlap = 1;
@@ -108,16 +108,16 @@ namespace RPG {
 		int GetSwitchesSize() const;
 		void SetSwitchesSize(int switches_size);
 
-		const std::vector<bool>& GetSwitches() const;
-		std::vector<bool>& GetSwitches();
-		void SetSwitches(const std::vector<bool>& switches);
+		const LcfVector<bool>& GetSwitches() const;
+		LcfVector<bool>& GetSwitches();
+		void SetSwitches(const LcfVector<bool>& switches);
 
 		int GetVariablesSize() const;
 		void SetVariablesSize(int variables_size);
 
-		const std::vector<uint32_t>& GetVariables() const;
-		std::vector<uint32_t>& GetVariables();
-		void SetVariables(const std::vector<uint32_t>& variables);
+		const LcfVector<uint32_t>& GetVariables() const;
+		LcfVector<uint32_t>& GetVariables();
+		void SetVariables(const LcfVector<uint32_t>& variables);
 
 		int GetMessageTransparent() const;
 		void SetMessageTransparent(int message_transparent);

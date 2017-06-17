@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 
 /**
@@ -42,13 +42,13 @@ namespace RPG {
 		int spirit_mod = 0;
 		int agility_mod = 0;
 		int skills_size = -1;
-		std::vector<int16_t> skills;
-		std::vector<int16_t> equipped;
+		LcfVector<int16_t> skills;
+		LcfVector<int16_t> equipped;
 		int current_hp = -1;
 		int current_sp = -1;
-		std::vector<uint32_t> battle_commands;
+		LcfVector<uint32_t> battle_commands;
 		int status_size = 0;
-		std::vector<int16_t> status;
+		LcfVector<int16_t> status;
 		bool changed_class = false;
 		int class_id = -1;
 		int row = 0;
@@ -109,13 +109,13 @@ namespace RPG {
 		int GetSkillsSize() const;
 		void SetSkillsSize(int skills_size);
 
-		const std::vector<int16_t>& GetSkills() const;
-		std::vector<int16_t>& GetSkills();
-		void SetSkills(const std::vector<int16_t>& skills);
+		const LcfVector<int16_t>& GetSkills() const;
+		LcfVector<int16_t>& GetSkills();
+		void SetSkills(const LcfVector<int16_t>& skills);
 
-		const std::vector<int16_t>& GetEquipped() const;
-		std::vector<int16_t>& GetEquipped();
-		void SetEquipped(const std::vector<int16_t>& equipped);
+		const LcfVector<int16_t>& GetEquipped() const;
+		LcfVector<int16_t>& GetEquipped();
+		void SetEquipped(const LcfVector<int16_t>& equipped);
 
 		int GetCurrentHp() const;
 		void SetCurrentHp(int current_hp);
@@ -123,16 +123,16 @@ namespace RPG {
 		int GetCurrentSp() const;
 		void SetCurrentSp(int current_sp);
 
-		const std::vector<uint32_t>& GetBattleCommands() const;
-		std::vector<uint32_t>& GetBattleCommands();
-		void SetBattleCommands(const std::vector<uint32_t>& battle_commands);
+		const LcfVector<uint32_t>& GetBattleCommands() const;
+		LcfVector<uint32_t>& GetBattleCommands();
+		void SetBattleCommands(const LcfVector<uint32_t>& battle_commands);
 
 		int GetStatusSize() const;
 		void SetStatusSize(int status_size);
 
-		const std::vector<int16_t>& GetStatus() const;
-		std::vector<int16_t>& GetStatus();
-		void SetStatus(const std::vector<int16_t>& status);
+		const LcfVector<int16_t>& GetStatus() const;
+		LcfVector<int16_t>& GetStatus();
+		void SetStatus(const LcfVector<int16_t>& status);
 
 		bool GetChangedClass() const;
 		void SetChangedClass(bool changed_class);

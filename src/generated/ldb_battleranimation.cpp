@@ -22,8 +22,8 @@
 LCF_STRUCT_FIELDS_BEGIN()
 	LCF_STRUCT_TYPED_FIELD(std::string, name),
 	LCF_STRUCT_TYPED_FIELD(int, speed),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::BattlerAnimationExtension>, base_data),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::BattlerAnimationExtension>, weapon_data),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::BattlerAnimationExtension>, base_data),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::BattlerAnimationExtension>, weapon_data),
 LCF_STRUCT_FIELDS_END()
 
 #undef LCF_CURRENT_STRUCT

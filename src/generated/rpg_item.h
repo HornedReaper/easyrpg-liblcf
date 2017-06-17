@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_itemanimation.h"
 
 /**
@@ -89,15 +89,15 @@ namespace RPG {
 		int switch_id = 1;
 		bool occasion_field2 = true;
 		bool occasion_battle = false;
-		std::vector<bool> actor_set;
-		std::vector<bool> state_set;
-		std::vector<bool> attribute_set;
+		LcfVector<bool> actor_set;
+		LcfVector<bool> state_set;
+		LcfVector<bool> attribute_set;
 		int state_chance = 0;
 		bool state_effect = false;
 		int weapon_animation = 1;
-		std::vector<ItemAnimation> animation_data;
+		LcfVector<ItemAnimation> animation_data;
 		bool use_skill = false;
-		std::vector<bool> class_set;
+		LcfVector<bool> class_set;
 		int ranged_trajectory = 0;
 		int ranged_target = 0;
 		const std::string& GetName() const;
@@ -226,19 +226,19 @@ namespace RPG {
 		void SetOccasionBattle(bool occasion_battle);
 
 
-		const std::vector<bool>& GetActorSet() const;
-		std::vector<bool>& GetActorSet();
-		void SetActorSet(const std::vector<bool>& actor_set);
+		const LcfVector<bool>& GetActorSet() const;
+		LcfVector<bool>& GetActorSet();
+		void SetActorSet(const LcfVector<bool>& actor_set);
 
 
-		const std::vector<bool>& GetStateSet() const;
-		std::vector<bool>& GetStateSet();
-		void SetStateSet(const std::vector<bool>& state_set);
+		const LcfVector<bool>& GetStateSet() const;
+		LcfVector<bool>& GetStateSet();
+		void SetStateSet(const LcfVector<bool>& state_set);
 
 
-		const std::vector<bool>& GetAttributeSet() const;
-		std::vector<bool>& GetAttributeSet();
-		void SetAttributeSet(const std::vector<bool>& attribute_set);
+		const LcfVector<bool>& GetAttributeSet() const;
+		LcfVector<bool>& GetAttributeSet();
+		void SetAttributeSet(const LcfVector<bool>& attribute_set);
 
 		int GetStateChance() const;
 		void SetStateChance(int state_chance);
@@ -249,17 +249,17 @@ namespace RPG {
 		int GetWeaponAnimation() const;
 		void SetWeaponAnimation(int weapon_animation);
 
-		const std::vector<ItemAnimation>& GetAnimationData() const;
-		std::vector<ItemAnimation>& GetAnimationData();
-		void SetAnimationData(const std::vector<ItemAnimation>& animation_data);
+		const LcfVector<ItemAnimation>& GetAnimationData() const;
+		LcfVector<ItemAnimation>& GetAnimationData();
+		void SetAnimationData(const LcfVector<ItemAnimation>& animation_data);
 
 		bool GetUseSkill() const;
 		void SetUseSkill(bool use_skill);
 
 
-		const std::vector<bool>& GetClassSet() const;
-		std::vector<bool>& GetClassSet();
-		void SetClassSet(const std::vector<bool>& class_set);
+		const LcfVector<bool>& GetClassSet() const;
+		LcfVector<bool>& GetClassSet();
+		void SetClassSet(const LcfVector<bool>& class_set);
 
 		int GetRangedTrajectory() const;
 		void SetRangedTrajectory(int ranged_trajectory);

@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_troopmember.h"
 #include "rpg_trooppage.h"
 
@@ -26,33 +26,33 @@ namespace RPG {
 	public:
 		int ID = 0;
 		std::string name;
-		std::vector<TroopMember> members;
+		LcfVector<TroopMember> members;
 		bool auto_alignment = false;
-		std::vector<bool> terrain_set;
+		LcfVector<bool> terrain_set;
 		bool appear_randomly = false;
-		std::vector<TroopPage> pages;
+		LcfVector<TroopPage> pages;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);
 
-		const std::vector<TroopMember>& GetMembers() const;
-		std::vector<TroopMember>& GetMembers();
-		void SetMembers(const std::vector<TroopMember>& members);
+		const LcfVector<TroopMember>& GetMembers() const;
+		LcfVector<TroopMember>& GetMembers();
+		void SetMembers(const LcfVector<TroopMember>& members);
 
 		bool GetAutoAlignment() const;
 		void SetAutoAlignment(bool auto_alignment);
 
 
-		const std::vector<bool>& GetTerrainSet() const;
-		std::vector<bool>& GetTerrainSet();
-		void SetTerrainSet(const std::vector<bool>& terrain_set);
+		const LcfVector<bool>& GetTerrainSet() const;
+		LcfVector<bool>& GetTerrainSet();
+		void SetTerrainSet(const LcfVector<bool>& terrain_set);
 
 		bool GetAppearRandomly() const;
 		void SetAppearRandomly(bool appear_randomly);
 
-		const std::vector<TroopPage>& GetPages() const;
-		std::vector<TroopPage>& GetPages();
-		void SetPages(const std::vector<TroopPage>& pages);
+		const LcfVector<TroopPage>& GetPages() const;
+		LcfVector<TroopPage>& GetPages();
+		void SetPages(const LcfVector<TroopPage>& pages);
 
 	};
 }

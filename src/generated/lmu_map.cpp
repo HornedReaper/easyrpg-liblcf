@@ -44,12 +44,12 @@ LCF_STRUCT_FIELDS_BEGIN()
 	LCF_STRUCT_TYPED_FIELD(bool, generator_floor_c),
 	LCF_STRUCT_TYPED_FIELD(bool, generator_extra_b),
 	LCF_STRUCT_TYPED_FIELD(bool, generator_extra_c),
-	LCF_STRUCT_TYPED_FIELD(std::vector<uint32_t>, generator_x),
-	LCF_STRUCT_TYPED_FIELD(std::vector<uint32_t>, generator_y),
-	LCF_STRUCT_TYPED_FIELD(std::vector<int16_t>, generator_tile_ids),
-	LCF_STRUCT_TYPED_FIELD(std::vector<int16_t>, lower_layer),
-	LCF_STRUCT_TYPED_FIELD(std::vector<int16_t>, upper_layer),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::Event>, events),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<uint32_t>, generator_x),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<uint32_t>, generator_y),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<int16_t>, generator_tile_ids),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<int16_t>, lower_layer),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<int16_t>, upper_layer),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::Event>, events),
 	LCF_STRUCT_TYPED_FIELD(int, save_count),
 LCF_STRUCT_FIELDS_END()
 

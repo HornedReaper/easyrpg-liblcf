@@ -11,7 +11,7 @@
 #define LCF_READER_XML_H
 
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include <cstdio>
 #if defined(LCF_SUPPORT_XML)
 #  include <expat.h>
@@ -85,7 +85,7 @@ public:
 	 * Parses a vector of primitive type.
 	 */
 	template <class T>
-	static void ReadVector(std::vector<T>& ref, const std::string& data);
+	static void ReadVector(LcfVector<T>& ref, const std::string& data);
 
 	/**
 	 * Start element callback.
@@ -116,7 +116,7 @@ protected:
 	/** Nesting depth. */
 	int nesting;
 	/** Handler stack. */
-	std::vector<XmlHandler*> handlers;
+	LcfVector<XmlHandler*> handlers;
 	/** Text buffer. */
 	std::string buffer;
 

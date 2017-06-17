@@ -11,7 +11,7 @@
 #define LCF_READER_STRUCT_H
 
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include <map>
 #include <memory>
 #include <cstring>
@@ -73,7 +73,7 @@ template <>	struct TypeCategory<double>							{ static const Category::Index val
 template <>	struct TypeCategory<std::string>					{ static const Category::Index value = Category::Primitive; };
 
 template <class T>
-struct TypeCategory<std::vector<T> > {
+struct TypeCategory<LcfVector<T> > {
 	static const Category::Index value = TypeCategory<T>::value;
 };
 
@@ -172,11 +172,11 @@ struct Primitive {
  * Vector specialization.
  */
 template <class T>
-struct Primitive<std::vector<T> > {
-	static void ReadLcf(std::vector<T>& ref, LcfReader& stream, uint32_t length) {
+struct Primitive<LcfVector<T> > {
+	static void ReadLcf(LcfVector<T>& ref, LcfReader& stream, uint32_t length) {
 		stream.Read(ref, length);
 #ifdef LCF_DEBUG_TRACE
-		typename std::vector<T>::iterator it;
+		typename LcfVector<T>::iterator it;
 		printf("  ");
 		for (it = ref.begin(); it != ref.end(); ++it) {
 			printf("%d, ", *it);
@@ -184,16 +184,16 @@ struct Primitive<std::vector<T> > {
 		printf("\n");
 #endif
 	}
-	static void WriteLcf(const std::vector<T>& ref, LcfWriter& stream) {
+	static void WriteLcf(const LcfVector<T>& ref, LcfWriter& stream) {
 		stream.Write(ref);
 	}
-	static int LcfSize(const std::vector<T>& ref, LcfWriter& /* stream */) {
+	static int LcfSize(const LcfVector<T>& ref, LcfWriter& /* stream */) {
 		return LcfSizeT<T>::value * ref.size();
 	}
-	static void WriteXml(const std::vector<T>& ref, XmlWriter& stream) {
+	static void WriteXml(const LcfVector<T>& ref, XmlWriter& stream) {
 		stream.Write(ref);
 	}
-	static void ParseXml(std::vector<T>& ref, const std::string& data) {
+	static void ParseXml(LcfVector<T>& ref, const std::string& data) {
 		XmlReader::Read(ref, data);
 	}
 };
@@ -325,7 +325,7 @@ struct Compare_Test {
 };
 
 template <class T>
-struct Compare_Test<std::vector<T> > {
+struct Compare_Test<LcfVector<T> > {
 	static const bool value = Compare_Test<T>::value;
 };
 
@@ -352,8 +352,8 @@ struct Compare_Traits_Impl<T, false> {
 };
 
 template <class T>
-struct Compare_Traits_Impl<std::vector<T>, false> {
-	static bool IsEqual(const std::vector<T>& a, const std::vector<T>& b) {
+struct Compare_Traits_Impl<LcfVector<T>, false> {
+	static bool IsEqual(const LcfVector<T>& a, const LcfVector<T>& b) {
 		return a.empty() && b.empty();
 	}
 };
@@ -406,18 +406,18 @@ struct TypedField : public Field<S> {
  */
 template <class S, class T>
 struct SizeField : public Field<S> {
-	const std::vector<T> S::*ref;
+	const LcfVector<T> S::*ref;
 
 	void ReadLcf(S& /* obj */, LcfReader& stream, uint32_t length) const {
 		int dummy;
 		TypeReader<int>::ReadLcf(dummy, stream, length);
 	}
 	void WriteLcf(const S& obj, LcfWriter& stream) const {
-		int size = TypeReader<std::vector<T> >::LcfSize(obj.*ref, stream);
+		int size = TypeReader<LcfVector<T> >::LcfSize(obj.*ref, stream);
 		TypeReader<int>::WriteLcf(size, stream);
 	}
 	int LcfSize(const S& obj, LcfWriter& stream) const {
-		int size = TypeReader<std::vector<T> >::LcfSize(obj.*ref, stream);
+		int size = TypeReader<LcfVector<T> >::LcfSize(obj.*ref, stream);
 		return LcfReader::IntSize(size);
 	}
 	void WriteXml(const S& /* obj */, XmlWriter& /* stream */) const {
@@ -433,7 +433,7 @@ struct SizeField : public Field<S> {
 		return (a.*ref).empty() && (b.*ref).empty();
 	}
 
-	SizeField(const std::vector<T> S::*ref, int id) :
+	SizeField(const LcfVector<T> S::*ref, int id) :
 		Field<S>(id, ""), ref(ref) {}
 };
 
@@ -526,11 +526,11 @@ public:
 	static void WriteXml(const S& obj, XmlWriter& stream);
 	static void BeginXml(S& obj, XmlReader& stream);
 
-	static void ReadLcf(std::vector<S>& obj, LcfReader& stream);
-	static void WriteLcf(const std::vector<S>& obj, LcfWriter& stream);
-	static int LcfSize(const std::vector<S>& obj, LcfWriter& stream);
-	static void WriteXml(const std::vector<S>& obj, XmlWriter& stream);
-	static void BeginXml(std::vector<S>& obj, XmlReader& stream);
+	static void ReadLcf(LcfVector<S>& obj, LcfReader& stream);
+	static void WriteLcf(const LcfVector<S>& obj, LcfWriter& stream);
+	static int LcfSize(const LcfVector<S>& obj, LcfWriter& stream);
+	static void WriteXml(const LcfVector<S>& obj, XmlWriter& stream);
+	static void BeginXml(LcfVector<S>& obj, XmlReader& stream);
 };
 
 template <class S>
@@ -565,23 +565,23 @@ struct TypeReader<T, Category::Struct> {
 };
 
 template <class T>
-struct TypeReader<std::vector<T>, Category::Struct> {
-	static void ReadLcf(std::vector<T>& ref, LcfReader& stream, uint32_t /* length */) {
+struct TypeReader<LcfVector<T>, Category::Struct> {
+	static void ReadLcf(LcfVector<T>& ref, LcfReader& stream, uint32_t /* length */) {
 		Struct<T>::ReadLcf(ref, stream);
 	}
-	static void WriteLcf(const std::vector<T>& ref, LcfWriter& stream) {
+	static void WriteLcf(const LcfVector<T>& ref, LcfWriter& stream) {
 		Struct<T>::WriteLcf(ref, stream);
 	}
-	static int LcfSize(const std::vector<T>& ref, LcfWriter& stream) {
+	static int LcfSize(const LcfVector<T>& ref, LcfWriter& stream) {
 		return Struct<T>::LcfSize(ref, stream);
 	}
-	static void WriteXml(const std::vector<T>& ref, XmlWriter& stream) {
+	static void WriteXml(const LcfVector<T>& ref, XmlWriter& stream) {
 		Struct<T>::WriteXml(ref, stream);
 	}
-	static void BeginXml(std::vector<T>& ref, XmlReader& stream) {
+	static void BeginXml(LcfVector<T>& ref, XmlReader& stream) {
 		Struct<T>::BeginXml(ref, stream);
 	}
-	static void ParseXml(std::vector<T>& /* ref */, const std::string& /* data */) {
+	static void ParseXml(LcfVector<T>& /* ref */, const std::string& /* data */) {
 		// no-op
 	}
 };

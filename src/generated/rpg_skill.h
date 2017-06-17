@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_battleranimationdata.h"
 #include "rpg_sound.h"
 
@@ -73,11 +73,11 @@ namespace RPG {
 		bool affect_agility = false;
 		bool absorb_damage = false;
 		bool ignore_defense = false;
-		std::vector<bool> state_effects;
-		std::vector<bool> attribute_effects;
+		LcfVector<bool> state_effects;
+		LcfVector<bool> attribute_effects;
 		bool affect_attr_defence = false;
 		int battler_animation = 1;
-		std::vector<BattlerAnimationData> battler_animation_data;
+		LcfVector<BattlerAnimationData> battler_animation_data;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);
@@ -171,14 +171,14 @@ namespace RPG {
 		void SetIgnoreDefense(bool ignore_defense);
 
 
-		const std::vector<bool>& GetStateEffects() const;
-		std::vector<bool>& GetStateEffects();
-		void SetStateEffects(const std::vector<bool>& state_effects);
+		const LcfVector<bool>& GetStateEffects() const;
+		LcfVector<bool>& GetStateEffects();
+		void SetStateEffects(const LcfVector<bool>& state_effects);
 
 
-		const std::vector<bool>& GetAttributeEffects() const;
-		std::vector<bool>& GetAttributeEffects();
-		void SetAttributeEffects(const std::vector<bool>& attribute_effects);
+		const LcfVector<bool>& GetAttributeEffects() const;
+		LcfVector<bool>& GetAttributeEffects();
+		void SetAttributeEffects(const LcfVector<bool>& attribute_effects);
 
 		bool GetAffectAttrDefence() const;
 		void SetAffectAttrDefence(bool affect_attr_defence);
@@ -186,9 +186,9 @@ namespace RPG {
 		int GetBattlerAnimation() const;
 		void SetBattlerAnimation(int battler_animation);
 
-		const std::vector<BattlerAnimationData>& GetBattlerAnimationData() const;
-		std::vector<BattlerAnimationData>& GetBattlerAnimationData();
-		void SetBattlerAnimationData(const std::vector<BattlerAnimationData>& battler_animation_data);
+		const LcfVector<BattlerAnimationData>& GetBattlerAnimationData() const;
+		LcfVector<BattlerAnimationData>& GetBattlerAnimationData();
+		void SetBattlerAnimationData(const LcfVector<BattlerAnimationData>& battler_animation_data);
 
 	};
 }

@@ -13,7 +13,7 @@
 #define LCF_RPG_SAVE_H
 
 // Headers
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_saveactor.h"
 #include "rpg_savecommonevent.h"
 #include "rpg_saveeventdata.h"
@@ -37,18 +37,18 @@ namespace RPG {
 		SaveTitle title;
 		SaveSystem system;
 		SaveScreen screen;
-		std::vector<SavePicture> pictures;
+		LcfVector<SavePicture> pictures;
 		SavePartyLocation party_location;
 		SaveVehicleLocation boat_location;
 		SaveVehicleLocation ship_location;
 		SaveVehicleLocation airship_location;
-		std::vector<SaveActor> actors;
+		LcfVector<SaveActor> actors;
 		SaveInventory inventory;
-		std::vector<SaveTarget> targets;
+		LcfVector<SaveTarget> targets;
 		SaveMapInfo map_info;
 		int panorama_data = -1;
 		SaveEventData events;
-		std::vector<SaveCommonEvent> common_events;
+		LcfVector<SaveCommonEvent> common_events;
 		const SaveTitle& GetTitle() const;
 		SaveTitle& GetTitle();
 		void SetTitle(const SaveTitle& title);
@@ -61,9 +61,9 @@ namespace RPG {
 		SaveScreen& GetScreen();
 		void SetScreen(const SaveScreen& screen);
 
-		const std::vector<SavePicture>& GetPictures() const;
-		std::vector<SavePicture>& GetPictures();
-		void SetPictures(const std::vector<SavePicture>& pictures);
+		const LcfVector<SavePicture>& GetPictures() const;
+		LcfVector<SavePicture>& GetPictures();
+		void SetPictures(const LcfVector<SavePicture>& pictures);
 
 		const SavePartyLocation& GetPartyLocation() const;
 		SavePartyLocation& GetPartyLocation();
@@ -81,17 +81,17 @@ namespace RPG {
 		SaveVehicleLocation& GetAirshipLocation();
 		void SetAirshipLocation(const SaveVehicleLocation& airship_location);
 
-		const std::vector<SaveActor>& GetActors() const;
-		std::vector<SaveActor>& GetActors();
-		void SetActors(const std::vector<SaveActor>& actors);
+		const LcfVector<SaveActor>& GetActors() const;
+		LcfVector<SaveActor>& GetActors();
+		void SetActors(const LcfVector<SaveActor>& actors);
 
 		const SaveInventory& GetInventory() const;
 		SaveInventory& GetInventory();
 		void SetInventory(const SaveInventory& inventory);
 
-		const std::vector<SaveTarget>& GetTargets() const;
-		std::vector<SaveTarget>& GetTargets();
-		void SetTargets(const std::vector<SaveTarget>& targets);
+		const LcfVector<SaveTarget>& GetTargets() const;
+		LcfVector<SaveTarget>& GetTargets();
+		void SetTargets(const LcfVector<SaveTarget>& targets);
 
 		const SaveMapInfo& GetMapInfo() const;
 		SaveMapInfo& GetMapInfo();
@@ -104,9 +104,9 @@ namespace RPG {
 		SaveEventData& GetEvents();
 		void SetEvents(const SaveEventData& events);
 
-		const std::vector<SaveCommonEvent>& GetCommonEvents() const;
-		std::vector<SaveCommonEvent>& GetCommonEvents();
-		void SetCommonEvents(const std::vector<SaveCommonEvent>& common_events);
+		const LcfVector<SaveCommonEvent>& GetCommonEvents() const;
+		LcfVector<SaveCommonEvent>& GetCommonEvents();
+		void SetCommonEvents(const LcfVector<SaveCommonEvent>& common_events);
 
 	};
 }

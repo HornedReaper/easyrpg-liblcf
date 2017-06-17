@@ -143,15 +143,15 @@ void RPG::MapInfo::SetSave(int save) {
 	this->save = save;
 }
 
-const std::vector<RPG::Encounter>& RPG::MapInfo::GetEncounters() const  {
+const LcfVector<RPG::Encounter>& RPG::MapInfo::GetEncounters() const  {
 	return encounters;
 }
 
-std::vector<RPG::Encounter>& RPG::MapInfo::GetEncounters() {
+LcfVector<RPG::Encounter>& RPG::MapInfo::GetEncounters() {
 	return encounters;
 }
 
-void RPG::MapInfo::SetEncounters(const std::vector<RPG::Encounter>& encounters) {
+void RPG::MapInfo::SetEncounters(const LcfVector<RPG::Encounter>& encounters) {
 	this->encounters = encounters;
 }
 

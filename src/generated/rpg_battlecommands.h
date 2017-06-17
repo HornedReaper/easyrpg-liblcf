@@ -13,7 +13,7 @@
 #define LCF_RPG_BATTLECOMMANDS_H
 
 // Headers
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_battlecommand.h"
 
 /**
@@ -56,7 +56,7 @@ namespace RPG {
 		int row = 0;
 		int battle_type = 0;
 		int unknown_09 = 0;
-		std::vector<BattleCommand> commands;
+		LcfVector<BattleCommand> commands;
 		int death_handler2 = 0;
 		int death_event = 0;
 		int window_size = 0;
@@ -81,9 +81,9 @@ namespace RPG {
 		int GetUnknown09() const;
 		void SetUnknown09(int unknown_09);
 
-		const std::vector<BattleCommand>& GetCommands() const;
-		std::vector<BattleCommand>& GetCommands();
-		void SetCommands(const std::vector<BattleCommand>& commands);
+		const LcfVector<BattleCommand>& GetCommands() const;
+		LcfVector<BattleCommand>& GetCommands();
+		void SetCommands(const LcfVector<BattleCommand>& commands);
 
 		int GetDeathHandler2() const;
 		void SetDeathHandler2(int death_handler2);

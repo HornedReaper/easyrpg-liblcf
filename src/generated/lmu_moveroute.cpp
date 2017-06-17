@@ -21,7 +21,7 @@
 
 LCF_STRUCT_FIELDS_BEGIN()
 	LCF_STRUCT_SIZE_FIELD(RPG::MoveCommand, move_commands),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::MoveCommand>, move_commands),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::MoveCommand>, move_commands),
 	LCF_STRUCT_TYPED_FIELD(bool, repeat),
 	LCF_STRUCT_TYPED_FIELD(bool, skippable),
 LCF_STRUCT_FIELDS_END()

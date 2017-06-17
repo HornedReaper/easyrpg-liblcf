@@ -237,15 +237,15 @@ void RPG::Actor::SetBattlerAnimation(int battler_animation) {
 	this->battler_animation = battler_animation;
 }
 
-const std::vector<RPG::Learning>& RPG::Actor::GetSkills() const  {
+const LcfVector<RPG::Learning>& RPG::Actor::GetSkills() const  {
 	return skills;
 }
 
-std::vector<RPG::Learning>& RPG::Actor::GetSkills() {
+LcfVector<RPG::Learning>& RPG::Actor::GetSkills() {
 	return skills;
 }
 
-void RPG::Actor::SetSkills(const std::vector<RPG::Learning>& skills) {
+void RPG::Actor::SetSkills(const LcfVector<RPG::Learning>& skills) {
 	this->skills = skills;
 }
 
@@ -270,40 +270,40 @@ void RPG::Actor::SetSkillName(const std::string& skill_name) {
 }
 
 
-const std::vector<uint8_t>& RPG::Actor::GetStateRanks() const  {
+const LcfVector<uint8_t>& RPG::Actor::GetStateRanks() const  {
 	return state_ranks;
 }
 
-std::vector<uint8_t>& RPG::Actor::GetStateRanks() {
+LcfVector<uint8_t>& RPG::Actor::GetStateRanks() {
 	return state_ranks;
 }
 
-void RPG::Actor::SetStateRanks(const std::vector<uint8_t>& state_ranks) {
+void RPG::Actor::SetStateRanks(const LcfVector<uint8_t>& state_ranks) {
 	this->state_ranks = state_ranks;
 }
 
 
-const std::vector<uint8_t>& RPG::Actor::GetAttributeRanks() const  {
+const LcfVector<uint8_t>& RPG::Actor::GetAttributeRanks() const  {
 	return attribute_ranks;
 }
 
-std::vector<uint8_t>& RPG::Actor::GetAttributeRanks() {
+LcfVector<uint8_t>& RPG::Actor::GetAttributeRanks() {
 	return attribute_ranks;
 }
 
-void RPG::Actor::SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks) {
+void RPG::Actor::SetAttributeRanks(const LcfVector<uint8_t>& attribute_ranks) {
 	this->attribute_ranks = attribute_ranks;
 }
 
-const std::vector<uint32_t>& RPG::Actor::GetBattleCommands() const  {
+const LcfVector<uint32_t>& RPG::Actor::GetBattleCommands() const  {
 	return battle_commands;
 }
 
-std::vector<uint32_t>& RPG::Actor::GetBattleCommands() {
+LcfVector<uint32_t>& RPG::Actor::GetBattleCommands() {
 	return battle_commands;
 }
 
-void RPG::Actor::SetBattleCommands(const std::vector<uint32_t>& battle_commands) {
+void RPG::Actor::SetBattleCommands(const LcfVector<uint32_t>& battle_commands) {
 	this->battle_commands = battle_commands;
 }
 

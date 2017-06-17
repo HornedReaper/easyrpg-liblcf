@@ -21,11 +21,11 @@
 
 LCF_STRUCT_FIELDS_BEGIN()
 	LCF_STRUCT_TYPED_FIELD(int, party_size),
-	LCF_STRUCT_TYPED_FIELD(std::vector<int16_t>, party),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<int16_t>, party),
 	LCF_STRUCT_TYPED_FIELD(int, items_size),
-	LCF_STRUCT_TYPED_FIELD(std::vector<int16_t>, item_ids),
-	LCF_STRUCT_TYPED_FIELD(std::vector<uint8_t>, item_counts),
-	LCF_STRUCT_TYPED_FIELD(std::vector<uint8_t>, item_usage),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<int16_t>, item_ids),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<uint8_t>, item_counts),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<uint8_t>, item_usage),
 	LCF_STRUCT_TYPED_FIELD(int, gold),
 	LCF_STRUCT_TYPED_FIELD(int, timer1_secs),
 	LCF_STRUCT_TYPED_FIELD(bool, timer1_active),

@@ -13,7 +13,7 @@
 #define LCF_RPG_SAVEEVENTDATA_H
 
 // Headers
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 #include "rpg_saveeventcommands.h"
 
@@ -23,7 +23,7 @@
 namespace RPG {
 	class SaveEventData {
 	public:
-		std::vector<SaveEventCommands> commands;
+		LcfVector<SaveEventCommands> commands;
 		bool show_message = false;
 		int unknown_0b_escape = 0;
 		bool wait_movement = false;
@@ -45,9 +45,9 @@ namespace RPG {
 		bool keyinput_up = false;
 		bool keyinput_timed = false;
 		int unknown_2a_time_left = 0;
-		const std::vector<SaveEventCommands>& GetCommands() const;
-		std::vector<SaveEventCommands>& GetCommands();
-		void SetCommands(const std::vector<SaveEventCommands>& commands);
+		const LcfVector<SaveEventCommands>& GetCommands() const;
+		LcfVector<SaveEventCommands>& GetCommands();
+		void SetCommands(const LcfVector<SaveEventCommands>& commands);
 
 		bool GetShowMessage() const;
 		void SetShowMessage(bool show_message);

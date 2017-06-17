@@ -11,7 +11,7 @@
 #define LCF_WRITER_LCF_H
 
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include <iosfwd>
 #include <cstring>
 #include <cstdio>
@@ -90,7 +90,7 @@ public:
 	 * @param buffer vector to write.
 	 */
 	template <class T>
-	void Write(const std::vector<T>& buffer);
+	void Write(const LcfVector<T>& buffer);
 
 	/**
 	 * Checks if the file is writable and if no error occurred.

@@ -14,15 +14,15 @@
 
 
 
-const std::vector<RPG::MoveCommand>& RPG::MoveRoute::GetMoveCommands() const  {
+const LcfVector<RPG::MoveCommand>& RPG::MoveRoute::GetMoveCommands() const  {
 	return move_commands;
 }
 
-std::vector<RPG::MoveCommand>& RPG::MoveRoute::GetMoveCommands() {
+LcfVector<RPG::MoveCommand>& RPG::MoveRoute::GetMoveCommands() {
 	return move_commands;
 }
 
-void RPG::MoveRoute::SetMoveCommands(const std::vector<RPG::MoveCommand>& move_commands) {
+void RPG::MoveRoute::SetMoveCommands(const LcfVector<RPG::MoveCommand>& move_commands) {
 	this->move_commands = move_commands;
 }
 

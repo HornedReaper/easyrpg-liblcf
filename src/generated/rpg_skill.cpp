@@ -266,28 +266,28 @@ void RPG::Skill::SetIgnoreDefense(bool ignore_defense) {
 }
 
 
-const std::vector<bool>& RPG::Skill::GetStateEffects() const  {
+const LcfVector<bool>& RPG::Skill::GetStateEffects() const  {
 	return state_effects;
 }
 
-std::vector<bool>& RPG::Skill::GetStateEffects() {
+LcfVector<bool>& RPG::Skill::GetStateEffects() {
 	return state_effects;
 }
 
-void RPG::Skill::SetStateEffects(const std::vector<bool>& state_effects) {
+void RPG::Skill::SetStateEffects(const LcfVector<bool>& state_effects) {
 	this->state_effects = state_effects;
 }
 
 
-const std::vector<bool>& RPG::Skill::GetAttributeEffects() const  {
+const LcfVector<bool>& RPG::Skill::GetAttributeEffects() const  {
 	return attribute_effects;
 }
 
-std::vector<bool>& RPG::Skill::GetAttributeEffects() {
+LcfVector<bool>& RPG::Skill::GetAttributeEffects() {
 	return attribute_effects;
 }
 
-void RPG::Skill::SetAttributeEffects(const std::vector<bool>& attribute_effects) {
+void RPG::Skill::SetAttributeEffects(const LcfVector<bool>& attribute_effects) {
 	this->attribute_effects = attribute_effects;
 }
 
@@ -307,15 +307,15 @@ void RPG::Skill::SetBattlerAnimation(int battler_animation) {
 	this->battler_animation = battler_animation;
 }
 
-const std::vector<RPG::BattlerAnimationData>& RPG::Skill::GetBattlerAnimationData() const  {
+const LcfVector<RPG::BattlerAnimationData>& RPG::Skill::GetBattlerAnimationData() const  {
 	return battler_animation_data;
 }
 
-std::vector<RPG::BattlerAnimationData>& RPG::Skill::GetBattlerAnimationData() {
+LcfVector<RPG::BattlerAnimationData>& RPG::Skill::GetBattlerAnimationData() {
 	return battler_animation_data;
 }
 
-void RPG::Skill::SetBattlerAnimationData(const std::vector<RPG::BattlerAnimationData>& battler_animation_data) {
+void RPG::Skill::SetBattlerAnimationData(const LcfVector<RPG::BattlerAnimationData>& battler_animation_data) {
 	this->battler_animation_data = battler_animation_data;
 }
 

@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 #include "rpg_event.h"
 
@@ -65,12 +65,12 @@ namespace RPG {
 		bool generator_floor_c = true;
 		bool generator_extra_b = true;
 		bool generator_extra_c = true;
-		std::vector<uint32_t> generator_x;
-		std::vector<uint32_t> generator_y;
-		std::vector<int16_t> generator_tile_ids;
-		std::vector<int16_t> lower_layer;
-		std::vector<int16_t> upper_layer;
-		std::vector<Event> events;
+		LcfVector<uint32_t> generator_x;
+		LcfVector<uint32_t> generator_y;
+		LcfVector<int16_t> generator_tile_ids;
+		LcfVector<int16_t> lower_layer;
+		LcfVector<int16_t> upper_layer;
+		LcfVector<Event> events;
 		int save_count = 0;
 		int GetChipsetId() const;
 		void SetChipsetId(int chipset_id);
@@ -145,29 +145,29 @@ namespace RPG {
 		bool GetGeneratorExtraC() const;
 		void SetGeneratorExtraC(bool generator_extra_c);
 
-		const std::vector<uint32_t>& GetGeneratorX() const;
-		std::vector<uint32_t>& GetGeneratorX();
-		void SetGeneratorX(const std::vector<uint32_t>& generator_x);
+		const LcfVector<uint32_t>& GetGeneratorX() const;
+		LcfVector<uint32_t>& GetGeneratorX();
+		void SetGeneratorX(const LcfVector<uint32_t>& generator_x);
 
-		const std::vector<uint32_t>& GetGeneratorY() const;
-		std::vector<uint32_t>& GetGeneratorY();
-		void SetGeneratorY(const std::vector<uint32_t>& generator_y);
+		const LcfVector<uint32_t>& GetGeneratorY() const;
+		LcfVector<uint32_t>& GetGeneratorY();
+		void SetGeneratorY(const LcfVector<uint32_t>& generator_y);
 
-		const std::vector<int16_t>& GetGeneratorTileIds() const;
-		std::vector<int16_t>& GetGeneratorTileIds();
-		void SetGeneratorTileIds(const std::vector<int16_t>& generator_tile_ids);
+		const LcfVector<int16_t>& GetGeneratorTileIds() const;
+		LcfVector<int16_t>& GetGeneratorTileIds();
+		void SetGeneratorTileIds(const LcfVector<int16_t>& generator_tile_ids);
 
-		const std::vector<int16_t>& GetLowerLayer() const;
-		std::vector<int16_t>& GetLowerLayer();
-		void SetLowerLayer(const std::vector<int16_t>& lower_layer);
+		const LcfVector<int16_t>& GetLowerLayer() const;
+		LcfVector<int16_t>& GetLowerLayer();
+		void SetLowerLayer(const LcfVector<int16_t>& lower_layer);
 
-		const std::vector<int16_t>& GetUpperLayer() const;
-		std::vector<int16_t>& GetUpperLayer();
-		void SetUpperLayer(const std::vector<int16_t>& upper_layer);
+		const LcfVector<int16_t>& GetUpperLayer() const;
+		LcfVector<int16_t>& GetUpperLayer();
+		void SetUpperLayer(const LcfVector<int16_t>& upper_layer);
 
-		const std::vector<Event>& GetEvents() const;
-		std::vector<Event>& GetEvents();
-		void SetEvents(const std::vector<Event>& events);
+		const LcfVector<Event>& GetEvents() const;
+		LcfVector<Event>& GetEvents();
+		void SetEvents(const LcfVector<Event>& events);
 
 		int GetSaveCount() const;
 		void SetSaveCount(int save_count);

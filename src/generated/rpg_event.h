@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_eventpage.h"
 
 /**
@@ -27,7 +27,7 @@ namespace RPG {
 		std::string name;
 		int x = 0;
 		int y = 0;
-		std::vector<EventPage> pages;
+		LcfVector<EventPage> pages;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);
@@ -38,9 +38,9 @@ namespace RPG {
 		int GetY() const;
 		void SetY(int y);
 
-		const std::vector<EventPage>& GetPages() const;
-		std::vector<EventPage>& GetPages();
-		void SetPages(const std::vector<EventPage>& pages);
+		const LcfVector<EventPage>& GetPages() const;
+		LcfVector<EventPage>& GetPages();
+		void SetPages(const LcfVector<EventPage>& pages);
 
 	};
 }

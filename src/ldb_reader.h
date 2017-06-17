@@ -11,7 +11,7 @@
 #define LCF_LDB_READER_H
 
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_actor.h"
 #include "rpg_skill.h"
 #include "rpg_item.h"

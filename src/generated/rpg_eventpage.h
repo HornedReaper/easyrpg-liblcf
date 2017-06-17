@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_eventcommand.h"
 #include "rpg_eventpagecondition.h"
 #include "rpg_moveroute.h"
@@ -89,7 +89,7 @@ namespace RPG {
 		int animation_type = 0;
 		int move_speed = 3;
 		MoveRoute move_route;
-		std::vector<EventCommand> event_commands;
+		LcfVector<EventCommand> event_commands;
 		const EventPageCondition& GetCondition() const;
 		EventPageCondition& GetCondition();
 		void SetCondition(const EventPageCondition& condition);
@@ -136,9 +136,9 @@ namespace RPG {
 		void SetMoveRoute(const MoveRoute& move_route);
 
 
-		const std::vector<EventCommand>& GetEventCommands() const;
-		std::vector<EventCommand>& GetEventCommands();
-		void SetEventCommands(const std::vector<EventCommand>& event_commands);
+		const LcfVector<EventCommand>& GetEventCommands() const;
+		LcfVector<EventCommand>& GetEventCommands();
+		void SetEventCommands(const LcfVector<EventCommand>& event_commands);
 
 	};
 }

@@ -42,11 +42,11 @@ def cpp_type(ty, prefix=True):
 
     m = re.match(r'Array<(.*):(.*)>', ty)
     if m:
-        return 'std::vector<%s>' % cpp_type(m.group(1), prefix)
+        return 'LcfVector<%s>' % cpp_type(m.group(1), prefix)
 
     m = re.match(r'(Vector|Array)<(.*)>', ty)
     if m:
-        return 'std::vector<%s>' % cpp_type(m.group(2), prefix)
+        return 'LcfVector<%s>' % cpp_type(m.group(2), prefix)
 
     m = re.match(r'Ref<(.*):(.*)>', ty)
     if m:
@@ -143,11 +143,11 @@ def struct_headers(ty, header_map):
 
     m = re.match(r'Array<(.*):(.*)>', ty)
     if m:
-        return ['<vector>'] + struct_headers(m.group(1), header_map)
+        return ['"lcf_vector.h"'] + struct_headers(m.group(1), header_map)
 
     m = re.match(r'(Vector|Array)<(.*)>', ty)
     if m:
-        return ['<vector>'] + struct_headers(m.group(2), header_map)
+        return ['"lcf_vector.h"'] + struct_headers(m.group(2), header_map)
 
     header = header_map.get(ty)
     if header is not None:

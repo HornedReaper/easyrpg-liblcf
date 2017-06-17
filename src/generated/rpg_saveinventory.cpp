@@ -21,15 +21,15 @@ void RPG::SaveInventory::SetPartySize(int party_size) {
 	this->party_size = party_size;
 }
 
-const std::vector<int16_t>& RPG::SaveInventory::GetParty() const  {
+const LcfVector<int16_t>& RPG::SaveInventory::GetParty() const  {
 	return party;
 }
 
-std::vector<int16_t>& RPG::SaveInventory::GetParty() {
+LcfVector<int16_t>& RPG::SaveInventory::GetParty() {
 	return party;
 }
 
-void RPG::SaveInventory::SetParty(const std::vector<int16_t>& party) {
+void RPG::SaveInventory::SetParty(const LcfVector<int16_t>& party) {
 	this->party = party;
 }
 
@@ -41,39 +41,39 @@ void RPG::SaveInventory::SetItemsSize(int items_size) {
 	this->items_size = items_size;
 }
 
-const std::vector<int16_t>& RPG::SaveInventory::GetItemIds() const  {
+const LcfVector<int16_t>& RPG::SaveInventory::GetItemIds() const  {
 	return item_ids;
 }
 
-std::vector<int16_t>& RPG::SaveInventory::GetItemIds() {
+LcfVector<int16_t>& RPG::SaveInventory::GetItemIds() {
 	return item_ids;
 }
 
-void RPG::SaveInventory::SetItemIds(const std::vector<int16_t>& item_ids) {
+void RPG::SaveInventory::SetItemIds(const LcfVector<int16_t>& item_ids) {
 	this->item_ids = item_ids;
 }
 
-const std::vector<uint8_t>& RPG::SaveInventory::GetItemCounts() const  {
+const LcfVector<uint8_t>& RPG::SaveInventory::GetItemCounts() const  {
 	return item_counts;
 }
 
-std::vector<uint8_t>& RPG::SaveInventory::GetItemCounts() {
+LcfVector<uint8_t>& RPG::SaveInventory::GetItemCounts() {
 	return item_counts;
 }
 
-void RPG::SaveInventory::SetItemCounts(const std::vector<uint8_t>& item_counts) {
+void RPG::SaveInventory::SetItemCounts(const LcfVector<uint8_t>& item_counts) {
 	this->item_counts = item_counts;
 }
 
-const std::vector<uint8_t>& RPG::SaveInventory::GetItemUsage() const  {
+const LcfVector<uint8_t>& RPG::SaveInventory::GetItemUsage() const  {
 	return item_usage;
 }
 
-std::vector<uint8_t>& RPG::SaveInventory::GetItemUsage() {
+LcfVector<uint8_t>& RPG::SaveInventory::GetItemUsage() {
 	return item_usage;
 }
 
-void RPG::SaveInventory::SetItemUsage(const std::vector<uint8_t>& item_usage) {
+void RPG::SaveInventory::SetItemUsage(const LcfVector<uint8_t>& item_usage) {
 	this->item_usage = item_usage;
 }
 

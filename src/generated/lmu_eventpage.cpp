@@ -35,7 +35,7 @@ LCF_STRUCT_FIELDS_BEGIN()
 	LCF_STRUCT_TYPED_FIELD(int, move_speed),
 	LCF_STRUCT_TYPED_FIELD(RPG::MoveRoute, move_route),
 	LCF_STRUCT_SIZE_FIELD(RPG::EventCommand, event_commands),
-	LCF_STRUCT_TYPED_FIELD(std::vector<RPG::EventCommand>, event_commands),
+	LCF_STRUCT_TYPED_FIELD(LcfVector<RPG::EventCommand>, event_commands),
 LCF_STRUCT_FIELDS_END()
 
 #undef LCF_CURRENT_STRUCT

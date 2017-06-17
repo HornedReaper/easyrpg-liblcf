@@ -117,7 +117,7 @@ void LcfReader::Read<double>(double& ref) {
 }
 
 template <>
-void LcfReader::Read<bool>(std::vector<bool> &buffer, size_t size) {
+void LcfReader::Read<bool>(LcfVector<bool> &buffer, size_t size) {
 	buffer.clear();
 
 	for (unsigned i = 0; i < size; ++i) {
@@ -128,7 +128,7 @@ void LcfReader::Read<bool>(std::vector<bool> &buffer, size_t size) {
 }
 
 template <>
-void LcfReader::Read<uint8_t>(std::vector<uint8_t> &buffer, size_t size) {
+void LcfReader::Read<uint8_t>(LcfVector<uint8_t> &buffer, size_t size) {
 	buffer.clear();
 
 	for (unsigned int i = 0; i < size; ++i) {
@@ -139,7 +139,7 @@ void LcfReader::Read<uint8_t>(std::vector<uint8_t> &buffer, size_t size) {
 }
 
 template <>
-void LcfReader::Read<int16_t>(std::vector<int16_t> &buffer, size_t size) {
+void LcfReader::Read<int16_t>(LcfVector<int16_t> &buffer, size_t size) {
 	buffer.clear();
 	size_t items = size / 2;
 	for (unsigned int i = 0; i < items; ++i) {
@@ -155,7 +155,7 @@ void LcfReader::Read<int16_t>(std::vector<int16_t> &buffer, size_t size) {
 }
 
 template <>
-void LcfReader::Read<uint32_t>(std::vector<uint32_t> &buffer, size_t size) {
+void LcfReader::Read<uint32_t>(LcfVector<uint32_t> &buffer, size_t size) {
 	buffer.clear();
 	size_t items = size / 4;
 	for (unsigned int i = 0; i < items; ++i) {

@@ -13,7 +13,7 @@
 #define LCF_RPG_TROOPPAGE_H
 
 // Headers
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_eventcommand.h"
 #include "rpg_trooppagecondition.h"
 
@@ -25,15 +25,15 @@ namespace RPG {
 	public:
 		int ID = 0;
 		TroopPageCondition condition;
-		std::vector<EventCommand> event_commands;
+		LcfVector<EventCommand> event_commands;
 		const TroopPageCondition& GetCondition() const;
 		TroopPageCondition& GetCondition();
 		void SetCondition(const TroopPageCondition& condition);
 
 
-		const std::vector<EventCommand>& GetEventCommands() const;
-		std::vector<EventCommand>& GetEventCommands();
-		void SetEventCommands(const std::vector<EventCommand>& event_commands);
+		const LcfVector<EventCommand>& GetEventCommands() const;
+		LcfVector<EventCommand>& GetEventCommands();
+		void SetEventCommands(const LcfVector<EventCommand>& event_commands);
 
 	};
 }

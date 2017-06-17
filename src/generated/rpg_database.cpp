@@ -13,123 +13,123 @@
 #include "rpg_database.h"
 
 
-const std::vector<RPG::Actor>& RPG::Database::GetActors() const  {
+const LcfVector<RPG::Actor>& RPG::Database::GetActors() const  {
 	return actors;
 }
 
-std::vector<RPG::Actor>& RPG::Database::GetActors() {
+LcfVector<RPG::Actor>& RPG::Database::GetActors() {
 	return actors;
 }
 
-void RPG::Database::SetActors(const std::vector<RPG::Actor>& actors) {
+void RPG::Database::SetActors(const LcfVector<RPG::Actor>& actors) {
 	this->actors = actors;
 }
 
-const std::vector<RPG::Skill>& RPG::Database::GetSkills() const  {
+const LcfVector<RPG::Skill>& RPG::Database::GetSkills() const  {
 	return skills;
 }
 
-std::vector<RPG::Skill>& RPG::Database::GetSkills() {
+LcfVector<RPG::Skill>& RPG::Database::GetSkills() {
 	return skills;
 }
 
-void RPG::Database::SetSkills(const std::vector<RPG::Skill>& skills) {
+void RPG::Database::SetSkills(const LcfVector<RPG::Skill>& skills) {
 	this->skills = skills;
 }
 
-const std::vector<RPG::Item>& RPG::Database::GetItems() const  {
+const LcfVector<RPG::Item>& RPG::Database::GetItems() const  {
 	return items;
 }
 
-std::vector<RPG::Item>& RPG::Database::GetItems() {
+LcfVector<RPG::Item>& RPG::Database::GetItems() {
 	return items;
 }
 
-void RPG::Database::SetItems(const std::vector<RPG::Item>& items) {
+void RPG::Database::SetItems(const LcfVector<RPG::Item>& items) {
 	this->items = items;
 }
 
-const std::vector<RPG::Enemy>& RPG::Database::GetEnemies() const  {
+const LcfVector<RPG::Enemy>& RPG::Database::GetEnemies() const  {
 	return enemies;
 }
 
-std::vector<RPG::Enemy>& RPG::Database::GetEnemies() {
+LcfVector<RPG::Enemy>& RPG::Database::GetEnemies() {
 	return enemies;
 }
 
-void RPG::Database::SetEnemies(const std::vector<RPG::Enemy>& enemies) {
+void RPG::Database::SetEnemies(const LcfVector<RPG::Enemy>& enemies) {
 	this->enemies = enemies;
 }
 
-const std::vector<RPG::Troop>& RPG::Database::GetTroops() const  {
+const LcfVector<RPG::Troop>& RPG::Database::GetTroops() const  {
 	return troops;
 }
 
-std::vector<RPG::Troop>& RPG::Database::GetTroops() {
+LcfVector<RPG::Troop>& RPG::Database::GetTroops() {
 	return troops;
 }
 
-void RPG::Database::SetTroops(const std::vector<RPG::Troop>& troops) {
+void RPG::Database::SetTroops(const LcfVector<RPG::Troop>& troops) {
 	this->troops = troops;
 }
 
-const std::vector<RPG::Terrain>& RPG::Database::GetTerrains() const  {
+const LcfVector<RPG::Terrain>& RPG::Database::GetTerrains() const  {
 	return terrains;
 }
 
-std::vector<RPG::Terrain>& RPG::Database::GetTerrains() {
+LcfVector<RPG::Terrain>& RPG::Database::GetTerrains() {
 	return terrains;
 }
 
-void RPG::Database::SetTerrains(const std::vector<RPG::Terrain>& terrains) {
+void RPG::Database::SetTerrains(const LcfVector<RPG::Terrain>& terrains) {
 	this->terrains = terrains;
 }
 
-const std::vector<RPG::Attribute>& RPG::Database::GetAttributes() const  {
+const LcfVector<RPG::Attribute>& RPG::Database::GetAttributes() const  {
 	return attributes;
 }
 
-std::vector<RPG::Attribute>& RPG::Database::GetAttributes() {
+LcfVector<RPG::Attribute>& RPG::Database::GetAttributes() {
 	return attributes;
 }
 
-void RPG::Database::SetAttributes(const std::vector<RPG::Attribute>& attributes) {
+void RPG::Database::SetAttributes(const LcfVector<RPG::Attribute>& attributes) {
 	this->attributes = attributes;
 }
 
-const std::vector<RPG::State>& RPG::Database::GetStates() const  {
+const LcfVector<RPG::State>& RPG::Database::GetStates() const  {
 	return states;
 }
 
-std::vector<RPG::State>& RPG::Database::GetStates() {
+LcfVector<RPG::State>& RPG::Database::GetStates() {
 	return states;
 }
 
-void RPG::Database::SetStates(const std::vector<RPG::State>& states) {
+void RPG::Database::SetStates(const LcfVector<RPG::State>& states) {
 	this->states = states;
 }
 
-const std::vector<RPG::Animation>& RPG::Database::GetAnimations() const  {
+const LcfVector<RPG::Animation>& RPG::Database::GetAnimations() const  {
 	return animations;
 }
 
-std::vector<RPG::Animation>& RPG::Database::GetAnimations() {
+LcfVector<RPG::Animation>& RPG::Database::GetAnimations() {
 	return animations;
 }
 
-void RPG::Database::SetAnimations(const std::vector<RPG::Animation>& animations) {
+void RPG::Database::SetAnimations(const LcfVector<RPG::Animation>& animations) {
 	this->animations = animations;
 }
 
-const std::vector<RPG::Chipset>& RPG::Database::GetChipsets() const  {
+const LcfVector<RPG::Chipset>& RPG::Database::GetChipsets() const  {
 	return chipsets;
 }
 
-std::vector<RPG::Chipset>& RPG::Database::GetChipsets() {
+LcfVector<RPG::Chipset>& RPG::Database::GetChipsets() {
 	return chipsets;
 }
 
-void RPG::Database::SetChipsets(const std::vector<RPG::Chipset>& chipsets) {
+void RPG::Database::SetChipsets(const LcfVector<RPG::Chipset>& chipsets) {
 	this->chipsets = chipsets;
 }
 
@@ -157,39 +157,39 @@ void RPG::Database::SetSystem(const RPG::System& system) {
 	this->system = system;
 }
 
-const std::vector<RPG::Switch>& RPG::Database::GetSwitches() const  {
+const LcfVector<RPG::Switch>& RPG::Database::GetSwitches() const  {
 	return switches;
 }
 
-std::vector<RPG::Switch>& RPG::Database::GetSwitches() {
+LcfVector<RPG::Switch>& RPG::Database::GetSwitches() {
 	return switches;
 }
 
-void RPG::Database::SetSwitches(const std::vector<RPG::Switch>& switches) {
+void RPG::Database::SetSwitches(const LcfVector<RPG::Switch>& switches) {
 	this->switches = switches;
 }
 
-const std::vector<RPG::Variable>& RPG::Database::GetVariables() const  {
+const LcfVector<RPG::Variable>& RPG::Database::GetVariables() const  {
 	return variables;
 }
 
-std::vector<RPG::Variable>& RPG::Database::GetVariables() {
+LcfVector<RPG::Variable>& RPG::Database::GetVariables() {
 	return variables;
 }
 
-void RPG::Database::SetVariables(const std::vector<RPG::Variable>& variables) {
+void RPG::Database::SetVariables(const LcfVector<RPG::Variable>& variables) {
 	this->variables = variables;
 }
 
-const std::vector<RPG::CommonEvent>& RPG::Database::GetCommonevents() const  {
+const LcfVector<RPG::CommonEvent>& RPG::Database::GetCommonevents() const  {
 	return commonevents;
 }
 
-std::vector<RPG::CommonEvent>& RPG::Database::GetCommonevents() {
+LcfVector<RPG::CommonEvent>& RPG::Database::GetCommonevents() {
 	return commonevents;
 }
 
-void RPG::Database::SetCommonevents(const std::vector<RPG::CommonEvent>& commonevents) {
+void RPG::Database::SetCommonevents(const LcfVector<RPG::CommonEvent>& commonevents) {
 	this->commonevents = commonevents;
 }
 
@@ -213,27 +213,27 @@ void RPG::Database::SetBattlecommands(const RPG::BattleCommands& battlecommands)
 	this->battlecommands = battlecommands;
 }
 
-const std::vector<RPG::Class>& RPG::Database::GetClasses() const  {
+const LcfVector<RPG::Class>& RPG::Database::GetClasses() const  {
 	return classes;
 }
 
-std::vector<RPG::Class>& RPG::Database::GetClasses() {
+LcfVector<RPG::Class>& RPG::Database::GetClasses() {
 	return classes;
 }
 
-void RPG::Database::SetClasses(const std::vector<RPG::Class>& classes) {
+void RPG::Database::SetClasses(const LcfVector<RPG::Class>& classes) {
 	this->classes = classes;
 }
 
-const std::vector<RPG::BattlerAnimation>& RPG::Database::GetBattleranimations() const  {
+const LcfVector<RPG::BattlerAnimation>& RPG::Database::GetBattleranimations() const  {
 	return battleranimations;
 }
 
-std::vector<RPG::BattlerAnimation>& RPG::Database::GetBattleranimations() {
+LcfVector<RPG::BattlerAnimation>& RPG::Database::GetBattleranimations() {
 	return battleranimations;
 }
 
-void RPG::Database::SetBattleranimations(const std::vector<RPG::BattlerAnimation>& battleranimations) {
+void RPG::Database::SetBattleranimations(const LcfVector<RPG::BattlerAnimation>& battleranimations) {
 	this->battleranimations = battleranimations;
 }
 

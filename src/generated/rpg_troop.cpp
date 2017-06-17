@@ -25,15 +25,15 @@ void RPG::Troop::SetName(const std::string& name) {
 	this->name = name;
 }
 
-const std::vector<RPG::TroopMember>& RPG::Troop::GetMembers() const  {
+const LcfVector<RPG::TroopMember>& RPG::Troop::GetMembers() const  {
 	return members;
 }
 
-std::vector<RPG::TroopMember>& RPG::Troop::GetMembers() {
+LcfVector<RPG::TroopMember>& RPG::Troop::GetMembers() {
 	return members;
 }
 
-void RPG::Troop::SetMembers(const std::vector<RPG::TroopMember>& members) {
+void RPG::Troop::SetMembers(const LcfVector<RPG::TroopMember>& members) {
 	this->members = members;
 }
 
@@ -46,15 +46,15 @@ void RPG::Troop::SetAutoAlignment(bool auto_alignment) {
 }
 
 
-const std::vector<bool>& RPG::Troop::GetTerrainSet() const  {
+const LcfVector<bool>& RPG::Troop::GetTerrainSet() const  {
 	return terrain_set;
 }
 
-std::vector<bool>& RPG::Troop::GetTerrainSet() {
+LcfVector<bool>& RPG::Troop::GetTerrainSet() {
 	return terrain_set;
 }
 
-void RPG::Troop::SetTerrainSet(const std::vector<bool>& terrain_set) {
+void RPG::Troop::SetTerrainSet(const LcfVector<bool>& terrain_set) {
 	this->terrain_set = terrain_set;
 }
 
@@ -66,15 +66,15 @@ void RPG::Troop::SetAppearRandomly(bool appear_randomly) {
 	this->appear_randomly = appear_randomly;
 }
 
-const std::vector<RPG::TroopPage>& RPG::Troop::GetPages() const  {
+const LcfVector<RPG::TroopPage>& RPG::Troop::GetPages() const  {
 	return pages;
 }
 
-std::vector<RPG::TroopPage>& RPG::Troop::GetPages() {
+LcfVector<RPG::TroopPage>& RPG::Troop::GetPages() {
 	return pages;
 }
 
-void RPG::Troop::SetPages(const std::vector<RPG::TroopPage>& pages) {
+void RPG::Troop::SetPages(const LcfVector<RPG::TroopPage>& pages) {
 	this->pages = pages;
 }
 

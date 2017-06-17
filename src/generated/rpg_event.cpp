@@ -41,15 +41,15 @@ void RPG::Event::SetY(int y) {
 	this->y = y;
 }
 
-const std::vector<RPG::EventPage>& RPG::Event::GetPages() const  {
+const LcfVector<RPG::EventPage>& RPG::Event::GetPages() const  {
 	return pages;
 }
 
-std::vector<RPG::EventPage>& RPG::Event::GetPages() {
+LcfVector<RPG::EventPage>& RPG::Event::GetPages() {
 	return pages;
 }
 
-void RPG::Event::SetPages(const std::vector<RPG::EventPage>& pages) {
+void RPG::Event::SetPages(const LcfVector<RPG::EventPage>& pages) {
 	this->pages = pages;
 }
 

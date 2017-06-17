@@ -350,41 +350,41 @@ void RPG::Item::SetOccasionBattle(bool occasion_battle) {
 }
 
 
-const std::vector<bool>& RPG::Item::GetActorSet() const  {
+const LcfVector<bool>& RPG::Item::GetActorSet() const  {
 	return actor_set;
 }
 
-std::vector<bool>& RPG::Item::GetActorSet() {
+LcfVector<bool>& RPG::Item::GetActorSet() {
 	return actor_set;
 }
 
-void RPG::Item::SetActorSet(const std::vector<bool>& actor_set) {
+void RPG::Item::SetActorSet(const LcfVector<bool>& actor_set) {
 	this->actor_set = actor_set;
 }
 
 
-const std::vector<bool>& RPG::Item::GetStateSet() const  {
+const LcfVector<bool>& RPG::Item::GetStateSet() const  {
 	return state_set;
 }
 
-std::vector<bool>& RPG::Item::GetStateSet() {
+LcfVector<bool>& RPG::Item::GetStateSet() {
 	return state_set;
 }
 
-void RPG::Item::SetStateSet(const std::vector<bool>& state_set) {
+void RPG::Item::SetStateSet(const LcfVector<bool>& state_set) {
 	this->state_set = state_set;
 }
 
 
-const std::vector<bool>& RPG::Item::GetAttributeSet() const  {
+const LcfVector<bool>& RPG::Item::GetAttributeSet() const  {
 	return attribute_set;
 }
 
-std::vector<bool>& RPG::Item::GetAttributeSet() {
+LcfVector<bool>& RPG::Item::GetAttributeSet() {
 	return attribute_set;
 }
 
-void RPG::Item::SetAttributeSet(const std::vector<bool>& attribute_set) {
+void RPG::Item::SetAttributeSet(const LcfVector<bool>& attribute_set) {
 	this->attribute_set = attribute_set;
 }
 
@@ -412,15 +412,15 @@ void RPG::Item::SetWeaponAnimation(int weapon_animation) {
 	this->weapon_animation = weapon_animation;
 }
 
-const std::vector<RPG::ItemAnimation>& RPG::Item::GetAnimationData() const  {
+const LcfVector<RPG::ItemAnimation>& RPG::Item::GetAnimationData() const  {
 	return animation_data;
 }
 
-std::vector<RPG::ItemAnimation>& RPG::Item::GetAnimationData() {
+LcfVector<RPG::ItemAnimation>& RPG::Item::GetAnimationData() {
 	return animation_data;
 }
 
-void RPG::Item::SetAnimationData(const std::vector<RPG::ItemAnimation>& animation_data) {
+void RPG::Item::SetAnimationData(const LcfVector<RPG::ItemAnimation>& animation_data) {
 	this->animation_data = animation_data;
 }
 
@@ -433,15 +433,15 @@ void RPG::Item::SetUseSkill(bool use_skill) {
 }
 
 
-const std::vector<bool>& RPG::Item::GetClassSet() const  {
+const LcfVector<bool>& RPG::Item::GetClassSet() const  {
 	return class_set;
 }
 
-std::vector<bool>& RPG::Item::GetClassSet() {
+LcfVector<bool>& RPG::Item::GetClassSet() {
 	return class_set;
 }
 
-void RPG::Item::SetClassSet(const std::vector<bool>& class_set) {
+void RPG::Item::SetClassSet(const LcfVector<bool>& class_set) {
 	this->class_set = class_set;
 }
 

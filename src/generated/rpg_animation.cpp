@@ -45,15 +45,15 @@ void RPG::Animation::SetUnknown03(int unknown_03) {
 	this->unknown_03 = unknown_03;
 }
 
-const std::vector<RPG::AnimationTiming>& RPG::Animation::GetTimings() const  {
+const LcfVector<RPG::AnimationTiming>& RPG::Animation::GetTimings() const  {
 	return timings;
 }
 
-std::vector<RPG::AnimationTiming>& RPG::Animation::GetTimings() {
+LcfVector<RPG::AnimationTiming>& RPG::Animation::GetTimings() {
 	return timings;
 }
 
-void RPG::Animation::SetTimings(const std::vector<RPG::AnimationTiming>& timings) {
+void RPG::Animation::SetTimings(const LcfVector<RPG::AnimationTiming>& timings) {
 	this->timings = timings;
 }
 
@@ -73,15 +73,15 @@ void RPG::Animation::SetPosition(int position) {
 	this->position = position;
 }
 
-const std::vector<RPG::AnimationFrame>& RPG::Animation::GetFrames() const  {
+const LcfVector<RPG::AnimationFrame>& RPG::Animation::GetFrames() const  {
 	return frames;
 }
 
-std::vector<RPG::AnimationFrame>& RPG::Animation::GetFrames() {
+LcfVector<RPG::AnimationFrame>& RPG::Animation::GetFrames() {
 	return frames;
 }
 
-void RPG::Animation::SetFrames(const std::vector<RPG::AnimationFrame>& frames) {
+void RPG::Animation::SetFrames(const LcfVector<RPG::AnimationFrame>& frames) {
 	this->frames = frames;
 }
 

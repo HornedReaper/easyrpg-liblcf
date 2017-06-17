@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_types.h"
 #include "rpg_map.h"
 #include "rpg_mapinfo.h"
@@ -34,9 +34,9 @@ namespace RPG {
 		int position_y = 0;
 		int encounter_rate = -1;
 		int chipset_id = 0;
-		std::vector<SaveMapEvent> events;
-		std::vector<uint8_t> lower_tiles;
-		std::vector<uint8_t> upper_tiles;
+		LcfVector<SaveMapEvent> events;
+		LcfVector<uint8_t> lower_tiles;
+		LcfVector<uint8_t> upper_tiles;
 		std::string parallax_name;
 		bool parallax_horz = false;
 		bool parallax_vert = false;
@@ -56,17 +56,17 @@ namespace RPG {
 		int GetChipsetId() const;
 		void SetChipsetId(int chipset_id);
 
-		const std::vector<SaveMapEvent>& GetEvents() const;
-		std::vector<SaveMapEvent>& GetEvents();
-		void SetEvents(const std::vector<SaveMapEvent>& events);
+		const LcfVector<SaveMapEvent>& GetEvents() const;
+		LcfVector<SaveMapEvent>& GetEvents();
+		void SetEvents(const LcfVector<SaveMapEvent>& events);
 
-		const std::vector<uint8_t>& GetLowerTiles() const;
-		std::vector<uint8_t>& GetLowerTiles();
-		void SetLowerTiles(const std::vector<uint8_t>& lower_tiles);
+		const LcfVector<uint8_t>& GetLowerTiles() const;
+		LcfVector<uint8_t>& GetLowerTiles();
+		void SetLowerTiles(const LcfVector<uint8_t>& lower_tiles);
 
-		const std::vector<uint8_t>& GetUpperTiles() const;
-		std::vector<uint8_t>& GetUpperTiles();
-		void SetUpperTiles(const std::vector<uint8_t>& upper_tiles);
+		const LcfVector<uint8_t>& GetUpperTiles() const;
+		LcfVector<uint8_t>& GetUpperTiles();
+		void SetUpperTiles(const LcfVector<uint8_t>& upper_tiles);
 
 		const std::string& GetParallaxName() const;
 		std::string& GetParallaxName();

@@ -14,7 +14,7 @@
 
 // Headers
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "rpg_encounter.h"
 #include "rpg_music.h"
 #include "rpg_rect.h"
@@ -58,7 +58,7 @@ namespace RPG {
 		int teleport = 0;
 		int escape = 0;
 		int save = 0;
-		std::vector<Encounter> encounters;
+		LcfVector<Encounter> encounters;
 		int encounter_steps = 25;
 		Rect area_rect;
 		const std::string& GetName() const;
@@ -106,9 +106,9 @@ namespace RPG {
 		int GetSave() const;
 		void SetSave(int save);
 
-		const std::vector<Encounter>& GetEncounters() const;
-		std::vector<Encounter>& GetEncounters();
-		void SetEncounters(const std::vector<Encounter>& encounters);
+		const LcfVector<Encounter>& GetEncounters() const;
+		LcfVector<Encounter>& GetEncounters();
+		void SetEncounters(const LcfVector<Encounter>& encounters);
 
 		int GetEncounterSteps() const;
 		void SetEncounterSteps(int encounter_steps);

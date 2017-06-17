@@ -8,7 +8,7 @@
  */
 
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include "reader_struct.h"
 #include "rpg_eventcommand.h"
 
@@ -22,12 +22,12 @@ struct RawStruct<RPG::EventCommand> {
 };
 
 template <>
-struct RawStruct<std::vector<RPG::EventCommand> > {
-	static void ReadLcf(std::vector<RPG::EventCommand>& ref, LcfReader& stream, uint32_t length);
-	static void WriteLcf(const std::vector<RPG::EventCommand>& ref, LcfWriter& stream);
-	static int LcfSize(const std::vector<RPG::EventCommand>& ref, LcfWriter& stream);
-	static void WriteXml(const std::vector<RPG::EventCommand>& ref, XmlWriter& stream);
-	static void BeginXml(std::vector<RPG::EventCommand>& ref, XmlReader& stream);
+struct RawStruct<LcfVector<RPG::EventCommand> > {
+	static void ReadLcf(LcfVector<RPG::EventCommand>& ref, LcfReader& stream, uint32_t length);
+	static void WriteLcf(const LcfVector<RPG::EventCommand>& ref, LcfWriter& stream);
+	static int LcfSize(const LcfVector<RPG::EventCommand>& ref, LcfWriter& stream);
+	static void WriteXml(const LcfVector<RPG::EventCommand>& ref, XmlWriter& stream);
+	static void BeginXml(LcfVector<RPG::EventCommand>& ref, XmlReader& stream);
 };
 
 /**
@@ -73,7 +73,7 @@ void RawStruct<RPG::EventCommand>::WriteXml(const RPG::EventCommand& event_comma
 	stream.WriteNode<int>("code", event_command.code);
 	stream.WriteNode<int>("indent", event_command.indent);
 	stream.WriteNode<std::string>("string", event_command.string);
-	stream.WriteNode<std::vector<int> >("parameters", event_command.parameters);
+	stream.WriteNode<LcfVector<int> >("parameters", event_command.parameters);
 	stream.EndElement("EventCommand");
 }
 
@@ -120,7 +120,7 @@ public:
 				XmlReader::Read<std::string>(ref.string, data);
 				break;
 			case Parameters:
-				XmlReader::Read<std::vector<int> >(ref.parameters, data);
+				XmlReader::Read<LcfVector<int> >(ref.parameters, data);
 				break;
 		}
 	}
@@ -133,8 +133,8 @@ void RawStruct<RPG::EventCommand>::BeginXml(RPG::EventCommand& ref, XmlReader& s
 /**
  * Reads event commands.
  */
-void RawStruct<std::vector<RPG::EventCommand> >::ReadLcf(
-	std::vector<RPG::EventCommand>& event_commands, LcfReader& stream, uint32_t length) {
+void RawStruct<LcfVector<RPG::EventCommand> >::ReadLcf(
+	LcfVector<RPG::EventCommand>& event_commands, LcfReader& stream, uint32_t length) {
 	// Event Commands is a special array
 	// Has no size information. Is terminated by 4 times 0x00.
 	unsigned long startpos = stream.Tell();
@@ -177,7 +177,7 @@ void RawStruct<std::vector<RPG::EventCommand> >::ReadLcf(
 	}
 }
 
-void RawStruct<std::vector<RPG::EventCommand> >::WriteLcf(const std::vector<RPG::EventCommand>& event_commands, LcfWriter& stream) {
+void RawStruct<LcfVector<RPG::EventCommand> >::WriteLcf(const LcfVector<RPG::EventCommand>& event_commands, LcfWriter& stream) {
 	int count = event_commands.size();
 	for (int i = 0; i < count; i++)
 		RawStruct<RPG::EventCommand>::WriteLcf(event_commands[i], stream);
@@ -185,7 +185,7 @@ void RawStruct<std::vector<RPG::EventCommand> >::WriteLcf(const std::vector<RPG:
 		stream.WriteInt(0);
 }
 
-int RawStruct<std::vector<RPG::EventCommand> >::LcfSize(const std::vector<RPG::EventCommand>& event_commands, LcfWriter& stream) {
+int RawStruct<LcfVector<RPG::EventCommand> >::LcfSize(const LcfVector<RPG::EventCommand>& event_commands, LcfWriter& stream) {
 	int result = 0;
 	int count = event_commands.size();
 	for (int i = 0; i < count; i++)
@@ -194,15 +194,15 @@ int RawStruct<std::vector<RPG::EventCommand> >::LcfSize(const std::vector<RPG::E
 	return result;
 }
 
-void RawStruct<std::vector<RPG::EventCommand> >::WriteXml(const std::vector<RPG::EventCommand>& event_commands, XmlWriter& stream) {
-	std::vector<RPG::EventCommand>::const_iterator it;
+void RawStruct<LcfVector<RPG::EventCommand> >::WriteXml(const LcfVector<RPG::EventCommand>& event_commands, XmlWriter& stream) {
+	LcfVector<RPG::EventCommand>::const_iterator it;
 	for (it = event_commands.begin(); it != event_commands.end(); it++)
 		RawStruct<RPG::EventCommand>::WriteXml(*it, stream);
 }
 
 class EventCommandVectorXmlHandler : public XmlHandler {
 public:
-	EventCommandVectorXmlHandler(std::vector<RPG::EventCommand>& ref) : ref(ref) {}
+	EventCommandVectorXmlHandler(LcfVector<RPG::EventCommand>& ref) : ref(ref) {}
 
 	void StartElement(XmlReader& stream, const char* name, const char** /* atts */) {
 		if (strcmp(name, "EventCommand") != 0)
@@ -212,9 +212,9 @@ public:
 		stream.SetHandler(new EventCommandXmlHandler(obj));
 	}
 private:
-	std::vector<RPG::EventCommand>& ref;
+	LcfVector<RPG::EventCommand>& ref;
 };
 
-void RawStruct<std::vector<RPG::EventCommand> >::BeginXml(std::vector<RPG::EventCommand>& obj, XmlReader& stream) {
+void RawStruct<LcfVector<RPG::EventCommand> >::BeginXml(LcfVector<RPG::EventCommand>& obj, XmlReader& stream) {
 	stream.SetHandler(new EventCommandVectorXmlHandler(obj));
 }

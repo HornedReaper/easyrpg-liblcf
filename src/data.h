@@ -11,7 +11,6 @@
 #define LCF_DATA_H
 
 #include <string>
-#include <vector>
 #include "rpg_actor.h"
 #include "rpg_skill.h"
 #include "rpg_item.h"
@@ -41,24 +40,24 @@ namespace Data {
 	/** Database Data (ldb) */
 	extern RPG::Database data;
 	/** @{ */
-	extern std::vector<RPG::Actor*>& actors;
-	extern std::vector<RPG::Skill*>& skills;
-	extern std::vector<RPG::Item*>& items;
-	extern std::vector<RPG::Enemy*>& enemies;
-	extern std::vector<RPG::Troop*>& troops;
-	extern std::vector<RPG::Terrain*>& terrains;
-	extern std::vector<RPG::Attribute*>& attributes;
-	extern std::vector<RPG::State*>& states;
-	extern std::vector<RPG::Animation*>& animations;
-	extern std::vector<RPG::Chipset*>& chipsets;
-	extern std::vector<RPG::CommonEvent*>& commonevents;
+	extern LcfVector<RPG::Actor>& actors;
+	extern LcfVector<RPG::Skill>& skills;
+	extern LcfVector<RPG::Item>& items;
+	extern LcfVector<RPG::Enemy>& enemies;
+	extern LcfVector<RPG::Troop>& troops;
+	extern LcfVector<RPG::Terrain>& terrains;
+	extern LcfVector<RPG::Attribute>& attributes;
+	extern LcfVector<RPG::State>& states;
+	extern LcfVector<RPG::Animation>& animations;
+	extern LcfVector<RPG::Chipset>& chipsets;
+	extern LcfVector<RPG::CommonEvent>& commonevents;
 	extern RPG::BattleCommands& battlecommands;
-	extern std::vector<RPG::Class*>& classes;
-	extern std::vector<RPG::BattlerAnimation*>& battleranimations;
+	extern LcfVector<RPG::Class>& classes;
+	extern LcfVector<RPG::BattlerAnimation>& battleranimations;
 	extern RPG::Terms& terms;
 	extern RPG::System& system;
-	extern std::vector<RPG::Switch*>& switches;
-	extern std::vector<RPG::Variable*>& variables;
+	extern LcfVector<RPG::Switch>& switches;
+	extern LcfVector<RPG::Variable>& variables;
 	/** @} */
 
 	/** TreeMap (lmt) */

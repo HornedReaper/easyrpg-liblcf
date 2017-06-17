@@ -157,27 +157,27 @@ void RPG::SaveActor::SetSkillsSize(int skills_size) {
 	this->skills_size = skills_size;
 }
 
-const std::vector<int16_t>& RPG::SaveActor::GetSkills() const  {
+const LcfVector<int16_t>& RPG::SaveActor::GetSkills() const  {
 	return skills;
 }
 
-std::vector<int16_t>& RPG::SaveActor::GetSkills() {
+LcfVector<int16_t>& RPG::SaveActor::GetSkills() {
 	return skills;
 }
 
-void RPG::SaveActor::SetSkills(const std::vector<int16_t>& skills) {
+void RPG::SaveActor::SetSkills(const LcfVector<int16_t>& skills) {
 	this->skills = skills;
 }
 
-const std::vector<int16_t>& RPG::SaveActor::GetEquipped() const  {
+const LcfVector<int16_t>& RPG::SaveActor::GetEquipped() const  {
 	return equipped;
 }
 
-std::vector<int16_t>& RPG::SaveActor::GetEquipped() {
+LcfVector<int16_t>& RPG::SaveActor::GetEquipped() {
 	return equipped;
 }
 
-void RPG::SaveActor::SetEquipped(const std::vector<int16_t>& equipped) {
+void RPG::SaveActor::SetEquipped(const LcfVector<int16_t>& equipped) {
 	this->equipped = equipped;
 }
 
@@ -197,15 +197,15 @@ void RPG::SaveActor::SetCurrentSp(int current_sp) {
 	this->current_sp = current_sp;
 }
 
-const std::vector<uint32_t>& RPG::SaveActor::GetBattleCommands() const  {
+const LcfVector<uint32_t>& RPG::SaveActor::GetBattleCommands() const  {
 	return battle_commands;
 }
 
-std::vector<uint32_t>& RPG::SaveActor::GetBattleCommands() {
+LcfVector<uint32_t>& RPG::SaveActor::GetBattleCommands() {
 	return battle_commands;
 }
 
-void RPG::SaveActor::SetBattleCommands(const std::vector<uint32_t>& battle_commands) {
+void RPG::SaveActor::SetBattleCommands(const LcfVector<uint32_t>& battle_commands) {
 	this->battle_commands = battle_commands;
 }
 
@@ -217,15 +217,15 @@ void RPG::SaveActor::SetStatusSize(int status_size) {
 	this->status_size = status_size;
 }
 
-const std::vector<int16_t>& RPG::SaveActor::GetStatus() const  {
+const LcfVector<int16_t>& RPG::SaveActor::GetStatus() const  {
 	return status;
 }
 
-std::vector<int16_t>& RPG::SaveActor::GetStatus() {
+LcfVector<int16_t>& RPG::SaveActor::GetStatus() {
 	return status;
 }
 
-void RPG::SaveActor::SetStatus(const std::vector<int16_t>& status) {
+void RPG::SaveActor::SetStatus(const LcfVector<int16_t>& status) {
 	this->status = status;
 }
 

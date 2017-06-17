@@ -181,10 +181,10 @@ void Struct<S>::BeginXml(S& obj, XmlReader& stream) {
 	stream.SetHandler(new StructFieldXmlHandler<S>(obj));
 }
 
-// Read/Write std::vector<Struct>
+// Read/Write LcfVector<Struct>
 
 template <class S>
-void Struct<S>::ReadLcf(std::vector<S>& vec, LcfReader& stream) {
+void Struct<S>::ReadLcf(LcfVector<S>& vec, LcfReader& stream) {
 	int count = stream.ReadInt();
 	vec.resize(count);
 	for (int i = 0; i < count; i++) {
@@ -194,7 +194,7 @@ void Struct<S>::ReadLcf(std::vector<S>& vec, LcfReader& stream) {
 }
 
 template <class S>
-void Struct<S>::WriteLcf(const std::vector<S>& vec, LcfWriter& stream) {
+void Struct<S>::WriteLcf(const LcfVector<S>& vec, LcfWriter& stream) {
 	int count = vec.size();
 	stream.WriteInt(count);
 	for (int i = 0; i < count; i++) {
@@ -204,7 +204,7 @@ void Struct<S>::WriteLcf(const std::vector<S>& vec, LcfWriter& stream) {
 }
 
 template <class S>
-int Struct<S>::LcfSize(const std::vector<S>& vec, LcfWriter& stream) {
+int Struct<S>::LcfSize(const LcfVector<S>& vec, LcfWriter& stream) {
 	int result = 0;
 	int count = vec.size();
 	result += LcfReader::IntSize(count);
@@ -216,7 +216,7 @@ int Struct<S>::LcfSize(const std::vector<S>& vec, LcfWriter& stream) {
 }
 
 template <class S>
-void Struct<S>::WriteXml(const std::vector<S>& vec, XmlWriter& stream) {
+void Struct<S>::WriteXml(const LcfVector<S>& vec, XmlWriter& stream) {
 	int count = vec.size();
 	for (int i = 0; i < count; i++)
 		TypeReader<S>::WriteXml(vec[i], stream);
@@ -225,7 +225,7 @@ void Struct<S>::WriteXml(const std::vector<S>& vec, XmlWriter& stream) {
 template <class S>
 class StructVectorXmlHandler : public XmlHandler {
 public:
-	StructVectorXmlHandler(std::vector<S>& ref) : ref(ref) {}
+	StructVectorXmlHandler(LcfVector<S>& ref) : ref(ref) {}
 
 	void StartElement(XmlReader& stream, const char* name, const char** atts) {
 		if (strcmp(name, Struct<S>::name) != 0)
@@ -236,11 +236,11 @@ public:
 		stream.SetHandler(new StructXmlHandler<S>(obj));
 	}
 private:
-	std::vector<S>& ref;
+	LcfVector<S>& ref;
 };
 
 template <class S>
-void Struct<S>::BeginXml(std::vector<S>& obj, XmlReader& stream) {
+void Struct<S>::BeginXml(LcfVector<S>& obj, XmlReader& stream) {
 	stream.SetHandler(new StructVectorXmlHandler<S>(obj));
 }
 

@@ -138,15 +138,15 @@ void RPG::EventPage::SetMoveRoute(const RPG::MoveRoute& move_route) {
 }
 
 
-const std::vector<RPG::EventCommand>& RPG::EventPage::GetEventCommands() const  {
+const LcfVector<RPG::EventCommand>& RPG::EventPage::GetEventCommands() const  {
 	return event_commands;
 }
 
-std::vector<RPG::EventCommand>& RPG::EventPage::GetEventCommands() {
+LcfVector<RPG::EventCommand>& RPG::EventPage::GetEventCommands() {
 	return event_commands;
 }
 
-void RPG::EventPage::SetEventCommands(const std::vector<RPG::EventCommand>& event_commands) {
+void RPG::EventPage::SetEventCommands(const LcfVector<RPG::EventCommand>& event_commands) {
 	this->event_commands = event_commands;
 }
 

@@ -49,15 +49,15 @@ void RPG::Save::SetScreen(const RPG::SaveScreen& screen) {
 	this->screen = screen;
 }
 
-const std::vector<RPG::SavePicture>& RPG::Save::GetPictures() const  {
+const LcfVector<RPG::SavePicture>& RPG::Save::GetPictures() const  {
 	return pictures;
 }
 
-std::vector<RPG::SavePicture>& RPG::Save::GetPictures() {
+LcfVector<RPG::SavePicture>& RPG::Save::GetPictures() {
 	return pictures;
 }
 
-void RPG::Save::SetPictures(const std::vector<RPG::SavePicture>& pictures) {
+void RPG::Save::SetPictures(const LcfVector<RPG::SavePicture>& pictures) {
 	this->pictures = pictures;
 }
 
@@ -109,15 +109,15 @@ void RPG::Save::SetAirshipLocation(const RPG::SaveVehicleLocation& airship_locat
 	this->airship_location = airship_location;
 }
 
-const std::vector<RPG::SaveActor>& RPG::Save::GetActors() const  {
+const LcfVector<RPG::SaveActor>& RPG::Save::GetActors() const  {
 	return actors;
 }
 
-std::vector<RPG::SaveActor>& RPG::Save::GetActors() {
+LcfVector<RPG::SaveActor>& RPG::Save::GetActors() {
 	return actors;
 }
 
-void RPG::Save::SetActors(const std::vector<RPG::SaveActor>& actors) {
+void RPG::Save::SetActors(const LcfVector<RPG::SaveActor>& actors) {
 	this->actors = actors;
 }
 
@@ -133,15 +133,15 @@ void RPG::Save::SetInventory(const RPG::SaveInventory& inventory) {
 	this->inventory = inventory;
 }
 
-const std::vector<RPG::SaveTarget>& RPG::Save::GetTargets() const  {
+const LcfVector<RPG::SaveTarget>& RPG::Save::GetTargets() const  {
 	return targets;
 }
 
-std::vector<RPG::SaveTarget>& RPG::Save::GetTargets() {
+LcfVector<RPG::SaveTarget>& RPG::Save::GetTargets() {
 	return targets;
 }
 
-void RPG::Save::SetTargets(const std::vector<RPG::SaveTarget>& targets) {
+void RPG::Save::SetTargets(const LcfVector<RPG::SaveTarget>& targets) {
 	this->targets = targets;
 }
 
@@ -177,15 +177,15 @@ void RPG::Save::SetEvents(const RPG::SaveEventData& events) {
 	this->events = events;
 }
 
-const std::vector<RPG::SaveCommonEvent>& RPG::Save::GetCommonEvents() const  {
+const LcfVector<RPG::SaveCommonEvent>& RPG::Save::GetCommonEvents() const  {
 	return common_events;
 }
 
-std::vector<RPG::SaveCommonEvent>& RPG::Save::GetCommonEvents() {
+LcfVector<RPG::SaveCommonEvent>& RPG::Save::GetCommonEvents() {
 	return common_events;
 }
 
-void RPG::Save::SetCommonEvents(const std::vector<RPG::SaveCommonEvent>& common_events) {
+void RPG::Save::SetCommonEvents(const LcfVector<RPG::SaveCommonEvent>& common_events) {
 	this->common_events = common_events;
 }
 

@@ -13,15 +13,15 @@
 #include "rpg_saveeventdata.h"
 
 
-const std::vector<RPG::SaveEventCommands>& RPG::SaveEventData::GetCommands() const  {
+const LcfVector<RPG::SaveEventCommands>& RPG::SaveEventData::GetCommands() const  {
 	return commands;
 }
 
-std::vector<RPG::SaveEventCommands>& RPG::SaveEventData::GetCommands() {
+LcfVector<RPG::SaveEventCommands>& RPG::SaveEventData::GetCommands() {
 	return commands;
 }
 
-void RPG::SaveEventData::SetCommands(const std::vector<RPG::SaveEventCommands>& commands) {
+void RPG::SaveEventData::SetCommands(const LcfVector<RPG::SaveEventCommands>& commands) {
 	this->commands = commands;
 }
 

@@ -21,15 +21,15 @@ void RPG::SaveEventCommands::SetCommandsSize(int commands_size) {
 	this->commands_size = commands_size;
 }
 
-const std::vector<RPG::EventCommand>& RPG::SaveEventCommands::GetCommands() const  {
+const LcfVector<RPG::EventCommand>& RPG::SaveEventCommands::GetCommands() const  {
 	return commands;
 }
 
-std::vector<RPG::EventCommand>& RPG::SaveEventCommands::GetCommands() {
+LcfVector<RPG::EventCommand>& RPG::SaveEventCommands::GetCommands() {
 	return commands;
 }
 
-void RPG::SaveEventCommands::SetCommands(const std::vector<RPG::EventCommand>& commands) {
+void RPG::SaveEventCommands::SetCommands(const LcfVector<RPG::EventCommand>& commands) {
 	this->commands = commands;
 }
 
@@ -65,15 +65,15 @@ void RPG::SaveEventCommands::SetUnknown15SubcommandPathSize(int unknown_15_subco
 	this->unknown_15_subcommand_path_size = unknown_15_subcommand_path_size;
 }
 
-const std::vector<uint8_t>& RPG::SaveEventCommands::GetUnknown16SubcommandPath() const  {
+const LcfVector<uint8_t>& RPG::SaveEventCommands::GetUnknown16SubcommandPath() const  {
 	return unknown_16_subcommand_path;
 }
 
-std::vector<uint8_t>& RPG::SaveEventCommands::GetUnknown16SubcommandPath() {
+LcfVector<uint8_t>& RPG::SaveEventCommands::GetUnknown16SubcommandPath() {
 	return unknown_16_subcommand_path;
 }
 
-void RPG::SaveEventCommands::SetUnknown16SubcommandPath(const std::vector<uint8_t>& unknown_16_subcommand_path) {
+void RPG::SaveEventCommands::SetUnknown16SubcommandPath(const LcfVector<uint8_t>& unknown_16_subcommand_path) {
 	this->unknown_16_subcommand_path = unknown_16_subcommand_path;
 }
 

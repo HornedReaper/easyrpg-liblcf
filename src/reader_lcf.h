@@ -11,7 +11,7 @@
 #define LCF_READER_LCF_H
 
 #include <string>
-#include <vector>
+#include "lcf_vector.h"
 #include <iosfwd>
 #include <cstring>
 #include <cstdio>
@@ -130,7 +130,7 @@ public:
 	 * @param size how many bytes to read.
 	 */
 	template <class T>
-	void Read(std::vector<T> &buffer, size_t size);
+	void Read(LcfVector<T> &buffer, size_t size);
 
 	/**
 	 * Reads a compressed integer from the stream.
