@@ -147,27 +147,33 @@ namespace RPG {
 
 		const LcfVector<uint32_t>& GetGeneratorX() const;
 		LcfVector<uint32_t>& GetGeneratorX();
-		void SetGeneratorX(const LcfVector<uint32_t>& generator_x);
+		void AddGeneratorX(const uint32_t& uint32_t);
+		uint32_t&
 
 		const LcfVector<uint32_t>& GetGeneratorY() const;
 		LcfVector<uint32_t>& GetGeneratorY();
-		void SetGeneratorY(const LcfVector<uint32_t>& generator_y);
+		void AddGeneratorY(const uint32_t& uint32_t);
+		uint32_t&
 
 		const LcfVector<int16_t>& GetGeneratorTileIds() const;
 		LcfVector<int16_t>& GetGeneratorTileIds();
-		void SetGeneratorTileIds(const LcfVector<int16_t>& generator_tile_ids);
+		void AddGeneratorTileIds(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<int16_t>& GetLowerLayer() const;
 		LcfVector<int16_t>& GetLowerLayer();
-		void SetLowerLayer(const LcfVector<int16_t>& lower_layer);
+		void AddLowerLayer(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<int16_t>& GetUpperLayer() const;
 		LcfVector<int16_t>& GetUpperLayer();
-		void SetUpperLayer(const LcfVector<int16_t>& upper_layer);
+		void AddUpperLayer(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<Event>& GetEvents() const;
 		LcfVector<Event>& GetEvents();
-		void SetEvents(const LcfVector<Event>& events);
+		void AddEvents(const Event& event);
+		Event&
 
 		int GetSaveCount() const;
 		void SetSaveCount(int save_count);

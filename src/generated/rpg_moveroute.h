@@ -28,7 +28,8 @@ namespace RPG {
 
 		const LcfVector<MoveCommand>& GetMoveCommands() const;
 		LcfVector<MoveCommand>& GetMoveCommands();
-		void SetMoveCommands(const LcfVector<MoveCommand>& move_commands);
+		void AddMoveCommands(const MoveCommand& movecommand);
+		MoveCommand&
 
 		bool GetRepeat() const;
 		void SetRepeat(bool repeat);

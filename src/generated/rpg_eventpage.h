@@ -138,7 +138,8 @@ namespace RPG {
 
 		const LcfVector<EventCommand>& GetEventCommands() const;
 		LcfVector<EventCommand>& GetEventCommands();
-		void SetEventCommands(const LcfVector<EventCommand>& event_commands);
+		void AddEventCommands(const EventCommand& eventcommand);
+		EventCommand&
 
 	};
 }

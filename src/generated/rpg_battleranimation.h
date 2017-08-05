@@ -43,11 +43,13 @@ namespace RPG {
 
 		const LcfVector<BattlerAnimationExtension>& GetBaseData() const;
 		LcfVector<BattlerAnimationExtension>& GetBaseData();
-		void SetBaseData(const LcfVector<BattlerAnimationExtension>& base_data);
+		void AddBaseData(const BattlerAnimationExtension& battleranimationextension);
+		BattlerAnimationExtension&
 
 		const LcfVector<BattlerAnimationExtension>& GetWeaponData() const;
 		LcfVector<BattlerAnimationExtension>& GetWeaponData();
-		void SetWeaponData(const LcfVector<BattlerAnimationExtension>& weapon_data);
+		void AddWeaponData(const BattlerAnimationExtension& battleranimationextension);
+		BattlerAnimationExtension&
 
 	};
 }

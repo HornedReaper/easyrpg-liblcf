@@ -74,21 +74,25 @@ namespace RPG {
 
 		const LcfVector<Learning>& GetSkills() const;
 		LcfVector<Learning>& GetSkills();
-		void SetSkills(const LcfVector<Learning>& skills);
+		void AddSkills(const Learning& learning);
+		Learning&
 
 
 		const LcfVector<uint8_t>& GetStateRanks() const;
 		LcfVector<uint8_t>& GetStateRanks();
-		void SetStateRanks(const LcfVector<uint8_t>& state_ranks);
+		void AddStateRanks(const uint8_t& uint8_t);
+		uint8_t&
 
 
 		const LcfVector<uint8_t>& GetAttributeRanks() const;
 		LcfVector<uint8_t>& GetAttributeRanks();
-		void SetAttributeRanks(const LcfVector<uint8_t>& attribute_ranks);
+		void AddAttributeRanks(const uint8_t& uint8_t);
+		uint8_t&
 
 		const LcfVector<uint32_t>& GetBattleCommands() const;
 		LcfVector<uint32_t>& GetBattleCommands();
-		void SetBattleCommands(const LcfVector<uint32_t>& battle_commands);
+		void AddBattleCommands(const uint32_t& uint32_t);
+		uint32_t&
 
 	};
 }

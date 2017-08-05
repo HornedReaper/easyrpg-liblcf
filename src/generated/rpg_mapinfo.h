@@ -108,7 +108,8 @@ namespace RPG {
 
 		const LcfVector<Encounter>& GetEncounters() const;
 		LcfVector<Encounter>& GetEncounters();
-		void SetEncounters(const LcfVector<Encounter>& encounters);
+		void AddEncounters(const Encounter& encounter);
+		Encounter&
 
 		int GetEncounterSteps() const;
 		void SetEncounterSteps(int encounter_steps);

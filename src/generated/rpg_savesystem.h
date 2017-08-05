@@ -110,14 +110,16 @@ namespace RPG {
 
 		const LcfVector<bool>& GetSwitches() const;
 		LcfVector<bool>& GetSwitches();
-		void SetSwitches(const LcfVector<bool>& switches);
+		void AddSwitches(const bool& bool);
+		bool&
 
 		int GetVariablesSize() const;
 		void SetVariablesSize(int variables_size);
 
 		const LcfVector<uint32_t>& GetVariables() const;
 		LcfVector<uint32_t>& GetVariables();
-		void SetVariables(const LcfVector<uint32_t>& variables);
+		void AddVariables(const uint32_t& uint32_t);
+		uint32_t&
 
 		int GetMessageTransparent() const;
 		void SetMessageTransparent(int message_transparent);

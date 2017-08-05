@@ -171,7 +171,8 @@ namespace RPG {
 
 		const LcfVector<int>& GetParameters() const;
 		LcfVector<int>& GetParameters();
-		void SetParameters(const LcfVector<int>& parameters);
+		void AddParameters(const int& int);
+		int&
 
 	};
 }

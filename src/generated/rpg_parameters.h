@@ -31,27 +31,33 @@ namespace RPG {
 		LcfVector<int16_t> agility;
 		const LcfVector<int16_t>& GetMaxhp() const;
 		LcfVector<int16_t>& GetMaxhp();
-		void SetMaxhp(const LcfVector<int16_t>& maxhp);
+		void AddMaxhp(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<int16_t>& GetMaxsp() const;
 		LcfVector<int16_t>& GetMaxsp();
-		void SetMaxsp(const LcfVector<int16_t>& maxsp);
+		void AddMaxsp(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<int16_t>& GetAttack() const;
 		LcfVector<int16_t>& GetAttack();
-		void SetAttack(const LcfVector<int16_t>& attack);
+		void AddAttack(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<int16_t>& GetDefense() const;
 		LcfVector<int16_t>& GetDefense();
-		void SetDefense(const LcfVector<int16_t>& defense);
+		void AddDefense(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<int16_t>& GetSpirit() const;
 		LcfVector<int16_t>& GetSpirit();
-		void SetSpirit(const LcfVector<int16_t>& spirit);
+		void AddSpirit(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<int16_t>& GetAgility() const;
 		LcfVector<int16_t>& GetAgility();
-		void SetAgility(const LcfVector<int16_t>& agility);
+		void AddAgility(const int16_t& int16_t);
+		int16_t&
 
 	};
 }

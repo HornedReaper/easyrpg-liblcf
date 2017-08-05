@@ -73,9 +73,15 @@ def cpp_type(ty, prefix=True):
 
     return ty
 
+def cpp_type_filter(field, prefix=True):
+    return cpp_type(field.type, prefix)
+
 def is_pod(field):
     return (field.type != "String" and (field.type in cpp_types)) \
         or cpp_type(field.type) == "int"
+
+def is_vector(field):
+    return not is_pod(field) and cpp_type(field.type).startswith("LcfVector")
 
 def pod_default(field):
     dfl = field.default
@@ -96,6 +102,13 @@ def pod_default(field):
 
 def flag_size(flag):
     return (len(flag) + 7) // 8
+
+def cpp_inner_type(field, prefix=True):
+    if not is_vector(field):
+        raise ValueError("not array or vector")
+    t = cpp_type(field.type, prefix)
+    m = re.match(r'LcfVector<(.*)>', t)
+    return m.group(1)
 
 def method_name(field):
     return "".join(map(lambda x: x[:1].upper() + x[1:], field.name.split("_")))
@@ -365,14 +378,16 @@ def main(argv):
     headers = get_headers()
 
     # Setup Jinja
-    env.filters["cpp_type"] = cpp_type
+    env.filters["cpp_type"] = cpp_type_filter
     env.filters["pod_default"] = pod_default
     env.filters["struct_has_code"] = filter_structs_without_codes
     env.filters["field_is_used"] = filter_unused_fields
     env.filters["flag_size"] = flag_size
     env.filters["method"] = method_name
+    env.filters["cpp_inner_type"] = cpp_inner_type
     env.tests['needs_ctor'] = needs_ctor
     env.tests['pod'] = is_pod
+    env.tests['vector'] = is_vector
 
     globals = dict(
         structs=structs,

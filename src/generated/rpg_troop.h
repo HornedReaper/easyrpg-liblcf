@@ -37,7 +37,8 @@ namespace RPG {
 
 		const LcfVector<TroopMember>& GetMembers() const;
 		LcfVector<TroopMember>& GetMembers();
-		void SetMembers(const LcfVector<TroopMember>& members);
+		void AddMembers(const TroopMember& troopmember);
+		TroopMember&
 
 		bool GetAutoAlignment() const;
 		void SetAutoAlignment(bool auto_alignment);
@@ -45,14 +46,16 @@ namespace RPG {
 
 		const LcfVector<bool>& GetTerrainSet() const;
 		LcfVector<bool>& GetTerrainSet();
-		void SetTerrainSet(const LcfVector<bool>& terrain_set);
+		void AddTerrainSet(const bool& bool);
+		bool&
 
 		bool GetAppearRandomly() const;
 		void SetAppearRandomly(bool appear_randomly);
 
 		const LcfVector<TroopPage>& GetPages() const;
 		LcfVector<TroopPage>& GetPages();
-		void SetPages(const LcfVector<TroopPage>& pages);
+		void AddPages(const TroopPage& trooppage);
+		TroopPage&
 
 	};
 }

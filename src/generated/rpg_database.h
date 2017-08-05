@@ -60,43 +60,53 @@ namespace RPG {
 		LcfVector<BattlerAnimation> battleranimations;
 		const LcfVector<Actor>& GetActors() const;
 		LcfVector<Actor>& GetActors();
-		void SetActors(const LcfVector<Actor>& actors);
+		void AddActors(const Actor& actor);
+		Actor&
 
 		const LcfVector<Skill>& GetSkills() const;
 		LcfVector<Skill>& GetSkills();
-		void SetSkills(const LcfVector<Skill>& skills);
+		void AddSkills(const Skill& skill);
+		Skill&
 
 		const LcfVector<Item>& GetItems() const;
 		LcfVector<Item>& GetItems();
-		void SetItems(const LcfVector<Item>& items);
+		void AddItems(const Item& item);
+		Item&
 
 		const LcfVector<Enemy>& GetEnemies() const;
 		LcfVector<Enemy>& GetEnemies();
-		void SetEnemies(const LcfVector<Enemy>& enemies);
+		void AddEnemies(const Enemy& enemy);
+		Enemy&
 
 		const LcfVector<Troop>& GetTroops() const;
 		LcfVector<Troop>& GetTroops();
-		void SetTroops(const LcfVector<Troop>& troops);
+		void AddTroops(const Troop& troop);
+		Troop&
 
 		const LcfVector<Terrain>& GetTerrains() const;
 		LcfVector<Terrain>& GetTerrains();
-		void SetTerrains(const LcfVector<Terrain>& terrains);
+		void AddTerrains(const Terrain& terrain);
+		Terrain&
 
 		const LcfVector<Attribute>& GetAttributes() const;
 		LcfVector<Attribute>& GetAttributes();
-		void SetAttributes(const LcfVector<Attribute>& attributes);
+		void AddAttributes(const Attribute& attribute);
+		Attribute&
 
 		const LcfVector<State>& GetStates() const;
 		LcfVector<State>& GetStates();
-		void SetStates(const LcfVector<State>& states);
+		void AddStates(const State& state);
+		State&
 
 		const LcfVector<Animation>& GetAnimations() const;
 		LcfVector<Animation>& GetAnimations();
-		void SetAnimations(const LcfVector<Animation>& animations);
+		void AddAnimations(const Animation& animation);
+		Animation&
 
 		const LcfVector<Chipset>& GetChipsets() const;
 		LcfVector<Chipset>& GetChipsets();
-		void SetChipsets(const LcfVector<Chipset>& chipsets);
+		void AddChipsets(const Chipset& chipset);
+		Chipset&
 
 		const Terms& GetTerms() const;
 		Terms& GetTerms();
@@ -108,15 +118,18 @@ namespace RPG {
 
 		const LcfVector<Switch>& GetSwitches() const;
 		LcfVector<Switch>& GetSwitches();
-		void SetSwitches(const LcfVector<Switch>& switches);
+		void AddSwitches(const Switch& switch);
+		Switch&
 
 		const LcfVector<Variable>& GetVariables() const;
 		LcfVector<Variable>& GetVariables();
-		void SetVariables(const LcfVector<Variable>& variables);
+		void AddVariables(const Variable& variable);
+		Variable&
 
 		const LcfVector<CommonEvent>& GetCommonevents() const;
 		LcfVector<CommonEvent>& GetCommonevents();
-		void SetCommonevents(const LcfVector<CommonEvent>& commonevents);
+		void AddCommonevents(const CommonEvent& commonevent);
+		CommonEvent&
 
 		int GetVersion() const;
 		void SetVersion(int version);
@@ -127,11 +140,13 @@ namespace RPG {
 
 		const LcfVector<Class>& GetClasses() const;
 		LcfVector<Class>& GetClasses();
-		void SetClasses(const LcfVector<Class>& classes);
+		void AddClasses(const Class& class);
+		Class&
 
 		const LcfVector<BattlerAnimation>& GetBattleranimations() const;
 		LcfVector<BattlerAnimation>& GetBattleranimations();
-		void SetBattleranimations(const LcfVector<BattlerAnimation>& battleranimations);
+		void AddBattleranimations(const BattlerAnimation& battleranimation);
+		BattlerAnimation&
 
 	};
 }

@@ -55,7 +55,8 @@ namespace RPG {
 
 		const LcfVector<AnimationTiming>& GetTimings() const;
 		LcfVector<AnimationTiming>& GetTimings();
-		void SetTimings(const LcfVector<AnimationTiming>& timings);
+		void AddTimings(const AnimationTiming& animationtiming);
+		AnimationTiming&
 
 		int GetScope() const;
 		void SetScope(int scope);
@@ -65,7 +66,8 @@ namespace RPG {
 
 		const LcfVector<AnimationFrame>& GetFrames() const;
 		LcfVector<AnimationFrame>& GetFrames();
-		void SetFrames(const LcfVector<AnimationFrame>& frames);
+		void AddFrames(const AnimationFrame& animationframe);
+		AnimationFrame&
 
 	};
 }

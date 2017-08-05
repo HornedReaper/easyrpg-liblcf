@@ -49,22 +49,26 @@ namespace RPG {
 
 		const LcfVector<int16_t>& GetParty() const;
 		LcfVector<int16_t>& GetParty();
-		void SetParty(const LcfVector<int16_t>& party);
+		void AddParty(const int16_t& int16_t);
+		int16_t&
 
 		int GetItemsSize() const;
 		void SetItemsSize(int items_size);
 
 		const LcfVector<int16_t>& GetItemIds() const;
 		LcfVector<int16_t>& GetItemIds();
-		void SetItemIds(const LcfVector<int16_t>& item_ids);
+		void AddItemIds(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<uint8_t>& GetItemCounts() const;
 		LcfVector<uint8_t>& GetItemCounts();
-		void SetItemCounts(const LcfVector<uint8_t>& item_counts);
+		void AddItemCounts(const uint8_t& uint8_t);
+		uint8_t&
 
 		const LcfVector<uint8_t>& GetItemUsage() const;
 		LcfVector<uint8_t>& GetItemUsage();
-		void SetItemUsage(const LcfVector<uint8_t>& item_usage);
+		void AddItemUsage(const uint8_t& uint8_t);
+		uint8_t&
 
 		int GetGold() const;
 		void SetGold(int gold);

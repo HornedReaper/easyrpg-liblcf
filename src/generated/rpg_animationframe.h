@@ -26,7 +26,8 @@ namespace RPG {
 		LcfVector<AnimationCellData> cells;
 		const LcfVector<AnimationCellData>& GetCells() const;
 		LcfVector<AnimationCellData>& GetCells();
-		void SetCells(const LcfVector<AnimationCellData>& cells);
+		void AddCells(const AnimationCellData& animationcelldata);
+		AnimationCellData&
 
 	};
 }

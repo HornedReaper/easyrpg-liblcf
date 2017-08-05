@@ -47,7 +47,8 @@ namespace RPG {
 		int unknown_2a_time_left = 0;
 		const LcfVector<SaveEventCommands>& GetCommands() const;
 		LcfVector<SaveEventCommands>& GetCommands();
-		void SetCommands(const LcfVector<SaveEventCommands>& commands);
+		void AddCommands(const SaveEventCommands& saveeventcommands);
+		SaveEventCommands&
 
 		bool GetShowMessage() const;
 		void SetShowMessage(bool show_message);

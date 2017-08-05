@@ -63,7 +63,8 @@ namespace RPG {
 
 		const LcfVector<SavePicture>& GetPictures() const;
 		LcfVector<SavePicture>& GetPictures();
-		void SetPictures(const LcfVector<SavePicture>& pictures);
+		void AddPictures(const SavePicture& savepicture);
+		SavePicture&
 
 		const SavePartyLocation& GetPartyLocation() const;
 		SavePartyLocation& GetPartyLocation();
@@ -83,7 +84,8 @@ namespace RPG {
 
 		const LcfVector<SaveActor>& GetActors() const;
 		LcfVector<SaveActor>& GetActors();
-		void SetActors(const LcfVector<SaveActor>& actors);
+		void AddActors(const SaveActor& saveactor);
+		SaveActor&
 
 		const SaveInventory& GetInventory() const;
 		SaveInventory& GetInventory();
@@ -91,7 +93,8 @@ namespace RPG {
 
 		const LcfVector<SaveTarget>& GetTargets() const;
 		LcfVector<SaveTarget>& GetTargets();
-		void SetTargets(const LcfVector<SaveTarget>& targets);
+		void AddTargets(const SaveTarget& savetarget);
+		SaveTarget&
 
 		const SaveMapInfo& GetMapInfo() const;
 		SaveMapInfo& GetMapInfo();
@@ -106,7 +109,8 @@ namespace RPG {
 
 		const LcfVector<SaveCommonEvent>& GetCommonEvents() const;
 		LcfVector<SaveCommonEvent>& GetCommonEvents();
-		void SetCommonEvents(const LcfVector<SaveCommonEvent>& common_events);
+		void AddCommonEvents(const SaveCommonEvent& savecommonevent);
+		SaveCommonEvent&
 
 	};
 }

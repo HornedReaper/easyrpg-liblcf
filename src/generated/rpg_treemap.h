@@ -29,11 +29,13 @@ namespace RPG {
 		Start start;
 		const LcfVector<MapInfo>& GetMaps() const;
 		LcfVector<MapInfo>& GetMaps();
-		void SetMaps(const LcfVector<MapInfo>& maps);
+		void AddMaps(const MapInfo& mapinfo);
+		MapInfo&
 
 		const LcfVector<int>& GetTreeOrder() const;
 		LcfVector<int>& GetTreeOrder();
-		void SetTreeOrder(const LcfVector<int>& tree_order);
+		void AddTreeOrder(const int& int);
+		int&
 
 		int GetActiveNode() const;
 		void SetActiveNode(int active_node);

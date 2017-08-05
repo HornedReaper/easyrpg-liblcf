@@ -40,7 +40,8 @@ namespace RPG {
 
 		const LcfVector<EventPage>& GetPages() const;
 		LcfVector<EventPage>& GetPages();
-		void SetPages(const LcfVector<EventPage>& pages);
+		void AddPages(const EventPage& eventpage);
+		EventPage&
 
 	};
 }

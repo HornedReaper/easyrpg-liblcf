@@ -36,7 +36,8 @@ namespace RPG {
 
 		const LcfVector<EventCommand>& GetCommands() const;
 		LcfVector<EventCommand>& GetCommands();
-		void SetCommands(const LcfVector<EventCommand>& commands);
+		void AddCommands(const EventCommand& eventcommand);
+		EventCommand&
 
 		int GetCurrentCommand() const;
 		void SetCurrentCommand(int current_command);
@@ -52,7 +53,8 @@ namespace RPG {
 
 		const LcfVector<uint8_t>& GetUnknown16SubcommandPath() const;
 		LcfVector<uint8_t>& GetUnknown16SubcommandPath();
-		void SetUnknown16SubcommandPath(const LcfVector<uint8_t>& unknown_16_subcommand_path);
+		void AddUnknown16SubcommandPath(const uint8_t& uint8_t);
+		uint8_t&
 
 	};
 }

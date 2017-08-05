@@ -48,15 +48,18 @@ namespace RPG {
 
 		const LcfVector<int16_t>& GetTerrainData() const;
 		LcfVector<int16_t>& GetTerrainData();
-		void SetTerrainData(const LcfVector<int16_t>& terrain_data);
+		void AddTerrainData(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<uint8_t>& GetPassableDataLower() const;
 		LcfVector<uint8_t>& GetPassableDataLower();
-		void SetPassableDataLower(const LcfVector<uint8_t>& passable_data_lower);
+		void AddPassableDataLower(const uint8_t& uint8_t);
+		uint8_t&
 
 		const LcfVector<uint8_t>& GetPassableDataUpper() const;
 		LcfVector<uint8_t>& GetPassableDataUpper();
-		void SetPassableDataUpper(const LcfVector<uint8_t>& passable_data_upper);
+		void AddPassableDataUpper(const uint8_t& uint8_t);
+		uint8_t&
 
 		int GetAnimationType() const;
 		void SetAnimationType(int animation_type);

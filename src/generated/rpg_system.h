@@ -192,12 +192,14 @@ namespace RPG {
 
 		const LcfVector<int16_t>& GetParty() const;
 		LcfVector<int16_t>& GetParty();
-		void SetParty(const LcfVector<int16_t>& party);
+		void AddParty(const int16_t& int16_t);
+		int16_t&
 
 
 		const LcfVector<int16_t>& GetMenuCommands() const;
 		LcfVector<int16_t>& GetMenuCommands();
-		void SetMenuCommands(const LcfVector<int16_t>& menu_commands);
+		void AddMenuCommands(const int16_t& int16_t);
+		int16_t&
 
 		const Music& GetTitleMusic() const;
 		Music& GetTitleMusic();
@@ -315,7 +317,8 @@ namespace RPG {
 
 		const LcfVector<TestBattler>& GetBattletestData() const;
 		LcfVector<TestBattler>& GetBattletestData();
-		void SetBattletestData(const LcfVector<TestBattler>& battletest_data);
+		void AddBattletestData(const TestBattler& testbattler);
+		TestBattler&
 
 		int GetSaveCount() const;
 		void SetSaveCount(int save_count);

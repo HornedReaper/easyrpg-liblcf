@@ -111,11 +111,13 @@ namespace RPG {
 
 		const LcfVector<int16_t>& GetSkills() const;
 		LcfVector<int16_t>& GetSkills();
-		void SetSkills(const LcfVector<int16_t>& skills);
+		void AddSkills(const int16_t& int16_t);
+		int16_t&
 
 		const LcfVector<int16_t>& GetEquipped() const;
 		LcfVector<int16_t>& GetEquipped();
-		void SetEquipped(const LcfVector<int16_t>& equipped);
+		void AddEquipped(const int16_t& int16_t);
+		int16_t&
 
 		int GetCurrentHp() const;
 		void SetCurrentHp(int current_hp);
@@ -125,14 +127,16 @@ namespace RPG {
 
 		const LcfVector<uint32_t>& GetBattleCommands() const;
 		LcfVector<uint32_t>& GetBattleCommands();
-		void SetBattleCommands(const LcfVector<uint32_t>& battle_commands);
+		void AddBattleCommands(const uint32_t& uint32_t);
+		uint32_t&
 
 		int GetStatusSize() const;
 		void SetStatusSize(int status_size);
 
 		const LcfVector<int16_t>& GetStatus() const;
 		LcfVector<int16_t>& GetStatus();
-		void SetStatus(const LcfVector<int16_t>& status);
+		void AddStatus(const int16_t& int16_t);
+		int16_t&
 
 		bool GetChangedClass() const;
 		void SetChangedClass(bool changed_class);

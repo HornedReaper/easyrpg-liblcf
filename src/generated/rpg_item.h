@@ -228,17 +228,20 @@ namespace RPG {
 
 		const LcfVector<bool>& GetActorSet() const;
 		LcfVector<bool>& GetActorSet();
-		void SetActorSet(const LcfVector<bool>& actor_set);
+		void AddActorSet(const bool& bool);
+		bool&
 
 
 		const LcfVector<bool>& GetStateSet() const;
 		LcfVector<bool>& GetStateSet();
-		void SetStateSet(const LcfVector<bool>& state_set);
+		void AddStateSet(const bool& bool);
+		bool&
 
 
 		const LcfVector<bool>& GetAttributeSet() const;
 		LcfVector<bool>& GetAttributeSet();
-		void SetAttributeSet(const LcfVector<bool>& attribute_set);
+		void AddAttributeSet(const bool& bool);
+		bool&
 
 		int GetStateChance() const;
 		void SetStateChance(int state_chance);
@@ -251,7 +254,8 @@ namespace RPG {
 
 		const LcfVector<ItemAnimation>& GetAnimationData() const;
 		LcfVector<ItemAnimation>& GetAnimationData();
-		void SetAnimationData(const LcfVector<ItemAnimation>& animation_data);
+		void AddAnimationData(const ItemAnimation& itemanimation);
+		ItemAnimation&
 
 		bool GetUseSkill() const;
 		void SetUseSkill(bool use_skill);
@@ -259,7 +263,8 @@ namespace RPG {
 
 		const LcfVector<bool>& GetClassSet() const;
 		LcfVector<bool>& GetClassSet();
-		void SetClassSet(const LcfVector<bool>& class_set);
+		void AddClassSet(const bool& bool);
+		bool&
 
 		int GetRangedTrajectory() const;
 		void SetRangedTrajectory(int ranged_trajectory);

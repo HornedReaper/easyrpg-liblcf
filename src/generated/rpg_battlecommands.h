@@ -83,7 +83,8 @@ namespace RPG {
 
 		const LcfVector<BattleCommand>& GetCommands() const;
 		LcfVector<BattleCommand>& GetCommands();
-		void SetCommands(const LcfVector<BattleCommand>& commands);
+		void AddCommands(const BattleCommand& battlecommand);
+		BattleCommand&
 
 		int GetDeathHandler2() const;
 		void SetDeathHandler2(int death_handler2);
