@@ -165,20 +165,12 @@ std::vector<int16_t>& RPG::SaveActor::GetSkills() {
 	return skills;
 }
 
-void RPG::SaveActor::SetSkills(const std::vector<int16_t>& skills) {
-	this->skills = skills;
-}
-
 const std::vector<int16_t>& RPG::SaveActor::GetEquipped() const  {
 	return equipped;
 }
 
 std::vector<int16_t>& RPG::SaveActor::GetEquipped() {
 	return equipped;
-}
-
-void RPG::SaveActor::SetEquipped(const std::vector<int16_t>& equipped) {
-	this->equipped = equipped;
 }
 
 int RPG::SaveActor::GetCurrentHp() const {
@@ -205,10 +197,6 @@ std::vector<uint32_t>& RPG::SaveActor::GetBattleCommands() {
 	return battle_commands;
 }
 
-void RPG::SaveActor::SetBattleCommands(const std::vector<uint32_t>& battle_commands) {
-	this->battle_commands = battle_commands;
-}
-
 int RPG::SaveActor::GetStatusSize() const {
 	return status_size;
 }
@@ -223,10 +211,6 @@ const std::vector<int16_t>& RPG::SaveActor::GetStatus() const  {
 
 std::vector<int16_t>& RPG::SaveActor::GetStatus() {
 	return status;
-}
-
-void RPG::SaveActor::SetStatus(const std::vector<int16_t>& status) {
-	this->status = status;
 }
 
 bool RPG::SaveActor::GetChangedClass() const {

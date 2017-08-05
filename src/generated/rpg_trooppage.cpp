@@ -34,7 +34,3 @@ std::vector<RPG::EventCommand>& RPG::TroopPage::GetEventCommands() {
 	return event_commands;
 }
 
-void RPG::TroopPage::SetEventCommands(const std::vector<RPG::EventCommand>& event_commands) {
-	this->event_commands = event_commands;
-}
-

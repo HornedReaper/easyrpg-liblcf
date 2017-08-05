@@ -105,16 +105,13 @@ namespace RPG {
 
 		const std::vector<uint8_t>& GetStateRanks() const;
 		std::vector<uint8_t>& GetStateRanks();
-		void SetStateRanks(const std::vector<uint8_t>& state_ranks);
 
 
 		const std::vector<uint8_t>& GetAttributeRanks() const;
 		std::vector<uint8_t>& GetAttributeRanks();
-		void SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks);
 
 		const std::vector<EnemyAction>& GetActions() const;
 		std::vector<EnemyAction>& GetActions();
-		void SetActions(const std::vector<EnemyAction>& actions);
 
 	};
 }

@@ -58,15 +58,12 @@ namespace RPG {
 
 		const std::vector<SaveMapEvent>& GetEvents() const;
 		std::vector<SaveMapEvent>& GetEvents();
-		void SetEvents(const std::vector<SaveMapEvent>& events);
 
 		const std::vector<uint8_t>& GetLowerTiles() const;
 		std::vector<uint8_t>& GetLowerTiles();
-		void SetLowerTiles(const std::vector<uint8_t>& lower_tiles);
 
 		const std::vector<uint8_t>& GetUpperTiles() const;
 		std::vector<uint8_t>& GetUpperTiles();
-		void SetUpperTiles(const std::vector<uint8_t>& upper_tiles);
 
 		const std::string& GetParallaxName() const;
 		std::string& GetParallaxName();

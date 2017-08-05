@@ -40,7 +40,6 @@ namespace RPG {
 
 		const std::vector<EventPage>& GetPages() const;
 		std::vector<EventPage>& GetPages();
-		void SetPages(const std::vector<EventPage>& pages);
 
 	};
 }

@@ -109,10 +109,6 @@ std::vector<RPG::Learning>& RPG::Class::GetSkills() {
 	return skills;
 }
 
-void RPG::Class::SetSkills(const std::vector<RPG::Learning>& skills) {
-	this->skills = skills;
-}
-
 
 const std::vector<uint8_t>& RPG::Class::GetStateRanks() const  {
 	return state_ranks;
@@ -120,10 +116,6 @@ const std::vector<uint8_t>& RPG::Class::GetStateRanks() const  {
 
 std::vector<uint8_t>& RPG::Class::GetStateRanks() {
 	return state_ranks;
-}
-
-void RPG::Class::SetStateRanks(const std::vector<uint8_t>& state_ranks) {
-	this->state_ranks = state_ranks;
 }
 
 
@@ -135,19 +127,11 @@ std::vector<uint8_t>& RPG::Class::GetAttributeRanks() {
 	return attribute_ranks;
 }
 
-void RPG::Class::SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks) {
-	this->attribute_ranks = attribute_ranks;
-}
-
 const std::vector<uint32_t>& RPG::Class::GetBattleCommands() const  {
 	return battle_commands;
 }
 
 std::vector<uint32_t>& RPG::Class::GetBattleCommands() {
 	return battle_commands;
-}
-
-void RPG::Class::SetBattleCommands(const std::vector<uint32_t>& battle_commands) {
-	this->battle_commands = battle_commands;
 }
 

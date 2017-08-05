@@ -110,14 +110,12 @@ namespace RPG {
 
 		const std::vector<bool>& GetSwitches() const;
 		std::vector<bool>& GetSwitches();
-		void SetSwitches(const std::vector<bool>& switches);
 
 		int GetVariablesSize() const;
 		void SetVariablesSize(int variables_size);
 
 		const std::vector<uint32_t>& GetVariables() const;
 		std::vector<uint32_t>& GetVariables();
-		void SetVariables(const std::vector<uint32_t>& variables);
 
 		int GetMessageTransparent() const;
 		void SetMessageTransparent(int message_transparent);

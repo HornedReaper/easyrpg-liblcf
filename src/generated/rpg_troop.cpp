@@ -33,10 +33,6 @@ std::vector<RPG::TroopMember>& RPG::Troop::GetMembers() {
 	return members;
 }
 
-void RPG::Troop::SetMembers(const std::vector<RPG::TroopMember>& members) {
-	this->members = members;
-}
-
 bool RPG::Troop::GetAutoAlignment() const {
 	return auto_alignment;
 }
@@ -54,10 +50,6 @@ std::vector<bool>& RPG::Troop::GetTerrainSet() {
 	return terrain_set;
 }
 
-void RPG::Troop::SetTerrainSet(const std::vector<bool>& terrain_set) {
-	this->terrain_set = terrain_set;
-}
-
 bool RPG::Troop::GetAppearRandomly() const {
 	return appear_randomly;
 }
@@ -72,9 +64,5 @@ const std::vector<RPG::TroopPage>& RPG::Troop::GetPages() const  {
 
 std::vector<RPG::TroopPage>& RPG::Troop::GetPages() {
 	return pages;
-}
-
-void RPG::Troop::SetPages(const std::vector<RPG::TroopPage>& pages) {
-	this->pages = pages;
 }
 

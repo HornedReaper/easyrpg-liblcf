@@ -74,21 +74,17 @@ namespace RPG {
 
 		const std::vector<Learning>& GetSkills() const;
 		std::vector<Learning>& GetSkills();
-		void SetSkills(const std::vector<Learning>& skills);
 
 
 		const std::vector<uint8_t>& GetStateRanks() const;
 		std::vector<uint8_t>& GetStateRanks();
-		void SetStateRanks(const std::vector<uint8_t>& state_ranks);
 
 
 		const std::vector<uint8_t>& GetAttributeRanks() const;
 		std::vector<uint8_t>& GetAttributeRanks();
-		void SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks);
 
 		const std::vector<uint32_t>& GetBattleCommands() const;
 		std::vector<uint32_t>& GetBattleCommands();
-		void SetBattleCommands(const std::vector<uint32_t>& battle_commands);
 
 	};
 }

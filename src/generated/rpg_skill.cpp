@@ -274,10 +274,6 @@ std::vector<bool>& RPG::Skill::GetStateEffects() {
 	return state_effects;
 }
 
-void RPG::Skill::SetStateEffects(const std::vector<bool>& state_effects) {
-	this->state_effects = state_effects;
-}
-
 
 const std::vector<bool>& RPG::Skill::GetAttributeEffects() const  {
 	return attribute_effects;
@@ -285,10 +281,6 @@ const std::vector<bool>& RPG::Skill::GetAttributeEffects() const  {
 
 std::vector<bool>& RPG::Skill::GetAttributeEffects() {
 	return attribute_effects;
-}
-
-void RPG::Skill::SetAttributeEffects(const std::vector<bool>& attribute_effects) {
-	this->attribute_effects = attribute_effects;
 }
 
 bool RPG::Skill::GetAffectAttrDefence() const {
@@ -313,9 +305,5 @@ const std::vector<RPG::BattlerAnimationData>& RPG::Skill::GetBattlerAnimationDat
 
 std::vector<RPG::BattlerAnimationData>& RPG::Skill::GetBattlerAnimationData() {
 	return battler_animation_data;
-}
-
-void RPG::Skill::SetBattlerAnimationData(const std::vector<RPG::BattlerAnimationData>& battler_animation_data) {
-	this->battler_animation_data = battler_animation_data;
 }
 

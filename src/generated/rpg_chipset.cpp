@@ -51,10 +51,6 @@ std::vector<int16_t>& RPG::Chipset::GetTerrainData() {
 	return terrain_data;
 }
 
-void RPG::Chipset::SetTerrainData(const std::vector<int16_t>& terrain_data) {
-	this->terrain_data = terrain_data;
-}
-
 const std::vector<uint8_t>& RPG::Chipset::GetPassableDataLower() const  {
 	return passable_data_lower;
 }
@@ -63,20 +59,12 @@ std::vector<uint8_t>& RPG::Chipset::GetPassableDataLower() {
 	return passable_data_lower;
 }
 
-void RPG::Chipset::SetPassableDataLower(const std::vector<uint8_t>& passable_data_lower) {
-	this->passable_data_lower = passable_data_lower;
-}
-
 const std::vector<uint8_t>& RPG::Chipset::GetPassableDataUpper() const  {
 	return passable_data_upper;
 }
 
 std::vector<uint8_t>& RPG::Chipset::GetPassableDataUpper() {
 	return passable_data_upper;
-}
-
-void RPG::Chipset::SetPassableDataUpper(const std::vector<uint8_t>& passable_data_upper) {
-	this->passable_data_upper = passable_data_upper;
 }
 
 int RPG::Chipset::GetAnimationType() const {

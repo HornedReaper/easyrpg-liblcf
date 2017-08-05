@@ -63,7 +63,6 @@ namespace RPG {
 
 		const std::vector<SavePicture>& GetPictures() const;
 		std::vector<SavePicture>& GetPictures();
-		void SetPictures(const std::vector<SavePicture>& pictures);
 
 		const SavePartyLocation& GetPartyLocation() const;
 		SavePartyLocation& GetPartyLocation();
@@ -83,7 +82,6 @@ namespace RPG {
 
 		const std::vector<SaveActor>& GetActors() const;
 		std::vector<SaveActor>& GetActors();
-		void SetActors(const std::vector<SaveActor>& actors);
 
 		const SaveInventory& GetInventory() const;
 		SaveInventory& GetInventory();
@@ -91,7 +89,6 @@ namespace RPG {
 
 		const std::vector<SaveTarget>& GetTargets() const;
 		std::vector<SaveTarget>& GetTargets();
-		void SetTargets(const std::vector<SaveTarget>& targets);
 
 		const SaveMapInfo& GetMapInfo() const;
 		SaveMapInfo& GetMapInfo();
@@ -106,7 +103,6 @@ namespace RPG {
 
 		const std::vector<SaveCommonEvent>& GetCommonEvents() const;
 		std::vector<SaveCommonEvent>& GetCommonEvents();
-		void SetCommonEvents(const std::vector<SaveCommonEvent>& common_events);
 
 	};
 }

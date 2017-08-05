@@ -151,10 +151,6 @@ std::vector<RPG::Encounter>& RPG::MapInfo::GetEncounters() {
 	return encounters;
 }
 
-void RPG::MapInfo::SetEncounters(const std::vector<RPG::Encounter>& encounters) {
-	this->encounters = encounters;
-}
-
 int RPG::MapInfo::GetEncounterSteps() const {
 	return encounter_steps;
 }

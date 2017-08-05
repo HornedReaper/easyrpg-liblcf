@@ -55,7 +55,6 @@ namespace RPG {
 
 		const std::vector<AnimationTiming>& GetTimings() const;
 		std::vector<AnimationTiming>& GetTimings();
-		void SetTimings(const std::vector<AnimationTiming>& timings);
 
 		int GetScope() const;
 		void SetScope(int scope);
@@ -65,7 +64,6 @@ namespace RPG {
 
 		const std::vector<AnimationFrame>& GetFrames() const;
 		std::vector<AnimationFrame>& GetFrames();
-		void SetFrames(const std::vector<AnimationFrame>& frames);
 
 	};
 }

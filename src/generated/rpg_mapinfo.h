@@ -108,7 +108,6 @@ namespace RPG {
 
 		const std::vector<Encounter>& GetEncounters() const;
 		std::vector<Encounter>& GetEncounters();
-		void SetEncounters(const std::vector<Encounter>& encounters);
 
 		int GetEncounterSteps() const;
 		void SetEncounterSteps(int encounter_steps);

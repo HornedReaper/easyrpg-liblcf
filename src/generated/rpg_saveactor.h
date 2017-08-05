@@ -111,11 +111,9 @@ namespace RPG {
 
 		const std::vector<int16_t>& GetSkills() const;
 		std::vector<int16_t>& GetSkills();
-		void SetSkills(const std::vector<int16_t>& skills);
 
 		const std::vector<int16_t>& GetEquipped() const;
 		std::vector<int16_t>& GetEquipped();
-		void SetEquipped(const std::vector<int16_t>& equipped);
 
 		int GetCurrentHp() const;
 		void SetCurrentHp(int current_hp);
@@ -125,14 +123,12 @@ namespace RPG {
 
 		const std::vector<uint32_t>& GetBattleCommands() const;
 		std::vector<uint32_t>& GetBattleCommands();
-		void SetBattleCommands(const std::vector<uint32_t>& battle_commands);
 
 		int GetStatusSize() const;
 		void SetStatusSize(int status_size);
 
 		const std::vector<int16_t>& GetStatus() const;
 		std::vector<int16_t>& GetStatus();
-		void SetStatus(const std::vector<int16_t>& status);
 
 		bool GetChangedClass() const;
 		void SetChangedClass(bool changed_class);

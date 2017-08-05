@@ -26,7 +26,6 @@ namespace RPG {
 		std::vector<AnimationCellData> cells;
 		const std::vector<AnimationCellData>& GetCells() const;
 		std::vector<AnimationCellData>& GetCells();
-		void SetCells(const std::vector<AnimationCellData>& cells);
 
 	};
 }

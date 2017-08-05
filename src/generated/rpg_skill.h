@@ -173,12 +173,10 @@ namespace RPG {
 
 		const std::vector<bool>& GetStateEffects() const;
 		std::vector<bool>& GetStateEffects();
-		void SetStateEffects(const std::vector<bool>& state_effects);
 
 
 		const std::vector<bool>& GetAttributeEffects() const;
 		std::vector<bool>& GetAttributeEffects();
-		void SetAttributeEffects(const std::vector<bool>& attribute_effects);
 
 		bool GetAffectAttrDefence() const;
 		void SetAffectAttrDefence(bool affect_attr_defence);
@@ -188,7 +186,6 @@ namespace RPG {
 
 		const std::vector<BattlerAnimationData>& GetBattlerAnimationData() const;
 		std::vector<BattlerAnimationData>& GetBattlerAnimationData();
-		void SetBattlerAnimationData(const std::vector<BattlerAnimationData>& battler_animation_data);
 
 	};
 }

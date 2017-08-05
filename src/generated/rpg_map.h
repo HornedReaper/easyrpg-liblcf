@@ -147,27 +147,21 @@ namespace RPG {
 
 		const std::vector<uint32_t>& GetGeneratorX() const;
 		std::vector<uint32_t>& GetGeneratorX();
-		void SetGeneratorX(const std::vector<uint32_t>& generator_x);
 
 		const std::vector<uint32_t>& GetGeneratorY() const;
 		std::vector<uint32_t>& GetGeneratorY();
-		void SetGeneratorY(const std::vector<uint32_t>& generator_y);
 
 		const std::vector<int16_t>& GetGeneratorTileIds() const;
 		std::vector<int16_t>& GetGeneratorTileIds();
-		void SetGeneratorTileIds(const std::vector<int16_t>& generator_tile_ids);
 
 		const std::vector<int16_t>& GetLowerLayer() const;
 		std::vector<int16_t>& GetLowerLayer();
-		void SetLowerLayer(const std::vector<int16_t>& lower_layer);
 
 		const std::vector<int16_t>& GetUpperLayer() const;
 		std::vector<int16_t>& GetUpperLayer();
-		void SetUpperLayer(const std::vector<int16_t>& upper_layer);
 
 		const std::vector<Event>& GetEvents() const;
 		std::vector<Event>& GetEvents();
-		void SetEvents(const std::vector<Event>& events);
 
 		int GetSaveCount() const;
 		void SetSaveCount(int save_count);

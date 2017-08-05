@@ -49,7 +49,3 @@ std::vector<RPG::EventPage>& RPG::Event::GetPages() {
 	return pages;
 }
 
-void RPG::Event::SetPages(const std::vector<RPG::EventPage>& pages) {
-	this->pages = pages;
-}
-

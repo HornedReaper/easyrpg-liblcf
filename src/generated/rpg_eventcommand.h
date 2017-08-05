@@ -171,7 +171,6 @@ namespace RPG {
 
 		const std::vector<int>& GetParameters() const;
 		std::vector<int>& GetParameters();
-		void SetParameters(const std::vector<int>& parameters);
 
 	};
 }

@@ -138,10 +138,6 @@ std::vector<int16_t>& RPG::System::GetParty() {
 	return party;
 }
 
-void RPG::System::SetParty(const std::vector<int16_t>& party) {
-	this->party = party;
-}
-
 
 const std::vector<int16_t>& RPG::System::GetMenuCommands() const  {
 	return menu_commands;
@@ -149,10 +145,6 @@ const std::vector<int16_t>& RPG::System::GetMenuCommands() const  {
 
 std::vector<int16_t>& RPG::System::GetMenuCommands() {
 	return menu_commands;
-}
-
-void RPG::System::SetMenuCommands(const std::vector<int16_t>& menu_commands) {
-	this->menu_commands = menu_commands;
 }
 
 const RPG::Music& RPG::System::GetTitleMusic() const  {
@@ -493,10 +485,6 @@ const std::vector<RPG::TestBattler>& RPG::System::GetBattletestData() const  {
 
 std::vector<RPG::TestBattler>& RPG::System::GetBattletestData() {
 	return battletest_data;
-}
-
-void RPG::System::SetBattletestData(const std::vector<RPG::TestBattler>& battletest_data) {
-	this->battletest_data = battletest_data;
 }
 
 int RPG::System::GetSaveCount() const {

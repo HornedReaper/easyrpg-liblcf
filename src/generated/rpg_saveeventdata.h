@@ -47,7 +47,6 @@ namespace RPG {
 		int unknown_2a_time_left = 0;
 		const std::vector<SaveEventCommands>& GetCommands() const;
 		std::vector<SaveEventCommands>& GetCommands();
-		void SetCommands(const std::vector<SaveEventCommands>& commands);
 
 		bool GetShowMessage() const;
 		void SetShowMessage(bool show_message);

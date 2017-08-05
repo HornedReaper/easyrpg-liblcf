@@ -57,10 +57,6 @@ std::vector<RPG::SavePicture>& RPG::Save::GetPictures() {
 	return pictures;
 }
 
-void RPG::Save::SetPictures(const std::vector<RPG::SavePicture>& pictures) {
-	this->pictures = pictures;
-}
-
 const RPG::SavePartyLocation& RPG::Save::GetPartyLocation() const  {
 	return party_location;
 }
@@ -117,10 +113,6 @@ std::vector<RPG::SaveActor>& RPG::Save::GetActors() {
 	return actors;
 }
 
-void RPG::Save::SetActors(const std::vector<RPG::SaveActor>& actors) {
-	this->actors = actors;
-}
-
 const RPG::SaveInventory& RPG::Save::GetInventory() const  {
 	return inventory;
 }
@@ -139,10 +131,6 @@ const std::vector<RPG::SaveTarget>& RPG::Save::GetTargets() const  {
 
 std::vector<RPG::SaveTarget>& RPG::Save::GetTargets() {
 	return targets;
-}
-
-void RPG::Save::SetTargets(const std::vector<RPG::SaveTarget>& targets) {
-	this->targets = targets;
 }
 
 const RPG::SaveMapInfo& RPG::Save::GetMapInfo() const  {
@@ -183,9 +171,5 @@ const std::vector<RPG::SaveCommonEvent>& RPG::Save::GetCommonEvents() const  {
 
 std::vector<RPG::SaveCommonEvent>& RPG::Save::GetCommonEvents() {
 	return common_events;
-}
-
-void RPG::Save::SetCommonEvents(const std::vector<RPG::SaveCommonEvent>& common_events) {
-	this->common_events = common_events;
 }
 

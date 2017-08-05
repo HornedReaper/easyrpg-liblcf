@@ -29,10 +29,6 @@ std::vector<int16_t>& RPG::SaveInventory::GetParty() {
 	return party;
 }
 
-void RPG::SaveInventory::SetParty(const std::vector<int16_t>& party) {
-	this->party = party;
-}
-
 int RPG::SaveInventory::GetItemsSize() const {
 	return items_size;
 }
@@ -49,10 +45,6 @@ std::vector<int16_t>& RPG::SaveInventory::GetItemIds() {
 	return item_ids;
 }
 
-void RPG::SaveInventory::SetItemIds(const std::vector<int16_t>& item_ids) {
-	this->item_ids = item_ids;
-}
-
 const std::vector<uint8_t>& RPG::SaveInventory::GetItemCounts() const  {
 	return item_counts;
 }
@@ -61,20 +53,12 @@ std::vector<uint8_t>& RPG::SaveInventory::GetItemCounts() {
 	return item_counts;
 }
 
-void RPG::SaveInventory::SetItemCounts(const std::vector<uint8_t>& item_counts) {
-	this->item_counts = item_counts;
-}
-
 const std::vector<uint8_t>& RPG::SaveInventory::GetItemUsage() const  {
 	return item_usage;
 }
 
 std::vector<uint8_t>& RPG::SaveInventory::GetItemUsage() {
 	return item_usage;
-}
-
-void RPG::SaveInventory::SetItemUsage(const std::vector<uint8_t>& item_usage) {
-	this->item_usage = item_usage;
 }
 
 int RPG::SaveInventory::GetGold() const {

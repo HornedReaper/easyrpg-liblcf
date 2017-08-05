@@ -228,17 +228,14 @@ namespace RPG {
 
 		const std::vector<bool>& GetActorSet() const;
 		std::vector<bool>& GetActorSet();
-		void SetActorSet(const std::vector<bool>& actor_set);
 
 
 		const std::vector<bool>& GetStateSet() const;
 		std::vector<bool>& GetStateSet();
-		void SetStateSet(const std::vector<bool>& state_set);
 
 
 		const std::vector<bool>& GetAttributeSet() const;
 		std::vector<bool>& GetAttributeSet();
-		void SetAttributeSet(const std::vector<bool>& attribute_set);
 
 		int GetStateChance() const;
 		void SetStateChance(int state_chance);
@@ -251,7 +248,6 @@ namespace RPG {
 
 		const std::vector<ItemAnimation>& GetAnimationData() const;
 		std::vector<ItemAnimation>& GetAnimationData();
-		void SetAnimationData(const std::vector<ItemAnimation>& animation_data);
 
 		bool GetUseSkill() const;
 		void SetUseSkill(bool use_skill);
@@ -259,7 +255,6 @@ namespace RPG {
 
 		const std::vector<bool>& GetClassSet() const;
 		std::vector<bool>& GetClassSet();
-		void SetClassSet(const std::vector<bool>& class_set);
 
 		int GetRangedTrajectory() const;
 		void SetRangedTrajectory(int ranged_trajectory);

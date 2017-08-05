@@ -54,20 +54,24 @@ namespace RPG {
 		{%- endfor %}
 		} {{ field.name }};
 		{%- else %}
-		{{ field.type|cpp_type(prefix=False) }} {{ field.name }}{{ field|pod_default }};
+		{{ field|cpp_type(prefix=False) }} {{ field.name }}{{ field|pod_default }};
 		{%- endif %}
 	{%- endif %}
 	{%- endfor %}
 
 	{%- for field in fields[struct_name]|field_is_used %}
+	{%- set type = field|cpp_type(prefix=False) %}
 	{%- if not field.size %}
 	{%- if field is pod %}
-		{{ field.type|cpp_type(prefix=False) }} Get{{ field|method }}() const;
-		void Set{{ field|method }}({{ field.type|cpp_type(prefix=False) }} {{ field.name }});
+		{{ type }} Get{{ field|method }}() const;
+		void Set{{ field|method }}({{ type }} {{ field.name }});
+	{%- elif field is vector %}
+		const {{ type }}& Get{{ field|method }}() const;
+		{{ type }}& Get{{ field|method }}();
 	{%- else %}
-		const {{ field.type|cpp_type(prefix=False) }}& Get{{ field|method }}() const;
-		{{ field.type|cpp_type(prefix=False) }}& Get{{ field|method }}();
-		void Set{{ field|method }}(const {{ field.type|cpp_type(prefix=False) }}& {{ field.name }});
+		const {{ type }}& Get{{ field|method }}() const;
+		{{ type }}& Get{{ field|method }}();
+		void Set{{ field|method }}(const {{ type }}& {{ field.name }});
 	{%- endif %}
 	{%- endif %}
 	{% endfor %}

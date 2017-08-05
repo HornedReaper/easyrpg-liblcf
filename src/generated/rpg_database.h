@@ -60,43 +60,33 @@ namespace RPG {
 		std::vector<BattlerAnimation> battleranimations;
 		const std::vector<Actor>& GetActors() const;
 		std::vector<Actor>& GetActors();
-		void SetActors(const std::vector<Actor>& actors);
 
 		const std::vector<Skill>& GetSkills() const;
 		std::vector<Skill>& GetSkills();
-		void SetSkills(const std::vector<Skill>& skills);
 
 		const std::vector<Item>& GetItems() const;
 		std::vector<Item>& GetItems();
-		void SetItems(const std::vector<Item>& items);
 
 		const std::vector<Enemy>& GetEnemies() const;
 		std::vector<Enemy>& GetEnemies();
-		void SetEnemies(const std::vector<Enemy>& enemies);
 
 		const std::vector<Troop>& GetTroops() const;
 		std::vector<Troop>& GetTroops();
-		void SetTroops(const std::vector<Troop>& troops);
 
 		const std::vector<Terrain>& GetTerrains() const;
 		std::vector<Terrain>& GetTerrains();
-		void SetTerrains(const std::vector<Terrain>& terrains);
 
 		const std::vector<Attribute>& GetAttributes() const;
 		std::vector<Attribute>& GetAttributes();
-		void SetAttributes(const std::vector<Attribute>& attributes);
 
 		const std::vector<State>& GetStates() const;
 		std::vector<State>& GetStates();
-		void SetStates(const std::vector<State>& states);
 
 		const std::vector<Animation>& GetAnimations() const;
 		std::vector<Animation>& GetAnimations();
-		void SetAnimations(const std::vector<Animation>& animations);
 
 		const std::vector<Chipset>& GetChipsets() const;
 		std::vector<Chipset>& GetChipsets();
-		void SetChipsets(const std::vector<Chipset>& chipsets);
 
 		const Terms& GetTerms() const;
 		Terms& GetTerms();
@@ -108,15 +98,12 @@ namespace RPG {
 
 		const std::vector<Switch>& GetSwitches() const;
 		std::vector<Switch>& GetSwitches();
-		void SetSwitches(const std::vector<Switch>& switches);
 
 		const std::vector<Variable>& GetVariables() const;
 		std::vector<Variable>& GetVariables();
-		void SetVariables(const std::vector<Variable>& variables);
 
 		const std::vector<CommonEvent>& GetCommonevents() const;
 		std::vector<CommonEvent>& GetCommonevents();
-		void SetCommonevents(const std::vector<CommonEvent>& commonevents);
 
 		int GetVersion() const;
 		void SetVersion(int version);
@@ -127,11 +114,9 @@ namespace RPG {
 
 		const std::vector<Class>& GetClasses() const;
 		std::vector<Class>& GetClasses();
-		void SetClasses(const std::vector<Class>& classes);
 
 		const std::vector<BattlerAnimation>& GetBattleranimations() const;
 		std::vector<BattlerAnimation>& GetBattleranimations();
-		void SetBattleranimations(const std::vector<BattlerAnimation>& battleranimations);
 
 	};
 }

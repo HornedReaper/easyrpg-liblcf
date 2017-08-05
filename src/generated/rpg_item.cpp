@@ -358,10 +358,6 @@ std::vector<bool>& RPG::Item::GetActorSet() {
 	return actor_set;
 }
 
-void RPG::Item::SetActorSet(const std::vector<bool>& actor_set) {
-	this->actor_set = actor_set;
-}
-
 
 const std::vector<bool>& RPG::Item::GetStateSet() const  {
 	return state_set;
@@ -371,10 +367,6 @@ std::vector<bool>& RPG::Item::GetStateSet() {
 	return state_set;
 }
 
-void RPG::Item::SetStateSet(const std::vector<bool>& state_set) {
-	this->state_set = state_set;
-}
-
 
 const std::vector<bool>& RPG::Item::GetAttributeSet() const  {
 	return attribute_set;
@@ -382,10 +374,6 @@ const std::vector<bool>& RPG::Item::GetAttributeSet() const  {
 
 std::vector<bool>& RPG::Item::GetAttributeSet() {
 	return attribute_set;
-}
-
-void RPG::Item::SetAttributeSet(const std::vector<bool>& attribute_set) {
-	this->attribute_set = attribute_set;
 }
 
 int RPG::Item::GetStateChance() const {
@@ -420,10 +408,6 @@ std::vector<RPG::ItemAnimation>& RPG::Item::GetAnimationData() {
 	return animation_data;
 }
 
-void RPG::Item::SetAnimationData(const std::vector<RPG::ItemAnimation>& animation_data) {
-	this->animation_data = animation_data;
-}
-
 bool RPG::Item::GetUseSkill() const {
 	return use_skill;
 }
@@ -439,10 +423,6 @@ const std::vector<bool>& RPG::Item::GetClassSet() const  {
 
 std::vector<bool>& RPG::Item::GetClassSet() {
 	return class_set;
-}
-
-void RPG::Item::SetClassSet(const std::vector<bool>& class_set) {
-	this->class_set = class_set;
 }
 
 int RPG::Item::GetRangedTrajectory() const {

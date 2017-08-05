@@ -28,7 +28,6 @@ namespace RPG {
 
 		const std::vector<MoveCommand>& GetMoveCommands() const;
 		std::vector<MoveCommand>& GetMoveCommands();
-		void SetMoveCommands(const std::vector<MoveCommand>& move_commands);
 
 		bool GetRepeat() const;
 		void SetRepeat(bool repeat);

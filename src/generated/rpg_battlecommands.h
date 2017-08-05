@@ -83,7 +83,6 @@ namespace RPG {
 
 		const std::vector<BattleCommand>& GetCommands() const;
 		std::vector<BattleCommand>& GetCommands();
-		void SetCommands(const std::vector<BattleCommand>& commands);
 
 		int GetDeathHandler2() const;
 		void SetDeathHandler2(int death_handler2);

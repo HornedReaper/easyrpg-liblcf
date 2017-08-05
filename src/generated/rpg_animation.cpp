@@ -53,10 +53,6 @@ std::vector<RPG::AnimationTiming>& RPG::Animation::GetTimings() {
 	return timings;
 }
 
-void RPG::Animation::SetTimings(const std::vector<RPG::AnimationTiming>& timings) {
-	this->timings = timings;
-}
-
 int RPG::Animation::GetScope() const {
 	return scope;
 }
@@ -79,9 +75,5 @@ const std::vector<RPG::AnimationFrame>& RPG::Animation::GetFrames() const  {
 
 std::vector<RPG::AnimationFrame>& RPG::Animation::GetFrames() {
 	return frames;
-}
-
-void RPG::Animation::SetFrames(const std::vector<RPG::AnimationFrame>& frames) {
-	this->frames = frames;
 }
 

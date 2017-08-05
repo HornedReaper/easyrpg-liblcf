@@ -58,7 +58,3 @@ std::vector<RPG::EventCommand>& RPG::CommonEvent::GetEventCommands() {
 	return event_commands;
 }
 
-void RPG::CommonEvent::SetEventCommands(const std::vector<RPG::EventCommand>& event_commands) {
-	this->event_commands = event_commands;
-}
-

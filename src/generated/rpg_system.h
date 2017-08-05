@@ -192,12 +192,10 @@ namespace RPG {
 
 		const std::vector<int16_t>& GetParty() const;
 		std::vector<int16_t>& GetParty();
-		void SetParty(const std::vector<int16_t>& party);
 
 
 		const std::vector<int16_t>& GetMenuCommands() const;
 		std::vector<int16_t>& GetMenuCommands();
-		void SetMenuCommands(const std::vector<int16_t>& menu_commands);
 
 		const Music& GetTitleMusic() const;
 		Music& GetTitleMusic();
@@ -315,7 +313,6 @@ namespace RPG {
 
 		const std::vector<TestBattler>& GetBattletestData() const;
 		std::vector<TestBattler>& GetBattletestData();
-		void SetBattletestData(const std::vector<TestBattler>& battletest_data);
 
 		int GetSaveCount() const;
 		void SetSaveCount(int save_count);

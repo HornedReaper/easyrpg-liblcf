@@ -174,10 +174,6 @@ std::vector<uint8_t>& RPG::Enemy::GetStateRanks() {
 	return state_ranks;
 }
 
-void RPG::Enemy::SetStateRanks(const std::vector<uint8_t>& state_ranks) {
-	this->state_ranks = state_ranks;
-}
-
 
 const std::vector<uint8_t>& RPG::Enemy::GetAttributeRanks() const  {
 	return attribute_ranks;
@@ -187,19 +183,11 @@ std::vector<uint8_t>& RPG::Enemy::GetAttributeRanks() {
 	return attribute_ranks;
 }
 
-void RPG::Enemy::SetAttributeRanks(const std::vector<uint8_t>& attribute_ranks) {
-	this->attribute_ranks = attribute_ranks;
-}
-
 const std::vector<RPG::EnemyAction>& RPG::Enemy::GetActions() const  {
 	return actions;
 }
 
 std::vector<RPG::EnemyAction>& RPG::Enemy::GetActions() {
 	return actions;
-}
-
-void RPG::Enemy::SetActions(const std::vector<RPG::EnemyAction>& actions) {
-	this->actions = actions;
 }
 

@@ -53,10 +53,6 @@ std::vector<RPG::SaveMapEvent>& RPG::SaveMapInfo::GetEvents() {
 	return events;
 }
 
-void RPG::SaveMapInfo::SetEvents(const std::vector<RPG::SaveMapEvent>& events) {
-	this->events = events;
-}
-
 const std::vector<uint8_t>& RPG::SaveMapInfo::GetLowerTiles() const  {
 	return lower_tiles;
 }
@@ -65,20 +61,12 @@ std::vector<uint8_t>& RPG::SaveMapInfo::GetLowerTiles() {
 	return lower_tiles;
 }
 
-void RPG::SaveMapInfo::SetLowerTiles(const std::vector<uint8_t>& lower_tiles) {
-	this->lower_tiles = lower_tiles;
-}
-
 const std::vector<uint8_t>& RPG::SaveMapInfo::GetUpperTiles() const  {
 	return upper_tiles;
 }
 
 std::vector<uint8_t>& RPG::SaveMapInfo::GetUpperTiles() {
 	return upper_tiles;
-}
-
-void RPG::SaveMapInfo::SetUpperTiles(const std::vector<uint8_t>& upper_tiles) {
-	this->upper_tiles = upper_tiles;
 }
 
 const std::string& RPG::SaveMapInfo::GetParallaxName() const  {

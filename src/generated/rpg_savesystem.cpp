@@ -73,10 +73,6 @@ std::vector<bool>& RPG::SaveSystem::GetSwitches() {
 	return switches;
 }
 
-void RPG::SaveSystem::SetSwitches(const std::vector<bool>& switches) {
-	this->switches = switches;
-}
-
 int RPG::SaveSystem::GetVariablesSize() const {
 	return variables_size;
 }
@@ -91,10 +87,6 @@ const std::vector<uint32_t>& RPG::SaveSystem::GetVariables() const  {
 
 std::vector<uint32_t>& RPG::SaveSystem::GetVariables() {
 	return variables;
-}
-
-void RPG::SaveSystem::SetVariables(const std::vector<uint32_t>& variables) {
-	this->variables = variables;
 }
 
 int RPG::SaveSystem::GetMessageTransparent() const {

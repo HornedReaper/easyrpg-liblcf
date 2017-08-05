@@ -33,7 +33,6 @@ namespace RPG {
 
 		const std::vector<EventCommand>& GetEventCommands() const;
 		std::vector<EventCommand>& GetEventCommands();
-		void SetEventCommands(const std::vector<EventCommand>& event_commands);
 
 	};
 }

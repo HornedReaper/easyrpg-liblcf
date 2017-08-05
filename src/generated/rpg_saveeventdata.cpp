@@ -21,10 +21,6 @@ std::vector<RPG::SaveEventCommands>& RPG::SaveEventData::GetCommands() {
 	return commands;
 }
 
-void RPG::SaveEventData::SetCommands(const std::vector<RPG::SaveEventCommands>& commands) {
-	this->commands = commands;
-}
-
 bool RPG::SaveEventData::GetShowMessage() const {
 	return show_message;
 }

@@ -61,10 +61,6 @@ std::vector<RPG::BattleCommand>& RPG::BattleCommands::GetCommands() {
 	return commands;
 }
 
-void RPG::BattleCommands::SetCommands(const std::vector<RPG::BattleCommand>& commands) {
-	this->commands = commands;
-}
-
 int RPG::BattleCommands::GetDeathHandler2() const {
 	return death_handler2;
 }

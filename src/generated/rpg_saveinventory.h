@@ -49,22 +49,18 @@ namespace RPG {
 
 		const std::vector<int16_t>& GetParty() const;
 		std::vector<int16_t>& GetParty();
-		void SetParty(const std::vector<int16_t>& party);
 
 		int GetItemsSize() const;
 		void SetItemsSize(int items_size);
 
 		const std::vector<int16_t>& GetItemIds() const;
 		std::vector<int16_t>& GetItemIds();
-		void SetItemIds(const std::vector<int16_t>& item_ids);
 
 		const std::vector<uint8_t>& GetItemCounts() const;
 		std::vector<uint8_t>& GetItemCounts();
-		void SetItemCounts(const std::vector<uint8_t>& item_counts);
 
 		const std::vector<uint8_t>& GetItemUsage() const;
 		std::vector<uint8_t>& GetItemUsage();
-		void SetItemUsage(const std::vector<uint8_t>& item_usage);
 
 		int GetGold() const;
 		void SetGold(int gold);

@@ -29,10 +29,6 @@ std::vector<RPG::EventCommand>& RPG::SaveEventCommands::GetCommands() {
 	return commands;
 }
 
-void RPG::SaveEventCommands::SetCommands(const std::vector<RPG::EventCommand>& commands) {
-	this->commands = commands;
-}
-
 int RPG::SaveEventCommands::GetCurrentCommand() const {
 	return current_command;
 }
@@ -71,9 +67,5 @@ const std::vector<uint8_t>& RPG::SaveEventCommands::GetUnknown16SubcommandPath()
 
 std::vector<uint8_t>& RPG::SaveEventCommands::GetUnknown16SubcommandPath() {
 	return unknown_16_subcommand_path;
-}
-
-void RPG::SaveEventCommands::SetUnknown16SubcommandPath(const std::vector<uint8_t>& unknown_16_subcommand_path) {
-	this->unknown_16_subcommand_path = unknown_16_subcommand_path;
 }
 

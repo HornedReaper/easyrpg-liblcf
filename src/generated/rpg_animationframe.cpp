@@ -21,7 +21,3 @@ std::vector<RPG::AnimationCellData>& RPG::AnimationFrame::GetCells() {
 	return cells;
 }
 
-void RPG::AnimationFrame::SetCells(const std::vector<RPG::AnimationCellData>& cells) {
-	this->cells = cells;
-}
-

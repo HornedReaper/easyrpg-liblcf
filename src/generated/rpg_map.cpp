@@ -217,20 +217,12 @@ std::vector<uint32_t>& RPG::Map::GetGeneratorX() {
 	return generator_x;
 }
 
-void RPG::Map::SetGeneratorX(const std::vector<uint32_t>& generator_x) {
-	this->generator_x = generator_x;
-}
-
 const std::vector<uint32_t>& RPG::Map::GetGeneratorY() const  {
 	return generator_y;
 }
 
 std::vector<uint32_t>& RPG::Map::GetGeneratorY() {
 	return generator_y;
-}
-
-void RPG::Map::SetGeneratorY(const std::vector<uint32_t>& generator_y) {
-	this->generator_y = generator_y;
 }
 
 const std::vector<int16_t>& RPG::Map::GetGeneratorTileIds() const  {
@@ -241,20 +233,12 @@ std::vector<int16_t>& RPG::Map::GetGeneratorTileIds() {
 	return generator_tile_ids;
 }
 
-void RPG::Map::SetGeneratorTileIds(const std::vector<int16_t>& generator_tile_ids) {
-	this->generator_tile_ids = generator_tile_ids;
-}
-
 const std::vector<int16_t>& RPG::Map::GetLowerLayer() const  {
 	return lower_layer;
 }
 
 std::vector<int16_t>& RPG::Map::GetLowerLayer() {
 	return lower_layer;
-}
-
-void RPG::Map::SetLowerLayer(const std::vector<int16_t>& lower_layer) {
-	this->lower_layer = lower_layer;
 }
 
 const std::vector<int16_t>& RPG::Map::GetUpperLayer() const  {
@@ -265,20 +249,12 @@ std::vector<int16_t>& RPG::Map::GetUpperLayer() {
 	return upper_layer;
 }
 
-void RPG::Map::SetUpperLayer(const std::vector<int16_t>& upper_layer) {
-	this->upper_layer = upper_layer;
-}
-
 const std::vector<RPG::Event>& RPG::Map::GetEvents() const  {
 	return events;
 }
 
 std::vector<RPG::Event>& RPG::Map::GetEvents() {
 	return events;
-}
-
-void RPG::Map::SetEvents(const std::vector<RPG::Event>& events) {
-	this->events = events;
 }
 
 int RPG::Map::GetSaveCount() const {

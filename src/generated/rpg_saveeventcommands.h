@@ -36,7 +36,6 @@ namespace RPG {
 
 		const std::vector<EventCommand>& GetCommands() const;
 		std::vector<EventCommand>& GetCommands();
-		void SetCommands(const std::vector<EventCommand>& commands);
 
 		int GetCurrentCommand() const;
 		void SetCurrentCommand(int current_command);
@@ -52,7 +51,6 @@ namespace RPG {
 
 		const std::vector<uint8_t>& GetUnknown16SubcommandPath() const;
 		std::vector<uint8_t>& GetUnknown16SubcommandPath();
-		void SetUnknown16SubcommandPath(const std::vector<uint8_t>& unknown_16_subcommand_path);
 
 	};
 }
