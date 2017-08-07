@@ -31,6 +31,27 @@ namespace RPG {
 		bool actioned = false;
 		int unknown_15_subcommand_path_size = -1;
 		std::vector<uint8_t> unknown_16_subcommand_path;
+		int GetCommandsSize() const;
+		void SetCommandsSize(int commands_size);
+
+		const std::vector<EventCommand>& GetCommands() const;
+		std::vector<EventCommand>& GetCommands();
+
+		int GetCurrentCommand() const;
+		void SetCurrentCommand(int current_command);
+
+		int GetEventId() const;
+		void SetEventId(int event_id);
+
+		bool GetActioned() const;
+		void SetActioned(bool actioned);
+
+		int GetUnknown15SubcommandPathSize() const;
+		void SetUnknown15SubcommandPathSize(int unknown_15_subcommand_path_size);
+
+		const std::vector<uint8_t>& GetUnknown16SubcommandPath() const;
+		std::vector<uint8_t>& GetUnknown16SubcommandPath();
+
 	};
 }
 

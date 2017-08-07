@@ -35,6 +35,23 @@ namespace RPG {
 		bool switch_flag = false;
 		int switch_id = 1;
 		std::vector<EventCommand> event_commands;
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
+
+		int GetTrigger() const;
+		void SetTrigger(int trigger);
+
+		bool GetSwitchFlag() const;
+		void SetSwitchFlag(bool switch_flag);
+
+		int GetSwitchId() const;
+		void SetSwitchId(int switch_id);
+
+
+		const std::vector<EventCommand>& GetEventCommands() const;
+		std::vector<EventCommand>& GetEventCommands();
+
 	};
 }
 

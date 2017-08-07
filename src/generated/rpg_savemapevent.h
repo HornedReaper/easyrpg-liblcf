@@ -69,6 +69,135 @@ namespace RPG {
 		int original_move_route_index = 0;
 		bool pending = false;
 		SaveEventData event_data;
+		bool GetActive() const;
+		void SetActive(bool active);
+
+		int GetMapId() const;
+		void SetMapId(int map_id);
+
+		int GetPositionX() const;
+		void SetPositionX(int position_x);
+
+		int GetPositionY() const;
+		void SetPositionY(int position_y);
+
+		int GetDirection() const;
+		void SetDirection(int direction);
+
+		int GetSpriteDirection() const;
+		void SetSpriteDirection(int sprite_direction);
+
+		int GetAnimFrame() const;
+		void SetAnimFrame(int anim_frame);
+
+		int GetTransparency() const;
+		void SetTransparency(int transparency);
+
+		int GetRemainingStep() const;
+		void SetRemainingStep(int remaining_step);
+
+		int GetMoveFrequency() const;
+		void SetMoveFrequency(int move_frequency);
+
+		int GetLayer() const;
+		void SetLayer(int layer);
+
+		bool GetOverlapForbidden() const;
+		void SetOverlapForbidden(bool overlap_forbidden);
+
+		int GetAnimationType() const;
+		void SetAnimationType(int animation_type);
+
+		bool GetLockFacing() const;
+		void SetLockFacing(bool lock_facing);
+
+		int GetMoveSpeed() const;
+		void SetMoveSpeed(int move_speed);
+
+		const MoveRoute& GetMoveRoute() const;
+		MoveRoute& GetMoveRoute();
+		void SetMoveRoute(const MoveRoute& move_route);
+
+		bool GetMoveRouteOverwrite() const;
+		void SetMoveRouteOverwrite(bool move_route_overwrite);
+
+		int GetMoveRouteIndex() const;
+		void SetMoveRouteIndex(int move_route_index);
+
+		bool GetMoveRouteRepeated() const;
+		void SetMoveRouteRepeated(bool move_route_repeated);
+
+		int GetUnknown2fOverlap() const;
+		void SetUnknown2fOverlap(int unknown_2f_overlap);
+
+		int GetAnimPaused() const;
+		void SetAnimPaused(int anim_paused);
+
+		bool GetThrough() const;
+		void SetThrough(bool through);
+
+		int GetStopCount() const;
+		void SetStopCount(int stop_count);
+
+		int GetAnimCount() const;
+		void SetAnimCount(int anim_count);
+
+		int GetMaxStopCount() const;
+		void SetMaxStopCount(int max_stop_count);
+
+		bool GetJumping() const;
+		void SetJumping(bool jumping);
+
+		int GetBeginJumpX() const;
+		void SetBeginJumpX(int begin_jump_x);
+
+		int GetBeginJumpY() const;
+		void SetBeginJumpY(int begin_jump_y);
+
+		int GetUnknown47Pause() const;
+		void SetUnknown47Pause(int unknown_47_pause);
+
+		bool GetFlying() const;
+		void SetFlying(bool flying);
+
+		const std::string& GetSpriteName() const;
+		std::string& GetSpriteName();
+		void SetSpriteName(const std::string& sprite_name);
+
+		int GetSpriteId() const;
+		void SetSpriteId(int sprite_id);
+
+		int GetUnknown4bSpriteMove() const;
+		void SetUnknown4bSpriteMove(int unknown_4b_sprite_move);
+
+		int GetFlashRed() const;
+		void SetFlashRed(int flash_red);
+
+		int GetFlashGreen() const;
+		void SetFlashGreen(int flash_green);
+
+		int GetFlashBlue() const;
+		void SetFlashBlue(int flash_blue);
+
+		double GetFlashCurrentLevel() const;
+		void SetFlashCurrentLevel(double flash_current_level);
+
+		int GetFlashTimeLeft() const;
+		void SetFlashTimeLeft(int flash_time_left);
+
+		bool GetRunning() const;
+		void SetRunning(bool running);
+
+		int GetOriginalMoveRouteIndex() const;
+		void SetOriginalMoveRouteIndex(int original_move_route_index);
+
+		bool GetPending() const;
+		void SetPending(bool pending);
+
+		const SaveEventData& GetEventData() const;
+		SaveEventData& GetEventData();
+		void SetEventData(const SaveEventData& event_data);
+
 	};
 }
 

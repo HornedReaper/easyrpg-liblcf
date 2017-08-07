@@ -33,6 +33,15 @@ namespace RPG {
 		int move = 0;
 		int after_image = 0;
 		int pose = 0;
+		int GetMove() const;
+		void SetMove(int move);
+
+		int GetAfterImage() const;
+		void SetAfterImage(int after_image);
+
+		int GetPose() const;
+		void SetPose(int pose);
+
 	};
 }
 

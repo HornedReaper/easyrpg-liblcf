@@ -27,6 +27,19 @@ namespace RPG {
 		std::vector<int> tree_order;
 		int active_node = 0;
 		Start start;
+		const std::vector<MapInfo>& GetMaps() const;
+		std::vector<MapInfo>& GetMaps();
+
+		const std::vector<int>& GetTreeOrder() const;
+		std::vector<int>& GetTreeOrder();
+
+		int GetActiveNode() const;
+		void SetActiveNode(int active_node);
+
+		const Start& GetStart() const;
+		Start& GetStart();
+		void SetStart(const Start& start);
+
 	};
 }
 

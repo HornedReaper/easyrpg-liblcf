@@ -25,6 +25,19 @@ namespace RPG {
 		int volume = 100;
 		int tempo = 100;
 		int balance = 50;
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
+
+		int GetVolume() const;
+		void SetVolume(int volume);
+
+		int GetTempo() const;
+		void SetTempo(int tempo);
+
+		int GetBalance() const;
+		void SetBalance(int balance);
+
 	};
 }
 

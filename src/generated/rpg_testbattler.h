@@ -26,6 +26,27 @@ namespace RPG {
 		int armor_id = 0;
 		int helmet_id = 0;
 		int accessory_id = 0;
+		int GetActorId() const;
+		void SetActorId(int actor_id);
+
+		int GetLevel() const;
+		void SetLevel(int level);
+
+		int GetWeaponId() const;
+		void SetWeaponId(int weapon_id);
+
+		int GetShieldId() const;
+		void SetShieldId(int shield_id);
+
+		int GetArmorId() const;
+		void SetArmorId(int armor_id);
+
+		int GetHelmetId() const;
+		void SetHelmetId(int helmet_id);
+
+		int GetAccessoryId() const;
+		void SetAccessoryId(int accessory_id);
+
 	};
 }
 

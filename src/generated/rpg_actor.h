@@ -59,6 +59,108 @@ namespace RPG {
 		std::vector<uint8_t> state_ranks;
 		std::vector<uint8_t> attribute_ranks;
 		std::vector<uint32_t> battle_commands;
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
+
+		const std::string& GetTitle() const;
+		std::string& GetTitle();
+		void SetTitle(const std::string& title);
+
+		const std::string& GetCharacterName() const;
+		std::string& GetCharacterName();
+		void SetCharacterName(const std::string& character_name);
+
+		int GetCharacterIndex() const;
+		void SetCharacterIndex(int character_index);
+
+		bool GetTransparent() const;
+		void SetTransparent(bool transparent);
+
+		int GetInitialLevel() const;
+		void SetInitialLevel(int initial_level);
+
+		int GetFinalLevel() const;
+		void SetFinalLevel(int final_level);
+
+		bool GetCriticalHit() const;
+		void SetCriticalHit(bool critical_hit);
+
+		int GetCriticalHitChance() const;
+		void SetCriticalHitChance(int critical_hit_chance);
+
+		const std::string& GetFaceName() const;
+		std::string& GetFaceName();
+		void SetFaceName(const std::string& face_name);
+
+		int GetFaceIndex() const;
+		void SetFaceIndex(int face_index);
+
+		bool GetTwoWeapon() const;
+		void SetTwoWeapon(bool two_weapon);
+
+		bool GetLockEquipment() const;
+		void SetLockEquipment(bool lock_equipment);
+
+		bool GetAutoBattle() const;
+		void SetAutoBattle(bool auto_battle);
+
+		bool GetSuperGuard() const;
+		void SetSuperGuard(bool super_guard);
+
+		const Parameters& GetParameters() const;
+		Parameters& GetParameters();
+		void SetParameters(const Parameters& parameters);
+
+		int GetExpBase() const;
+		void SetExpBase(int exp_base);
+
+		int GetExpInflation() const;
+		void SetExpInflation(int exp_inflation);
+
+		int GetExpCorrection() const;
+		void SetExpCorrection(int exp_correction);
+
+		const Equipment& GetInitialEquipment() const;
+		Equipment& GetInitialEquipment();
+		void SetInitialEquipment(const Equipment& initial_equipment);
+
+		int GetUnarmedAnimation() const;
+		void SetUnarmedAnimation(int unarmed_animation);
+
+		int GetClassId() const;
+		void SetClassId(int class_id);
+
+		int GetBattleX() const;
+		void SetBattleX(int battle_x);
+
+		int GetBattleY() const;
+		void SetBattleY(int battle_y);
+
+		int GetBattlerAnimation() const;
+		void SetBattlerAnimation(int battler_animation);
+
+		const std::vector<Learning>& GetSkills() const;
+		std::vector<Learning>& GetSkills();
+
+		bool GetRenameSkill() const;
+		void SetRenameSkill(bool rename_skill);
+
+		const std::string& GetSkillName() const;
+		std::string& GetSkillName();
+		void SetSkillName(const std::string& skill_name);
+
+
+		const std::vector<uint8_t>& GetStateRanks() const;
+		std::vector<uint8_t>& GetStateRanks();
+
+
+		const std::vector<uint8_t>& GetAttributeRanks() const;
+		std::vector<uint8_t>& GetAttributeRanks();
+
+		const std::vector<uint32_t>& GetBattleCommands() const;
+		std::vector<uint32_t>& GetBattleCommands();
+
 	};
 }
 

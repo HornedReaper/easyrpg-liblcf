@@ -45,6 +45,37 @@ namespace RPG {
 		int timer_sec = 0;
 		int timer2_sec = 0;
 		int compare_operator = 1;
+		const Flags& GetFlags() const;
+		Flags& GetFlags();
+		void SetFlags(const Flags& flags);
+
+		int GetSwitchAId() const;
+		void SetSwitchAId(int switch_a_id);
+
+		int GetSwitchBId() const;
+		void SetSwitchBId(int switch_b_id);
+
+		int GetVariableId() const;
+		void SetVariableId(int variable_id);
+
+		int GetVariableValue() const;
+		void SetVariableValue(int variable_value);
+
+		int GetItemId() const;
+		void SetItemId(int item_id);
+
+		int GetActorId() const;
+		void SetActorId(int actor_id);
+
+		int GetTimerSec() const;
+		void SetTimerSec(int timer_sec);
+
+		int GetTimer2Sec() const;
+		void SetTimer2Sec(int timer2_sec);
+
+		int GetCompareOperator() const;
+		void SetCompareOperator(int compare_operator);
+
 	};
 }
 

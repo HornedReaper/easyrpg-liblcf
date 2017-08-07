@@ -61,6 +61,61 @@ namespace RPG {
 		std::vector<Encounter> encounters;
 		int encounter_steps = 25;
 		Rect area_rect;
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
+
+		int GetParentMap() const;
+		void SetParentMap(int parent_map);
+
+		int GetIndentation() const;
+		void SetIndentation(int indentation);
+
+		int GetType() const;
+		void SetType(int type);
+
+		int GetScrollbarX() const;
+		void SetScrollbarX(int scrollbar_x);
+
+		int GetScrollbarY() const;
+		void SetScrollbarY(int scrollbar_y);
+
+		bool GetExpandedNode() const;
+		void SetExpandedNode(bool expanded_node);
+
+		int GetMusicType() const;
+		void SetMusicType(int music_type);
+
+		const Music& GetMusic() const;
+		Music& GetMusic();
+		void SetMusic(const Music& music);
+
+		int GetBackgroundType() const;
+		void SetBackgroundType(int background_type);
+
+		const std::string& GetBackgroundName() const;
+		std::string& GetBackgroundName();
+		void SetBackgroundName(const std::string& background_name);
+
+		int GetTeleport() const;
+		void SetTeleport(int teleport);
+
+		int GetEscape() const;
+		void SetEscape(int escape);
+
+		int GetSave() const;
+		void SetSave(int save);
+
+		const std::vector<Encounter>& GetEncounters() const;
+		std::vector<Encounter>& GetEncounters();
+
+		int GetEncounterSteps() const;
+		void SetEncounterSteps(int encounter_steps);
+
+		const Rect& GetAreaRect() const;
+		Rect& GetAreaRect();
+		void SetAreaRect(const Rect& area_rect);
+
 	};
 }
 

@@ -46,6 +46,73 @@ namespace RPG {
 		std::vector<uint8_t> state_ranks;
 		std::vector<uint8_t> attribute_ranks;
 		std::vector<EnemyAction> actions;
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
+
+		const std::string& GetBattlerName() const;
+		std::string& GetBattlerName();
+		void SetBattlerName(const std::string& battler_name);
+
+		int GetBattlerHue() const;
+		void SetBattlerHue(int battler_hue);
+
+		int GetMaxHp() const;
+		void SetMaxHp(int max_hp);
+
+		int GetMaxSp() const;
+		void SetMaxSp(int max_sp);
+
+		int GetAttack() const;
+		void SetAttack(int attack);
+
+		int GetDefense() const;
+		void SetDefense(int defense);
+
+		int GetSpirit() const;
+		void SetSpirit(int spirit);
+
+		int GetAgility() const;
+		void SetAgility(int agility);
+
+		bool GetTransparent() const;
+		void SetTransparent(bool transparent);
+
+		int GetExp() const;
+		void SetExp(int exp);
+
+		int GetGold() const;
+		void SetGold(int gold);
+
+		int GetDropId() const;
+		void SetDropId(int drop_id);
+
+		int GetDropProb() const;
+		void SetDropProb(int drop_prob);
+
+		bool GetCriticalHit() const;
+		void SetCriticalHit(bool critical_hit);
+
+		int GetCriticalHitChance() const;
+		void SetCriticalHitChance(int critical_hit_chance);
+
+		bool GetMiss() const;
+		void SetMiss(bool miss);
+
+		bool GetLevitate() const;
+		void SetLevitate(bool levitate);
+
+
+		const std::vector<uint8_t>& GetStateRanks() const;
+		std::vector<uint8_t>& GetStateRanks();
+
+
+		const std::vector<uint8_t>& GetAttributeRanks() const;
+		std::vector<uint8_t>& GetAttributeRanks();
+
+		const std::vector<EnemyAction>& GetActions() const;
+		std::vector<EnemyAction>& GetActions();
+
 	};
 }
 

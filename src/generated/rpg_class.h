@@ -40,6 +40,52 @@ namespace RPG {
 		std::vector<uint8_t> state_ranks;
 		std::vector<uint8_t> attribute_ranks;
 		std::vector<uint32_t> battle_commands;
+		const std::string& GetName() const;
+		std::string& GetName();
+		void SetName(const std::string& name);
+
+		bool GetTwoWeapon() const;
+		void SetTwoWeapon(bool two_weapon);
+
+		bool GetLockEquipment() const;
+		void SetLockEquipment(bool lock_equipment);
+
+		bool GetAutoBattle() const;
+		void SetAutoBattle(bool auto_battle);
+
+		bool GetSuperGuard() const;
+		void SetSuperGuard(bool super_guard);
+
+		const Parameters& GetParameters() const;
+		Parameters& GetParameters();
+		void SetParameters(const Parameters& parameters);
+
+		int GetExpBase() const;
+		void SetExpBase(int exp_base);
+
+		int GetExpInflation() const;
+		void SetExpInflation(int exp_inflation);
+
+		int GetExpCorrection() const;
+		void SetExpCorrection(int exp_correction);
+
+		int GetBattlerAnimation() const;
+		void SetBattlerAnimation(int battler_animation);
+
+		const std::vector<Learning>& GetSkills() const;
+		std::vector<Learning>& GetSkills();
+
+
+		const std::vector<uint8_t>& GetStateRanks() const;
+		std::vector<uint8_t>& GetStateRanks();
+
+
+		const std::vector<uint8_t>& GetAttributeRanks() const;
+		std::vector<uint8_t>& GetAttributeRanks();
+
+		const std::vector<uint32_t>& GetBattleCommands() const;
+		std::vector<uint32_t>& GetBattleCommands();
+
 	};
 }
 
