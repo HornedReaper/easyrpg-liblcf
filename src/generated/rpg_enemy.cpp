@@ -12,182 +12,185 @@
 // Headers
 #include "rpg_enemy.h"
 
+RPG::Enemy::Enemy(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const std::string& RPG::Enemy::GetName() const  {
-	return name;
+const std::string& RPG::Enemy::GetName() const {
+	return getter<const std::string&>("name");
 }
 
 std::string& RPG::Enemy::GetName() {
-	return name;
+	return getter<std::string&>("name");
 }
 
 void RPG::Enemy::SetName(const std::string& name) {
-	this->name = name;
+	setter<std::string>("name", name);
 }
 
-const std::string& RPG::Enemy::GetBattlerName() const  {
-	return battler_name;
+const std::string& RPG::Enemy::GetBattlerName() const {
+	return getter<const std::string&>("battler_name");
 }
 
 std::string& RPG::Enemy::GetBattlerName() {
-	return battler_name;
+	return getter<std::string&>("battler_name");
 }
 
 void RPG::Enemy::SetBattlerName(const std::string& battler_name) {
-	this->battler_name = battler_name;
+	setter<std::string>("battler_name", battler_name);
 }
 
 int RPG::Enemy::GetBattlerHue() const {
-	return battler_hue;
+	return getter<int>("battler_hue");
 }
 
 void RPG::Enemy::SetBattlerHue(int battler_hue) {
-	this->battler_hue = battler_hue;
+	setter<int>("battler_hue", battler_hue);
 }
 
 int RPG::Enemy::GetMaxHp() const {
-	return max_hp;
+	return getter<int>("max_hp");
 }
 
 void RPG::Enemy::SetMaxHp(int max_hp) {
-	this->max_hp = max_hp;
+	setter<int>("max_hp", max_hp);
 }
 
 int RPG::Enemy::GetMaxSp() const {
-	return max_sp;
+	return getter<int>("max_sp");
 }
 
 void RPG::Enemy::SetMaxSp(int max_sp) {
-	this->max_sp = max_sp;
+	setter<int>("max_sp", max_sp);
 }
 
 int RPG::Enemy::GetAttack() const {
-	return attack;
+	return getter<int>("attack");
 }
 
 void RPG::Enemy::SetAttack(int attack) {
-	this->attack = attack;
+	setter<int>("attack", attack);
 }
 
 int RPG::Enemy::GetDefense() const {
-	return defense;
+	return getter<int>("defense");
 }
 
 void RPG::Enemy::SetDefense(int defense) {
-	this->defense = defense;
+	setter<int>("defense", defense);
 }
 
 int RPG::Enemy::GetSpirit() const {
-	return spirit;
+	return getter<int>("spirit");
 }
 
 void RPG::Enemy::SetSpirit(int spirit) {
-	this->spirit = spirit;
+	setter<int>("spirit", spirit);
 }
 
 int RPG::Enemy::GetAgility() const {
-	return agility;
+	return getter<int>("agility");
 }
 
 void RPG::Enemy::SetAgility(int agility) {
-	this->agility = agility;
+	setter<int>("agility", agility);
 }
 
 bool RPG::Enemy::GetTransparent() const {
-	return transparent;
+	return getter<bool>("transparent");
 }
 
 void RPG::Enemy::SetTransparent(bool transparent) {
-	this->transparent = transparent;
+	setter<bool>("transparent", transparent);
 }
 
 int RPG::Enemy::GetExp() const {
-	return exp;
+	return getter<int>("exp");
 }
 
 void RPG::Enemy::SetExp(int exp) {
-	this->exp = exp;
+	setter<int>("exp", exp);
 }
 
 int RPG::Enemy::GetGold() const {
-	return gold;
+	return getter<int>("gold");
 }
 
 void RPG::Enemy::SetGold(int gold) {
-	this->gold = gold;
+	setter<int>("gold", gold);
 }
 
 int RPG::Enemy::GetDropId() const {
-	return drop_id;
+	return getter<int>("drop_id");
 }
 
 void RPG::Enemy::SetDropId(int drop_id) {
-	this->drop_id = drop_id;
+	setter<int>("drop_id", drop_id);
 }
 
 int RPG::Enemy::GetDropProb() const {
-	return drop_prob;
+	return getter<int>("drop_prob");
 }
 
 void RPG::Enemy::SetDropProb(int drop_prob) {
-	this->drop_prob = drop_prob;
+	setter<int>("drop_prob", drop_prob);
 }
 
 bool RPG::Enemy::GetCriticalHit() const {
-	return critical_hit;
+	return getter<bool>("critical_hit");
 }
 
 void RPG::Enemy::SetCriticalHit(bool critical_hit) {
-	this->critical_hit = critical_hit;
+	setter<bool>("critical_hit", critical_hit);
 }
 
 int RPG::Enemy::GetCriticalHitChance() const {
-	return critical_hit_chance;
+	return getter<int>("critical_hit_chance");
 }
 
 void RPG::Enemy::SetCriticalHitChance(int critical_hit_chance) {
-	this->critical_hit_chance = critical_hit_chance;
+	setter<int>("critical_hit_chance", critical_hit_chance);
 }
 
 bool RPG::Enemy::GetMiss() const {
-	return miss;
+	return getter<bool>("miss");
 }
 
 void RPG::Enemy::SetMiss(bool miss) {
-	this->miss = miss;
+	setter<bool>("miss", miss);
 }
 
 bool RPG::Enemy::GetLevitate() const {
-	return levitate;
+	return getter<bool>("levitate");
 }
 
 void RPG::Enemy::SetLevitate(bool levitate) {
-	this->levitate = levitate;
+	setter<bool>("levitate", levitate);
 }
 
 
-const std::vector<uint8_t>& RPG::Enemy::GetStateRanks() const  {
-	return state_ranks;
+const std::vector<uint8_t>& RPG::Enemy::GetStateRanks() const {
+	return vector_getter<const std::vector<uint8_t>&, uint8_t>("state_ranks");
 }
 
 std::vector<uint8_t>& RPG::Enemy::GetStateRanks() {
-	return state_ranks;
+	return vector_getter<std::vector<uint8_t>&, uint8_t>("state_ranks");
 }
 
 
-const std::vector<uint8_t>& RPG::Enemy::GetAttributeRanks() const  {
-	return attribute_ranks;
+const std::vector<uint8_t>& RPG::Enemy::GetAttributeRanks() const {
+	return vector_getter<const std::vector<uint8_t>&, uint8_t>("attribute_ranks");
 }
 
 std::vector<uint8_t>& RPG::Enemy::GetAttributeRanks() {
-	return attribute_ranks;
+	return vector_getter<std::vector<uint8_t>&, uint8_t>("attribute_ranks");
 }
 
-const std::vector<RPG::EnemyAction>& RPG::Enemy::GetActions() const  {
-	return actions;
+const std::vector<RPG::EnemyAction>& RPG::Enemy::GetActions() const {
+	return vector_getter<const std::vector<RPG::EnemyAction>&, RPG::EnemyAction>("actions");
 }
 
 std::vector<RPG::EnemyAction>& RPG::Enemy::GetActions() {
-	return actions;
+	return vector_getter<std::vector<RPG::EnemyAction>&, RPG::EnemyAction>("actions");
 }
 

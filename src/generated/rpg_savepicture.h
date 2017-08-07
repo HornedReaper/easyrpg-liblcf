@@ -14,13 +14,16 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 
 /**
  * RPG::SavePicture class.
  */
 namespace RPG {
-	class SavePicture {
+	class SavePicture : Base {
 	public:
+		SavePicture() {}
+		SavePicture(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		double start_x = 0.0;

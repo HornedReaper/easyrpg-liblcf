@@ -12,12 +12,17 @@
 #ifndef LCF_RPG_LEARNING_H
 #define LCF_RPG_LEARNING_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::Learning class.
  */
 namespace RPG {
-	class Learning {
+	class Learning : Base {
 	public:
+		Learning() {}
+		Learning(rapidjson::Value& json_values);
 		int ID = 0;
 		int level = 1;
 		int skill_id = 1;

@@ -14,13 +14,14 @@
 
 // Headers
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_battlecommand.h"
 
 /**
  * RPG::BattleCommands class.
  */
 namespace RPG {
-	class BattleCommands {
+	class BattleCommands : Base {
 	public:
 		enum Placement {
 			Placement_manual = 0,
@@ -51,6 +52,8 @@ namespace RPG {
 			Facing_left = 4
 		};
 
+		BattleCommands() {}
+		BattleCommands(rapidjson::Value& json_values);
 		int placement = 0;
 		int death_handler1 = 0;
 		int row = 0;

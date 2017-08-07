@@ -16,13 +16,16 @@
 #include <string>
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 
 /**
  * RPG::SaveActor class.
  */
 namespace RPG {
-	class SaveActor {
+	class SaveActor : Base {
 	public:
+		SaveActor() {}
+		SaveActor(rapidjson::Value& json_values);
 		void Setup(int actor_id);
 		void Fixup(int actor_id);
 		int ID = 0;

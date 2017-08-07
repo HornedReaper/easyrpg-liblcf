@@ -14,13 +14,16 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 
 /**
  * RPG::SaveTitle class.
  */
 namespace RPG {
-	class SaveTitle {
+	class SaveTitle : Base {
 	public:
+		SaveTitle() {}
+		SaveTitle(rapidjson::Value& json_values);
 		double timestamp = 0;
 		std::string hero_name;
 		int hero_level = 0;

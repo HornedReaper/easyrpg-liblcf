@@ -12,48 +12,51 @@
 // Headers
 #include "rpg_music.h"
 
+RPG::Music::Music(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const std::string& RPG::Music::GetName() const  {
-	return name;
+const std::string& RPG::Music::GetName() const {
+	return getter<const std::string&>("name");
 }
 
 std::string& RPG::Music::GetName() {
-	return name;
+	return getter<std::string&>("name");
 }
 
 void RPG::Music::SetName(const std::string& name) {
-	this->name = name;
+	setter<std::string>("name", name);
 }
 
 int RPG::Music::GetFadein() const {
-	return fadein;
+	return getter<int>("fadein");
 }
 
 void RPG::Music::SetFadein(int fadein) {
-	this->fadein = fadein;
+	setter<int>("fadein", fadein);
 }
 
 int RPG::Music::GetVolume() const {
-	return volume;
+	return getter<int>("volume");
 }
 
 void RPG::Music::SetVolume(int volume) {
-	this->volume = volume;
+	setter<int>("volume", volume);
 }
 
 int RPG::Music::GetTempo() const {
-	return tempo;
+	return getter<int>("tempo");
 }
 
 void RPG::Music::SetTempo(int tempo) {
-	this->tempo = tempo;
+	setter<int>("tempo", tempo);
 }
 
 int RPG::Music::GetBalance() const {
-	return balance;
+	return getter<int>("balance");
 }
 
 void RPG::Music::SetBalance(int balance) {
-	this->balance = balance;
+	setter<int>("balance", balance);
 }
 

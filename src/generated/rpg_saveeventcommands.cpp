@@ -12,60 +12,63 @@
 // Headers
 #include "rpg_saveeventcommands.h"
 
+RPG::SaveEventCommands::SaveEventCommands(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
 int RPG::SaveEventCommands::GetCommandsSize() const {
-	return commands_size;
+	return getter<int>("commands_size");
 }
 
 void RPG::SaveEventCommands::SetCommandsSize(int commands_size) {
-	this->commands_size = commands_size;
+	setter<int>("commands_size", commands_size);
 }
 
-const std::vector<RPG::EventCommand>& RPG::SaveEventCommands::GetCommands() const  {
-	return commands;
+const std::vector<RPG::EventCommand>& RPG::SaveEventCommands::GetCommands() const {
+	return vector_getter<const std::vector<RPG::EventCommand>&, RPG::EventCommand>("commands");
 }
 
 std::vector<RPG::EventCommand>& RPG::SaveEventCommands::GetCommands() {
-	return commands;
+	return vector_getter<std::vector<RPG::EventCommand>&, RPG::EventCommand>("commands");
 }
 
 int RPG::SaveEventCommands::GetCurrentCommand() const {
-	return current_command;
+	return getter<int>("current_command");
 }
 
 void RPG::SaveEventCommands::SetCurrentCommand(int current_command) {
-	this->current_command = current_command;
+	setter<int>("current_command", current_command);
 }
 
 int RPG::SaveEventCommands::GetEventId() const {
-	return event_id;
+	return getter<int>("event_id");
 }
 
 void RPG::SaveEventCommands::SetEventId(int event_id) {
-	this->event_id = event_id;
+	setter<int>("event_id", event_id);
 }
 
 bool RPG::SaveEventCommands::GetActioned() const {
-	return actioned;
+	return getter<bool>("actioned");
 }
 
 void RPG::SaveEventCommands::SetActioned(bool actioned) {
-	this->actioned = actioned;
+	setter<bool>("actioned", actioned);
 }
 
 int RPG::SaveEventCommands::GetUnknown15SubcommandPathSize() const {
-	return unknown_15_subcommand_path_size;
+	return getter<int>("unknown_15_subcommand_path_size");
 }
 
 void RPG::SaveEventCommands::SetUnknown15SubcommandPathSize(int unknown_15_subcommand_path_size) {
-	this->unknown_15_subcommand_path_size = unknown_15_subcommand_path_size;
+	setter<int>("unknown_15_subcommand_path_size", unknown_15_subcommand_path_size);
 }
 
-const std::vector<uint8_t>& RPG::SaveEventCommands::GetUnknown16SubcommandPath() const  {
-	return unknown_16_subcommand_path;
+const std::vector<uint8_t>& RPG::SaveEventCommands::GetUnknown16SubcommandPath() const {
+	return vector_getter<const std::vector<uint8_t>&, uint8_t>("unknown_16_subcommand_path");
 }
 
 std::vector<uint8_t>& RPG::SaveEventCommands::GetUnknown16SubcommandPath() {
-	return unknown_16_subcommand_path;
+	return vector_getter<std::vector<uint8_t>&, uint8_t>("unknown_16_subcommand_path");
 }
 

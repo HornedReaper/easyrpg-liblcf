@@ -12,72 +12,75 @@
 // Headers
 #include "rpg_animationtiming.h"
 
+RPG::AnimationTiming::AnimationTiming(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
 int RPG::AnimationTiming::GetFrame() const {
-	return frame;
+	return getter<int>("frame");
 }
 
 void RPG::AnimationTiming::SetFrame(int frame) {
-	this->frame = frame;
+	setter<int>("frame", frame);
 }
 
-const RPG::Sound& RPG::AnimationTiming::GetSe() const  {
-	return se;
+const RPG::Sound& RPG::AnimationTiming::GetSe() const {
+	return getter<const RPG::Sound&>("se");
 }
 
 RPG::Sound& RPG::AnimationTiming::GetSe() {
-	return se;
+	return getter<RPG::Sound&>("se");
 }
 
 void RPG::AnimationTiming::SetSe(const RPG::Sound& se) {
-	this->se = se;
+	setter<RPG::Sound>("se", se);
 }
 
 int RPG::AnimationTiming::GetFlashScope() const {
-	return flash_scope;
+	return getter<int>("flash_scope");
 }
 
 void RPG::AnimationTiming::SetFlashScope(int flash_scope) {
-	this->flash_scope = flash_scope;
+	setter<int>("flash_scope", flash_scope);
 }
 
 int RPG::AnimationTiming::GetFlashRed() const {
-	return flash_red;
+	return getter<int>("flash_red");
 }
 
 void RPG::AnimationTiming::SetFlashRed(int flash_red) {
-	this->flash_red = flash_red;
+	setter<int>("flash_red", flash_red);
 }
 
 int RPG::AnimationTiming::GetFlashGreen() const {
-	return flash_green;
+	return getter<int>("flash_green");
 }
 
 void RPG::AnimationTiming::SetFlashGreen(int flash_green) {
-	this->flash_green = flash_green;
+	setter<int>("flash_green", flash_green);
 }
 
 int RPG::AnimationTiming::GetFlashBlue() const {
-	return flash_blue;
+	return getter<int>("flash_blue");
 }
 
 void RPG::AnimationTiming::SetFlashBlue(int flash_blue) {
-	this->flash_blue = flash_blue;
+	setter<int>("flash_blue", flash_blue);
 }
 
 int RPG::AnimationTiming::GetFlashPower() const {
-	return flash_power;
+	return getter<int>("flash_power");
 }
 
 void RPG::AnimationTiming::SetFlashPower(int flash_power) {
-	this->flash_power = flash_power;
+	setter<int>("flash_power", flash_power);
 }
 
 int RPG::AnimationTiming::GetScreenShake() const {
-	return screen_shake;
+	return getter<int>("screen_shake");
 }
 
 void RPG::AnimationTiming::SetScreenShake(int screen_shake) {
-	this->screen_shake = screen_shake;
+	setter<int>("screen_shake", screen_shake);
 }
 

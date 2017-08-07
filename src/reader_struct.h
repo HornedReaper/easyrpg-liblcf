@@ -216,7 +216,7 @@ struct Primitive<int> {
 #endif
 			stream.Seek(length, LcfReader::FromCurrent);
 		}
-		
+
 	}
 	static void WriteLcf(const int& ref, LcfWriter& stream) {
 		stream.WriteInt(ref);
@@ -712,5 +712,250 @@ private:
 		  &RPG::LCF_CURRENT_STRUCT::REF \
 		, LCF_CHUNK_SUFFIX::BOOST_PP_CAT(Chunk, LCF_CURRENT_STRUCT)::BOOST_PP_CAT(REF, _size) \
 	) \
+
+
+// EXTRASTUFF VNEXT
+
+
+#include "rapidjson/writer.h"
+
+using namespace rapidjson;
+
+/**
+ * Primitive type reader template.
+ */
+template <class T>
+struct LcfStruct {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		T val;
+
+		int dif = 0;
+		// FIXME: Bug #174
+		if (length != LcfSizeT<T>::value) {
+			dif = length - LcfSizeT<T>::value;
+			fprintf(stderr, "Reading Primitive of incorrect size %d (expected %d) at %X\n",
+					length, LcfSizeT<T>::value, stream.Tell());
+		}
+
+		stream.Read(val);
+
+		if (dif != 0) {
+			// Fix incorrect read pointer position
+			stream.Seek(dif, LcfReader::FromCurrent);
+		}
+
+		writer.Int(val);
+	}
+	/*static void WriteLcf(const T& ref, LcfWriter& stream) {
+		stream.Write(ref);
+	}
+	static int LcfSize(const T& /* ref *, LcfWriter& /* stream *) {
+		return LcfSizeT<T>::value;
+	}
+	static void WriteXml(const T& ref, XmlWriter& stream) {
+		stream.Write(ref);
+	}
+	static void ParseXml(T& ref, const std::string& data) {
+		XmlReader::Read(ref, data);
+	}*/
+};
+
+
+/**
+ * Int specialization.
+ */
+template <>
+struct LcfStruct<int> {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		int ref;
+
+		if (length >= 1 && length <= 5) {
+			ref = stream.ReadInt();
+#ifdef LCF_DEBUG_TRACE
+			printf("  %d\n", ref);
+#endif
+		} else {
+			ref = 0;
+#ifdef LCF_DEBUG_TRACE
+			printf("Invalid integer at %X\n", stream.Tell());
+#endif
+			stream.Seek(length, LcfReader::FromCurrent);
+		}
+
+		writer.Int(ref);
+	}
+	/*static void WriteLcf(const int& ref, LcfWriter& stream) {
+		stream.WriteInt(ref);
+	}
+	static int LcfSize(const int& ref, LcfWriter& /* stream *) {
+		return LcfReader::IntSize(ref);
+	}
+	static void WriteXml(const int& ref, XmlWriter& stream) {
+		stream.WriteInt(ref);
+	}
+	static void ParseXml(int& ref, const std::string& data) {
+		XmlReader::Read(ref, data);
+	}*/
+};
+
+/**
+ * String specialization.
+ */
+template <>
+struct LcfStruct<std::string> {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		std::string ref;
+
+		stream.ReadString(ref, length);
+
+		writer.String(ref.c_str(), length);
+
+#ifdef LCF_DEBUG_TRACE
+		printf("  %s\n", ref.c_str());
+#endif
+	}
+	/*static void WriteLcf(const std::string& ref, LcfWriter& stream) {
+		stream.Write(ref);
+	}
+	static int LcfSize(const std::string& ref, LcfWriter& stream) {
+		return stream.Decode(ref).size();
+	}
+	static void WriteXml(const std::string& ref, XmlWriter& stream) {
+		stream.Write(ref);
+	}
+	static void ParseXml(std::string& ref, const std::string& data) {
+		XmlReader::Read(ref, data);
+	}*/
+};
+
+// ToDo: Vector specialisation
+/**
+* String specialization.
+*/
+template<>
+struct LcfStruct<std::vector<uint8_t>> {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		std::vector<uint8_t> ref;
+
+		stream.Read(ref, length);
+
+		writer.StartArray();
+		for (auto& e : ref) {
+			writer.Int(e);
+		}
+		writer.EndArray();
+
+#ifdef LCF_DEBUG_TRACE
+		printf("  %s\n", ref.c_str());
+#endif
+	}
+	/*static void WriteLcf(const std::string& ref, LcfWriter& stream) {
+	stream.Write(ref);
+	}
+	static int LcfSize(const std::string& ref, LcfWriter& stream) {
+	return stream.Decode(ref).size();
+	}
+	static void WriteXml(const std::string& ref, XmlWriter& stream) {
+	stream.Write(ref);
+	}
+	static void ParseXml(std::string& ref, const std::string& data) {
+	XmlReader::Read(ref, data);
+	}*/
+};
+
+template<>
+struct LcfStruct<std::vector<int16_t>> {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		std::vector<int16_t> ref;
+
+		stream.Read(ref, length);
+
+		writer.StartArray();
+		for (auto& e : ref) {
+			writer.Int(e);
+		}
+		writer.EndArray();
+
+#ifdef LCF_DEBUG_TRACE
+		printf("  %s\n", ref.c_str());
+#endif
+	}
+	/*static void WriteLcf(const std::string& ref, LcfWriter& stream) {
+	stream.Write(ref);
+	}
+	static int LcfSize(const std::string& ref, LcfWriter& stream) {
+	return stream.Decode(ref).size();
+	}
+	static void WriteXml(const std::string& ref, XmlWriter& stream) {
+	stream.Write(ref);
+	}
+	static void ParseXml(std::string& ref, const std::string& data) {
+	XmlReader::Read(ref, data);
+	}*/
+};
+
+template<>
+struct LcfStruct<std::vector<uint32_t>> {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		std::vector<uint32_t> ref;
+
+		stream.Read(ref, length);
+
+		writer.StartArray();
+		for (auto& e : ref) {
+			writer.Int(e);
+		}
+		writer.EndArray();
+
+#ifdef LCF_DEBUG_TRACE
+		printf("  %s\n", ref.c_str());
+#endif
+	}
+	/*static void WriteLcf(const std::string& ref, LcfWriter& stream) {
+	stream.Write(ref);
+	}
+	static int LcfSize(const std::string& ref, LcfWriter& stream) {
+	return stream.Decode(ref).size();
+	}
+	static void WriteXml(const std::string& ref, XmlWriter& stream) {
+	stream.Write(ref);
+	}
+	static void ParseXml(std::string& ref, const std::string& data) {
+	XmlReader::Read(ref, data);
+	}*/
+};
+
+template<>
+struct LcfStruct<std::vector<bool>> {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		std::vector<bool> ref;
+
+		stream.Read(ref, length);
+
+		writer.StartArray();
+		for (auto e : ref) {
+			writer.Bool(e);
+		}
+		writer.EndArray();
+
+#ifdef LCF_DEBUG_TRACE
+		printf("  %s\n", ref.c_str());
+#endif
+	}
+	/*static void WriteLcf(const std::string& ref, LcfWriter& stream) {
+	stream.Write(ref);
+	}
+	static int LcfSize(const std::string& ref, LcfWriter& stream) {
+	return stream.Decode(ref).size();
+	}
+	static void WriteXml(const std::string& ref, XmlWriter& stream) {
+	stream.Write(ref);
+	}
+	static void ParseXml(std::string& ref, const std::string& data) {
+	XmlReader::Read(ref, data);
+	}*/
+};
+
+
 
 #endif

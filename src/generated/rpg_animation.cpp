@@ -12,68 +12,71 @@
 // Headers
 #include "rpg_animation.h"
 
+RPG::Animation::Animation(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const std::string& RPG::Animation::GetName() const  {
-	return name;
+const std::string& RPG::Animation::GetName() const {
+	return getter<const std::string&>("name");
 }
 
 std::string& RPG::Animation::GetName() {
-	return name;
+	return getter<std::string&>("name");
 }
 
 void RPG::Animation::SetName(const std::string& name) {
-	this->name = name;
+	setter<std::string>("name", name);
 }
 
-const std::string& RPG::Animation::GetAnimationName() const  {
-	return animation_name;
+const std::string& RPG::Animation::GetAnimationName() const {
+	return getter<const std::string&>("animation_name");
 }
 
 std::string& RPG::Animation::GetAnimationName() {
-	return animation_name;
+	return getter<std::string&>("animation_name");
 }
 
 void RPG::Animation::SetAnimationName(const std::string& animation_name) {
-	this->animation_name = animation_name;
+	setter<std::string>("animation_name", animation_name);
 }
 
 bool RPG::Animation::GetLarge() const {
-	return large;
+	return getter<bool>("large");
 }
 
 void RPG::Animation::SetLarge(bool large) {
-	this->large = large;
+	setter<bool>("large", large);
 }
 
-const std::vector<RPG::AnimationTiming>& RPG::Animation::GetTimings() const  {
-	return timings;
+const std::vector<RPG::AnimationTiming>& RPG::Animation::GetTimings() const {
+	return vector_getter<const std::vector<RPG::AnimationTiming>&, RPG::AnimationTiming>("timings");
 }
 
 std::vector<RPG::AnimationTiming>& RPG::Animation::GetTimings() {
-	return timings;
+	return vector_getter<std::vector<RPG::AnimationTiming>&, RPG::AnimationTiming>("timings");
 }
 
 int RPG::Animation::GetScope() const {
-	return scope;
+	return getter<int>("scope");
 }
 
 void RPG::Animation::SetScope(int scope) {
-	this->scope = scope;
+	setter<int>("scope", scope);
 }
 
 int RPG::Animation::GetPosition() const {
-	return position;
+	return getter<int>("position");
 }
 
 void RPG::Animation::SetPosition(int position) {
-	this->position = position;
+	setter<int>("position", position);
 }
 
-const std::vector<RPG::AnimationFrame>& RPG::Animation::GetFrames() const  {
-	return frames;
+const std::vector<RPG::AnimationFrame>& RPG::Animation::GetFrames() const {
+	return vector_getter<const std::vector<RPG::AnimationFrame>&, RPG::AnimationFrame>("frames");
 }
 
 std::vector<RPG::AnimationFrame>& RPG::Animation::GetFrames() {
-	return frames;
+	return vector_getter<std::vector<RPG::AnimationFrame>&, RPG::AnimationFrame>("frames");
 }
 

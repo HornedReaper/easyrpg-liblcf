@@ -12,25 +12,28 @@
 // Headers
 #include "rpg_trooppage.h"
 
+RPG::TroopPage::TroopPage(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const RPG::TroopPageCondition& RPG::TroopPage::GetCondition() const  {
-	return condition;
+const RPG::TroopPageCondition& RPG::TroopPage::GetCondition() const {
+	return getter<const RPG::TroopPageCondition&>("condition");
 }
 
 RPG::TroopPageCondition& RPG::TroopPage::GetCondition() {
-	return condition;
+	return getter<RPG::TroopPageCondition&>("condition");
 }
 
 void RPG::TroopPage::SetCondition(const RPG::TroopPageCondition& condition) {
-	this->condition = condition;
+	setter<RPG::TroopPageCondition>("condition", condition);
 }
 
 
-const std::vector<RPG::EventCommand>& RPG::TroopPage::GetEventCommands() const  {
-	return event_commands;
+const std::vector<RPG::EventCommand>& RPG::TroopPage::GetEventCommands() const {
+	return vector_getter<const std::vector<RPG::EventCommand>&, RPG::EventCommand>("event_commands");
 }
 
 std::vector<RPG::EventCommand>& RPG::TroopPage::GetEventCommands() {
-	return event_commands;
+	return vector_getter<std::vector<RPG::EventCommand>&, RPG::EventCommand>("event_commands");
 }
 

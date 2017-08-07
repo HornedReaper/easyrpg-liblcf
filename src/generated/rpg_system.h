@@ -16,6 +16,7 @@
 #include <string>
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 #include "rpg_music.h"
 #include "rpg_sound.h"
 #include "rpg_testbattler.h"
@@ -24,7 +25,7 @@
  * RPG::System class.
  */
 namespace RPG {
-	class System {
+	class System : Base {
 	public:
 		enum FadeOut {
 			FadeOut_default = 0,
@@ -95,6 +96,8 @@ namespace RPG {
 			BattleCondition_pincers = 4
 		};
 
+		System() {}
+		System(rapidjson::Value& json_values);
 		int ldb_id = 0;
 		std::string boat_name;
 		std::string ship_name;

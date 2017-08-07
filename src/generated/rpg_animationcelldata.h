@@ -12,12 +12,17 @@
 #ifndef LCF_RPG_ANIMATIONCELLDATA_H
 #define LCF_RPG_ANIMATIONCELLDATA_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::AnimationCellData class.
  */
 namespace RPG {
-	class AnimationCellData {
+	class AnimationCellData : Base {
 	public:
+		AnimationCellData() {}
+		AnimationCellData(rapidjson::Value& json_values);
 		int ID = 0;
 		int valid = 1;
 		int cell_id = 0;

@@ -12,11 +12,14 @@
 #ifndef LCF_RPG_ITEMANIMATION_H
 #define LCF_RPG_ITEMANIMATION_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::ItemAnimation class.
  */
 namespace RPG {
-	class ItemAnimation {
+	class ItemAnimation : Base {
 	public:
 		enum Movement {
 			Movement_none = 0,
@@ -34,6 +37,8 @@ namespace RPG {
 			Speed_slow = 2
 		};
 
+		ItemAnimation() {}
+		ItemAnimation(rapidjson::Value& json_values);
 		int ID = 0;
 		int type = 0;
 		int weapon_anim = 0;

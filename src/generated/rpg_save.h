@@ -14,6 +14,7 @@
 
 // Headers
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_saveactor.h"
 #include "rpg_savecommonevent.h"
 #include "rpg_saveeventdata.h"
@@ -31,8 +32,10 @@
  * RPG::Save class.
  */
 namespace RPG {
-	class Save {
+	class Save : Base {
 	public:
+		Save() {}
+		Save(rapidjson::Value& json_values);
 		void Setup();
 		SaveTitle title;
 		SaveSystem system;

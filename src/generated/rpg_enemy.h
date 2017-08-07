@@ -16,14 +16,17 @@
 #include <string>
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 #include "rpg_enemyaction.h"
 
 /**
  * RPG::Enemy class.
  */
 namespace RPG {
-	class Enemy {
+	class Enemy : Base {
 	public:
+		Enemy() {}
+		Enemy(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		std::string battler_name;

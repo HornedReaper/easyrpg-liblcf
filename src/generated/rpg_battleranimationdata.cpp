@@ -12,28 +12,31 @@
 // Headers
 #include "rpg_battleranimationdata.h"
 
+RPG::BattlerAnimationData::BattlerAnimationData(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
 int RPG::BattlerAnimationData::GetMove() const {
-	return move;
+	return getter<int>("move");
 }
 
 void RPG::BattlerAnimationData::SetMove(int move) {
-	this->move = move;
+	setter<int>("move", move);
 }
 
 int RPG::BattlerAnimationData::GetAfterImage() const {
-	return after_image;
+	return getter<int>("after_image");
 }
 
 void RPG::BattlerAnimationData::SetAfterImage(int after_image) {
-	this->after_image = after_image;
+	setter<int>("after_image", after_image);
 }
 
 int RPG::BattlerAnimationData::GetPose() const {
-	return pose;
+	return getter<int>("pose");
 }
 
 void RPG::BattlerAnimationData::SetPose(int pose) {
-	this->pose = pose;
+	setter<int>("pose", pose);
 }
 

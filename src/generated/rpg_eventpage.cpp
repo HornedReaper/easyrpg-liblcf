@@ -12,137 +12,140 @@
 // Headers
 #include "rpg_eventpage.h"
 
+RPG::EventPage::EventPage(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const RPG::EventPageCondition& RPG::EventPage::GetCondition() const  {
-	return condition;
+const RPG::EventPageCondition& RPG::EventPage::GetCondition() const {
+	return getter<const RPG::EventPageCondition&>("condition");
 }
 
 RPG::EventPageCondition& RPG::EventPage::GetCondition() {
-	return condition;
+	return getter<RPG::EventPageCondition&>("condition");
 }
 
 void RPG::EventPage::SetCondition(const RPG::EventPageCondition& condition) {
-	this->condition = condition;
+	setter<RPG::EventPageCondition>("condition", condition);
 }
 
-const std::string& RPG::EventPage::GetCharacterName() const  {
-	return character_name;
+const std::string& RPG::EventPage::GetCharacterName() const {
+	return getter<const std::string&>("character_name");
 }
 
 std::string& RPG::EventPage::GetCharacterName() {
-	return character_name;
+	return getter<std::string&>("character_name");
 }
 
 void RPG::EventPage::SetCharacterName(const std::string& character_name) {
-	this->character_name = character_name;
+	setter<std::string>("character_name", character_name);
 }
 
 int RPG::EventPage::GetCharacterIndex() const {
-	return character_index;
+	return getter<int>("character_index");
 }
 
 void RPG::EventPage::SetCharacterIndex(int character_index) {
-	this->character_index = character_index;
+	setter<int>("character_index", character_index);
 }
 
 int RPG::EventPage::GetCharacterDirection() const {
-	return character_direction;
+	return getter<int>("character_direction");
 }
 
 void RPG::EventPage::SetCharacterDirection(int character_direction) {
-	this->character_direction = character_direction;
+	setter<int>("character_direction", character_direction);
 }
 
 int RPG::EventPage::GetCharacterPattern() const {
-	return character_pattern;
+	return getter<int>("character_pattern");
 }
 
 void RPG::EventPage::SetCharacterPattern(int character_pattern) {
-	this->character_pattern = character_pattern;
+	setter<int>("character_pattern", character_pattern);
 }
 
 bool RPG::EventPage::GetTranslucent() const {
-	return translucent;
+	return getter<bool>("translucent");
 }
 
 void RPG::EventPage::SetTranslucent(bool translucent) {
-	this->translucent = translucent;
+	setter<bool>("translucent", translucent);
 }
 
 int RPG::EventPage::GetMoveType() const {
-	return move_type;
+	return getter<int>("move_type");
 }
 
 void RPG::EventPage::SetMoveType(int move_type) {
-	this->move_type = move_type;
+	setter<int>("move_type", move_type);
 }
 
 int RPG::EventPage::GetMoveFrequency() const {
-	return move_frequency;
+	return getter<int>("move_frequency");
 }
 
 void RPG::EventPage::SetMoveFrequency(int move_frequency) {
-	this->move_frequency = move_frequency;
+	setter<int>("move_frequency", move_frequency);
 }
 
 int RPG::EventPage::GetTrigger() const {
-	return trigger;
+	return getter<int>("trigger");
 }
 
 void RPG::EventPage::SetTrigger(int trigger) {
-	this->trigger = trigger;
+	setter<int>("trigger", trigger);
 }
 
 int RPG::EventPage::GetLayer() const {
-	return layer;
+	return getter<int>("layer");
 }
 
 void RPG::EventPage::SetLayer(int layer) {
-	this->layer = layer;
+	setter<int>("layer", layer);
 }
 
 bool RPG::EventPage::GetOverlapForbidden() const {
-	return overlap_forbidden;
+	return getter<bool>("overlap_forbidden");
 }
 
 void RPG::EventPage::SetOverlapForbidden(bool overlap_forbidden) {
-	this->overlap_forbidden = overlap_forbidden;
+	setter<bool>("overlap_forbidden", overlap_forbidden);
 }
 
 int RPG::EventPage::GetAnimationType() const {
-	return animation_type;
+	return getter<int>("animation_type");
 }
 
 void RPG::EventPage::SetAnimationType(int animation_type) {
-	this->animation_type = animation_type;
+	setter<int>("animation_type", animation_type);
 }
 
 int RPG::EventPage::GetMoveSpeed() const {
-	return move_speed;
+	return getter<int>("move_speed");
 }
 
 void RPG::EventPage::SetMoveSpeed(int move_speed) {
-	this->move_speed = move_speed;
+	setter<int>("move_speed", move_speed);
 }
 
-const RPG::MoveRoute& RPG::EventPage::GetMoveRoute() const  {
-	return move_route;
+const RPG::MoveRoute& RPG::EventPage::GetMoveRoute() const {
+	return getter<const RPG::MoveRoute&>("move_route");
 }
 
 RPG::MoveRoute& RPG::EventPage::GetMoveRoute() {
-	return move_route;
+	return getter<RPG::MoveRoute&>("move_route");
 }
 
 void RPG::EventPage::SetMoveRoute(const RPG::MoveRoute& move_route) {
-	this->move_route = move_route;
+	setter<RPG::MoveRoute>("move_route", move_route);
 }
 
 
-const std::vector<RPG::EventCommand>& RPG::EventPage::GetEventCommands() const  {
-	return event_commands;
+const std::vector<RPG::EventCommand>& RPG::EventPage::GetEventCommands() const {
+	return vector_getter<const std::vector<RPG::EventCommand>&, RPG::EventCommand>("event_commands");
 }
 
 std::vector<RPG::EventCommand>& RPG::EventPage::GetEventCommands() {
-	return event_commands;
+	return vector_getter<std::vector<RPG::EventCommand>&, RPG::EventCommand>("event_commands");
 }
 

@@ -14,6 +14,7 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 #include "rpg_event.h"
 #include "rpg_moveroute.h"
 #include "rpg_saveeventdata.h"
@@ -22,8 +23,10 @@
  * RPG::SaveMapEvent class.
  */
 namespace RPG {
-	class SaveMapEvent {
+	class SaveMapEvent : Base {
 	public:
+		SaveMapEvent() {}
+		SaveMapEvent(rapidjson::Value& json_values);
 		void Setup(const RPG::Event& event);
 		void Fixup(const RPG::EventPage& page);
 		int ID = 0;

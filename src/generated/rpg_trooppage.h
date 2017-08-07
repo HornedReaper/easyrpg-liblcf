@@ -14,6 +14,7 @@
 
 // Headers
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_eventcommand.h"
 #include "rpg_trooppagecondition.h"
 
@@ -21,8 +22,10 @@
  * RPG::TroopPage class.
  */
 namespace RPG {
-	class TroopPage {
+	class TroopPage : Base {
 	public:
+		TroopPage() {}
+		TroopPage(rapidjson::Value& json_values);
 		int ID = 0;
 		TroopPageCondition condition;
 		std::vector<EventCommand> event_commands;

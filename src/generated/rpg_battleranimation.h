@@ -15,13 +15,14 @@
 // Headers
 #include <string>
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_battleranimationextension.h"
 
 /**
  * RPG::BattlerAnimation class.
  */
 namespace RPG {
-	class BattlerAnimation {
+	class BattlerAnimation : Base {
 	public:
 		enum Speed {
 			Speed_slow = 0,
@@ -29,6 +30,8 @@ namespace RPG {
 			Speed_fast = 14
 		};
 
+		BattlerAnimation() {}
+		BattlerAnimation(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		int speed = 0;

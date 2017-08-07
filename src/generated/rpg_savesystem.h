@@ -16,6 +16,7 @@
 #include <string>
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 #include "rpg_music.h"
 #include "rpg_sound.h"
 
@@ -23,13 +24,15 @@
  * RPG::SaveSystem class.
  */
 namespace RPG {
-	class SaveSystem {
+	class SaveSystem : Base {
 	public:
 		enum AtbMode {
 			AtbMode_atb_active = 0,
 			AtbMode_atb_wait = 1
 		};
 
+		SaveSystem() {}
+		SaveSystem(rapidjson::Value& json_values);
 		void Setup();
 		void Fixup();
 		int screen = 1;

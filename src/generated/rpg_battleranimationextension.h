@@ -14,18 +14,21 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 
 /**
  * RPG::BattlerAnimationExtension class.
  */
 namespace RPG {
-	class BattlerAnimationExtension {
+	class BattlerAnimationExtension : Base {
 	public:
 		enum AnimType {
 			AnimType_graphic = 0,
 			AnimType_animation = 1
 		};
 
+		BattlerAnimationExtension() {}
+		BattlerAnimationExtension(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		std::string battler_name;

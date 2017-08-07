@@ -12,16 +12,19 @@
 // Headers
 #include "rpg_variable.h"
 
+RPG::Variable::Variable(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const std::string& RPG::Variable::GetName() const  {
-	return name;
+const std::string& RPG::Variable::GetName() const {
+	return getter<const std::string&>("name");
 }
 
 std::string& RPG::Variable::GetName() {
-	return name;
+	return getter<std::string&>("name");
 }
 
 void RPG::Variable::SetName(const std::string& name) {
-	this->name = name;
+	setter<std::string>("name", name);
 }
 

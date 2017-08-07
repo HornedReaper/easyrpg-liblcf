@@ -15,13 +15,16 @@
 // Headers
 #include <vector>
 #include "rpg_animationcelldata.h"
+#include "rpg_base.h"
 
 /**
  * RPG::AnimationFrame class.
  */
 namespace RPG {
-	class AnimationFrame {
+	class AnimationFrame : Base {
 	public:
+		AnimationFrame() {}
+		AnimationFrame(rapidjson::Value& json_values);
 		int ID = 0;
 		std::vector<AnimationCellData> cells;
 		const std::vector<AnimationCellData>& GetCells() const;

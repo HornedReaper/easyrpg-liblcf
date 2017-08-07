@@ -12,49 +12,52 @@
 // Headers
 #include "rpg_commonevent.h"
 
+RPG::CommonEvent::CommonEvent(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const std::string& RPG::CommonEvent::GetName() const  {
-	return name;
+const std::string& RPG::CommonEvent::GetName() const {
+	return getter<const std::string&>("name");
 }
 
 std::string& RPG::CommonEvent::GetName() {
-	return name;
+	return getter<std::string&>("name");
 }
 
 void RPG::CommonEvent::SetName(const std::string& name) {
-	this->name = name;
+	setter<std::string>("name", name);
 }
 
 int RPG::CommonEvent::GetTrigger() const {
-	return trigger;
+	return getter<int>("trigger");
 }
 
 void RPG::CommonEvent::SetTrigger(int trigger) {
-	this->trigger = trigger;
+	setter<int>("trigger", trigger);
 }
 
 bool RPG::CommonEvent::GetSwitchFlag() const {
-	return switch_flag;
+	return getter<bool>("switch_flag");
 }
 
 void RPG::CommonEvent::SetSwitchFlag(bool switch_flag) {
-	this->switch_flag = switch_flag;
+	setter<bool>("switch_flag", switch_flag);
 }
 
 int RPG::CommonEvent::GetSwitchId() const {
-	return switch_id;
+	return getter<int>("switch_id");
 }
 
 void RPG::CommonEvent::SetSwitchId(int switch_id) {
-	this->switch_id = switch_id;
+	setter<int>("switch_id", switch_id);
 }
 
 
-const std::vector<RPG::EventCommand>& RPG::CommonEvent::GetEventCommands() const  {
-	return event_commands;
+const std::vector<RPG::EventCommand>& RPG::CommonEvent::GetEventCommands() const {
+	return vector_getter<const std::vector<RPG::EventCommand>&, RPG::EventCommand>("event_commands");
 }
 
 std::vector<RPG::EventCommand>& RPG::CommonEvent::GetEventCommands() {
-	return event_commands;
+	return vector_getter<std::vector<RPG::EventCommand>&, RPG::EventCommand>("event_commands");
 }
 

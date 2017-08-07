@@ -15,13 +15,16 @@
 // Headers
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 
 /**
  * RPG::SaveInventory class.
  */
 namespace RPG {
-	class SaveInventory {
+	class SaveInventory : Base {
 	public:
+		SaveInventory() {}
+		SaveInventory(rapidjson::Value& json_values);
 		void Setup();
 		int party_size = -1;
 		std::vector<int16_t> party;

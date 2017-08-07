@@ -13,14 +13,17 @@
 #define LCF_RPG_SAVECOMMONEVENT_H
 
 // Headers
+#include "rpg_base.h"
 #include "rpg_saveeventdata.h"
 
 /**
  * RPG::SaveCommonEvent class.
  */
 namespace RPG {
-	class SaveCommonEvent {
+	class SaveCommonEvent : Base {
 	public:
+		SaveCommonEvent() {}
+		SaveCommonEvent(rapidjson::Value& json_values);
 		int ID = 0;
 		SaveEventData event_data;
 		const SaveEventData& GetEventData() const;

@@ -16,6 +16,7 @@
 #include <string>
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 #include "rpg_map.h"
 #include "rpg_mapinfo.h"
 #include "rpg_savemapevent.h"
@@ -24,8 +25,10 @@
  * RPG::SaveMapInfo class.
  */
 namespace RPG {
-	class SaveMapInfo {
+	class SaveMapInfo : Base {
 	public:
+		SaveMapInfo() {}
+		SaveMapInfo(rapidjson::Value& json_values);
 		void Setup();
 		void Setup(const RPG::Map& map);
 		void Setup(const RPG::MapInfo& map_info);

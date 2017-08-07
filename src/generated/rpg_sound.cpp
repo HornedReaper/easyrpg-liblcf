@@ -12,40 +12,43 @@
 // Headers
 #include "rpg_sound.h"
 
+RPG::Sound::Sound(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const std::string& RPG::Sound::GetName() const  {
-	return name;
+const std::string& RPG::Sound::GetName() const {
+	return getter<const std::string&>("name");
 }
 
 std::string& RPG::Sound::GetName() {
-	return name;
+	return getter<std::string&>("name");
 }
 
 void RPG::Sound::SetName(const std::string& name) {
-	this->name = name;
+	setter<std::string>("name", name);
 }
 
 int RPG::Sound::GetVolume() const {
-	return volume;
+	return getter<int>("volume");
 }
 
 void RPG::Sound::SetVolume(int volume) {
-	this->volume = volume;
+	setter<int>("volume", volume);
 }
 
 int RPG::Sound::GetTempo() const {
-	return tempo;
+	return getter<int>("tempo");
 }
 
 void RPG::Sound::SetTempo(int tempo) {
-	this->tempo = tempo;
+	setter<int>("tempo", tempo);
 }
 
 int RPG::Sound::GetBalance() const {
-	return balance;
+	return getter<int>("balance");
 }
 
 void RPG::Sound::SetBalance(int balance) {
-	this->balance = balance;
+	setter<int>("balance", balance);
 }
 

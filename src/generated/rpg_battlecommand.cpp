@@ -12,24 +12,27 @@
 // Headers
 #include "rpg_battlecommand.h"
 
+RPG::BattleCommand::BattleCommand(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const std::string& RPG::BattleCommand::GetName() const  {
-	return name;
+const std::string& RPG::BattleCommand::GetName() const {
+	return getter<const std::string&>("name");
 }
 
 std::string& RPG::BattleCommand::GetName() {
-	return name;
+	return getter<std::string&>("name");
 }
 
 void RPG::BattleCommand::SetName(const std::string& name) {
-	this->name = name;
+	setter<std::string>("name", name);
 }
 
 int RPG::BattleCommand::GetType() const {
-	return type;
+	return getter<int>("type");
 }
 
 void RPG::BattleCommand::SetType(int type) {
-	this->type = type;
+	setter<int>("type", type);
 }
 

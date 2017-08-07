@@ -12,12 +12,17 @@
 #ifndef LCF_RPG_SAVETARGET_H
 #define LCF_RPG_SAVETARGET_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::SaveTarget class.
  */
 namespace RPG {
-	class SaveTarget {
+	class SaveTarget : Base {
 	public:
+		SaveTarget() {}
+		SaveTarget(rapidjson::Value& json_values);
 		int ID = 0;
 		int map_id = 0;
 		int map_x = 0;

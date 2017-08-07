@@ -14,13 +14,14 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 #include "rpg_sound.h"
 
 /**
  * RPG::Terrain class.
  */
 namespace RPG {
-	class Terrain {
+	class Terrain : Base {
 	public:
 		enum BushDepth {
 			BushDepth_normal = 0,
@@ -33,6 +34,8 @@ namespace RPG {
 			BGAssociation_frame = 1
 		};
 
+		Terrain() {}
+		Terrain(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		int damage = 0;
@@ -57,7 +60,7 @@ namespace RPG {
 		bool background_b_scrollv = false;
 		int background_b_scrollh_speed = 0;
 		int background_b_scrollv_speed = 0;
-		struct Flags {
+		struct Flags : Flags_Base {
 			bool back_party;
 			bool back_enemies;
 			bool lateral_party;
@@ -145,9 +148,9 @@ namespace RPG {
 		int GetBackgroundBScrollvSpeed() const;
 		void SetBackgroundBScrollvSpeed(int background_b_scrollv_speed);
 
-		const Flags& GetSpecialFlags() const;
-		Flags& GetSpecialFlags();
-		void SetSpecialFlags(const Flags& special_flags);
+		const Terrain::Flags& GetSpecialFlags() const;
+		Terrain::Flags& GetSpecialFlags();
+		void SetSpecialFlags(const Terrain::Flags& special_flags);
 
 		int GetSpecialBackParty() const;
 		void SetSpecialBackParty(int special_back_party);

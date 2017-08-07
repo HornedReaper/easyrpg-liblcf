@@ -12,11 +12,14 @@
 #ifndef LCF_RPG_BATTLERANIMATIONDATA_H
 #define LCF_RPG_BATTLERANIMATIONDATA_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::BattlerAnimationData class.
  */
 namespace RPG {
-	class BattlerAnimationData {
+	class BattlerAnimationData : Base {
 	public:
 		enum Movement {
 			Movement_none = 0,
@@ -29,6 +32,8 @@ namespace RPG {
 			AfterImage_add = 1
 		};
 
+		BattlerAnimationData() {}
+		BattlerAnimationData(rapidjson::Value& json_values);
 		int ID = 0;
 		int move = 0;
 		int after_image = 0;

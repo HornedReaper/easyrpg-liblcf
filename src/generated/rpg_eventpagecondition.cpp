@@ -12,88 +12,91 @@
 // Headers
 #include "rpg_eventpagecondition.h"
 
+RPG::EventPageCondition::EventPageCondition(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const RPG::EventPageCondition::Flags& RPG::EventPageCondition::GetFlags() const  {
-	return flags;
+const RPG::EventPageCondition::Flags& RPG::EventPageCondition::GetFlags() const {
+	return getter<const RPG::EventPageCondition::Flags&>("flags");
 }
 
 RPG::EventPageCondition::Flags& RPG::EventPageCondition::GetFlags() {
-	return flags;
+	return getter<RPG::EventPageCondition::Flags&>("flags");
 }
 
 void RPG::EventPageCondition::SetFlags(const RPG::EventPageCondition::Flags& flags) {
-	this->flags = flags;
+	setter<RPG::EventPageCondition::Flags>("flags", flags);
 }
 
 int RPG::EventPageCondition::GetSwitchAId() const {
-	return switch_a_id;
+	return getter<int>("switch_a_id");
 }
 
 void RPG::EventPageCondition::SetSwitchAId(int switch_a_id) {
-	this->switch_a_id = switch_a_id;
+	setter<int>("switch_a_id", switch_a_id);
 }
 
 int RPG::EventPageCondition::GetSwitchBId() const {
-	return switch_b_id;
+	return getter<int>("switch_b_id");
 }
 
 void RPG::EventPageCondition::SetSwitchBId(int switch_b_id) {
-	this->switch_b_id = switch_b_id;
+	setter<int>("switch_b_id", switch_b_id);
 }
 
 int RPG::EventPageCondition::GetVariableId() const {
-	return variable_id;
+	return getter<int>("variable_id");
 }
 
 void RPG::EventPageCondition::SetVariableId(int variable_id) {
-	this->variable_id = variable_id;
+	setter<int>("variable_id", variable_id);
 }
 
 int RPG::EventPageCondition::GetVariableValue() const {
-	return variable_value;
+	return getter<int>("variable_value");
 }
 
 void RPG::EventPageCondition::SetVariableValue(int variable_value) {
-	this->variable_value = variable_value;
+	setter<int>("variable_value", variable_value);
 }
 
 int RPG::EventPageCondition::GetItemId() const {
-	return item_id;
+	return getter<int>("item_id");
 }
 
 void RPG::EventPageCondition::SetItemId(int item_id) {
-	this->item_id = item_id;
+	setter<int>("item_id", item_id);
 }
 
 int RPG::EventPageCondition::GetActorId() const {
-	return actor_id;
+	return getter<int>("actor_id");
 }
 
 void RPG::EventPageCondition::SetActorId(int actor_id) {
-	this->actor_id = actor_id;
+	setter<int>("actor_id", actor_id);
 }
 
 int RPG::EventPageCondition::GetTimerSec() const {
-	return timer_sec;
+	return getter<int>("timer_sec");
 }
 
 void RPG::EventPageCondition::SetTimerSec(int timer_sec) {
-	this->timer_sec = timer_sec;
+	setter<int>("timer_sec", timer_sec);
 }
 
 int RPG::EventPageCondition::GetTimer2Sec() const {
-	return timer2_sec;
+	return getter<int>("timer2_sec");
 }
 
 void RPG::EventPageCondition::SetTimer2Sec(int timer2_sec) {
-	this->timer2_sec = timer2_sec;
+	setter<int>("timer2_sec", timer2_sec);
 }
 
 int RPG::EventPageCondition::GetCompareOperator() const {
-	return compare_operator;
+	return getter<int>("compare_operator");
 }
 
 void RPG::EventPageCondition::SetCompareOperator(int compare_operator) {
-	this->compare_operator = compare_operator;
+	setter<int>("compare_operator", compare_operator);
 }
 

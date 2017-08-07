@@ -14,12 +14,13 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 
 /**
  * RPG::BattleCommand class.
  */
 namespace RPG {
-	class BattleCommand {
+	class BattleCommand : Base {
 	public:
 		enum Type {
 			Type_attack = 0,
@@ -31,6 +32,8 @@ namespace RPG {
 			Type_special = 6
 		};
 
+		BattleCommand() {}
+		BattleCommand(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		int type = 0;

@@ -14,13 +14,16 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 
 /**
  * RPG::Switch class.
  */
 namespace RPG {
-	class Switch {
+	class Switch : Base {
 	public:
+		Switch() {}
+		Switch(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		const std::string& GetName() const;

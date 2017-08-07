@@ -14,13 +14,16 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 
 /**
  * RPG::Terms class.
  */
 namespace RPG {
-	class Terms {
+	class Terms : Base {
 	public:
+		Terms() {}
+		Terms(rapidjson::Value& json_values);
 		std::string encounter;
 		std::string special_combat;
 		std::string escape_success;

@@ -12,12 +12,17 @@
 #ifndef LCF_RPG_ENCOUNTER_H
 #define LCF_RPG_ENCOUNTER_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::Encounter class.
  */
 namespace RPG {
-	class Encounter {
+	class Encounter : Base {
 	public:
+		Encounter() {}
+		Encounter(rapidjson::Value& json_values);
 		int ID = 0;
 		int troop_id = 0;
 		int GetTroopId() const;

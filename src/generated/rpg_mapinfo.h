@@ -15,6 +15,7 @@
 // Headers
 #include <string>
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_encounter.h"
 #include "rpg_music.h"
 #include "rpg_rect.h"
@@ -23,7 +24,7 @@
  * RPG::MapInfo class.
  */
 namespace RPG {
-	class MapInfo {
+	class MapInfo : Base {
 	public:
 		enum MusicType {
 			MusicType_parent = 0,
@@ -42,6 +43,7 @@ namespace RPG {
 		};
 
 		MapInfo();
+		MapInfo(rapidjson::Value& json_values);
 		void Init();
 		int ID = 0;
 		std::string name;

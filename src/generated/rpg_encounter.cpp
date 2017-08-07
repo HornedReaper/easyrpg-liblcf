@@ -12,12 +12,15 @@
 // Headers
 #include "rpg_encounter.h"
 
+RPG::Encounter::Encounter(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
 int RPG::Encounter::GetTroopId() const {
-	return troop_id;
+	return getter<int>("troop_id");
 }
 
 void RPG::Encounter::SetTroopId(int troop_id) {
-	this->troop_id = troop_id;
+	setter<int>("troop_id", troop_id);
 }
 

@@ -62,11 +62,10 @@ def cpp_type(ty, prefix=True):
 
     m = re.match(r'(.*)_Flags$', ty)
     if m:
-        #ty = m.expand(r'\1::Flags')
+        ty = m.expand(r'\1::Flags')
         if prefix:
-            ty = m.expand(r'\1::Flags')
-            return 'RPG::' + ty
-        return 'Flags'
+            ty = 'RPG::' + ty
+        return ty
 
     if prefix:
         ty = 'RPG::' + ty
@@ -131,7 +130,7 @@ int_types = {
     'Int16': 'int16_t',
     }
 
-def struct_headers(ty, header_map):
+def struct_headers2(ty, header_map):
     if ty == 'String':
         return ['<string>']
 
@@ -143,7 +142,7 @@ def struct_headers(ty, header_map):
 
     m = re.match(r'Ref<(.*):(.*)>', ty)
     if m:
-        return struct_headers(m.group(2), header_map)
+        return struct_headers2(m.group(2), header_map)
 
     if re.match(r'Ref<(.*)>', ty):
         return []
@@ -156,11 +155,11 @@ def struct_headers(ty, header_map):
 
     m = re.match(r'Array<(.*):(.*)>', ty)
     if m:
-        return ['<vector>'] + struct_headers(m.group(1), header_map)
+        return ['<vector>'] + struct_headers2(m.group(1), header_map)
 
     m = re.match(r'(Vector|Array)<(.*)>', ty)
     if m:
-        return ['<vector>'] + struct_headers(m.group(2), header_map)
+        return ['<vector>'] + struct_headers2(m.group(2), header_map)
 
     header = header_map.get(ty)
     if header is not None:
@@ -170,6 +169,9 @@ def struct_headers(ty, header_map):
         return ['"rpg_%s.h"' % ty.lower()]
 
     return []
+
+def struct_headers(ty, header_map):
+    return struct_headers2(ty, header_map) + ['"rpg_base.h"']
 
 def process_file(filename, namedtup):
     # Mapping is: All elements of the line grouped by the first column

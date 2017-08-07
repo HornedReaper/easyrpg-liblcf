@@ -14,14 +14,17 @@
 
 // Headers
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_movecommand.h"
 
 /**
  * RPG::MoveRoute class.
  */
 namespace RPG {
-	class MoveRoute {
+	class MoveRoute : Base {
 	public:
+		MoveRoute() {}
+		MoveRoute(rapidjson::Value& json_values);
 		std::vector<MoveCommand> move_commands;
 		bool repeat = true;
 		bool skippable = false;

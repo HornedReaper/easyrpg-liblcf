@@ -15,13 +15,14 @@
 // Headers
 #include <string>
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_eventcommand.h"
 
 /**
  * RPG::CommonEvent class.
  */
 namespace RPG {
-	class CommonEvent {
+	class CommonEvent : Base {
 	public:
 		enum Trigger {
 			Trigger_automatic = 3,
@@ -29,6 +30,8 @@ namespace RPG {
 			Trigger_call = 5
 		};
 
+		CommonEvent() {}
+		CommonEvent(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		int trigger = 0;

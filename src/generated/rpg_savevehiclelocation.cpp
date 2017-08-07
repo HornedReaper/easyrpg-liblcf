@@ -12,360 +12,363 @@
 // Headers
 #include "rpg_savevehiclelocation.h"
 
+RPG::SaveVehicleLocation::SaveVehicleLocation(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
 bool RPG::SaveVehicleLocation::GetActive() const {
-	return active;
+	return getter<bool>("active");
 }
 
 void RPG::SaveVehicleLocation::SetActive(bool active) {
-	this->active = active;
+	setter<bool>("active", active);
 }
 
 int RPG::SaveVehicleLocation::GetMapId() const {
-	return map_id;
+	return getter<int>("map_id");
 }
 
 void RPG::SaveVehicleLocation::SetMapId(int map_id) {
-	this->map_id = map_id;
+	setter<int>("map_id", map_id);
 }
 
 int RPG::SaveVehicleLocation::GetPositionX() const {
-	return position_x;
+	return getter<int>("position_x");
 }
 
 void RPG::SaveVehicleLocation::SetPositionX(int position_x) {
-	this->position_x = position_x;
+	setter<int>("position_x", position_x);
 }
 
 int RPG::SaveVehicleLocation::GetPositionY() const {
-	return position_y;
+	return getter<int>("position_y");
 }
 
 void RPG::SaveVehicleLocation::SetPositionY(int position_y) {
-	this->position_y = position_y;
+	setter<int>("position_y", position_y);
 }
 
 int RPG::SaveVehicleLocation::GetDirection() const {
-	return direction;
+	return getter<int>("direction");
 }
 
 void RPG::SaveVehicleLocation::SetDirection(int direction) {
-	this->direction = direction;
+	setter<int>("direction", direction);
 }
 
 int RPG::SaveVehicleLocation::GetSpriteDirection() const {
-	return sprite_direction;
+	return getter<int>("sprite_direction");
 }
 
 void RPG::SaveVehicleLocation::SetSpriteDirection(int sprite_direction) {
-	this->sprite_direction = sprite_direction;
+	setter<int>("sprite_direction", sprite_direction);
 }
 
 int RPG::SaveVehicleLocation::GetAnimFrame() const {
-	return anim_frame;
+	return getter<int>("anim_frame");
 }
 
 void RPG::SaveVehicleLocation::SetAnimFrame(int anim_frame) {
-	this->anim_frame = anim_frame;
+	setter<int>("anim_frame", anim_frame);
 }
 
 int RPG::SaveVehicleLocation::GetTransparency() const {
-	return transparency;
+	return getter<int>("transparency");
 }
 
 void RPG::SaveVehicleLocation::SetTransparency(int transparency) {
-	this->transparency = transparency;
+	setter<int>("transparency", transparency);
 }
 
 int RPG::SaveVehicleLocation::GetRemainingStep() const {
-	return remaining_step;
+	return getter<int>("remaining_step");
 }
 
 void RPG::SaveVehicleLocation::SetRemainingStep(int remaining_step) {
-	this->remaining_step = remaining_step;
+	setter<int>("remaining_step", remaining_step);
 }
 
 int RPG::SaveVehicleLocation::GetMoveFrequency() const {
-	return move_frequency;
+	return getter<int>("move_frequency");
 }
 
 void RPG::SaveVehicleLocation::SetMoveFrequency(int move_frequency) {
-	this->move_frequency = move_frequency;
+	setter<int>("move_frequency", move_frequency);
 }
 
 int RPG::SaveVehicleLocation::GetLayer() const {
-	return layer;
+	return getter<int>("layer");
 }
 
 void RPG::SaveVehicleLocation::SetLayer(int layer) {
-	this->layer = layer;
+	setter<int>("layer", layer);
 }
 
 bool RPG::SaveVehicleLocation::GetOverlapForbidden() const {
-	return overlap_forbidden;
+	return getter<bool>("overlap_forbidden");
 }
 
 void RPG::SaveVehicleLocation::SetOverlapForbidden(bool overlap_forbidden) {
-	this->overlap_forbidden = overlap_forbidden;
+	setter<bool>("overlap_forbidden", overlap_forbidden);
 }
 
 int RPG::SaveVehicleLocation::GetAnimationType() const {
-	return animation_type;
+	return getter<int>("animation_type");
 }
 
 void RPG::SaveVehicleLocation::SetAnimationType(int animation_type) {
-	this->animation_type = animation_type;
+	setter<int>("animation_type", animation_type);
 }
 
 bool RPG::SaveVehicleLocation::GetLockFacing() const {
-	return lock_facing;
+	return getter<bool>("lock_facing");
 }
 
 void RPG::SaveVehicleLocation::SetLockFacing(bool lock_facing) {
-	this->lock_facing = lock_facing;
+	setter<bool>("lock_facing", lock_facing);
 }
 
 int RPG::SaveVehicleLocation::GetMoveSpeed() const {
-	return move_speed;
+	return getter<int>("move_speed");
 }
 
 void RPG::SaveVehicleLocation::SetMoveSpeed(int move_speed) {
-	this->move_speed = move_speed;
+	setter<int>("move_speed", move_speed);
 }
 
-const RPG::MoveRoute& RPG::SaveVehicleLocation::GetMoveRoute() const  {
-	return move_route;
+const RPG::MoveRoute& RPG::SaveVehicleLocation::GetMoveRoute() const {
+	return getter<const RPG::MoveRoute&>("move_route");
 }
 
 RPG::MoveRoute& RPG::SaveVehicleLocation::GetMoveRoute() {
-	return move_route;
+	return getter<RPG::MoveRoute&>("move_route");
 }
 
 void RPG::SaveVehicleLocation::SetMoveRoute(const RPG::MoveRoute& move_route) {
-	this->move_route = move_route;
+	setter<RPG::MoveRoute>("move_route", move_route);
 }
 
 bool RPG::SaveVehicleLocation::GetMoveRouteOverwrite() const {
-	return move_route_overwrite;
+	return getter<bool>("move_route_overwrite");
 }
 
 void RPG::SaveVehicleLocation::SetMoveRouteOverwrite(bool move_route_overwrite) {
-	this->move_route_overwrite = move_route_overwrite;
+	setter<bool>("move_route_overwrite", move_route_overwrite);
 }
 
 int RPG::SaveVehicleLocation::GetMoveRouteIndex() const {
-	return move_route_index;
+	return getter<int>("move_route_index");
 }
 
 void RPG::SaveVehicleLocation::SetMoveRouteIndex(int move_route_index) {
-	this->move_route_index = move_route_index;
+	setter<int>("move_route_index", move_route_index);
 }
 
 bool RPG::SaveVehicleLocation::GetMoveRouteRepeated() const {
-	return move_route_repeated;
+	return getter<bool>("move_route_repeated");
 }
 
 void RPG::SaveVehicleLocation::SetMoveRouteRepeated(bool move_route_repeated) {
-	this->move_route_repeated = move_route_repeated;
+	setter<bool>("move_route_repeated", move_route_repeated);
 }
 
 int RPG::SaveVehicleLocation::GetAnimPaused() const {
-	return anim_paused;
+	return getter<int>("anim_paused");
 }
 
 void RPG::SaveVehicleLocation::SetAnimPaused(int anim_paused) {
-	this->anim_paused = anim_paused;
+	setter<int>("anim_paused", anim_paused);
 }
 
 bool RPG::SaveVehicleLocation::GetThrough() const {
-	return through;
+	return getter<bool>("through");
 }
 
 void RPG::SaveVehicleLocation::SetThrough(bool through) {
-	this->through = through;
+	setter<bool>("through", through);
 }
 
 int RPG::SaveVehicleLocation::GetStopCount() const {
-	return stop_count;
+	return getter<int>("stop_count");
 }
 
 void RPG::SaveVehicleLocation::SetStopCount(int stop_count) {
-	this->stop_count = stop_count;
+	setter<int>("stop_count", stop_count);
 }
 
 int RPG::SaveVehicleLocation::GetAnimCount() const {
-	return anim_count;
+	return getter<int>("anim_count");
 }
 
 void RPG::SaveVehicleLocation::SetAnimCount(int anim_count) {
-	this->anim_count = anim_count;
+	setter<int>("anim_count", anim_count);
 }
 
 int RPG::SaveVehicleLocation::GetMaxStopCount() const {
-	return max_stop_count;
+	return getter<int>("max_stop_count");
 }
 
 void RPG::SaveVehicleLocation::SetMaxStopCount(int max_stop_count) {
-	this->max_stop_count = max_stop_count;
+	setter<int>("max_stop_count", max_stop_count);
 }
 
 bool RPG::SaveVehicleLocation::GetJumping() const {
-	return jumping;
+	return getter<bool>("jumping");
 }
 
 void RPG::SaveVehicleLocation::SetJumping(bool jumping) {
-	this->jumping = jumping;
+	setter<bool>("jumping", jumping);
 }
 
 int RPG::SaveVehicleLocation::GetBeginJumpX() const {
-	return begin_jump_x;
+	return getter<int>("begin_jump_x");
 }
 
 void RPG::SaveVehicleLocation::SetBeginJumpX(int begin_jump_x) {
-	this->begin_jump_x = begin_jump_x;
+	setter<int>("begin_jump_x", begin_jump_x);
 }
 
 int RPG::SaveVehicleLocation::GetBeginJumpY() const {
-	return begin_jump_y;
+	return getter<int>("begin_jump_y");
 }
 
 void RPG::SaveVehicleLocation::SetBeginJumpY(int begin_jump_y) {
-	this->begin_jump_y = begin_jump_y;
+	setter<int>("begin_jump_y", begin_jump_y);
 }
 
 int RPG::SaveVehicleLocation::GetUnknown47Pause() const {
-	return unknown_47_pause;
+	return getter<int>("unknown_47_pause");
 }
 
 void RPG::SaveVehicleLocation::SetUnknown47Pause(int unknown_47_pause) {
-	this->unknown_47_pause = unknown_47_pause;
+	setter<int>("unknown_47_pause", unknown_47_pause);
 }
 
 bool RPG::SaveVehicleLocation::GetFlying() const {
-	return flying;
+	return getter<bool>("flying");
 }
 
 void RPG::SaveVehicleLocation::SetFlying(bool flying) {
-	this->flying = flying;
+	setter<bool>("flying", flying);
 }
 
-const std::string& RPG::SaveVehicleLocation::GetSpriteName() const  {
-	return sprite_name;
+const std::string& RPG::SaveVehicleLocation::GetSpriteName() const {
+	return getter<const std::string&>("sprite_name");
 }
 
 std::string& RPG::SaveVehicleLocation::GetSpriteName() {
-	return sprite_name;
+	return getter<std::string&>("sprite_name");
 }
 
 void RPG::SaveVehicleLocation::SetSpriteName(const std::string& sprite_name) {
-	this->sprite_name = sprite_name;
+	setter<std::string>("sprite_name", sprite_name);
 }
 
 int RPG::SaveVehicleLocation::GetSpriteId() const {
-	return sprite_id;
+	return getter<int>("sprite_id");
 }
 
 void RPG::SaveVehicleLocation::SetSpriteId(int sprite_id) {
-	this->sprite_id = sprite_id;
+	setter<int>("sprite_id", sprite_id);
 }
 
 int RPG::SaveVehicleLocation::GetUnknown4bSpriteMove() const {
-	return unknown_4b_sprite_move;
+	return getter<int>("unknown_4b_sprite_move");
 }
 
 void RPG::SaveVehicleLocation::SetUnknown4bSpriteMove(int unknown_4b_sprite_move) {
-	this->unknown_4b_sprite_move = unknown_4b_sprite_move;
+	setter<int>("unknown_4b_sprite_move", unknown_4b_sprite_move);
 }
 
 int RPG::SaveVehicleLocation::GetFlashRed() const {
-	return flash_red;
+	return getter<int>("flash_red");
 }
 
 void RPG::SaveVehicleLocation::SetFlashRed(int flash_red) {
-	this->flash_red = flash_red;
+	setter<int>("flash_red", flash_red);
 }
 
 int RPG::SaveVehicleLocation::GetFlashGreen() const {
-	return flash_green;
+	return getter<int>("flash_green");
 }
 
 void RPG::SaveVehicleLocation::SetFlashGreen(int flash_green) {
-	this->flash_green = flash_green;
+	setter<int>("flash_green", flash_green);
 }
 
 int RPG::SaveVehicleLocation::GetFlashBlue() const {
-	return flash_blue;
+	return getter<int>("flash_blue");
 }
 
 void RPG::SaveVehicleLocation::SetFlashBlue(int flash_blue) {
-	this->flash_blue = flash_blue;
+	setter<int>("flash_blue", flash_blue);
 }
 
 double RPG::SaveVehicleLocation::GetFlashCurrentLevel() const {
-	return flash_current_level;
+	return getter<double>("flash_current_level");
 }
 
 void RPG::SaveVehicleLocation::SetFlashCurrentLevel(double flash_current_level) {
-	this->flash_current_level = flash_current_level;
+	setter<double>("flash_current_level", flash_current_level);
 }
 
 int RPG::SaveVehicleLocation::GetFlashTimeLeft() const {
-	return flash_time_left;
+	return getter<int>("flash_time_left");
 }
 
 void RPG::SaveVehicleLocation::SetFlashTimeLeft(int flash_time_left) {
-	this->flash_time_left = flash_time_left;
+	setter<int>("flash_time_left", flash_time_left);
 }
 
 int RPG::SaveVehicleLocation::GetVehicle() const {
-	return vehicle;
+	return getter<int>("vehicle");
 }
 
 void RPG::SaveVehicleLocation::SetVehicle(int vehicle) {
-	this->vehicle = vehicle;
+	setter<int>("vehicle", vehicle);
 }
 
 int RPG::SaveVehicleLocation::GetOriginalMoveRouteIndex() const {
-	return original_move_route_index;
+	return getter<int>("original_move_route_index");
 }
 
 void RPG::SaveVehicleLocation::SetOriginalMoveRouteIndex(int original_move_route_index) {
-	this->original_move_route_index = original_move_route_index;
+	setter<int>("original_move_route_index", original_move_route_index);
 }
 
 int RPG::SaveVehicleLocation::GetRemainingAscent() const {
-	return remaining_ascent;
+	return getter<int>("remaining_ascent");
 }
 
 void RPG::SaveVehicleLocation::SetRemainingAscent(int remaining_ascent) {
-	this->remaining_ascent = remaining_ascent;
+	setter<int>("remaining_ascent", remaining_ascent);
 }
 
 int RPG::SaveVehicleLocation::GetRemainingDescent() const {
-	return remaining_descent;
+	return getter<int>("remaining_descent");
 }
 
 void RPG::SaveVehicleLocation::SetRemainingDescent(int remaining_descent) {
-	this->remaining_descent = remaining_descent;
+	setter<int>("remaining_descent", remaining_descent);
 }
 
-const std::string& RPG::SaveVehicleLocation::GetSprite2Name() const  {
-	return sprite2_name;
+const std::string& RPG::SaveVehicleLocation::GetSprite2Name() const {
+	return getter<const std::string&>("sprite2_name");
 }
 
 std::string& RPG::SaveVehicleLocation::GetSprite2Name() {
-	return sprite2_name;
+	return getter<std::string&>("sprite2_name");
 }
 
 void RPG::SaveVehicleLocation::SetSprite2Name(const std::string& sprite2_name) {
-	this->sprite2_name = sprite2_name;
+	setter<std::string>("sprite2_name", sprite2_name);
 }
 
 int RPG::SaveVehicleLocation::GetSprite2Id() const {
-	return sprite2_id;
+	return getter<int>("sprite2_id");
 }
 
 void RPG::SaveVehicleLocation::SetSprite2Id(int sprite2_id) {
-	this->sprite2_id = sprite2_id;
+	setter<int>("sprite2_id", sprite2_id);
 }
 

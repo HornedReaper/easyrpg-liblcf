@@ -12,554 +12,557 @@
 // Headers
 #include "rpg_system.h"
 
+RPG::System::System(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
 int RPG::System::GetLdbId() const {
-	return ldb_id;
+	return getter<int>("ldb_id");
 }
 
 void RPG::System::SetLdbId(int ldb_id) {
-	this->ldb_id = ldb_id;
+	setter<int>("ldb_id", ldb_id);
 }
 
-const std::string& RPG::System::GetBoatName() const  {
-	return boat_name;
+const std::string& RPG::System::GetBoatName() const {
+	return getter<const std::string&>("boat_name");
 }
 
 std::string& RPG::System::GetBoatName() {
-	return boat_name;
+	return getter<std::string&>("boat_name");
 }
 
 void RPG::System::SetBoatName(const std::string& boat_name) {
-	this->boat_name = boat_name;
+	setter<std::string>("boat_name", boat_name);
 }
 
-const std::string& RPG::System::GetShipName() const  {
-	return ship_name;
+const std::string& RPG::System::GetShipName() const {
+	return getter<const std::string&>("ship_name");
 }
 
 std::string& RPG::System::GetShipName() {
-	return ship_name;
+	return getter<std::string&>("ship_name");
 }
 
 void RPG::System::SetShipName(const std::string& ship_name) {
-	this->ship_name = ship_name;
+	setter<std::string>("ship_name", ship_name);
 }
 
-const std::string& RPG::System::GetAirshipName() const  {
-	return airship_name;
+const std::string& RPG::System::GetAirshipName() const {
+	return getter<const std::string&>("airship_name");
 }
 
 std::string& RPG::System::GetAirshipName() {
-	return airship_name;
+	return getter<std::string&>("airship_name");
 }
 
 void RPG::System::SetAirshipName(const std::string& airship_name) {
-	this->airship_name = airship_name;
+	setter<std::string>("airship_name", airship_name);
 }
 
 int RPG::System::GetBoatIndex() const {
-	return boat_index;
+	return getter<int>("boat_index");
 }
 
 void RPG::System::SetBoatIndex(int boat_index) {
-	this->boat_index = boat_index;
+	setter<int>("boat_index", boat_index);
 }
 
 int RPG::System::GetShipIndex() const {
-	return ship_index;
+	return getter<int>("ship_index");
 }
 
 void RPG::System::SetShipIndex(int ship_index) {
-	this->ship_index = ship_index;
+	setter<int>("ship_index", ship_index);
 }
 
 int RPG::System::GetAirshipIndex() const {
-	return airship_index;
+	return getter<int>("airship_index");
 }
 
 void RPG::System::SetAirshipIndex(int airship_index) {
-	this->airship_index = airship_index;
+	setter<int>("airship_index", airship_index);
 }
 
-const std::string& RPG::System::GetTitleName() const  {
-	return title_name;
+const std::string& RPG::System::GetTitleName() const {
+	return getter<const std::string&>("title_name");
 }
 
 std::string& RPG::System::GetTitleName() {
-	return title_name;
+	return getter<std::string&>("title_name");
 }
 
 void RPG::System::SetTitleName(const std::string& title_name) {
-	this->title_name = title_name;
+	setter<std::string>("title_name", title_name);
 }
 
-const std::string& RPG::System::GetGameoverName() const  {
-	return gameover_name;
+const std::string& RPG::System::GetGameoverName() const {
+	return getter<const std::string&>("gameover_name");
 }
 
 std::string& RPG::System::GetGameoverName() {
-	return gameover_name;
+	return getter<std::string&>("gameover_name");
 }
 
 void RPG::System::SetGameoverName(const std::string& gameover_name) {
-	this->gameover_name = gameover_name;
+	setter<std::string>("gameover_name", gameover_name);
 }
 
-const std::string& RPG::System::GetSystemName() const  {
-	return system_name;
+const std::string& RPG::System::GetSystemName() const {
+	return getter<const std::string&>("system_name");
 }
 
 std::string& RPG::System::GetSystemName() {
-	return system_name;
+	return getter<std::string&>("system_name");
 }
 
 void RPG::System::SetSystemName(const std::string& system_name) {
-	this->system_name = system_name;
+	setter<std::string>("system_name", system_name);
 }
 
-const std::string& RPG::System::GetSystem2Name() const  {
-	return system2_name;
+const std::string& RPG::System::GetSystem2Name() const {
+	return getter<const std::string&>("system2_name");
 }
 
 std::string& RPG::System::GetSystem2Name() {
-	return system2_name;
+	return getter<std::string&>("system2_name");
 }
 
 void RPG::System::SetSystem2Name(const std::string& system2_name) {
-	this->system2_name = system2_name;
+	setter<std::string>("system2_name", system2_name);
 }
 
 
-const std::vector<int16_t>& RPG::System::GetParty() const  {
-	return party;
+const std::vector<int16_t>& RPG::System::GetParty() const {
+	return vector_getter<const std::vector<int16_t>&, int16_t>("party");
 }
 
 std::vector<int16_t>& RPG::System::GetParty() {
-	return party;
+	return vector_getter<std::vector<int16_t>&, int16_t>("party");
 }
 
 
-const std::vector<int16_t>& RPG::System::GetMenuCommands() const  {
-	return menu_commands;
+const std::vector<int16_t>& RPG::System::GetMenuCommands() const {
+	return vector_getter<const std::vector<int16_t>&, int16_t>("menu_commands");
 }
 
 std::vector<int16_t>& RPG::System::GetMenuCommands() {
-	return menu_commands;
+	return vector_getter<std::vector<int16_t>&, int16_t>("menu_commands");
 }
 
-const RPG::Music& RPG::System::GetTitleMusic() const  {
-	return title_music;
+const RPG::Music& RPG::System::GetTitleMusic() const {
+	return getter<const RPG::Music&>("title_music");
 }
 
 RPG::Music& RPG::System::GetTitleMusic() {
-	return title_music;
+	return getter<RPG::Music&>("title_music");
 }
 
 void RPG::System::SetTitleMusic(const RPG::Music& title_music) {
-	this->title_music = title_music;
+	setter<RPG::Music>("title_music", title_music);
 }
 
-const RPG::Music& RPG::System::GetBattleMusic() const  {
-	return battle_music;
+const RPG::Music& RPG::System::GetBattleMusic() const {
+	return getter<const RPG::Music&>("battle_music");
 }
 
 RPG::Music& RPG::System::GetBattleMusic() {
-	return battle_music;
+	return getter<RPG::Music&>("battle_music");
 }
 
 void RPG::System::SetBattleMusic(const RPG::Music& battle_music) {
-	this->battle_music = battle_music;
+	setter<RPG::Music>("battle_music", battle_music);
 }
 
-const RPG::Music& RPG::System::GetBattleEndMusic() const  {
-	return battle_end_music;
+const RPG::Music& RPG::System::GetBattleEndMusic() const {
+	return getter<const RPG::Music&>("battle_end_music");
 }
 
 RPG::Music& RPG::System::GetBattleEndMusic() {
-	return battle_end_music;
+	return getter<RPG::Music&>("battle_end_music");
 }
 
 void RPG::System::SetBattleEndMusic(const RPG::Music& battle_end_music) {
-	this->battle_end_music = battle_end_music;
+	setter<RPG::Music>("battle_end_music", battle_end_music);
 }
 
-const RPG::Music& RPG::System::GetInnMusic() const  {
-	return inn_music;
+const RPG::Music& RPG::System::GetInnMusic() const {
+	return getter<const RPG::Music&>("inn_music");
 }
 
 RPG::Music& RPG::System::GetInnMusic() {
-	return inn_music;
+	return getter<RPG::Music&>("inn_music");
 }
 
 void RPG::System::SetInnMusic(const RPG::Music& inn_music) {
-	this->inn_music = inn_music;
+	setter<RPG::Music>("inn_music", inn_music);
 }
 
-const RPG::Music& RPG::System::GetBoatMusic() const  {
-	return boat_music;
+const RPG::Music& RPG::System::GetBoatMusic() const {
+	return getter<const RPG::Music&>("boat_music");
 }
 
 RPG::Music& RPG::System::GetBoatMusic() {
-	return boat_music;
+	return getter<RPG::Music&>("boat_music");
 }
 
 void RPG::System::SetBoatMusic(const RPG::Music& boat_music) {
-	this->boat_music = boat_music;
+	setter<RPG::Music>("boat_music", boat_music);
 }
 
-const RPG::Music& RPG::System::GetShipMusic() const  {
-	return ship_music;
+const RPG::Music& RPG::System::GetShipMusic() const {
+	return getter<const RPG::Music&>("ship_music");
 }
 
 RPG::Music& RPG::System::GetShipMusic() {
-	return ship_music;
+	return getter<RPG::Music&>("ship_music");
 }
 
 void RPG::System::SetShipMusic(const RPG::Music& ship_music) {
-	this->ship_music = ship_music;
+	setter<RPG::Music>("ship_music", ship_music);
 }
 
-const RPG::Music& RPG::System::GetAirshipMusic() const  {
-	return airship_music;
+const RPG::Music& RPG::System::GetAirshipMusic() const {
+	return getter<const RPG::Music&>("airship_music");
 }
 
 RPG::Music& RPG::System::GetAirshipMusic() {
-	return airship_music;
+	return getter<RPG::Music&>("airship_music");
 }
 
 void RPG::System::SetAirshipMusic(const RPG::Music& airship_music) {
-	this->airship_music = airship_music;
+	setter<RPG::Music>("airship_music", airship_music);
 }
 
-const RPG::Music& RPG::System::GetGameoverMusic() const  {
-	return gameover_music;
+const RPG::Music& RPG::System::GetGameoverMusic() const {
+	return getter<const RPG::Music&>("gameover_music");
 }
 
 RPG::Music& RPG::System::GetGameoverMusic() {
-	return gameover_music;
+	return getter<RPG::Music&>("gameover_music");
 }
 
 void RPG::System::SetGameoverMusic(const RPG::Music& gameover_music) {
-	this->gameover_music = gameover_music;
+	setter<RPG::Music>("gameover_music", gameover_music);
 }
 
-const RPG::Sound& RPG::System::GetCursorSe() const  {
-	return cursor_se;
+const RPG::Sound& RPG::System::GetCursorSe() const {
+	return getter<const RPG::Sound&>("cursor_se");
 }
 
 RPG::Sound& RPG::System::GetCursorSe() {
-	return cursor_se;
+	return getter<RPG::Sound&>("cursor_se");
 }
 
 void RPG::System::SetCursorSe(const RPG::Sound& cursor_se) {
-	this->cursor_se = cursor_se;
+	setter<RPG::Sound>("cursor_se", cursor_se);
 }
 
-const RPG::Sound& RPG::System::GetDecisionSe() const  {
-	return decision_se;
+const RPG::Sound& RPG::System::GetDecisionSe() const {
+	return getter<const RPG::Sound&>("decision_se");
 }
 
 RPG::Sound& RPG::System::GetDecisionSe() {
-	return decision_se;
+	return getter<RPG::Sound&>("decision_se");
 }
 
 void RPG::System::SetDecisionSe(const RPG::Sound& decision_se) {
-	this->decision_se = decision_se;
+	setter<RPG::Sound>("decision_se", decision_se);
 }
 
-const RPG::Sound& RPG::System::GetCancelSe() const  {
-	return cancel_se;
+const RPG::Sound& RPG::System::GetCancelSe() const {
+	return getter<const RPG::Sound&>("cancel_se");
 }
 
 RPG::Sound& RPG::System::GetCancelSe() {
-	return cancel_se;
+	return getter<RPG::Sound&>("cancel_se");
 }
 
 void RPG::System::SetCancelSe(const RPG::Sound& cancel_se) {
-	this->cancel_se = cancel_se;
+	setter<RPG::Sound>("cancel_se", cancel_se);
 }
 
-const RPG::Sound& RPG::System::GetBuzzerSe() const  {
-	return buzzer_se;
+const RPG::Sound& RPG::System::GetBuzzerSe() const {
+	return getter<const RPG::Sound&>("buzzer_se");
 }
 
 RPG::Sound& RPG::System::GetBuzzerSe() {
-	return buzzer_se;
+	return getter<RPG::Sound&>("buzzer_se");
 }
 
 void RPG::System::SetBuzzerSe(const RPG::Sound& buzzer_se) {
-	this->buzzer_se = buzzer_se;
+	setter<RPG::Sound>("buzzer_se", buzzer_se);
 }
 
-const RPG::Sound& RPG::System::GetBattleSe() const  {
-	return battle_se;
+const RPG::Sound& RPG::System::GetBattleSe() const {
+	return getter<const RPG::Sound&>("battle_se");
 }
 
 RPG::Sound& RPG::System::GetBattleSe() {
-	return battle_se;
+	return getter<RPG::Sound&>("battle_se");
 }
 
 void RPG::System::SetBattleSe(const RPG::Sound& battle_se) {
-	this->battle_se = battle_se;
+	setter<RPG::Sound>("battle_se", battle_se);
 }
 
-const RPG::Sound& RPG::System::GetEscapeSe() const  {
-	return escape_se;
+const RPG::Sound& RPG::System::GetEscapeSe() const {
+	return getter<const RPG::Sound&>("escape_se");
 }
 
 RPG::Sound& RPG::System::GetEscapeSe() {
-	return escape_se;
+	return getter<RPG::Sound&>("escape_se");
 }
 
 void RPG::System::SetEscapeSe(const RPG::Sound& escape_se) {
-	this->escape_se = escape_se;
+	setter<RPG::Sound>("escape_se", escape_se);
 }
 
-const RPG::Sound& RPG::System::GetEnemyAttackSe() const  {
-	return enemy_attack_se;
+const RPG::Sound& RPG::System::GetEnemyAttackSe() const {
+	return getter<const RPG::Sound&>("enemy_attack_se");
 }
 
 RPG::Sound& RPG::System::GetEnemyAttackSe() {
-	return enemy_attack_se;
+	return getter<RPG::Sound&>("enemy_attack_se");
 }
 
 void RPG::System::SetEnemyAttackSe(const RPG::Sound& enemy_attack_se) {
-	this->enemy_attack_se = enemy_attack_se;
+	setter<RPG::Sound>("enemy_attack_se", enemy_attack_se);
 }
 
-const RPG::Sound& RPG::System::GetEnemyDamagedSe() const  {
-	return enemy_damaged_se;
+const RPG::Sound& RPG::System::GetEnemyDamagedSe() const {
+	return getter<const RPG::Sound&>("enemy_damaged_se");
 }
 
 RPG::Sound& RPG::System::GetEnemyDamagedSe() {
-	return enemy_damaged_se;
+	return getter<RPG::Sound&>("enemy_damaged_se");
 }
 
 void RPG::System::SetEnemyDamagedSe(const RPG::Sound& enemy_damaged_se) {
-	this->enemy_damaged_se = enemy_damaged_se;
+	setter<RPG::Sound>("enemy_damaged_se", enemy_damaged_se);
 }
 
-const RPG::Sound& RPG::System::GetActorDamagedSe() const  {
-	return actor_damaged_se;
+const RPG::Sound& RPG::System::GetActorDamagedSe() const {
+	return getter<const RPG::Sound&>("actor_damaged_se");
 }
 
 RPG::Sound& RPG::System::GetActorDamagedSe() {
-	return actor_damaged_se;
+	return getter<RPG::Sound&>("actor_damaged_se");
 }
 
 void RPG::System::SetActorDamagedSe(const RPG::Sound& actor_damaged_se) {
-	this->actor_damaged_se = actor_damaged_se;
+	setter<RPG::Sound>("actor_damaged_se", actor_damaged_se);
 }
 
-const RPG::Sound& RPG::System::GetDodgeSe() const  {
-	return dodge_se;
+const RPG::Sound& RPG::System::GetDodgeSe() const {
+	return getter<const RPG::Sound&>("dodge_se");
 }
 
 RPG::Sound& RPG::System::GetDodgeSe() {
-	return dodge_se;
+	return getter<RPG::Sound&>("dodge_se");
 }
 
 void RPG::System::SetDodgeSe(const RPG::Sound& dodge_se) {
-	this->dodge_se = dodge_se;
+	setter<RPG::Sound>("dodge_se", dodge_se);
 }
 
-const RPG::Sound& RPG::System::GetEnemyDeathSe() const  {
-	return enemy_death_se;
+const RPG::Sound& RPG::System::GetEnemyDeathSe() const {
+	return getter<const RPG::Sound&>("enemy_death_se");
 }
 
 RPG::Sound& RPG::System::GetEnemyDeathSe() {
-	return enemy_death_se;
+	return getter<RPG::Sound&>("enemy_death_se");
 }
 
 void RPG::System::SetEnemyDeathSe(const RPG::Sound& enemy_death_se) {
-	this->enemy_death_se = enemy_death_se;
+	setter<RPG::Sound>("enemy_death_se", enemy_death_se);
 }
 
-const RPG::Sound& RPG::System::GetItemSe() const  {
-	return item_se;
+const RPG::Sound& RPG::System::GetItemSe() const {
+	return getter<const RPG::Sound&>("item_se");
 }
 
 RPG::Sound& RPG::System::GetItemSe() {
-	return item_se;
+	return getter<RPG::Sound&>("item_se");
 }
 
 void RPG::System::SetItemSe(const RPG::Sound& item_se) {
-	this->item_se = item_se;
+	setter<RPG::Sound>("item_se", item_se);
 }
 
 int RPG::System::GetTransitionOut() const {
-	return transition_out;
+	return getter<int>("transition_out");
 }
 
 void RPG::System::SetTransitionOut(int transition_out) {
-	this->transition_out = transition_out;
+	setter<int>("transition_out", transition_out);
 }
 
 int RPG::System::GetTransitionIn() const {
-	return transition_in;
+	return getter<int>("transition_in");
 }
 
 void RPG::System::SetTransitionIn(int transition_in) {
-	this->transition_in = transition_in;
+	setter<int>("transition_in", transition_in);
 }
 
 int RPG::System::GetBattleStartFadeout() const {
-	return battle_start_fadeout;
+	return getter<int>("battle_start_fadeout");
 }
 
 void RPG::System::SetBattleStartFadeout(int battle_start_fadeout) {
-	this->battle_start_fadeout = battle_start_fadeout;
+	setter<int>("battle_start_fadeout", battle_start_fadeout);
 }
 
 int RPG::System::GetBattleStartFadein() const {
-	return battle_start_fadein;
+	return getter<int>("battle_start_fadein");
 }
 
 void RPG::System::SetBattleStartFadein(int battle_start_fadein) {
-	this->battle_start_fadein = battle_start_fadein;
+	setter<int>("battle_start_fadein", battle_start_fadein);
 }
 
 int RPG::System::GetBattleEndFadeout() const {
-	return battle_end_fadeout;
+	return getter<int>("battle_end_fadeout");
 }
 
 void RPG::System::SetBattleEndFadeout(int battle_end_fadeout) {
-	this->battle_end_fadeout = battle_end_fadeout;
+	setter<int>("battle_end_fadeout", battle_end_fadeout);
 }
 
 int RPG::System::GetBattleEndFadein() const {
-	return battle_end_fadein;
+	return getter<int>("battle_end_fadein");
 }
 
 void RPG::System::SetBattleEndFadein(int battle_end_fadein) {
-	this->battle_end_fadein = battle_end_fadein;
+	setter<int>("battle_end_fadein", battle_end_fadein);
 }
 
 int RPG::System::GetMessageStretch() const {
-	return message_stretch;
+	return getter<int>("message_stretch");
 }
 
 void RPG::System::SetMessageStretch(int message_stretch) {
-	this->message_stretch = message_stretch;
+	setter<int>("message_stretch", message_stretch);
 }
 
 int RPG::System::GetFontId() const {
-	return font_id;
+	return getter<int>("font_id");
 }
 
 void RPG::System::SetFontId(int font_id) {
-	this->font_id = font_id;
+	setter<int>("font_id", font_id);
 }
 
 int RPG::System::GetSelectedCondition() const {
-	return selected_condition;
+	return getter<int>("selected_condition");
 }
 
 void RPG::System::SetSelectedCondition(int selected_condition) {
-	this->selected_condition = selected_condition;
+	setter<int>("selected_condition", selected_condition);
 }
 
 int RPG::System::GetSelectedHero() const {
-	return selected_hero;
+	return getter<int>("selected_hero");
 }
 
 void RPG::System::SetSelectedHero(int selected_hero) {
-	this->selected_hero = selected_hero;
+	setter<int>("selected_hero", selected_hero);
 }
 
-const std::string& RPG::System::GetBattletestBackground() const  {
-	return battletest_background;
+const std::string& RPG::System::GetBattletestBackground() const {
+	return getter<const std::string&>("battletest_background");
 }
 
 std::string& RPG::System::GetBattletestBackground() {
-	return battletest_background;
+	return getter<std::string&>("battletest_background");
 }
 
 void RPG::System::SetBattletestBackground(const std::string& battletest_background) {
-	this->battletest_background = battletest_background;
+	setter<std::string>("battletest_background", battletest_background);
 }
 
-const std::vector<RPG::TestBattler>& RPG::System::GetBattletestData() const  {
-	return battletest_data;
+const std::vector<RPG::TestBattler>& RPG::System::GetBattletestData() const {
+	return vector_getter<const std::vector<RPG::TestBattler>&, RPG::TestBattler>("battletest_data");
 }
 
 std::vector<RPG::TestBattler>& RPG::System::GetBattletestData() {
-	return battletest_data;
+	return vector_getter<std::vector<RPG::TestBattler>&, RPG::TestBattler>("battletest_data");
 }
 
 int RPG::System::GetSaveCount() const {
-	return save_count;
+	return getter<int>("save_count");
 }
 
 void RPG::System::SetSaveCount(int save_count) {
-	this->save_count = save_count;
+	setter<int>("save_count", save_count);
 }
 
 int RPG::System::GetBattletestTerrain() const {
-	return battletest_terrain;
+	return getter<int>("battletest_terrain");
 }
 
 void RPG::System::SetBattletestTerrain(int battletest_terrain) {
-	this->battletest_terrain = battletest_terrain;
+	setter<int>("battletest_terrain", battletest_terrain);
 }
 
 int RPG::System::GetBattletestFormation() const {
-	return battletest_formation;
+	return getter<int>("battletest_formation");
 }
 
 void RPG::System::SetBattletestFormation(int battletest_formation) {
-	this->battletest_formation = battletest_formation;
+	setter<int>("battletest_formation", battletest_formation);
 }
 
 int RPG::System::GetBattletestCondition() const {
-	return battletest_condition;
+	return getter<int>("battletest_condition");
 }
 
 void RPG::System::SetBattletestCondition(int battletest_condition) {
-	this->battletest_condition = battletest_condition;
+	setter<int>("battletest_condition", battletest_condition);
 }
 
 int RPG::System::GetUnknown61() const {
-	return unknown_61;
+	return getter<int>("unknown_61");
 }
 
 void RPG::System::SetUnknown61(int unknown_61) {
-	this->unknown_61 = unknown_61;
+	setter<int>("unknown_61", unknown_61);
 }
 
 bool RPG::System::GetShowFrame() const {
-	return show_frame;
+	return getter<bool>("show_frame");
 }
 
 void RPG::System::SetShowFrame(bool show_frame) {
-	this->show_frame = show_frame;
+	setter<bool>("show_frame", show_frame);
 }
 
-const std::string& RPG::System::GetFrameName() const  {
-	return frame_name;
+const std::string& RPG::System::GetFrameName() const {
+	return getter<const std::string&>("frame_name");
 }
 
 std::string& RPG::System::GetFrameName() {
-	return frame_name;
+	return getter<std::string&>("frame_name");
 }
 
 void RPG::System::SetFrameName(const std::string& frame_name) {
-	this->frame_name = frame_name;
+	setter<std::string>("frame_name", frame_name);
 }
 
 bool RPG::System::GetInvertAnimations() const {
-	return invert_animations;
+	return getter<bool>("invert_animations");
 }
 
 void RPG::System::SetInvertAnimations(bool invert_animations) {
-	this->invert_animations = invert_animations;
+	setter<bool>("invert_animations", invert_animations);
 }
 
 bool RPG::System::GetShowTitle() const {
-	return show_title;
+	return getter<bool>("show_title");
 }
 
 void RPG::System::SetShowTitle(bool show_title) {
-	this->show_title = show_title;
+	setter<bool>("show_title", show_title);
 }
 

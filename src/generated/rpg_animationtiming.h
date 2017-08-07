@@ -13,13 +13,14 @@
 #define LCF_RPG_ANIMATIONTIMING_H
 
 // Headers
+#include "rpg_base.h"
 #include "rpg_sound.h"
 
 /**
  * RPG::AnimationTiming class.
  */
 namespace RPG {
-	class AnimationTiming {
+	class AnimationTiming : Base {
 	public:
 		enum FlashScope {
 			FlashScope_nothing = 0,
@@ -32,6 +33,8 @@ namespace RPG {
 			ScreenShake_screen = 2
 		};
 
+		AnimationTiming() {}
+		AnimationTiming(rapidjson::Value& json_values);
 		int ID = 0;
 		int frame = 0;
 		Sound se;

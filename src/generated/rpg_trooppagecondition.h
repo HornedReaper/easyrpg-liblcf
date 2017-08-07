@@ -12,13 +12,18 @@
 #ifndef LCF_RPG_TROOPPAGECONDITION_H
 #define LCF_RPG_TROOPPAGECONDITION_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::TroopPageCondition class.
  */
 namespace RPG {
-	class TroopPageCondition {
+	class TroopPageCondition : Base {
 	public:
-		struct Flags {
+		TroopPageCondition() {}
+		TroopPageCondition(rapidjson::Value& json_values);
+		struct Flags : Flags_Base {
 			bool switch_a;
 			bool switch_b;
 			bool variable;
@@ -52,9 +57,9 @@ namespace RPG {
 		int turn_actor_b = 0;
 		int command_actor_id = 1;
 		int command_id = 1;
-		const Flags& GetFlags() const;
-		Flags& GetFlags();
-		void SetFlags(const Flags& flags);
+		const TroopPageCondition::Flags& GetFlags() const;
+		TroopPageCondition::Flags& GetFlags();
+		void SetFlags(const TroopPageCondition::Flags& flags);
 
 		int GetSwitchAId() const;
 		void SetSwitchAId(int switch_a_id);

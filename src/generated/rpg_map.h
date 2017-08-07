@@ -16,13 +16,14 @@
 #include <string>
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 #include "rpg_event.h"
 
 /**
  * RPG::Map class.
  */
 namespace RPG {
-	class Map {
+	class Map : Base {
 	public:
 		enum ScrollType {
 			ScrollType_none = 0,
@@ -41,6 +42,8 @@ namespace RPG {
 			GeneratorTiles_two = 1
 		};
 
+		Map() {}
+		Map(rapidjson::Value& json_values);
 		int chipset_id = 1;
 		int width = 20;
 		int height = 15;

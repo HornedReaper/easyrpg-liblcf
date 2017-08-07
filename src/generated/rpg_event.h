@@ -15,14 +15,17 @@
 // Headers
 #include <string>
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_eventpage.h"
 
 /**
  * RPG::Event class.
  */
 namespace RPG {
-	class Event {
+	class Event : Base {
 	public:
+		Event() {}
+		Event(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		int x = 0;

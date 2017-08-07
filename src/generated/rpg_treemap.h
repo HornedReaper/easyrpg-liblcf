@@ -14,6 +14,7 @@
 
 // Headers
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_mapinfo.h"
 #include "rpg_start.h"
 
@@ -21,8 +22,10 @@
  * RPG::TreeMap class.
  */
 namespace RPG {
-	class TreeMap {
+	class TreeMap : Base {
 	public:
+		TreeMap() {}
+		TreeMap(rapidjson::Value& json_values);
 		std::vector<MapInfo> maps;
 		std::vector<int> tree_order;
 		int active_node = 0;

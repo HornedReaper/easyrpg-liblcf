@@ -12,12 +12,17 @@
 #ifndef LCF_RPG_TESTBATTLER_H
 #define LCF_RPG_TESTBATTLER_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::TestBattler class.
  */
 namespace RPG {
-	class TestBattler {
+	class TestBattler : Base {
 	public:
+		TestBattler() {}
+		TestBattler(rapidjson::Value& json_values);
 		int ID = 0;
 		int actor_id = 1;
 		int level = 1;

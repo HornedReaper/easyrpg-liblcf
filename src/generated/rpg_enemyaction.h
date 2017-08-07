@@ -12,11 +12,14 @@
 #ifndef LCF_RPG_ENEMYACTION_H
 #define LCF_RPG_ENEMYACTION_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::EnemyAction class.
  */
 namespace RPG {
-	class EnemyAction {
+	class EnemyAction : Base {
 	public:
 		enum Kind {
 			Kind_basic = 0,
@@ -44,6 +47,8 @@ namespace RPG {
 			ConditionType_party_fatigue = 7
 		};
 
+		EnemyAction() {}
+		EnemyAction(rapidjson::Value& json_values);
 		int ID = 0;
 		int kind = 0;
 		int basic = 1;

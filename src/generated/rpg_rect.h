@@ -14,13 +14,16 @@
 
 // Headers
 #include "reader_types.h"
+#include "rpg_base.h"
 
 /**
  * RPG::Rect class.
  */
 namespace RPG {
-	class Rect {
+	class Rect : Base {
 	public:
+		Rect() {}
+		Rect(rapidjson::Value& json_values);
 		uint32_t l = 0;
 		uint32_t t = 0;
 		uint32_t r = 0;

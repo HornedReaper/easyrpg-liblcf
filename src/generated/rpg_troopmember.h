@@ -12,12 +12,17 @@
 #ifndef LCF_RPG_TROOPMEMBER_H
 #define LCF_RPG_TROOPMEMBER_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::TroopMember class.
  */
 namespace RPG {
-	class TroopMember {
+	class TroopMember : Base {
 	public:
+		TroopMember() {}
+		TroopMember(rapidjson::Value& json_values);
 		int ID = 0;
 		int enemy_id = 1;
 		int x = 0;

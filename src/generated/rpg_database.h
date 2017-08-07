@@ -17,6 +17,7 @@
 #include "rpg_actor.h"
 #include "rpg_animation.h"
 #include "rpg_attribute.h"
+#include "rpg_base.h"
 #include "rpg_battlecommands.h"
 #include "rpg_battleranimation.h"
 #include "rpg_chipset.h"
@@ -37,8 +38,10 @@
  * RPG::Database class.
  */
 namespace RPG {
-	class Database {
+	class Database : Base {
 	public:
+		Database() {}
+		Database(rapidjson::Value& json_values);
 		std::vector<Actor> actors;
 		std::vector<Skill> skills;
 		std::vector<Item> items;

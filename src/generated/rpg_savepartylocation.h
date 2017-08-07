@@ -14,13 +14,14 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 #include "rpg_moveroute.h"
 
 /**
  * RPG::SavePartyLocation class.
  */
 namespace RPG {
-	class SavePartyLocation {
+	class SavePartyLocation : Base {
 	public:
 		enum VehicleType {
 			VehicleType_none = 0,
@@ -29,6 +30,8 @@ namespace RPG {
 			VehicleType_airship = 3
 		};
 
+		SavePartyLocation() {}
+		SavePartyLocation(rapidjson::Value& json_values);
 		bool active = true;
 		int map_id = -1;
 		int position_x = -1;

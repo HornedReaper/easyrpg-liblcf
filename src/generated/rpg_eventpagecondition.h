@@ -12,11 +12,14 @@
 #ifndef LCF_RPG_EVENTPAGECONDITION_H
 #define LCF_RPG_EVENTPAGECONDITION_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::EventPageCondition class.
  */
 namespace RPG {
-	class EventPageCondition {
+	class EventPageCondition : Base {
 	public:
 		enum Comparison {
 			Comparison_equal = 0,
@@ -27,7 +30,9 @@ namespace RPG {
 			Comparison_not_equal = 5
 		};
 
-		struct Flags {
+		EventPageCondition() {}
+		EventPageCondition(rapidjson::Value& json_values);
+		struct Flags : Flags_Base {
 			bool switch_a;
 			bool switch_b;
 			bool variable;
@@ -45,9 +50,9 @@ namespace RPG {
 		int timer_sec = 0;
 		int timer2_sec = 0;
 		int compare_operator = 1;
-		const Flags& GetFlags() const;
-		Flags& GetFlags();
-		void SetFlags(const Flags& flags);
+		const EventPageCondition::Flags& GetFlags() const;
+		EventPageCondition::Flags& GetFlags();
+		void SetFlags(const EventPageCondition::Flags& flags);
 
 		int GetSwitchAId() const;
 		void SetSwitchAId(int switch_a_id);

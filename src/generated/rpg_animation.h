@@ -17,12 +17,13 @@
 #include <vector>
 #include "rpg_animationframe.h"
 #include "rpg_animationtiming.h"
+#include "rpg_base.h"
 
 /**
  * RPG::Animation class.
  */
 namespace RPG {
-	class Animation {
+	class Animation : Base {
 	public:
 		enum Scope {
 			Scope_target = 0,
@@ -34,6 +35,8 @@ namespace RPG {
 			Position_down = 2
 		};
 
+		Animation() {}
+		Animation(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		std::string animation_name;

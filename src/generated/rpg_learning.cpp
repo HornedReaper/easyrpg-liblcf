@@ -12,20 +12,23 @@
 // Headers
 #include "rpg_learning.h"
 
+RPG::Learning::Learning(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
 int RPG::Learning::GetLevel() const {
-	return level;
+	return getter<int>("level");
 }
 
 void RPG::Learning::SetLevel(int level) {
-	this->level = level;
+	setter<int>("level", level);
 }
 
 int RPG::Learning::GetSkillId() const {
-	return skill_id;
+	return getter<int>("skill_id");
 }
 
 void RPG::Learning::SetSkillId(int skill_id) {
-	this->skill_id = skill_id;
+	setter<int>("skill_id", skill_id);
 }
 

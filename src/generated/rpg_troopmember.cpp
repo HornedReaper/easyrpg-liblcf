@@ -12,36 +12,39 @@
 // Headers
 #include "rpg_troopmember.h"
 
+RPG::TroopMember::TroopMember(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
 int RPG::TroopMember::GetEnemyId() const {
-	return enemy_id;
+	return getter<int>("enemy_id");
 }
 
 void RPG::TroopMember::SetEnemyId(int enemy_id) {
-	this->enemy_id = enemy_id;
+	setter<int>("enemy_id", enemy_id);
 }
 
 int RPG::TroopMember::GetX() const {
-	return x;
+	return getter<int>("x");
 }
 
 void RPG::TroopMember::SetX(int x) {
-	this->x = x;
+	setter<int>("x", x);
 }
 
 int RPG::TroopMember::GetY() const {
-	return y;
+	return getter<int>("y");
 }
 
 void RPG::TroopMember::SetY(int y) {
-	this->y = y;
+	setter<int>("y", y);
 }
 
 bool RPG::TroopMember::GetInvisible() const {
-	return invisible;
+	return getter<bool>("invisible");
 }
 
 void RPG::TroopMember::SetInvisible(bool invisible) {
-	this->invisible = invisible;
+	setter<bool>("invisible", invisible);
 }
 

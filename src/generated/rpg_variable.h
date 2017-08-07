@@ -14,13 +14,16 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 
 /**
  * RPG::Variable class.
  */
 namespace RPG {
-	class Variable {
+	class Variable : Base {
 	public:
+		Variable() {}
+		Variable(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		const std::string& GetName() const;

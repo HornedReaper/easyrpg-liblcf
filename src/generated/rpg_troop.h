@@ -15,6 +15,7 @@
 // Headers
 #include <string>
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_troopmember.h"
 #include "rpg_trooppage.h"
 
@@ -22,8 +23,10 @@
  * RPG::Troop class.
  */
 namespace RPG {
-	class Troop {
+	class Troop : Base {
 	public:
+		Troop() {}
+		Troop(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		std::vector<TroopMember> members;

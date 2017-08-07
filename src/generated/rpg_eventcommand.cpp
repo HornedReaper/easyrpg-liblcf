@@ -12,40 +12,43 @@
 // Headers
 #include "rpg_eventcommand.h"
 
+RPG::EventCommand::EventCommand(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
 int RPG::EventCommand::GetCode() const {
-	return code;
+	return getter<int>("code");
 }
 
 void RPG::EventCommand::SetCode(int code) {
-	this->code = code;
+	setter<int>("code", code);
 }
 
 int RPG::EventCommand::GetIndent() const {
-	return indent;
+	return getter<int>("indent");
 }
 
 void RPG::EventCommand::SetIndent(int indent) {
-	this->indent = indent;
+	setter<int>("indent", indent);
 }
 
-const std::string& RPG::EventCommand::GetString() const  {
-	return string;
+const std::string& RPG::EventCommand::GetString() const {
+	return getter<const std::string&>("string");
 }
 
 std::string& RPG::EventCommand::GetString() {
-	return string;
+	return getter<std::string&>("string");
 }
 
 void RPG::EventCommand::SetString(const std::string& string) {
-	this->string = string;
+	setter<std::string>("string", string);
 }
 
-const std::vector<int>& RPG::EventCommand::GetParameters() const  {
-	return parameters;
+const std::vector<int>& RPG::EventCommand::GetParameters() const {
+	return vector_getter<const std::vector<int>&, int>("parameters");
 }
 
 std::vector<int>& RPG::EventCommand::GetParameters() {
-	return parameters;
+	return vector_getter<std::vector<int>&, int>("parameters");
 }
 

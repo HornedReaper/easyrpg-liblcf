@@ -15,12 +15,13 @@
 // Headers
 #include <string>
 #include <vector>
+#include "rpg_base.h"
 
 /**
  * RPG::EventCommand class.
  */
 namespace RPG {
-	class EventCommand {
+	class EventCommand : Base {
 	public:
 		struct Code {
 			enum Index {
@@ -155,6 +156,8 @@ namespace RPG {
 			};
 		};
 
+		EventCommand() {}
+		EventCommand(rapidjson::Value& json_values);
 		int code = 0;
 		int indent = 0;
 		std::string string;

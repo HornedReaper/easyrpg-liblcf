@@ -12,12 +12,17 @@
 #ifndef LCF_RPG_START_H
 #define LCF_RPG_START_H
 
+// Headers
+#include "rpg_base.h"
+
 /**
  * RPG::Start class.
  */
 namespace RPG {
-	class Start {
+	class Start : Base {
 	public:
+		Start() {}
+		Start(rapidjson::Value& json_values);
 		int party_map_id = 0;
 		int party_x = 0;
 		int party_y = 0;

@@ -12,52 +12,55 @@
 // Headers
 #include "rpg_battleranimationextension.h"
 
+RPG::BattlerAnimationExtension::BattlerAnimationExtension(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const std::string& RPG::BattlerAnimationExtension::GetName() const  {
-	return name;
+const std::string& RPG::BattlerAnimationExtension::GetName() const {
+	return getter<const std::string&>("name");
 }
 
 std::string& RPG::BattlerAnimationExtension::GetName() {
-	return name;
+	return getter<std::string&>("name");
 }
 
 void RPG::BattlerAnimationExtension::SetName(const std::string& name) {
-	this->name = name;
+	setter<std::string>("name", name);
 }
 
-const std::string& RPG::BattlerAnimationExtension::GetBattlerName() const  {
-	return battler_name;
+const std::string& RPG::BattlerAnimationExtension::GetBattlerName() const {
+	return getter<const std::string&>("battler_name");
 }
 
 std::string& RPG::BattlerAnimationExtension::GetBattlerName() {
-	return battler_name;
+	return getter<std::string&>("battler_name");
 }
 
 void RPG::BattlerAnimationExtension::SetBattlerName(const std::string& battler_name) {
-	this->battler_name = battler_name;
+	setter<std::string>("battler_name", battler_name);
 }
 
 int RPG::BattlerAnimationExtension::GetBattlerIndex() const {
-	return battler_index;
+	return getter<int>("battler_index");
 }
 
 void RPG::BattlerAnimationExtension::SetBattlerIndex(int battler_index) {
-	this->battler_index = battler_index;
+	setter<int>("battler_index", battler_index);
 }
 
 int RPG::BattlerAnimationExtension::GetAnimationType() const {
-	return animation_type;
+	return getter<int>("animation_type");
 }
 
 void RPG::BattlerAnimationExtension::SetAnimationType(int animation_type) {
-	this->animation_type = animation_type;
+	setter<int>("animation_type", animation_type);
 }
 
 int RPG::BattlerAnimationExtension::GetAnimationId() const {
-	return animation_id;
+	return getter<int>("animation_id");
 }
 
 void RPG::BattlerAnimationExtension::SetAnimationId(int animation_id) {
-	this->animation_id = animation_id;
+	setter<int>("animation_id", animation_id);
 }
 

@@ -15,6 +15,7 @@
 // Headers
 #include <string>
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_eventcommand.h"
 #include "rpg_eventpagecondition.h"
 #include "rpg_moveroute.h"
@@ -23,7 +24,7 @@
  * RPG::EventPage class.
  */
 namespace RPG {
-	class EventPage {
+	class EventPage : Base {
 	public:
 		enum Direction {
 			Direction_up = 0,
@@ -74,6 +75,8 @@ namespace RPG {
 			MoveSpeed_fourfold = 6
 		};
 
+		EventPage() {}
+		EventPage(rapidjson::Value& json_values);
 		int ID = 0;
 		EventPageCondition condition;
 		std::string character_name;

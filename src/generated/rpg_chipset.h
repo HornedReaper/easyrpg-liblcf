@@ -16,12 +16,13 @@
 #include <string>
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 
 /**
  * RPG::Chipset class.
  */
 namespace RPG {
-	class Chipset {
+	class Chipset : Base {
 	public:
 		enum AnimType {
 			AnimType_reciprocating = 0,
@@ -29,6 +30,7 @@ namespace RPG {
 		};
 
 		Chipset();
+		Chipset(rapidjson::Value& json_values);
 		void Init();
 		int ID = 0;
 		std::string name;

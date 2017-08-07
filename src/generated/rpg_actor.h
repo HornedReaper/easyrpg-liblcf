@@ -16,6 +16,7 @@
 #include <string>
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 #include "rpg_equipment.h"
 #include "rpg_learning.h"
 #include "rpg_parameters.h"
@@ -24,8 +25,10 @@
  * RPG::Actor class.
  */
 namespace RPG {
-	class Actor {
+	class Actor : Base {
 	public:
+		Actor() {}
+		Actor(rapidjson::Value& json_values);
 		void Setup();
 		int ID = 0;
 		std::string name;

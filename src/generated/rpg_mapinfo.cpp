@@ -18,156 +18,159 @@ RPG::MapInfo::MapInfo() {
 	Init();
 }
 
+RPG::MapInfo::MapInfo(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
-const std::string& RPG::MapInfo::GetName() const  {
-	return name;
+const std::string& RPG::MapInfo::GetName() const {
+	return getter<const std::string&>("name");
 }
 
 std::string& RPG::MapInfo::GetName() {
-	return name;
+	return getter<std::string&>("name");
 }
 
 void RPG::MapInfo::SetName(const std::string& name) {
-	this->name = name;
+	setter<std::string>("name", name);
 }
 
 int RPG::MapInfo::GetParentMap() const {
-	return parent_map;
+	return getter<int>("parent_map");
 }
 
 void RPG::MapInfo::SetParentMap(int parent_map) {
-	this->parent_map = parent_map;
+	setter<int>("parent_map", parent_map);
 }
 
 int RPG::MapInfo::GetIndentation() const {
-	return indentation;
+	return getter<int>("indentation");
 }
 
 void RPG::MapInfo::SetIndentation(int indentation) {
-	this->indentation = indentation;
+	setter<int>("indentation", indentation);
 }
 
 int RPG::MapInfo::GetType() const {
-	return type;
+	return getter<int>("type");
 }
 
 void RPG::MapInfo::SetType(int type) {
-	this->type = type;
+	setter<int>("type", type);
 }
 
 int RPG::MapInfo::GetScrollbarX() const {
-	return scrollbar_x;
+	return getter<int>("scrollbar_x");
 }
 
 void RPG::MapInfo::SetScrollbarX(int scrollbar_x) {
-	this->scrollbar_x = scrollbar_x;
+	setter<int>("scrollbar_x", scrollbar_x);
 }
 
 int RPG::MapInfo::GetScrollbarY() const {
-	return scrollbar_y;
+	return getter<int>("scrollbar_y");
 }
 
 void RPG::MapInfo::SetScrollbarY(int scrollbar_y) {
-	this->scrollbar_y = scrollbar_y;
+	setter<int>("scrollbar_y", scrollbar_y);
 }
 
 bool RPG::MapInfo::GetExpandedNode() const {
-	return expanded_node;
+	return getter<bool>("expanded_node");
 }
 
 void RPG::MapInfo::SetExpandedNode(bool expanded_node) {
-	this->expanded_node = expanded_node;
+	setter<bool>("expanded_node", expanded_node);
 }
 
 int RPG::MapInfo::GetMusicType() const {
-	return music_type;
+	return getter<int>("music_type");
 }
 
 void RPG::MapInfo::SetMusicType(int music_type) {
-	this->music_type = music_type;
+	setter<int>("music_type", music_type);
 }
 
-const RPG::Music& RPG::MapInfo::GetMusic() const  {
-	return music;
+const RPG::Music& RPG::MapInfo::GetMusic() const {
+	return getter<const RPG::Music&>("music");
 }
 
 RPG::Music& RPG::MapInfo::GetMusic() {
-	return music;
+	return getter<RPG::Music&>("music");
 }
 
 void RPG::MapInfo::SetMusic(const RPG::Music& music) {
-	this->music = music;
+	setter<RPG::Music>("music", music);
 }
 
 int RPG::MapInfo::GetBackgroundType() const {
-	return background_type;
+	return getter<int>("background_type");
 }
 
 void RPG::MapInfo::SetBackgroundType(int background_type) {
-	this->background_type = background_type;
+	setter<int>("background_type", background_type);
 }
 
-const std::string& RPG::MapInfo::GetBackgroundName() const  {
-	return background_name;
+const std::string& RPG::MapInfo::GetBackgroundName() const {
+	return getter<const std::string&>("background_name");
 }
 
 std::string& RPG::MapInfo::GetBackgroundName() {
-	return background_name;
+	return getter<std::string&>("background_name");
 }
 
 void RPG::MapInfo::SetBackgroundName(const std::string& background_name) {
-	this->background_name = background_name;
+	setter<std::string>("background_name", background_name);
 }
 
 int RPG::MapInfo::GetTeleport() const {
-	return teleport;
+	return getter<int>("teleport");
 }
 
 void RPG::MapInfo::SetTeleport(int teleport) {
-	this->teleport = teleport;
+	setter<int>("teleport", teleport);
 }
 
 int RPG::MapInfo::GetEscape() const {
-	return escape;
+	return getter<int>("escape");
 }
 
 void RPG::MapInfo::SetEscape(int escape) {
-	this->escape = escape;
+	setter<int>("escape", escape);
 }
 
 int RPG::MapInfo::GetSave() const {
-	return save;
+	return getter<int>("save");
 }
 
 void RPG::MapInfo::SetSave(int save) {
-	this->save = save;
+	setter<int>("save", save);
 }
 
-const std::vector<RPG::Encounter>& RPG::MapInfo::GetEncounters() const  {
-	return encounters;
+const std::vector<RPG::Encounter>& RPG::MapInfo::GetEncounters() const {
+	return vector_getter<const std::vector<RPG::Encounter>&, RPG::Encounter>("encounters");
 }
 
 std::vector<RPG::Encounter>& RPG::MapInfo::GetEncounters() {
-	return encounters;
+	return vector_getter<std::vector<RPG::Encounter>&, RPG::Encounter>("encounters");
 }
 
 int RPG::MapInfo::GetEncounterSteps() const {
-	return encounter_steps;
+	return getter<int>("encounter_steps");
 }
 
 void RPG::MapInfo::SetEncounterSteps(int encounter_steps) {
-	this->encounter_steps = encounter_steps;
+	setter<int>("encounter_steps", encounter_steps);
 }
 
-const RPG::Rect& RPG::MapInfo::GetAreaRect() const  {
-	return area_rect;
+const RPG::Rect& RPG::MapInfo::GetAreaRect() const {
+	return getter<const RPG::Rect&>("area_rect");
 }
 
 RPG::Rect& RPG::MapInfo::GetAreaRect() {
-	return area_rect;
+	return getter<RPG::Rect&>("area_rect");
 }
 
 void RPG::MapInfo::SetAreaRect(const RPG::Rect& area_rect) {
-	this->area_rect = area_rect;
+	setter<RPG::Rect>("area_rect", area_rect);
 }
 

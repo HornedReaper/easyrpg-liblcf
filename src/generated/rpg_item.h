@@ -15,13 +15,14 @@
 // Headers
 #include <string>
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_itemanimation.h"
 
 /**
  * RPG::Item class.
  */
 namespace RPG {
-	class Item {
+	class Item : Base {
 	public:
 		enum Type {
 			Type_normal = 0,
@@ -47,6 +48,8 @@ namespace RPG {
 			Target_sequential = 3
 		};
 
+		Item() {}
+		Item(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		std::string description;

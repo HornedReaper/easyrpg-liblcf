@@ -15,6 +15,7 @@
 // Headers
 #include <string>
 #include <vector>
+#include "rpg_base.h"
 #include "rpg_battleranimationdata.h"
 #include "rpg_sound.h"
 
@@ -22,7 +23,7 @@
  * RPG::Skill class.
  */
 namespace RPG {
-	class Skill {
+	class Skill : Base {
 	public:
 		enum Type {
 			Type_normal = 0,
@@ -43,6 +44,8 @@ namespace RPG {
 			Scope_party = 4
 		};
 
+		Skill() {}
+		Skill(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		std::string description;

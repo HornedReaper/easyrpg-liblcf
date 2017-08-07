@@ -16,6 +16,7 @@
 #include <string>
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 #include "rpg_learning.h"
 #include "rpg_parameters.h"
 
@@ -23,8 +24,10 @@
  * RPG::Class class.
  */
 namespace RPG {
-	class Class {
+	class Class : Base {
 	public:
+		Class() {}
+		Class(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		bool two_weapon = false;

@@ -14,12 +14,13 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 
 /**
  * RPG::State class.
  */
 namespace RPG {
-	class State {
+	class State : Base {
 	public:
 		enum Persistence {
 			Persistence_ends = 0,
@@ -42,6 +43,8 @@ namespace RPG {
 			ChangeType_nothing = 2
 		};
 
+		State() {}
+		State(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		int type = 0;

@@ -15,14 +15,17 @@
 // Headers
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 #include "rpg_saveeventcommands.h"
 
 /**
  * RPG::SaveEventData class.
  */
 namespace RPG {
-	class SaveEventData {
+	class SaveEventData : Base {
 	public:
+		SaveEventData() {}
+		SaveEventData(rapidjson::Value& json_values);
 		std::vector<SaveEventCommands> commands;
 		bool show_message = false;
 		int unknown_0b_escape = 0;

@@ -14,18 +14,21 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 
 /**
  * RPG::Attribute class.
  */
 namespace RPG {
-	class Attribute {
+	class Attribute : Base {
 	public:
 		enum Type {
 			Type_physical = 0,
 			Type_magical = 1
 		};
 
+		Attribute() {}
+		Attribute(rapidjson::Value& json_values);
 		int ID = 0;
 		std::string name;
 		int type = 0;

@@ -14,13 +14,16 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 
 /**
  * RPG::Music class.
  */
 namespace RPG {
-	class Music {
+	class Music : Base {
 	public:
+		Music() {}
+		Music(rapidjson::Value& json_values);
 		std::string name;
 		int fadein = 0;
 		int volume = 100;

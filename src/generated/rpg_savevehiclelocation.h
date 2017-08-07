@@ -14,14 +14,17 @@
 
 // Headers
 #include <string>
+#include "rpg_base.h"
 #include "rpg_moveroute.h"
 
 /**
  * RPG::SaveVehicleLocation class.
  */
 namespace RPG {
-	class SaveVehicleLocation {
+	class SaveVehicleLocation : Base {
 	public:
+		SaveVehicleLocation() {}
+		SaveVehicleLocation(rapidjson::Value& json_values);
 		bool active = true;
 		int map_id = -1;
 		int position_x = -1;

@@ -12,29 +12,32 @@
 // Headers
 #include "rpg_moveroute.h"
 
+RPG::MoveRoute::MoveRoute(rapidjson::Value& json_values) {
+	this->json_values = &json_values;
+}
 
 
-const std::vector<RPG::MoveCommand>& RPG::MoveRoute::GetMoveCommands() const  {
-	return move_commands;
+const std::vector<RPG::MoveCommand>& RPG::MoveRoute::GetMoveCommands() const {
+	return vector_getter<const std::vector<RPG::MoveCommand>&, RPG::MoveCommand>("move_commands");
 }
 
 std::vector<RPG::MoveCommand>& RPG::MoveRoute::GetMoveCommands() {
-	return move_commands;
+	return vector_getter<std::vector<RPG::MoveCommand>&, RPG::MoveCommand>("move_commands");
 }
 
 bool RPG::MoveRoute::GetRepeat() const {
-	return repeat;
+	return getter<bool>("repeat");
 }
 
 void RPG::MoveRoute::SetRepeat(bool repeat) {
-	this->repeat = repeat;
+	setter<bool>("repeat", repeat);
 }
 
 bool RPG::MoveRoute::GetSkippable() const {
-	return skippable;
+	return getter<bool>("skippable");
 }
 
 void RPG::MoveRoute::SetSkippable(bool skippable) {
-	this->skippable = skippable;
+	setter<bool>("skippable", skippable);
 }
 

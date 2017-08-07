@@ -14,13 +14,16 @@
 
 // Headers
 #include "reader_types.h"
+#include "rpg_base.h"
 
 /**
  * RPG::Equipment class.
  */
 namespace RPG {
-	class Equipment {
+	class Equipment : Base {
 	public:
+		Equipment() {}
+		Equipment(rapidjson::Value& json_values);
 		int16_t weapon_id = 0;
 		int16_t shield_id = 0;
 		int16_t armor_id = 0;

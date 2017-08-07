@@ -15,13 +15,16 @@
 // Headers
 #include <vector>
 #include "reader_types.h"
+#include "rpg_base.h"
 
 /**
  * RPG::Parameters class.
  */
 namespace RPG {
-	class Parameters {
+	class Parameters : Base {
 	public:
+		Parameters() {}
+		Parameters(rapidjson::Value& json_values);
 		void Setup(int final_level);
 		std::vector<int16_t> maxhp;
 		std::vector<int16_t> maxsp;
