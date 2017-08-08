@@ -24,18 +24,6 @@ namespace RPG {
 	public:
 		SaveTitle() {}
 		SaveTitle(rapidjson::Value& json_values);
-		double timestamp = 0;
-		std::string hero_name;
-		int hero_level = 0;
-		int hero_hp = 0;
-		std::string face1_name;
-		int face1_id = 0;
-		std::string face2_name;
-		int face2_id = 0;
-		std::string face3_name;
-		int face3_id = 0;
-		std::string face4_name;
-		int face4_id = 0;
 		double GetTimestamp() const;
 		void SetTimestamp(double timestamp);
 

@@ -54,21 +54,6 @@ namespace RPG {
 
 		BattleCommands() {}
 		BattleCommands(rapidjson::Value& json_values);
-		int placement = 0;
-		int death_handler1 = 0;
-		int row = 0;
-		int battle_type = 0;
-		int unknown_09 = 0;
-		std::vector<BattleCommand> commands;
-		int death_handler2 = 0;
-		int death_event = 0;
-		int window_size = 0;
-		int transparency = 0;
-		bool teleport = false;
-		int teleport_id = 0;
-		int teleport_x = 0;
-		int teleport_y = 0;
-		int teleport_face = 0;
 		int GetPlacement() const;
 		void SetPlacement(int placement);
 

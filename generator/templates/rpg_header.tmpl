@@ -57,8 +57,6 @@ namespace RPG {
 			bool {{ flag.field }};
 		{%- endfor %}
 		} {{ field.name }};
-		{%- else %}
-		{{ field|cpp_type(prefix=False) }} {{ field.name }}{{ field|pod_default }};
 		{%- endif %}
 	{%- endif %}
 	{%- endfor %}

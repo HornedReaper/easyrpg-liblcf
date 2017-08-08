@@ -24,11 +24,6 @@ namespace RPG {
 		SaveTarget() {}
 		SaveTarget(rapidjson::Value& json_values);
 		int ID = 0;
-		int map_id = 0;
-		int map_x = 0;
-		int map_y = 0;
-		bool switch_on = false;
-		int switch_id = 0;
 		int GetMapId() const;
 		void SetMapId(int map_id);
 

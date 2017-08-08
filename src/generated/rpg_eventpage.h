@@ -78,21 +78,6 @@ namespace RPG {
 		EventPage() {}
 		EventPage(rapidjson::Value& json_values);
 		int ID = 0;
-		EventPageCondition condition;
-		std::string character_name;
-		int character_index = 0;
-		int character_direction = 2;
-		int character_pattern = 1;
-		bool translucent = false;
-		int move_type = 1;
-		int move_frequency = 3;
-		int trigger = 0;
-		int layer = 0;
-		bool overlap_forbidden = false;
-		int animation_type = 0;
-		int move_speed = 3;
-		MoveRoute move_route;
-		std::vector<EventCommand> event_commands;
 		const EventPageCondition& GetCondition() const;
 		EventPageCondition& GetCondition();
 		void SetCondition(const EventPageCondition& condition);

@@ -24,10 +24,6 @@ namespace RPG {
 	public:
 		Sound() {}
 		Sound(rapidjson::Value& json_values);
-		std::string name;
-		int volume = 100;
-		int tempo = 100;
-		int balance = 50;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);

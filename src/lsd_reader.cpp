@@ -9,7 +9,6 @@
 
 #include <cmath>
 #include "lsd_reader.h"
-#include "lsd_chunks.h"
 #include "ldb_reader.h"
 #include "rpg_save.h"
 #include "reader_util.h"
@@ -28,7 +27,7 @@ std::time_t LSD_Reader::ToUnixTimestamp(double const ms) {
 double LSD_Reader::GenerateTimestamp(std::time_t const t) {
 	return ToTDateTime(t);
 }
-
+#if 0
 std::unique_ptr<RPG::Save> LSD_Reader::Load(const std::string& filename, const std::string &encoding) {
 	LcfReader reader(filename, encoding);
 	if (!reader.IsOk()) {
@@ -88,3 +87,4 @@ std::unique_ptr<RPG::Save> LSD_Reader::LoadXml(const std::string& filename) {
 	reader.Parse();
 	return std::unique_ptr<RPG::Save>(save);
 }
+#endif

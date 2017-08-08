@@ -26,12 +26,6 @@ namespace RPG {
 		Parameters() {}
 		Parameters(rapidjson::Value& json_values);
 		void Setup(int final_level);
-		std::vector<int16_t> maxhp;
-		std::vector<int16_t> maxsp;
-		std::vector<int16_t> attack;
-		std::vector<int16_t> defense;
-		std::vector<int16_t> spirit;
-		std::vector<int16_t> agility;
 		const std::vector<int16_t>& GetMaxhp() const;
 		std::vector<int16_t>& GetMaxhp();
 

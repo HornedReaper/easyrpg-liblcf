@@ -12,7 +12,7 @@
 
 namespace Data {
 	RPG::Database data;
-
+/*
 	std::vector<RPG::Actor>& actors = data.actors;
 	std::vector<RPG::Skill>& skills = data.skills;
 	std::vector<RPG::Item>& items = data.items;
@@ -31,12 +31,12 @@ namespace Data {
 	RPG::System& system = data.system;
 	std::vector<RPG::Switch>& switches = data.switches;
 	std::vector<RPG::Variable>& variables = data.variables;
-
+*/
 	RPG::TreeMap treemap;
 }
 
 void Data::Clear() {
-	actors.clear();
+	/*actors.clear();
 	skills.clear();
 	items.clear();
 	enemies.clear();
@@ -56,5 +56,5 @@ void Data::Clear() {
 	variables.clear();
 	treemap.active_node = 0;
 	treemap.maps.clear();
-	treemap.tree_order.clear();
+	treemap.tree_order.clear();*/
 }

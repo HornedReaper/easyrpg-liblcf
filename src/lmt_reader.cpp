@@ -6,7 +6,7 @@
  * For the full copyright and license information, please view the COPYING
  * file that was distributed with this source code.
  */
-
+#if 0
 #include "lmt_reader.h"
 #include "lmt_chunks.h"
 #include "data.h"
@@ -67,3 +67,4 @@ bool LMT_Reader::LoadXml(const std::string& filename) {
 	reader.Parse();
 	return true;
 }
+#endif

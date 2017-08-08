@@ -255,7 +255,7 @@ int main() {
 	const std::string& name2 = actor.GetName();
 
 	auto& skills = actor.GetSkills();
-	auto& l = skills[0].level;
+	//auto& l = skills[0].GetSk;
 
 	auto& b = dbb.GetActors();
 

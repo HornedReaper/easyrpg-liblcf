@@ -29,20 +29,6 @@ namespace RPG {
 		Class() {}
 		Class(rapidjson::Value& json_values);
 		int ID = 0;
-		std::string name;
-		bool two_weapon = false;
-		bool lock_equipment = false;
-		bool auto_battle = false;
-		bool super_guard = false;
-		Parameters parameters;
-		int exp_base = 300;
-		int exp_inflation = 300;
-		int exp_correction = 0;
-		int battler_animation = 0;
-		std::vector<Learning> skills;
-		std::vector<uint8_t> state_ranks;
-		std::vector<uint8_t> attribute_ranks;
-		std::vector<uint32_t> battle_commands;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);

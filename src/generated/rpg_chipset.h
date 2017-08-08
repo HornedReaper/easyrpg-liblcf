@@ -33,13 +33,6 @@ namespace RPG {
 		Chipset(rapidjson::Value& json_values);
 		void Init();
 		int ID = 0;
-		std::string name;
-		std::string chipset_name;
-		std::vector<int16_t> terrain_data;
-		std::vector<uint8_t> passable_data_lower;
-		std::vector<uint8_t> passable_data_upper;
-		int animation_type = 0;
-		int animation_speed = 0;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);

@@ -23,18 +23,6 @@ namespace RPG {
 	public:
 		Start() {}
 		Start(rapidjson::Value& json_values);
-		int party_map_id = 0;
-		int party_x = 0;
-		int party_y = 0;
-		int boat_map_id = 0;
-		int boat_x = 0;
-		int boat_y = 0;
-		int ship_map_id = 0;
-		int ship_x = 0;
-		int ship_y = 0;
-		int airship_map_id = 0;
-		int airship_x = 0;
-		int airship_y = 0;
 		int GetPartyMapId() const;
 		void SetPartyMapId(int party_map_id);
 

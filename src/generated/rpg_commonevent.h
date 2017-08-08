@@ -33,11 +33,6 @@ namespace RPG {
 		CommonEvent() {}
 		CommonEvent(rapidjson::Value& json_values);
 		int ID = 0;
-		std::string name;
-		int trigger = 0;
-		bool switch_flag = false;
-		int switch_id = 1;
-		std::vector<EventCommand> event_commands;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);

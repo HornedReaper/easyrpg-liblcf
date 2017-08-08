@@ -27,8 +27,6 @@ namespace RPG {
 		TroopPage() {}
 		TroopPage(rapidjson::Value& json_values);
 		int ID = 0;
-		TroopPageCondition condition;
-		std::vector<EventCommand> event_commands;
 		const TroopPageCondition& GetCondition() const;
 		TroopPageCondition& GetCondition();
 		void SetCondition(const TroopPageCondition& condition);

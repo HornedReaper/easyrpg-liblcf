@@ -33,10 +33,6 @@ namespace RPG {
 		BattlerAnimation() {}
 		BattlerAnimation(rapidjson::Value& json_values);
 		int ID = 0;
-		std::string name;
-		int speed = 0;
-		std::vector<BattlerAnimationExtension> base_data;
-		std::vector<BattlerAnimationExtension> weapon_data;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);

@@ -41,15 +41,6 @@ namespace RPG {
 			bool timer;
 			bool timer2;
 		} flags;
-		int switch_a_id = 1;
-		int switch_b_id = 1;
-		int variable_id = 1;
-		int variable_value = 0;
-		int item_id = 1;
-		int actor_id = 1;
-		int timer_sec = 0;
-		int timer2_sec = 0;
-		int compare_operator = 1;
 		const EventPageCondition::Flags& GetFlags() const;
 		EventPageCondition::Flags& GetFlags();
 		void SetFlags(const EventPageCondition::Flags& flags);

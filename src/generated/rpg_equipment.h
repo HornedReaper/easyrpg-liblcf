@@ -13,7 +13,6 @@
 #define LCF_RPG_EQUIPMENT_H
 
 // Headers
-#include "reader_types.h"
 #include "rpg_base.h"
 
 /**
@@ -24,11 +23,6 @@ namespace RPG {
 	public:
 		Equipment() {}
 		Equipment(rapidjson::Value& json_values);
-		int16_t weapon_id = 0;
-		int16_t shield_id = 0;
-		int16_t armor_id = 0;
-		int16_t helmet_id = 0;
-		int16_t accessory_id = 0;
 		const int16_t& GetWeaponId() const;
 		int16_t& GetWeaponId();
 		void SetWeaponId(const int16_t& weapon_id);

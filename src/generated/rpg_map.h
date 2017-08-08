@@ -44,37 +44,6 @@ namespace RPG {
 
 		Map() {}
 		Map(rapidjson::Value& json_values);
-		int chipset_id = 1;
-		int width = 20;
-		int height = 15;
-		int scroll_type = 0;
-		bool parallax_flag = false;
-		std::string parallax_name;
-		bool parallax_loop_x = false;
-		bool parallax_loop_y = false;
-		bool parallax_auto_loop_x = false;
-		int parallax_sx = 0;
-		bool parallax_auto_loop_y = false;
-		int parallax_sy = 0;
-		bool generator_flag = false;
-		int generator_mode = 0;
-		bool top_level = false;
-		int generator_tiles = 0;
-		int generator_width = 4;
-		int generator_height = 1;
-		bool generator_surround = true;
-		bool generator_upper_wall = true;
-		bool generator_floor_b = true;
-		bool generator_floor_c = true;
-		bool generator_extra_b = true;
-		bool generator_extra_c = true;
-		std::vector<uint32_t> generator_x;
-		std::vector<uint32_t> generator_y;
-		std::vector<int16_t> generator_tile_ids;
-		std::vector<int16_t> lower_layer;
-		std::vector<int16_t> upper_layer;
-		std::vector<Event> events;
-		int save_count = 0;
 		int GetChipsetId() const;
 		void SetChipsetId(int chipset_id);
 

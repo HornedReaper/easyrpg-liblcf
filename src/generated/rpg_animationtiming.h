@@ -36,14 +36,6 @@ namespace RPG {
 		AnimationTiming() {}
 		AnimationTiming(rapidjson::Value& json_values);
 		int ID = 0;
-		int frame = 0;
-		Sound se;
-		int flash_scope = 0;
-		int flash_red = 31;
-		int flash_green = 31;
-		int flash_blue = 31;
-		int flash_power = 31;
-		int screen_shake = 0;
 		int GetFrame() const;
 		void SetFrame(int frame);
 

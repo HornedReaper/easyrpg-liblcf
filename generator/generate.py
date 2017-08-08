@@ -283,28 +283,28 @@ def needs_ctor(struct_name):
 def generate():
     if not os.path.exists(tmp_dir):
         os.mkdir(tmp_dir)
-    for filetype in ['ldb','lmt','lmu','lsd']:
-        filepath = os.path.join(tmp_dir, '%s_chunks.h' % filetype)
+    #for filetype in ['ldb','lmt','lmu','lsd']:
+    #    filepath = os.path.join(tmp_dir, '%s_chunks.h' % filetype)
 
-        with open(filepath, 'w') as f:
-            f.write(chunk_tmpl.render(
-                type=filetype
-            ))
+    #    with open(filepath, 'w') as f:
+    #        f.write(chunk_tmpl.render(
+    #            type=filetype
+    #        ))
 
     for filetype, structlist in structs.items():
         for struct in structlist:
             filename = struct.name.lower()
 
-            if struct.hasid is not None:
-                if struct.name not in sfields:
-                    continue
+            #if struct.hasid is not None:
+            #    if struct.name not in sfields:
+            #        continue
 
-                filepath = os.path.join(tmp_dir, '%s_%s.cpp' % (filetype, filename))
-                with open(filepath, 'w') as f:
-                    f.write(lcf_struct_tmpl.render(
-                        struct_name=struct.name,
-                        type=filetype
-                    ))
+            #    filepath = os.path.join(tmp_dir, '%s_%s.cpp' % (filetype, filename))
+            #    with open(filepath, 'w') as f:
+            #        f.write(lcf_struct_tmpl.render(
+            #            struct_name=struct.name,
+            #            type=filetype
+            #        ))
 
                 #if needs_ctor(struct.name):
             filepath = os.path.join(tmp_dir, 'rpg_%s.cpp' % filename)
@@ -321,13 +321,13 @@ def generate():
                     has_id=struct.hasid
                 ))
 
-            if struct.name in flags:
-                filepath = os.path.join(tmp_dir, '%s_%s_flags.cpp' % (filetype, filename))
-                with open(filepath, 'w') as f:
-                    f.write(flags_tmpl.render(
-                        struct_name=struct.name,
-                        type=filetype
-                    ))
+            #if struct.name in flags:
+            #    filepath = os.path.join(tmp_dir, '%s_%s_flags.cpp' % (filetype, filename))
+            #    with open(filepath, 'w') as f:
+            #        f.write(flags_tmpl.render(
+            #            struct_name=struct.name,
+            #            type=filetype
+            #        ))
 
     filepath = os.path.join(tmp_dir, 'lcf_database.h')
     with open(filepath, 'w') as f:

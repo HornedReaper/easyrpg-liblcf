@@ -28,12 +28,6 @@ namespace RPG {
 		Troop() {}
 		Troop(rapidjson::Value& json_values);
 		int ID = 0;
-		std::string name;
-		std::vector<TroopMember> members;
-		bool auto_alignment = false;
-		std::vector<bool> terrain_set;
-		bool appear_randomly = false;
-		std::vector<TroopPage> pages;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);

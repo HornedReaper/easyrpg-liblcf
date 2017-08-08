@@ -24,10 +24,6 @@ namespace RPG {
 		TroopMember() {}
 		TroopMember(rapidjson::Value& json_values);
 		int ID = 0;
-		int enemy_id = 1;
-		int x = 0;
-		int y = 0;
-		bool invisible = false;
 		int GetEnemyId() const;
 		void SetEnemyId(int enemy_id);
 

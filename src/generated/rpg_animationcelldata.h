@@ -24,16 +24,6 @@ namespace RPG {
 		AnimationCellData() {}
 		AnimationCellData(rapidjson::Value& json_values);
 		int ID = 0;
-		int valid = 1;
-		int cell_id = 0;
-		int x = 0;
-		int y = 0;
-		int zoom = 100;
-		int tone_red = 100;
-		int tone_green = 100;
-		int tone_blue = 100;
-		int tone_gray = 100;
-		int transparency = 0;
 		int GetValid() const;
 		void SetValid(int valid);
 

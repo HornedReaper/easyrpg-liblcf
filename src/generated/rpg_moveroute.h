@@ -25,9 +25,6 @@ namespace RPG {
 	public:
 		MoveRoute() {}
 		MoveRoute(rapidjson::Value& json_values);
-		std::vector<MoveCommand> move_commands;
-		bool repeat = true;
-		bool skippable = false;
 
 		const std::vector<MoveCommand>& GetMoveCommands() const;
 		std::vector<MoveCommand>& GetMoveCommands();

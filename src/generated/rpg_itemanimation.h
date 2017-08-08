@@ -40,15 +40,6 @@ namespace RPG {
 		ItemAnimation() {}
 		ItemAnimation(rapidjson::Value& json_values);
 		int ID = 0;
-		int type = 0;
-		int weapon_anim = 0;
-		int movement = 0;
-		int after_image = 0;
-		int attacks = 0;
-		bool ranged = false;
-		int ranged_anim = 0;
-		int ranged_speed = 0;
-		int battle_anim = 0;
 		int GetType() const;
 		void SetType(int type);
 

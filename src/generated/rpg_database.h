@@ -42,25 +42,6 @@ namespace RPG {
 	public:
 		Database() {}
 		Database(rapidjson::Value& json_values);
-		std::vector<Actor> actors;
-		std::vector<Skill> skills;
-		std::vector<Item> items;
-		std::vector<Enemy> enemies;
-		std::vector<Troop> troops;
-		std::vector<Terrain> terrains;
-		std::vector<Attribute> attributes;
-		std::vector<State> states;
-		std::vector<Animation> animations;
-		std::vector<Chipset> chipsets;
-		Terms terms;
-		System system;
-		std::vector<Switch> switches;
-		std::vector<Variable> variables;
-		std::vector<CommonEvent> commonevents;
-		int version = 0;
-		BattleCommands battlecommands;
-		std::vector<Class> classes;
-		std::vector<BattlerAnimation> battleranimations;
 		const std::vector<Actor>& GetActors() const;
 		std::vector<Actor>& GetActors();
 

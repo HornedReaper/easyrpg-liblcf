@@ -24,13 +24,6 @@ namespace RPG {
 		TestBattler() {}
 		TestBattler(rapidjson::Value& json_values);
 		int ID = 0;
-		int actor_id = 1;
-		int level = 1;
-		int weapon_id = 0;
-		int shield_id = 0;
-		int armor_id = 0;
-		int helmet_id = 0;
-		int accessory_id = 0;
 		int GetActorId() const;
 		void SetActorId(int actor_id);
 

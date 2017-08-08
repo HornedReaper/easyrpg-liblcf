@@ -24,10 +24,6 @@ namespace RPG {
 	public:
 		Rect() {}
 		Rect(rapidjson::Value& json_values);
-		uint32_t l = 0;
-		uint32_t t = 0;
-		uint32_t r = 0;
-		uint32_t b = 0;
 		uint32_t GetL() const;
 		void SetL(uint32_t l);
 

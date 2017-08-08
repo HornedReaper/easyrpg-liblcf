@@ -26,7 +26,6 @@ namespace RPG {
 		AnimationFrame() {}
 		AnimationFrame(rapidjson::Value& json_values);
 		int ID = 0;
-		std::vector<AnimationCellData> cells;
 		const std::vector<AnimationCellData>& GetCells() const;
 		std::vector<AnimationCellData>& GetCells();
 

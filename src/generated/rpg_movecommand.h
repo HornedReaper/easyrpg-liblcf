@@ -71,11 +71,6 @@ namespace RPG {
 
 		MoveCommand() {}
 		MoveCommand(rapidjson::Value& json_values);
-		int command_id = 0;
-		std::string parameter_string;
-		int parameter_a = 0;
-		int parameter_b = 0;
-		int parameter_c = 0;
 		int GetCommandId() const;
 		void SetCommandId(int command_id);
 

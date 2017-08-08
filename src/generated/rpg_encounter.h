@@ -24,7 +24,6 @@ namespace RPG {
 		Encounter() {}
 		Encounter(rapidjson::Value& json_values);
 		int ID = 0;
-		int troop_id = 0;
 		int GetTroopId() const;
 		void SetTroopId(int troop_id);
 

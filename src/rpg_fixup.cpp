@@ -16,7 +16,7 @@
 #include "data.h"
 
 void RPG::SaveActor::Fixup(int actor_id) {
-	ID = actor_id;
+	/*ID = actor_id;
 
 	const RPG::Actor& actor = Data::actors[actor_id - 1];
 
@@ -37,11 +37,11 @@ void RPG::SaveActor::Fixup(int actor_id) {
 	}
 	if (class_id == -1) {
 		class_id = actor.class_id;
-	}
+	}*/
 }
 
 void RPG::SaveMapEvent::Fixup(const RPG::EventPage& page) {
-	if (move_frequency == -1) {
+	/*if (move_frequency == -1) {
 		move_frequency = page.move_frequency;
 	}
 	if (move_speed == -1) {
@@ -52,11 +52,11 @@ void RPG::SaveMapEvent::Fixup(const RPG::EventPage& page) {
 	}
 	if (sprite_id == -1) {
 		sprite_id = page.character_index;
-	}
+	}*/
 }
 
 void RPG::SaveSystem::Fixup() {
-	const RPG::System& system = Data::system;
+	/*const RPG::System& system = Data::system;
 
 	if (graphics_name.empty()) {
 		graphics_name = system.system_name;
@@ -126,11 +126,11 @@ void RPG::SaveSystem::Fixup() {
 	}
 	if (item_se.name.empty()) {
 		item_se.name = system.item_se.name;
-	}
+	}*/
 }
 
 void RPG::SaveMapInfo::Fixup(const RPG::Map& map) {
-	if (chipset_id <= 0) {
+	/*if (chipset_id <= 0) {
 		chipset_id = map.chipset_id;
-	}
+	}*/
 }

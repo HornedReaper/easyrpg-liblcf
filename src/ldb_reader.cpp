@@ -6,7 +6,7 @@
  * For the full copyright and license information, please view the COPYING
  * file that was distributed with this source code.
  */
-
+#if 0
 #include "ldb_reader.h"
 #include "ldb_chunks.h"
 #include "data.h"
@@ -75,3 +75,4 @@ bool LDB_Reader::LoadXml(const std::string& filename) {
 	reader.Parse();
 	return true;
 }
+#endif

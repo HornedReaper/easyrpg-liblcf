@@ -24,8 +24,6 @@ namespace RPG {
 		Learning() {}
 		Learning(rapidjson::Value& json_values);
 		int ID = 0;
-		int level = 1;
-		int skill_id = 1;
 		int GetLevel() const;
 		void SetLevel(int level);
 

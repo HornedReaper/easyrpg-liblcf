@@ -90,8 +90,8 @@ std::vector<std::string> ReaderUtil::DetectEncodings(const std::string& database
 	std::ostringstream text;
 
 	// Populate Data::terms and Data::system or will empty by default even if load fails
-	LDB_Reader::Load(database_file, "");
-
+	//LDB_Reader::Load(database_file, "");
+/*
 	text <<
 	Data::terms.menu_save <<
 	Data::terms.menu_quit <<
@@ -136,7 +136,7 @@ std::vector<std::string> ReaderUtil::DetectEncodings(const std::string& database
 	Data::system.system2_name <<
 	Data::system.battletest_background <<
 	Data::system.frame_name;
-
+*/
 	if (!text.str().empty()) {
 		UErrorCode status = U_ZERO_ERROR;
 		UCharsetDetector* detector = ucsdet_open(&status);
@@ -279,7 +279,7 @@ std::string ReaderUtil::Recode(const std::string& str_to_encode,
 	std::string result_str;
 
 	conv = ucnv_open(src_enc_str.c_str(), &status);
-	
+
 	if (status != U_ZERO_ERROR && status != U_AMBIGUOUS_ALIAS_WARNING) {
 		fprintf(stderr, "liblcf:  ucnv_open() error for source encoding \"%s\": %s\n", src_enc_str.c_str(), u_errorName(status));
 		return std::string();

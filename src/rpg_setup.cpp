@@ -19,6 +19,7 @@
 #include "data.h"
 
 void RPG::SaveActor::Setup(int actor_id) {
+/*
 	const RPG::Actor& actor = Data::actors[actor_id - 1];
 	ID = actor.ID;
 	name = actor.name;
@@ -56,20 +57,26 @@ void RPG::SaveActor::Setup(int actor_id) {
 	lock_equipment = actor.lock_equipment;
 	auto_battle = actor.auto_battle;
 	super_guard = actor.super_guard;
+ */
 }
 
 void RPG::SaveInventory::Setup() {
+	/*
 	party = Data::system.party;
 	party_size = party.size();
+	 */
 }
 
 void RPG::SaveMapEvent::Setup(const RPG::Event& event) {
+	/*
 	ID = event.ID;
 	position_x = event.x;
 	position_y = event.y;
+	 */
 }
 
 void RPG::SaveMapInfo::Setup() {
+	/*
 	position_x = 0;
 	position_y = 0;
 	lower_tiles.resize(144);
@@ -78,25 +85,26 @@ void RPG::SaveMapInfo::Setup() {
 		lower_tiles[i] = i;
 		upper_tiles[i] = i;
 	}
+	 */
 }
 
 void RPG::SaveMapInfo::Setup(const RPG::Map& map) {
-	chipset_id = map.chipset_id;
+	/*chipset_id = map.chipset_id;
 	parallax_name = map.parallax_name;
 	parallax_horz = map.parallax_loop_x;
 	parallax_vert = map.parallax_loop_y;
 	parallax_horz_auto = map.parallax_auto_loop_x;
 	parallax_vert_auto = map.parallax_auto_loop_y;
 	parallax_horz_speed = map.parallax_sx;
-	parallax_vert_speed = map.parallax_sy;
+	parallax_vert_speed = map.parallax_sy;*/
 }
 
 void RPG::SaveMapInfo::Setup(const RPG::MapInfo& map_info) {
-	encounter_rate = map_info.encounter_steps;
+	//encounter_rate = map_info.encounter_steps;
 }
 
 void RPG::SaveSystem::Setup() {
-	const RPG::System& system = Data::system;
+	/*const RPG::System& system = Data::system;
 	screen = 0;
 	frame_count = 0;
 	graphics_name = system.system_name;
@@ -150,11 +158,11 @@ void RPG::SaveSystem::Setup() {
 	menu_allowed = true;
 	background = "";
 	save_count = 0;
-	save_slot = -1;
+	save_slot = -1;*/
 }
 
 void RPG::Save::Setup() {
-	system.Setup();
+	/*system.Setup();
 	screen = RPG::SaveScreen();
 	pictures.clear();
 	pictures.resize(50);
@@ -165,11 +173,11 @@ void RPG::Save::Setup() {
 	actors.resize(Data::actors.size());
 	for (int i = 1; i <= (int) actors.size(); i++)
 		actors[i - 1].Setup(i);
-	map_info.Setup();
+	map_info.Setup();*/
 }
 
 void RPG::Actor::Setup() {
-	if (Data::system.ldb_id == 2003) {
+	/*if (Data::system.ldb_id == 2003) {
 		final_level = final_level == -1 ? 99 : final_level;
 		exp_base = exp_base == -1 ? 300 : exp_base;
 		exp_inflation = exp_inflation == -1 ? 300 : exp_inflation;
@@ -179,25 +187,25 @@ void RPG::Actor::Setup() {
 		exp_base = exp_base == -1 ? 30 : exp_base;
 		exp_inflation = exp_inflation == -1 ? 30 : exp_inflation;
 	}
-	parameters.Setup(final_level);
+	parameters.Setup(final_level);*/
 }
 
 void RPG::MapInfo::Init() {
-	music.name = "(OFF)";
+	//music.name = "(OFF)";
 }
 
 void RPG::Chipset::Init() {
-	terrain_data.resize(162, 1);
+	/*terrain_data.resize(162, 1);
 	passable_data_lower.resize(162, 15);
 	passable_data_upper.resize(144, 15);
-	passable_data_upper.front() = 31;
+	passable_data_upper.front() = 31;*/
 }
 
 void RPG::Parameters::Setup(int final_level) {
-	maxhp.resize(final_level, 1);
+	/*maxhp.resize(final_level, 1);
 	maxsp.resize(final_level, 0);
 	attack.resize(final_level, 1);
 	defense.resize(final_level, 1);
 	spirit.resize(final_level, 1);
-	agility.resize(final_level, 1);
+	agility.resize(final_level, 1);*/
 }

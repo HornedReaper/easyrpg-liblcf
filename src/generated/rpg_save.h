@@ -37,21 +37,6 @@ namespace RPG {
 		Save() {}
 		Save(rapidjson::Value& json_values);
 		void Setup();
-		SaveTitle title;
-		SaveSystem system;
-		SaveScreen screen;
-		std::vector<SavePicture> pictures;
-		SavePartyLocation party_location;
-		SaveVehicleLocation boat_location;
-		SaveVehicleLocation ship_location;
-		SaveVehicleLocation airship_location;
-		std::vector<SaveActor> actors;
-		SaveInventory inventory;
-		std::vector<SaveTarget> targets;
-		SaveMapInfo map_info;
-		int panorama_data = -1;
-		SaveEventData events;
-		std::vector<SaveCommonEvent> common_events;
 		const SaveTitle& GetTitle() const;
 		SaveTitle& GetTitle();
 		void SetTitle(const SaveTitle& title);

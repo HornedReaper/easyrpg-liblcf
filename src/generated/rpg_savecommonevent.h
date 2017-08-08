@@ -25,7 +25,6 @@ namespace RPG {
 		SaveCommonEvent() {}
 		SaveCommonEvent(rapidjson::Value& json_values);
 		int ID = 0;
-		SaveEventData event_data;
 		const SaveEventData& GetEventData() const;
 		SaveEventData& GetEventData();
 		void SetEventData(const SaveEventData& event_data);

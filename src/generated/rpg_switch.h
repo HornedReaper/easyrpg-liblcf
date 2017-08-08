@@ -25,7 +25,6 @@ namespace RPG {
 		Switch() {}
 		Switch(rapidjson::Value& json_values);
 		int ID = 0;
-		std::string name;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);

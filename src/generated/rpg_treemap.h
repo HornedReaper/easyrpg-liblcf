@@ -26,10 +26,6 @@ namespace RPG {
 	public:
 		TreeMap() {}
 		TreeMap(rapidjson::Value& json_values);
-		std::vector<MapInfo> maps;
-		std::vector<int> tree_order;
-		int active_node = 0;
-		Start start;
 		const std::vector<MapInfo>& GetMaps() const;
 		std::vector<MapInfo>& GetMaps();
 

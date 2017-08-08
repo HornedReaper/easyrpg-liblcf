@@ -50,19 +50,6 @@ namespace RPG {
 		EnemyAction() {}
 		EnemyAction(rapidjson::Value& json_values);
 		int ID = 0;
-		int kind = 0;
-		int basic = 1;
-		int skill_id = 1;
-		int enemy_id = 1;
-		int condition_type = 0;
-		int condition_param1 = 0;
-		int condition_param2 = 0;
-		int switch_id = 1;
-		bool switch_on = false;
-		int switch_on_id = 1;
-		bool switch_off = false;
-		int switch_off_id = 1;
-		int rating = 50;
 		int GetKind() const;
 		void SetKind(int kind);
 

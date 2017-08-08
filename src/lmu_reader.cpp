@@ -6,7 +6,7 @@
  * For the full copyright and license information, please view the COPYING
  * file that was distributed with this source code.
  */
-
+#if 0
 #include "lmu_reader.h"
 #include "lmu_chunks.h"
 #include "reader_lcf.h"
@@ -73,3 +73,4 @@ std::unique_ptr<RPG::Map> LMU_Reader::LoadXml(const std::string& filename) {
 	return std::unique_ptr<RPG::Map>(map);
 }
 
+#endif

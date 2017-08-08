@@ -38,13 +38,6 @@ namespace RPG {
 		Animation() {}
 		Animation(rapidjson::Value& json_values);
 		int ID = 0;
-		std::string name;
-		std::string animation_name;
-		bool large = false;
-		std::vector<AnimationTiming> timings;
-		int scope = 0;
-		int position = 2;
-		std::vector<AnimationFrame> frames;
 		const std::string& GetName() const;
 		std::string& GetName();
 		void SetName(const std::string& name);

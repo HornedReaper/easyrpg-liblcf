@@ -27,13 +27,6 @@ namespace RPG {
 		SaveEventCommands() {}
 		SaveEventCommands(rapidjson::Value& json_values);
 		int ID = 0;
-		int commands_size = 0;
-		std::vector<EventCommand> commands;
-		int current_command = 0;
-		int event_id = 0;
-		bool actioned = false;
-		int unknown_15_subcommand_path_size = -1;
-		std::vector<uint8_t> unknown_16_subcommand_path;
 		int GetCommandsSize() const;
 		void SetCommandsSize(int commands_size);
 
