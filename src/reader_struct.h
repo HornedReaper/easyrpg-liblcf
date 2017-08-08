@@ -956,6 +956,194 @@ struct LcfStruct<std::vector<bool>> {
 	}*/
 };
 
+template<>
+struct LcfStruct<RPG::Equipment> {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		writer.StartObject();
+
+		int n = length / 5;
+
+		writer.Key("weapon_id");
+		LcfStruct<int16_t>::ReadLcf(stream, n, writer);
+		writer.Key("shield_id");
+		LcfStruct<int16_t>::ReadLcf(stream, n, writer);
+		writer.Key("armor_id");
+		LcfStruct<int16_t>::ReadLcf(stream, n, writer);
+		writer.Key("helmet_id");
+		LcfStruct<int16_t>::ReadLcf(stream, n, writer);
+		writer.Key("accessory_id");
+		LcfStruct<int16_t>::ReadLcf(stream, n, writer);
+
+		writer.EndObject();
+#ifdef LCF_DEBUG_TRACE
+		printf("  %s\n", ref.c_str());
+#endif
+	}
+	/*static void WriteLcf(const std::string& ref, LcfWriter& stream) {
+	stream.Write(ref);
+	}
+	static int LcfSize(const std::string& ref, LcfWriter& stream) {
+	return stream.Decode(ref).size();
+	}
+	static void WriteXml(const std::string& ref, XmlWriter& stream) {
+	stream.Write(ref);
+	}
+	static void ParseXml(std::string& ref, const std::string& data) {
+	XmlReader::Read(ref, data);
+	}*/
+};
+
+template<>
+struct LcfStruct<RPG::Parameters> {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		writer.StartObject();
+
+		int n = length / 6;
+
+		writer.Key("maxhp");
+		LcfStruct<std::vector<int16_t>>::ReadLcf(stream, n, writer);
+		writer.Key("maxsp");
+		LcfStruct<std::vector<int16_t>>::ReadLcf(stream, n, writer);
+		writer.Key("attack");
+		LcfStruct<std::vector<int16_t>>::ReadLcf(stream, n, writer);
+		writer.Key("defense");
+		LcfStruct<std::vector<int16_t>>::ReadLcf(stream, n, writer);
+		writer.Key("spirit");
+		LcfStruct<std::vector<int16_t>>::ReadLcf(stream, n, writer);
+		writer.Key("agility");
+		LcfStruct<std::vector<int16_t>>::ReadLcf(stream, n, writer);
+
+		writer.EndObject();
+#ifdef LCF_DEBUG_TRACE
+		printf("  %s\n", ref.c_str());
+#endif
+	}
+	/*static void WriteLcf(const std::string& ref, LcfWriter& stream) {
+	stream.Write(ref);
+	}
+	static int LcfSize(const std::string& ref, LcfWriter& stream) {
+	return stream.Decode(ref).size();
+	}
+	static void WriteXml(const std::string& ref, XmlWriter& stream) {
+	stream.Write(ref);
+	}
+	static void ParseXml(std::string& ref, const std::string& data) {
+	XmlReader::Read(ref, data);
+	}*/
+};
+
+template<>
+struct LcfStruct<RPG::EventCommand> {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		writer.StartObject();
+
+		writer.Key("code");
+		int code = stream.ReadInt();
+		writer.Int(code);
+
+		if (code != 0) {
+			int indent = stream.ReadInt();
+			if (indent > 0) {
+				writer.Key("indent");
+				writer.Int(indent);
+			}
+
+			int str_len = stream.ReadInt();
+			if (str_len > 0) {
+				writer.Key("string");
+				std::string str;
+				stream.ReadString(str, str_len);
+				writer.String(str);
+			}
+
+			int params = stream.ReadInt();
+			if (params > 0) {
+				writer.Key("parameters");
+				writer.StartArray();
+				for (int i = params; i > 0; i--) {
+					writer.Int(stream.ReadInt());
+				}
+				writer.EndArray();
+			}
+		}
+
+		writer.EndObject();
+	}
+	/*static void WriteLcf(const std::string& ref, LcfWriter& stream) {
+	stream.Write(ref);
+	}
+	static int LcfSize(const std::string& ref, LcfWriter& stream) {
+	return stream.Decode(ref).size();
+	}
+	static void WriteXml(const std::string& ref, XmlWriter& stream) {
+	stream.Write(ref);
+	}
+	static void ParseXml(std::string& ref, const std::string& data) {
+	XmlReader::Read(ref, data);
+	}*/
+};
+
+template<>
+struct LcfStruct<std::vector<RPG::EventCommand>> {
+	static void ReadLcf(LcfReader& stream, uint32_t length, Writer<StringBuffer>& writer) {
+		writer.StartArray();
+
+		// Event Commands is a special array
+		// Has no size information. Is terminated by 4 times 0x00.
+		unsigned long startpos = stream.Tell();
+		unsigned long endpos = startpos + length;
+
+		for (;;) {
+			uint8_t ch;
+			stream.Read(ch);
+			if (ch == 0) {
+				stream.Seek(3, LcfReader::FromCurrent);
+				break;
+			}
+
+			if (stream.Tell() >= endpos) {
+				stream.Seek(endpos, LcfReader::FromStart);
+				fprintf(stderr, "Event command corrupted at %d\n", stream.Tell());
+				for (;;) {
+					// Try finding the real end of the event command (4 0-bytes)
+					int i = 0;
+					for (; i < 4; ++i) {
+						stream.Read(ch);
+
+						if (ch != 0) {
+							break;
+						}
+					}
+
+					if (i == 4 || stream.Eof()) {
+						break;
+					}
+				}
+
+				break;
+			}
+
+			stream.Ungetch(ch);
+			//RPG::EventCommand command;
+			LcfStruct<RPG::EventCommand>::ReadLcf(stream, 0, writer);
+			//event_commands.push_back(command);
+		}
+
+		writer.EndArray();
+	}
+	/*static void WriteLcf(const std::string& ref, LcfWriter& stream) {
+	stream.Write(ref);
+	}
+	static int LcfSize(const std::string& ref, LcfWriter& stream) {
+	return stream.Decode(ref).size();
+	}
+	static void WriteXml(const std::string& ref, XmlWriter& stream) {
+	stream.Write(ref);
+	}
+	static void ParseXml(std::string& ref, const std::string& data) {
+	XmlReader::Read(ref, data);
+	}*/
+};
 
 
 #endif

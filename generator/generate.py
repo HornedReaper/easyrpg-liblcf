@@ -329,7 +329,7 @@ def generate():
                         type=filetype
                     ))
 
-    filepath = os.path.join(tmp_dir, 'database.json')
+    filepath = os.path.join(tmp_dir, 'lcf_database.h')
     with open(filepath, 'w') as f:
         f.write(jsondb_tmpl.render())
 

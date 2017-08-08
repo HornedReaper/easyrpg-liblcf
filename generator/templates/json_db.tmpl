@@ -1,3 +1,8 @@
+{% include "copyright.tmpl" %}
+#ifndef LCF_JSONDB_H
+#define LCF_JSONDB_H
+
+const char* lcf_jsondb = R"(
 {
 {%- for typ in structs %}
 {%- for struct in structs[typ]|struct_has_code %}
@@ -9,14 +14,14 @@
 {%- if field.size %}
 "s":{{ field.size|lower }},
 {% endif %}
-{%- set cpp_type = field|cpp_type %}
+{%- set cpp_type = field|cpp_type(prefix=False) %}
 {%- if cpp_type.startswith("std::vector") %}
 "t":"std::vector",
 {%- else %}
 "t":"{{ cpp_type }}",
 {%- endif %}
 {%- if field is vector %}
-"i":{{ field|cpp_inner_type }},
+"i":"{{ field|cpp_inner_type(prefix=False) }}",
 {%- endif %}
 "c":{{ field.code|int }},
 "d":"{{ field.default }}"
@@ -27,3 +32,6 @@
 {%- endfor %}
 {%- endfor %}
 }
+)";
+
+#endif

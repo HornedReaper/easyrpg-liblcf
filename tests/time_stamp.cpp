@@ -11,6 +11,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <iostream>
+#include "lcf_database.h"
 #include "lsd_reader.h"
 
 static void ToTDateTime() {
@@ -55,6 +56,7 @@ static void GenerateTimestamp() {
 #include "rapidjson/pointer.h"
 #include "rapidjson/prettywriter.h"
 #include "rapidjson/ostreamwrapper.h"
+#include "rapidjson/error/en.h"
 
 using namespace rapidjson;
 #include <sstream>
@@ -62,7 +64,6 @@ using namespace rapidjson;
 #include <fstream>
 #include "reader_lcf.h"
 #include "reader_struct.h"
-
 
 void ChunkReader(LcfReader& stream, Document& d, const Value& val, Writer<StringBuffer>& writer) {
 	LcfReader::Chunk chunk_info;
@@ -79,100 +80,91 @@ void ChunkReader(LcfReader& stream, Document& d, const Value& val, Writer<String
 		const Value* next_val = nullptr;
 
 		for (auto& v : val.GetArray()) {
-			if (std::stoi(v.GetObject()["index"].GetString(), nullptr, 16) == chunk_info.ID) {
+			if (v.GetObject()["c"].GetInt() == chunk_info.ID) {
 				next_val = &v;
 				break;
 			}
 		}
 
 		/*
-		"name": "level",
-		"size_field" : false,
-		"type" : "Integer",
-		"index" : "0x01",
-		"default" : "1",
-		"comment" : "Integer"
+		"n": "level",
+		"s?" : false,
+		"t" : "Integer",
+		"i?"
+		"c" : "0x01",
+		"default?" : "1"
 		*/
 
 		//typename field_map_type::const_iterator it = field_map.find(chunk_info.ID);
 		if (next_val) {
 			// Switch on type
+			std::string type = next_val->GetObject()["t"].GetString();
 
-			std::string type = next_val->GetObject()["type"].GetString();
+			writer.Key(next_val->GetObject()["n"].GetString());
 
-			/*
-				int count = stream.ReadInt();
-	vec.resize(count);
-	for (int i = 0; i < count; i++) {
-		IDReader::ReadID(vec[i], stream);
-		TypeReader<S>::ReadLcf(vec[i], stream, 0);
-	}
-			*/
-			writer.Key(next_val->GetObject()["name"].GetString());
+			if (type.find("std::vector") == 0) {
+				std::string inner_type = next_val->GetObject()["i"].GetString();
 
-			if (type.find("Array<") == 0) {
-				std::string real_type = type.substr(6);
-				real_type.pop_back();
-
-				Value::ConstMemberIterator itr = d.FindMember(real_type.c_str());
-				if (itr != d.MemberEnd()) {
-					next_val = &itr->value;
-
-					writer.StartArray();
-					int count = stream.ReadInt();
-
-					for (int i = 0; i < count; ++i) {
-						writer.StartObject();
-						writer.Key("ID");
-						writer.Int(stream.ReadInt());
-						ChunkReader(stream, d, *next_val, writer);
-						writer.EndObject();
-					}
-					writer.EndArray();
-				} else {
-					printf("UNBEKANNT: %s\n", type.c_str());
-					writer.String("UNKNOWN"); // Todo serialize binary
-					stream.Skip(chunk_info);
-				}
-			} else if (type.find("Vector<") == 0) {
-				std::string real_type = type.substr(7);
-				real_type.pop_back();
-
-				if (real_type == "UInt8") {
+				if (inner_type == "uint8_t") {
 					LcfStruct<std::vector<uint8_t>>::ReadLcf(stream, chunk_info.length, writer);
-				} else if (real_type == "Int16") {
+				} else if (inner_type == "int16_t") {
 					LcfStruct<std::vector<int16_t>>::ReadLcf(stream, chunk_info.length, writer);
-				} else if (real_type == "UInt32") {
+				} else if (inner_type == "uint32_t") {
 					LcfStruct<std::vector<uint32_t>>::ReadLcf(stream, chunk_info.length, writer);
-				} else if (real_type == "Boolean") {
+				} else if (inner_type == "bool") {
 					LcfStruct<std::vector<bool>>::ReadLcf(stream, chunk_info.length, writer);
 				} else {
-					printf("VECUNBEKANNT: %s\n", type.c_str());
-					writer.String("UNKNOWN"); // Todo serialize binary
-					stream.Skip(chunk_info);
+					if (inner_type != "EventCommand") {
+						Value::ConstMemberIterator itr = d.FindMember(inner_type.c_str());
+						if (itr != d.MemberEnd()) {
+							next_val = &itr->value;
+
+							writer.StartArray();
+							int count = stream.ReadInt();
+
+							for (int i = 0; i < count; ++i) {
+								writer.StartObject();
+								writer.Key("ID");
+								writer.Int(stream.ReadInt());
+								ChunkReader(stream, d, *next_val, writer);
+								writer.EndObject();
+							}
+							writer.EndArray();
+						} else {
+							//printf("UNBEKANNT: %s\n", inner_type.c_str());
+							writer.String("UNKNOWN"); // Todo serialize binary
+							stream.Skip(chunk_info);
+						}
+					} else {
+						LcfStruct<std::vector<RPG::EventCommand>>::ReadLcf(stream, chunk_info.length, writer);
+					}
 				}
-			} else if (type == "Integer" || type.find("Ref<") == 0 || type.find("Enum<") == 0) {
+			} else if (type == "int") {
 				LcfStruct<int>::ReadLcf(stream, chunk_info.length, writer);
-			} else if (type == "UInt8") {
+			} else if (type == "uint8_t") {
 				LcfStruct<uint8_t>::ReadLcf(stream, chunk_info.length, writer);
-			} else if (type == "Int16") {
+			} else if (type == "int16_t") {
 				LcfStruct<int16_t>::ReadLcf(stream, chunk_info.length, writer);
-			} else if (type == "UInt32") {
+			} else if (type == "uint32_t") {
 				LcfStruct<uint32_t>::ReadLcf(stream, chunk_info.length, writer);
-			} else if (type == "Boolean") {
+			} else if (type == "bool") {
 				LcfStruct<bool>::ReadLcf(stream, chunk_info.length, writer);
-			} else if (type == "String") {
+			} else if (type == "std::string") {
 				LcfStruct<std::string>::ReadLcf(stream, chunk_info.length, writer);
-			} else { // TODO Vector
+			} else {
 				// Repoint to complex type
 				Value::ConstMemberIterator itr = d.FindMember(type.c_str());
-				if (itr != d.MemberEnd() && type != "Parameters" && type != "Equipment" && type != "EventCommand") {
+				if (type == "Parameters") {
+					LcfStruct<RPG::Parameters>::ReadLcf(stream, chunk_info.length, writer);
+				} else if (type == "Equipment") {
+					LcfStruct<RPG::Equipment>::ReadLcf(stream, chunk_info.length, writer);
+				} else if (itr != d.MemberEnd()) {
 					writer.StartObject();
 					next_val = &itr->value;
 					ChunkReader(stream, d, *next_val, writer);
 					writer.EndObject();
 				} else {
-					printf("UNBEKANNT: %s\n", type.c_str());
+					//printf("UNBEKANNT: %s\n", type.c_str());
 					writer.String("UNKNOWN"); // Todo serialize binary
 					stream.Skip(chunk_info);
 				}
@@ -194,7 +186,7 @@ int main() {
   ToUnixTimestamp();
   GenerateTimestamp();
 
-	LcfReader reader("RPG_RT.ldb", "1252");
+	LcfReader reader("RPG_RTHERO.ldb", "1252");
 	if (!reader.IsOk()) {
 		//LcfReader::SetError("Couldn't find %s database file.\n", filename.c_str());
 		return false;
@@ -209,34 +201,40 @@ int main() {
 		//fprintf(stderr, "Warning: %s header is not LcfDataBase and might not be a valid RPG2000 database.\n", filename.c_str());
 	}
 
-	std::ifstream lcf_format("lcf.json");
-
-	std::stringstream ss;
-
-	while (!lcf_format.eof()) {
-		std::string out;
-		std::getline(lcf_format, out);
-
-		ss << out;
-	}
-
 	Document d;
-	d.Parse(ss.str().c_str());
+	d.Parse<RAPIDJSON_PARSE_DEFAULT_FLAGS | kParseTrailingCommasFlag>(lcf_jsondb);
+
+	if (d.GetParseError()) {
+		fprintf(stderr, "The LCF JSON Database is corrupted!");
+		fprintf(stderr, "\nError(offset %u): %s\n",
+				(unsigned)d.GetErrorOffset(),
+				GetParseError_En(d.GetParseError()));
+		fprintf(stderr, "%s", std::string(lcf_jsondb).substr(std::max((int)0, (int)(d.GetErrorOffset() - 40)), 80).c_str());
+		assert(false);
+		exit(1);
+	}
 
 	assert(d.HasMember("Database"));
 
 	Value& db = d.FindMember("Database")->value;
 
-	StringBuffer s;
-	PrettyWriter<StringBuffer> writer(s);
-	writer.StartObject();
-	ChunkReader(reader, d, db, writer);
-	writer.EndObject();
-
-	std::cout << s.GetString() << std::endl;
-
 	Document dd;
-	dd.Parse(s.GetString());
+
+	{
+		StringBuffer s;
+		Writer<StringBuffer> writer(s);
+		writer.StartObject();
+		ChunkReader(reader, d, db, writer);
+		writer.EndObject();
+
+		std::ofstream f("out.json");
+		f.write(s.GetString(), strlen(s.GetString()));
+		f.close();
+
+		//std::cout << s.GetString() << std::endl;
+
+		dd.Parse(s.GetString());
+	}
 
 	rapidjson::Value val = dd.GetObject();
 
@@ -246,7 +244,7 @@ int main() {
 
 	auto& a = dbb.GetActors();
 
-	auto& actor = a[1];
+	auto& actor = a[5];
 
 	{
 		std::string &name = actor.GetName();
